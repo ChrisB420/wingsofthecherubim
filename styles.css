@@ -1,0 +1,92 @@
+/* Basic styling for the website */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  background-color: #eef;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+nav {
+  background-color: #003B5C;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin: 40px 20px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #005B8C;
+  border-bottom: 2px solid #005B8C;
+  padding-bottom: 10px;
+}
+
+footer {
+    animation-duration: 10px;
+  background-color: #003B5C;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+img{
+    width: 300;
+    height:auto;
+    object-fit: cover;
+}
+
+    h1, h2, h3 {
+      color: #004080;
+    }
+
+    blockquote {
+      background-color: #eef;
+      border-left: 5px solid #99c;
+      padding: 10px 15px;
+      margin: 1em 0;
+    }
