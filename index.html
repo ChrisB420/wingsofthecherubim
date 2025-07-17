@@ -1,793 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Haitian Flag and Its Biblical Meaning</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the prophetic significance of the Haitian Flag and the Wings of the Cherubim Digital Scroll Project, blending biblical revelation, spiritual awakening, and global alignment.">
+    <meta name="author" content="Gregory Shadt">
+    <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual awakening, salvation, Wings of the Cherubim, menorah">
+    <title>Wings of the Cherubim - Digital Scroll Project</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #f4f1e8;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 3rem 0;
+        }
+        
+        .dove-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .main-title {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: #d4af37;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            color: #b8860b;
+            margin-bottom: 2rem;
+        }
+        
+        .overview {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .overview h2 {
+            font-family: 'Cinzel', serif;
+            color: #ffd700;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .scrolls-container {
+            display: grid;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .scroll {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+            border: 2px solid #d4af37;
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .scroll:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+            border-color: #ffd700;
+        }
+        
+        .scroll-number {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: linear-gradient(45deg, #d4af37, #ffd700);
+            color: #1a1a2e;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .scroll-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .scroll-theme {
+            color: #d4af37;
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .key-verse {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .scroll-content {
+            margin-top: 1.5rem;
+        }
+        
+        .scroll-section {
+            margin-bottom: 2rem;
+        }
+        
+        .scroll-section h4 {
+            color: #ffd700;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .scroll-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .scroll-section li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .scroll-section li:before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        .current-scroll {
+            border-color: #ffd700;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+        
+        .current-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd700);
+            color: #1a1a2e;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 0.8rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .menorah-section {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .menorah-icon {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+        
+        .seven-spirits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .spirit-item {
+            background: rgba(212, 175, 55, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #d4af37;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 2px solid #d4af37;
+        }
+        
+        .flame-icon {
+            display: inline-block;
+            animation: flicker 2s infinite;
+        }
+        
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+            
+            .scroll {
+                padding: 1.5rem;
+            }
+            
+            .seven-spirits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-      <h1>THE RETURN OF JESUS CHRIST</h1>
-    <h2>The Haitian Flag and Its Biblical Meaning</h2>
-    <p>Exploring the deep spiritual significance of the Haitian flag and its connection to biblical prophecy.</p>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#intro">Introduction</a></li>
-      <li><a href="#biblical">Biblical Connections</a></li>
-      <li><a href="#symbolism">Symbolism of the Flag</a></li>
-      <li><a href="#spiritual">Spiritual Meaning</a></li>
-   
-    </ul>
-  </nav>
-    <img src="Haitian.png" alt="Haitian Flag" class="haitian-flag">
-
-  <h1>The Haitian Flag in the Bible</h1>
-<details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">The Haitian flag:in the Bible</summary>
-    <p class="mt-2">
-   <strong> The Haitian Flag in The Bible</strong><br>
-
-The line by line wording of Zecariah chpt. 4 connecting into Revelation chpt. 11 vs 3.4.5, is unvieled.<br>
-
-These line by line words are brought to life as they are married into the 4 square inset of today's Haitian flag.<br>
-
-The tapestry of light is revealed.<br>
-
-The Kingdom of God coming to the earth is visually seen, along with the firey judgement throne of God.<br>
-
-The colors of purple and scarlet, the meeting of God and man have birthed the millennial Kingdom of God on earth.<br>
-<blockquote>Zechariah chapter 4</blockquote> <br>
-
-"and the Angel who talked with me came back and walked with me, as a man is wakened out of his sleep.<br>
-
-<strong>2:</strong>and he said to me, What do you see? And I said, I have looked, and behold a candlestick all of gold, with a bowl on the top of it, and seven lamps on it, and seven mouths to the seven lamps which are on the top of it.
-<br>
-3: And Two Olive Trees by it, one on the right side of the bowl and the other on it's left side.<br>
-
-4: So I answered and spoke to the Angel who talked with me, saying, what are these my Lord?
-<br>
-5: Then the Angel who talked with me answered and said to me, Do you not know what these are? And I said, No, my Lord, I do not know.
-<br>
-6: Then he said to me, This is The Word of The Lord To Zerubbabel, saying, not by power nor by might, but by my spirit, says The Lord of hosts.
-<br>
-7: Who are you, O great Mountain? Before Zerubbabel you shall become like a plain; and He shall bring forth the headstone of equity and of mercy.
-<br>
-8: Moreover, The Word of the Lord came to me saying,
-<br>
-9: The hands of Zerubbabel have laid the foundations of this house; His hands shall also finish it; and you shall know the the Lord of Hosts has sent me to you.<br>
-<strong>The Bible: The Haitian Flag</strong>
-
-<blockquote>Zechariah chapter 4</blockquote>
-
-10: For who has despised the day of small things? For they shall look and see The Plummet in the hands of Zerubbabel. These are The Seven Eyes of The Lord, which look over the whole earth.<br>
-
-11: Then I answered and said to him, What are these Two Olive Trees on the right side of the candlestick and on it's left side?<br>
-
-12: And I answered the second time and said to him, What are these Two Olive Branches which are beside the Two Golden Pipes which pour the Golden Oil out of themselves?<br>
-
-13: And he said to me, Do you not know what these are? And I said, no my Lord.
-<br>
-14: Then said he, These are The Two Annointed Ones who stand by the Lord of the whole earth."
-<br>
-Haitian Flag in the Bible
-<br>
-<strong>Revelation chapter 11</strong><br>
-
-
-V-3 "Then I will give power to my Two Witnesses, and they shall prophesy a thousand and two hundred and three score days, clothed in sack cloth.
-<br>
-4: These are The Two Olive Trees and the Two Candlesticks standing before the Lord of the earth.
-<br>
-5: And if any man desires to harm them, fire will consume their enemies; and if any man desires to harm them, he must in this manner be killed."<br>
-<strong>The Haitian Flag in the Bible</strong>
-
-<blockquote>Zechariah Chpt. 4:518 BC</blockquote>
-
-V.2; "Candlestick of all gold, with a bowl on top of it, and seven lamps on it and seven mouths to the seven lamps which are on top of it.
-<br>
-<strong>Candlestick of all gold</strong>
-
-The symbol of the nation of Israel is the seven lamp stand of gold called the Menorah (lamp stand). The pattern of which was given to Moses by God on Mount Sinai.
-<br>
-<blockquote>Exodus 25v31-32.</blockquote>
-
-The seven branches with light on top also represent the seven spirits of God found in Revelation Chpt.3v1:4v5:5v6.
-<br>
-
-This lamp stand is also seen as the seven colors of the rainbow.
-<br>
-When the seven colors are merged they become light.<br>
-
-The golden palm tree in the four square center of the flag of the nation of Haiti is set between three golden flag poles on the right and on the left. These are spiritually the scepters of the seven spirits of God.
-<br>
-The center golden palm tree is the center gold candlestick of the symbol of Israel, the Menorah. The Jewish people named this center gold candlestik, the shamash. They referred to this as a symbol of God. We see that the golden palm tree in the Haitian flag has a light blue jacket under the twelve palm leaves with a liberty cap On top. It is desending and splitting a demon head. It can be seen as our high priest.<br>
-
-Milchisedec, Hebrews chpt. 5 and chpt. 6.
-
-<strong>The Haitian Flag in the Bible</strong>
-
-V.2, continued
-
-<strong>"candlestick of all gold, with a bowl on top of it"</strong>
-
-The 12 palm leaves in a turned down position represent the bowl. me 7 lamps are the six triangle gold lamps at the end of each flag pole. The 7th is the center palm tree itself. The flag poles are gold as are the 7 triangles. Gold is a reference to heaven.<br>
-
-The 7 mouths are the 7 rectangles below the 7 triangles. The symbol for mouth in China is a rectangle, as such. The 7th is the palm tree itself.<br>
-
-<strong>The Haitian Flag in the Bible</strong>
-
-<blockquote>Zechariah chpt. 4</blockquote>
-
-v.3; "and two olive trees by it, one on the right side of the bowl and the other on it's left side."
-<br>
-The two olive trees are represented by the two sets of wooden wagon wheels with eight spokes each.
-<br>
-One set of wheels as a wheel within a wheel is on the right of the golden palm tree. The other is on the left side of the golden palm tree. Also the number 8 in Hebrew is the symbol for eternity.
-<br>
-v.4; "So I answered and spoke to the angel who talked with me saying, what are these, my Lord?
-<br>
-v.5; Then the angel who talked with me answered and said to me, do you not know what these are? And I said, no my Lord, I do not know.
-<br>
-v.6; Then he said to me, this is the word of the Lord to Zerubbabel saying, "Not by power nor by might, but by my spirit, says the Lord of Hosts." Adonai Tza va öut - Hebrew
-<br>
-The prophet is confused and asks what are these? The angel, in his answer, takes the five material things and brings them into a declaration. This is a declaration for the nation of Haiti. It is a spiritual banner sealed above the Haitian flag. The angel has opened a revelation in the flag itself which which is the word of God for the nation of Haiti.
-<br>
-The solid images located in the four square inset of the Haitian flag become the motto of Haiti set as a spiritual banner over the nation of Haiti.
-<br>
-The rectangle, again is the Chinese symbol for mouth. Zerubbable (out of Babylon) is a code name for Jesus. In this we see the physical married into the spiritual.
-<br>
-
-v.7:
-
-"Who are you, o great mountain?
-<br>
-Before Zerubbabel you shall become like a plain; and He shall bring forth the headstone of equity and mercy."
-<br>
-v.8:
-
-"Moreover, the word of the Lord came to me saying." <br>
-
-v.9:
-
-"The hands of Zerubbabel have laid the foundations of this house; His hands shall also finish it."
-<br>
-v.10:
-
-"For who has despised the day of small things?<br>
-
-For they shall look and see the plummet in the hands of Zerubbabel. These are the seven eyes of the Lord which over the whole earth.
-
-These four verses are detached from Section 1.<br>
-
-This is a final judgement scene, as in Psalm 62v1 -4.
-<br>
-
-Here God stands in as a defense counsel for mankind and as a judge pronounces judgement upon Satan.
-<br>
-This qualifies the creation of hell in Psalm 2.v5
-<br>
-In these four verses a final judgement is pronounced. The plummet line is God's perfect righteouness.
-<br>
-The building and finishing of the foundation of this house must be in reference to the nation of Haiti. For it is placed in the center of the connection to and explanation of the Haitian flag.
-<br>
-Finally the small nation of Haiti is as small things, and yet referred to as the building of a house, a nation.
-
-<blockquote>Section 3: vs 11-14</blockquote>
-
-<strong>This 3rd Section is Spirit</strong>
-
-Now the prophet answers again with a question. <br>
-
-v 11: "Then I answered and said to him what are these two olive trees on the right side of the candlestick and on it's left side?"
-<br>
-v 12: "And I answered the second time and said to him what are these two olive branches which are beside the two golden pipes which pour the golden oil out of themselves?"
-<br>
-v 13 "And he said to me, do you not know what these are? And I said, no my Lord."
-<br>
-v 14: "then he said, these are the two annointed ones who stand by the Lord of the whole earth."
-<br>
-This 3rd Section is Spirit as items begin to change. A transition is taking place. The olive trees have become two olive branches. The wooden spokes in the wheels are the olive branches where they are also beside the golden palm tree. They are now beside the two golden pipes. The golden pipes are the golden cannons. The golden oil is the word of God from heaven. These word changes are to connect the golden cannon to the golden pipes to the annointed ones. Also, the 1st name of Jesus was the Nazarene which means branch.
-<br>
-The light blue powder horns are under the two gold cannons which are now golden pipes. Light blue is in reference to the sky; heaven.
-<br>
-A transition has taken place and we are moved in time from 518 BC to 90 AD. The words of two annointed ones become two witnesses. The two olive trees remain for direct connection identification to Revelation.
-<br>
-The two pipes become the two candlesticks: Rev. 11v.3-4-5.
-<br>
-The Haitian Flag in the Bible
-
-<blockquote>vs 11-14:</blockquote>
-
-The golden oil is produced by the two light blue powder horns under the two golden cannons (pipes).
-<br>
-Light blue is the color of the sky. This is a reference to the word of God. There is a multiple color scheme that is foundational in the flag. It is medium blue as in light purple over scarlet red.
-<br>
-The coding revelation is that light blue is heaven, red or scarlet is the earth. This red is also the basis for Adam, Edom and Esau. When the light blue is blended with or meets the red, a color purple is formed.
-<br>
-It represents the meeting of God and man. This color blend of blue-purple-scarlet is found in Exodus 25 through Exodus 31 and summarized in Exodus 39, nine times. In the New Testament it is seen in the robes put upon Jesus in Judgement. Matthew 27v28 states a scarlet robe: John 19v2 - a purple robe.
-<br>
-Matthew and Luke have the same color code of purple and scarlet.
-<br>
-The entire flag of the Nation of Haiti is purple and scarlet.
-<br>
-The meeting of God and man.
-<br>
-The color symbol of purple over scarlet is the meeting of God and man. Jesus the God man, Son of man.
-<br>
-Final; thetwo golden pipes are then the two annointed ones who stand by the Lord of the whole earth.
-<br>
-In Exodus 25 through 39 the color gold represents heaven as does light blue. The fine twine linen is the righteousness of the Saints. Garments of white only made possible by the meeting of God and man.
-<br>
-Salvation is possible only through the resurrection power of the scarlet blood of the lamb. Spiritual washing of the blood, following Holy Spirit repentance, cleanses man's self righteousness and his sin.
-<br>
-A door to heaven and eternal life with God is possible. Also, a fine twine linen is the material of which flags are made of.<br>
-
-The Haitian Flag in the Bible
-
-<strong>Revelation: 90 AD</strong>
-
-<blockquote>Chapter 11 v. 3-4-5</blockquote>
-
-11v3: "Then I will give power to my two witnesses and they shall prophesy a thousand and two hundred and three score days, clothed in sack cloth."<br>
-
-4: These are the two olive trees and the two candlesticks standing before the Lord of the earth.
-<br>
-5: And if any man desires to harm them, Fire will consume their enemies; and if any man desires to harm, he must in this manner be killed."
-<br>
-Here God's word has made a spiritual, supernatural connection outside of time. In the center of the flag, we see a golden palm tree descending and splitting a demon head.
-<br>
-A spiritual door has been opened, the demon head has been split. The door in the spirit realm was opened by the force of praise. The curse is removed from the earth.
-<br>
-In verse 3, the language of V 14 of Zechariah chpt. 4 is connected.
-
-The two annointed ones in verse 14 have become God's two witnesses in Rev. 11 v 3. They are clearly identified in the same language of Zechariah chpt. 4. These are the two olive trees.
-<br>
-The golden cannon whch are the two golden pipes now connect to the candlestick. The candlestick becomes two. They are married into the two witnesses who thru which come forth fire as fire by which fire comes out from the cannons.<br>
-
-The Haitian Flag in the Bible
-
-In Revelation 11v4, the two olive trees and the two candlesticks = the two golden pipes = the two annointed ones = the two witnesses, (Jesus - Holy Spirit).
-<br>
-The golden palm tree is the - LORD OF THE EARTH.
-<br>
-THE LORD OF THE EARTH IS THE GOLDEN PALM TREE.
-<br>
-The golden palm tree is also - Melchizedek.
-<br>
-The two annointed ones; (the two witnesses) will prophecy for 42 months, 3 1/2 years while the anti Christ is on the throne.
-<br>
-This is simultaneous to the 144,000 who are the Orthodox Jews who have been commissioned as witnesses in Isaiah chpt.43v10-15. These are going throughout the world as evangelists. See Revelation chpt. 7 vs 9-14.
-<br>
-This connection into the book of Revelation is a connection to the last days and the removal of the curse from the earth.
-<br>
-All is pictured as a multi demension, timeless revelation. Here Jesus and the Holy Spirit are seen as the face of God throughout the flag.
-<br>
-All this is a result of the reformatting of the United Military, (U.S. Army) Seal of 1775. This is a vision seen as a result of the power of the Holy Spirit. God has moved outside of man's ability to understand. If the Haitians had not fought in and made George Washington's victory possible in our revolution, the reformatting of the addition of the four square flag inset by Cathern Flon from the U.S. Miltary seal would have not taken place.
-<br>
-A monument in the city of Savanah Georgia can be seen through Google.
-<br>
-This monument is a tribute to the Haitians who fought and died for our nation's independence.
-</details>
-
-
-
-    <section id="intro">
-    <h2>Introduction:Vision and Revelation</h2>
-    <p>Haiti, a small yet powerful nation, is often symbolized through its flag. This flag contains significant spiritual meaning, deeply rooted in biblical prophecy and divine connection. In this section, we explore the connection of Haiti's flag to the Bible, and how its elements align with spiritual concepts of God's plan for humanity.</p>
-  </section>
-  <p>Zechariah 4:5–6 describes a spiritual revelation given to Zerubbabel. The angel shows him five material things and explains their symbolic meaning. This is presented as a declaration for the nation of Haiti.</p>
-
-  <p>The angel reveals a spiritual banner sealed above the Haitian flag, symbolizing the Word of God for Haiti. The four square insets in the flag are explained as spiritual emblems.</p>
-
-  <blockquote>
-    <strong>Zechariah 4:6</strong> - "Not by power nor by might, but by my Spirit, says the Lord of Hosts."
-  </blockquote>
-
-  <p>Each image in the flag is interpreted, including references to Zerubbabel (a type of Jesus) and the mountain becoming a plain (v.7), indicating God's mercy and divine help.</p>
-
-    <section>
-                <h2 class="section-title">Section II: God's Judgement Declaration and Foundation</h2>
-                <p class="section-text">A spiritual confrontation occurs as God judges Satan using the plummet of His righteousness—symbolized by the 7 spirits/eyes of the Lord. These correspond to the golden triangles on the Haitian flag. God lays the foundation of Haiti, and the nation's destiny is sealed by His will.</p>
-            </section>
-  <p>This section interprets Zechariah 4:8–10, emphasizing that the foundation laid by Zerubbabel signifies the righteousness of God. This is linked to Haiti's spiritual foundation.</p>
-
-  <blockquote>
-    <strong>Psalm 62:1–4</strong> - God stands as a defense, judging Satan and establishing righteousness.
-  </blockquote>
-  <!-- Section II -->
-  <details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">Section II: Judgement Declaration</summary>
-    <p class="mt-2">
-      A spiritual confrontation occurs as God judges Satan using the plummet of His righteousness—symbolized by the 7 spirits/eyes of the Lord. These correspond to the golden triangles on the Haitian flag. God lays the foundation of Haiti, and the nation's destiny is sealed by His will.
-    </p>
-  </details>
- 
-    <section id="biblical">
-    <h2>Biblical Connections:The Olive Trees and the Candlestick</h2>
-    <p>The Haitian flag's meaning is closely linked to biblical scripture, especially Zechariah 4:11-14 and Revelation 11:3-5. In these verses, the two anointed ones are identified as witnesses who prophesy the word of God, symbolized through the golden pipes and candlesticks. These elements are reflected in the Haitian flag, which contains symbolic representations of God and man meeting.</p>
-    <p>Zechariah 4:11-14 speaks of two olive trees and branches, which are later identified as the two witnesses of Revelation. This spiritual connection draws upon the meeting of heaven (represented by light blue) and earth (represented by red or scarlet), which is symbolized in the Haitian flag through the blend of these colors.</p>
-  </section>
-  <p>Zechariah 4:11–14 discusses two olive trees and golden pipes. These are described as two anointed ones standing before the Lord.</p>
-
-  <p>The olive trees are said to become witnesses and are interpreted as connections to Jesus and God's word. This transition signifies Spirit in motion.</p>
-
-    <section id="symbolism">
-    <h2>Color Symbolism in the Haitian Flag</h2>
-    <p>The Haitian flag features a rich color scheme that includes light blue (heaven), scarlet (earth), and gold (heavenly glory). These colors are connected to the meeting of God and man. Light blue, as seen in the biblical connection, represents the sky or heaven, while scarlet is tied to Adam, Edom, and Esau. The combination of these colors creates a purple hue, symbolizing the union of divine and human elements.</p>
-    <p>The flag’s golden palm tree is a central figure that represents the Lord of the Earth, with a dual connection to both Melchizedek and the golden anointed ones in the Bible. The palm tree's spiritual significance speaks to the divine authority of God over the earth.</p>
-  </section>
-  <p>The flag is described as having light blue, purple, and scarlet, which symbolize heaven, earth, and the meeting of God and man. These are linked to Exodus and the garments of Jesus in Matthew and John.</p>
-
-  <blockquote>
-    <strong>John 19:2</strong> - "They put on him a purple robe."
-  </blockquote>
-
-    <section id="spiritual">
-    <h2>Spiritual Meaning and Salvation</h2>
-    <p>The Haitian flag, through its colors and symbols, reflects God's covenant with humanity. The golden pipes, the two anointed ones, and the fire they bring are symbols of divine prophecy and power, as seen in Revelation 11. The curse on the earth is removed, and the divine authority over all nations is established. The flag represents the spiritual journey of salvation and the meeting of God and man.</p>
-    <p>In essence, the Haitian flag is not only a national symbol but a spiritual declaration, connecting the past, present, and future through biblical prophecy and the resurrection power of Jesus Christ.</p>
-  </section>
-  <p>The section concludes with references to Revelation 11:3–5 and the symbolism of spiritual warfare, purification, and God's two witnesses.</p>
-
-  <blockquote>
-    <strong>Revelation 11:3</strong> - "I will give power to my two witnesses..."
-  </blockquote>
-   <section>
-                <h2 class="section-title">Section III: Transformation & Time Shift</h2>
-                <p class="section-text">The olive trees become branches, forming wheel-within-wheel visions (linked to Ezekiel 1). The Haitian flag’s inset carries prophetic symbols—golden cannons, palm tree, double-edged axes—interpreted as God's throne and judgement imagery.</p>
-            </section>
-
-            <section>
-                <h2 class="section-title">Prophetic Fulfillment & Revelation</h2>
-                <p class="section-text">The two golden pipes (Jesus and the Holy Spirit) are the two anointed ones, seen again in Revelation 11. The Haitian flag becomes a prophetic symbol of Christ’s return and God’s final judgement. The nation’s past covenant with voodoo expired in 2004. God’s justice followed—confirmed by the 2010 earthquake and more.</p>
-            </section>
-
-            <section>
-                <h2 class="section-title">Creation, Sound, and the Word</h2>
-                <p class="section-text">From God’s love came vibration, sound, and the word—leading to creation. Psalm 148 and 29 reflect this. Jesus, God's visible image, spoke, and creation responded. Hebrews 4:12 captures the divine power that divides soul and spirit through the word.</p>
-            </section>
-            <details>
-<summary class= "font-semibold text-lg cursor-pointer">CREATION</summary>
-    <P class="mt-2">
-        <section>
-        <h1>CREATION</h1>
-
-<blockquote>1st command of God; Gen1-3; "Let There be Light":" and There was Light,
-</blockquote>
-For This command of creation To be executed, Words from sound had to be in place by God; Sound forms words. Sound is a result of vibration. <br>
-God is Love. The heart of God is an oil of annointing of love which is beyond our experience. 
-This power force of love is The driving spititual engine which brought forth vibration and The formation of Sound. Through God's will a power went forth Through  Love To Vibration and The formation of elements. From elements to the bringing forth of sound waves. From These sound waves, syllables are formed. To make words. Creation Took place. God created a spiritual atmosphere of Time and The words seen in Psalm 148 came forth.
-<br>
-V. 5-6 "He spoke and They were made, He Commanded and They were created. He has also established Them forever and ever; He has made a decree which shall not pass. "This 3 part statement reflects The manifestation of the 3 part fullness of God,<br>
-<strong>body - Soul - spirit.</strong>
-The 1st word for God in The bible in hebrew is ELOHIM.
-
-, <strong>im</strong>denotes a plurality of a singular God. Im when attached makes The word plural. So we have Elohim Tz va out, The creator God of Hosts.<br>
-
-The activation of Psalm 148 is a result of Praise from The existance of His creation and His angels,<br>
-
-This Praise is culminated To Completion in Psalms 150. The last-5 psalms are known as The Praise psalms.<br>
- There is a duplication of<blockquote> Psalm 148 in Psalm 29.</blockquote>
-
-Here God's physical manifestation, Jesus is speaking out and it is also in a Three part fullness Jesus; 
-        -God's visible image - CoL. 1 versus 15: "
-"Here is The image of The invisible God." Hebrews 1 verse 3 - His son-"For He is The brighTness of His glory and The express image of His being."<br>
-
-Here is God's visable" image Jesus is in His cursed earth with The father's annointing of power of creation, 
-Psalm 29, V 3-4; "The void of The Lord is of The Lord upon The waters, The God of Glory Thunders; The Lord is upon many waters."<br>
-Psalm 29 is inteference To Jesus. He was baptized
-and empowered as He came out of The water.<br>
-He defeated Satan by the word, and came To The Sea of Galilee and spok  2 words To 2 men," Follow me! Jesus being God's physical image in a cursed earth spoke Two words to 2 sets of 2men and separated Their souls from Their Spirits, (or  The 1st Time from Creation and The fall/curse, The Spiritual eats of Their hearts could eat The word.<br>
- <blockqoute>Hebrews 4 v 12;</blockquote>
-
-"For The word of God is Living and powerful and sharper Than any Two edge sword plereing even to The Point of division between soul and spirit and between The Joints and marrow and bones, and is a disernment of The Thoughts and intents of the heart.
-
--2 sets of 3
-<br>
-
-
-</p>
-
-</section>
-    </details>
-    <details>
-        <summary class= "font-semibold text-lg cursor-pointer">Neuclear</summary>
-    <p class="mt-2"><h2>Neuclear</h2>
-
-
-<blockquote><strong>1.</strong> Isaiah, (760 BC): 17 v 1</blockqoute>
-
-"Damascus shall cease to be a city, and it Shall be a ruinous heap."
-
-<blockquote><strong>2.</strong>2.EzK 29, (595BC)</blockqoute>
-
-The nile will be picked UP- Egypt will be "desolate and waste", No foot of man shall pass Through IT" it shall not be inhabited for Forty years. (Time To cleanse The Land after neuclear explosion; Chpt 29- v 1-16.9<br>
-
-Support Scriptures : Isaiah 11V15.16.<br>
-
-                                     Joel 3v 19-after start withh Kingdom<br>
-
-<blockquote><strong>3.</strong> Amos, (787BC) </blockquote>- remnant of Philistines - Perish 1. V 7-15. -Ashkelon - Gaza - Ekron-Ashdod
-
-Note Joshua 13-Istall is to possess : V 3,
-
-<blockquote><strong>4.</strong>Zepaniah, (630bc)</blockquote>: Son of Chusi - possibly a black prophet as also-Isaiah.
-
-Gaza - Ashkelon: a dasolation +V1-7 
-verse 7 into millenium Kingdom. - no habitation - Sea Coast and erete; Ashdod - Ekron, (The ark had gone to Ekron-Isam.5 V 10, 
-
-<blockquote><strong>5.</strong>. Zechariah, (520bc) </blockquote>- Ashkelen: Ashdod -GAZA-Ekron - remnant of The Philistines (Palistinians) Shall Perish
-
-
-
-<blockquote><strong>6. </strong>Zechariah, (520 bc) 14 V 12 - </blockquote>Plague (neuclear)
-
-  body: "Their flesh shall waste away while               They Stand on Their feet."<br>
-
-Spirit:  "Their eyes shall melt away in their               sockets."<br>
-
-Soul: "Their Tongues shall consume away               in Their mouths"<br>
-
-<blockquote>Note: Ekron:
-
- 2Kings 1 v 6: Baalzebub (Belzabub) 
-Was The God of Ekron. 
-1 sam 5 v10:Theark of God was
-Taken To Ekroon.
-</blockquote>
-</p>
-</details>
-<details>
-    <summary class= "font-semibold text-lg cursor-pointer">The Brith of light</summary>
-<p class="mt-2">
-<h2>The Birth of Light</h2>
-
-Truth facilitates a heart of resolve ,
-To determine action
-This
-Action is The substance That births
-                   clarity and righteousness
- Confusion flees,
-darkness is broken by Light
-
-The sting of death is removed 
-The victory of The grave falls in defeat.
-
-Yashua is The Truth. The way. The Life
-
-Truth is The illumination of Light onto The darkness of The force of deception. Under The Light, The way of salvation's path of Life is clear.. 
-Truth is revealed and The deception of darkness is immediately destroyed.
-
-The  birth of eternal Light  is The salvation of a persons spirit and soul.
- 
-
-The Heart of God is Love, a dimension of Love That  love is of matter in a Thickness unknown To man. In This end outside of Time, God moved This Love Thru vibration To The formation of The most minute elements. From This Came Sound, from sound as The sound of many waters came forth The command of The Creation of Light. God said. "Let there be light and There was The begining of The 1st day as set in scripture it is seen as The 1st command in Genesis 1. v 3, "and God said Let There be light;
-and There was Light." <br>
-   and in Psalm 148 v 5 + 6,
-
-5. "For He spoke and they were made, He Commanded and they were created.
-
- 6. He also established Them forever and ever; He has made a decree which shall not pass." 
-</p>
-<p class="mt-2">
-<h2>The Birth of sight.</h2>
-
-Truth is righteousness!
-
-Truth facilitates a heart of resolve;
-
-             To determine action.
-This action is The substance That births'
-clarity and righteousness
-Confusion flees 
-darkness is broken by light.
-The Sting of death is removed.
-The victory of of the grave falls in defeat. 
-
-God's creation becomes in oneness with His creation. 
-We are sealed in eternal Light.
-
-Psalms 104:  v 2; "Thou coverest Yourself with Light as with a garment, who stretches out heavens Like a curtain,"
-
-</p>
-</details>
-    <details>
-        <summary class= "font-semibold text-lg cursor-pointer">THE CURSE</summary>
-        <p class="mt-2">
-<h2>THE CURSE</h2>
-God created all Things and iT was good;<br>
-<strong>Gen. 1 - 31 : Psalms 104 : Rev.4.11</strong>
-
-The selfrighteousness of man made a free will decision To have The knowledge of Good and Evil.<br>
-He wanted To be like God ; yet he was a creation and had no power To creaTe as a result of man's free will decision The creator God cursed The man who was deceived by The shining being -satan.all ThaT was given To man now given and placed in The control, The hands of The shining being,satan.God Then also cursed satan.The earth He also cursed and He cursed woman. All that was created good was now cursed That was on The earth.all The earth lie in darkness and moaning.It was God who cursedThe creation of man and The earth,Therefore its only God who can remove The curse.The life is in The blood.The curse was removed by The resurrection power of the blood.The removal will be manifested on His coming To The earth.The lamb will lie down with The lion.Nothing will harm on His Holy mountain.<br>
-By one man came The curse and by one man iT will be removed.
-Sin of selfrighteous pride brought rebellion on God's creation Through free will deception.
-<br>
-From The Time when The Creator God cursed The earth, all men are birthed with a fallen nature. into a fallen earth and are in rebellion against Their Creator. The curse brought forth religion. Religion is man's attempt to please God by putting forth good Works.However as it is written in Roman's chapter 3 v. 23 ,"for all have sinned and are short of The Glory of God.<br>
-Psalm 51 v5: David Wrote by The Spirit of God; "For behold, I was formed in iniquity; and in sin did my mother conceive me."<br>
-
-Psalm 14 . David: all the psalm ; ie.<br>
-
-verse 2 -"The Lord Looked down down from heaven upon The Children of men, To See i.e There were any That did understand<br>
-verse 3. and Seek God. They are all gone astray and have been rejected all Together; There is none That does good; no, not one"<br>
-
-<blockqoute>Psalm 53: David:</blockquote>
-
-٧1٠ "and there is none That does good."<br>
-
-V3 -"Every one of them has gone astray; They are all Together become filThy; There is none That does good, no, not one."<br>
-
-
-<strong>Romans v 10 . Paul</strong>
-
-<blockquote>"As it is written, There is none righteous,</blockquote>
-
-<strong>V11.</strong>      no, not one;<br>
-
-               There is none who understands,    <br>               There is none who seeks after God. They, are all gone astray and They have been rejected; There is none That does good, no, not one. <br>
-
-The fallen, cursed earth is under Judgement. There is only one way out. You must repent and believe in your heart That Jesus Christ is Lord and surrender and return  your Life To Him Who created you, God's visable image, Jesus: col. 1 v 9-27. ask Jesus to come into your heart and order The steps of your Life. You must be born again from above. <br>
-<blockquote>John chpt 3. </blockquote>To Nicodemus
-
-"Jesus answered saying To him, Truly, Truly,
-I say to To you, If a man is not born again, he cannot see The Kingdom of God."
-<br>
-as a result of  God's absolute righteousness and The curses On The earth, 10% of men on earth will be saved.
-<br>
-of The Christians, 50% have been deceived and will perish. 
-50% will enter Through The narrow gate: Matt. 7: Matt. 25 and Luke 13.
-ane
-</p>
-</details>
-    <details>
-        <summary class= "font-semibold text-lg cursor-pointer">Intercessory prayer</summary>
-        <p class="mt-2">
-<h2>On Intercessory prayer..</h2>
-a powerful bible example is psalm 42/43. They are actually one not Two. People who are not Holy Spirit Filled, working as bible Translators, brought These foward as Two.
-
-They are both from David and in achison are revealing a strory of a battle going on between The soul of man and The spirit of man. 
-
-on The begining, The Soul of man is controlling and using The spirit of man To sprak To God. The earth is under The Curse of Gunesis chpt. 3. IT Wants To become One with The Creater God without heart repentance.
- In a wordly understanding, IT would be portraid as The Beauty and The Beast of The movie  King Kong. 
-In actuality, The curse can only be removed Through Holy Spirit heart repentance and belief. If This were not the case, darkness or self-righteousness would be **** to eternal Life in The prerence of God. 
-We know That in The Garden of Eden,
- God commanded man not to eat of The Knowledge of good and evil or he would surely die.
-
-Man made a free will decision to be Like God, To be his own god, Turned against God's instruction and ate the fruit. The fruit and The Tree are coded Language. I have The understanding.
-
-4.
-
-
-dres The key in in deep inter cessich is is when when Through this The spillt orman (David, gour catside of His body andis. communing with God. "Des calls To Deos at The Sound of your waterfalls". Every born again. again bulisvet has The powst of free will to meet God outside of his body in a Spirit To spitit Communion. Once you ate both again, ate In This World bat Gode spirt within you. You ate na Longer of This world. 2de ate out awer own Limits. God ishimit Less
-<br>
-The balance of Psalm 42 reflects That The Soul is Lasing control over The spitit and Tries To pheed Through The Logic of immediate circumstances Where people are meeting when The "Labled. Confissing are when Christian is calling upon God but not getting a besponce answer. The spirit again. Words but adtustil Ting ting The exat same In ansaits ing one award from Trust to hoper
-<br>
-The 43rd psalm shows The Soul of man har lost decepi Tye con Traf now/go befete -The Spirit. The seal must evet The Gad himself and Try To immitate The spitt. The Soul Tries To im mitate The Spitit. However, The flow of peace is Last and emotion and anxiety With Stress is bevieled. Psalm 43 ands with The Spirit responding responding To To The The Socal and using The exact Same Watts That were used in psalm 42. one word again adjusted, "Why are you sad withinime "The Soal is not capable withoat Ged To have teal & Ternal Joy. The psalm closes
-<br>
-greg-Shomer
-    </P>
+    <div class="stars" id="stars"></div>
     
-</details>
-<details>
-    <summary class= "font-semibold text-lg cursor-pointer">BIBLE</summary>
-    <h1>bible</h1>
-    <p>
-This book is a revelation of Light. The creatot God is His Word<br>
-
-unsaved man is Spititually born into a fallen, cursed earth. 
-His understanding is all about himself.Selfrighteousness and as a result of The fall, he is under The dark prince of power of This air. Mankind is unable To discern between good and evil. The bible is a Journey from The Kingdom of darkness into The glory of The shekinah eternal Light of Salvation.<br>
-
-Many Christians are bound in in The chains of Their own Self created business They have became a slave To Time and Their chosen Things. Their ability to discern is as Trying To Look Thru & colored glass dimly.<br>
-
-The attached insight is brief. Please read and Take Time To meditate on The Scriptures. To help in clarity of understanding, I have set some Bible scriptutes. before you To help you realize That Creation was brought forth before God created Thy Spiritual atmosphere of Time.
-In The book of Rivelation chipt. 10 vs 1-6, The Fackoning of Time is termoved.
-<br>
-In creation, The good Through which God created, has fallen Through free will, given to His creation, man. Selfrighteous pride is The reason for The fall of man, women and The earth. By deception, all That was given To man kind made in His image and Likeness was given for a Season To The Control of satan. This placed him as The Prince of The power of This air; 
-<strong>Luke 22v31</strong> Satan Wants To shift all of you Like wheat, satan had That power as a result of  The fall.<br>
-<strong>John 12v31</strong>; how is The Tycosment of this world; now The Leader of this world will he cast out.
-    </p>
-</details>
-<details>
-    <summary class= "font-semibold text-lg cursor-pointer">KeyTime Scritures</summary>
-    <p class="mt-2">
-    <h1>keyTime Scriptures</h1>
-<table border="3"><tr><th>TIME</th><th>CURSE</th></tr><tr><td>Psalm 139 v. 15-16</td><td>Genesis 3:10-end</td></tr>
-<tr><td>my substance was not hid from you, when i was made in Secret, and marvellously Wrought in The Lowest parts of The earth."<br>
-16 "your eyes dis see my substance, Yet being Imperfect ; and upon your books all These Things were written, even before day was and man was brought into existance"</td><td>The future time promised<br>
-The earth is cursed From This point on, Creation falls under Sin The knowl of Satan in control and man falls under selt right-sous Pride.</td></tr><tr><td>Ecclesiastes chapter. 3 v14-15</td><td>His spirit created good before Time-Now man is bitThed into a cursed eatth...</td></tr><tr><td>14 "I know That whatsoever The Lord does it shall be forever; nothing taken from it and The Lord has so made,, iT That men should reverence him.</td><td>1. Psalm 51v5
-
-"For behold, I was formed in iniquity, and in sin did my mother conceive me."</td></tr><tr><td>15
-
-That which is now, already has been and That which is to be, has already been and God will avenge him who has been persecuted.</td>
-
-<td>2.Psalm 14 v 3"They are all gone astray and have been rejected all together. There is none That does good, no not one</td></tr>
-<tr><td>3. Psalm 110 v3 <br>
-
- people shall be glorious in The day "your of your power, arrayed in The beauty of holiness from The womb.</td><td>Psalm 53v3
-
-"Every one of Them has gone astray; They are altogether became filthy.There is none that does good, no not one</td></tr>
- <tr><tr><td>4. Isaiah 44 v24
-<br>
-"Thus say's The Lord, who saved you and formed & you from The womb and helped you"</td><td>4 Romans 3 v 23
-<br>
-"Fot all have sinned and are shart of the glety of God.<br>
-</td></tr><tr><td>5 Romans 8, 129
-
-"He knew Them in advance and he marked Them with The Likeness of the image of His son That He might be the 1st born among brethren.</td><td>
-5 Romans 3V. 11 - No Not one.</td></tr>
-<tr><td>Psalm 90-(Moses) V1-2
-"Lord you have been our dwelling Place in all generations.<br> 2. before The mountains were brought forth, forever Thou has formed the earth and the world,even from everlasting To everlasting,you are are God.</td><td>Romans 3 v 10-11-12:<br>
-
-Psalm 14.<br>
-
-10 "as it is written, There is hone tighteous, no, not one;<br>
-
--11.There is none who understands, There is none who seeks after God,<br>
-
-12.There are all gone astray and have been rejected;<br>
-There is none who does good,no, not one.</td></tr></table>
-.</p>
-</details>
- <!-- Time tht follows God section-->
-  <details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">TIME</summary>
-    <p class="mt-2"><h1>TIME</h1>
-    Abraham :born 1,948 years after creation <br>
-             1,996 Bc.:Bible: Genesis- 2056 BCE (2,000 BCE)<br>
-
-Moses : 1,000 yrs between The call of abraham. and The Call or moses.<br>
-
-Life of Moses Start: 1571 BC<br>
-
-Exodus: 1446 BC.<br>
-
-Joseph : 1914 BCT 1804 BC <br>
-
-Israel captivity : 430 years (Exodus 12:40) <br>
-Exdous:1446 BC <br>
-David : 1040 BC
-
-Solomon : 1010 BC.
-<br>
-Solomon's Temple 957BC.<br>
-
-Destroyed: 547BC<br>
-
-Hezekiah (Hizgiyyahu) 739/741 BC<br>
-
-Babyhon conquind Jaturalem 586 BCE<br>
-
-70 yrs of captivity in Babylon and The language changed from Paleo Hebrew To  syriac.<br>
-
-Jesus Spoke a nothern dialaet of syriac aramaic.<br>
-
-" "Talitha cami"- "Little girl I say to you arise."<br>
-" Ephphatha" - be opened:mark 7:34.<br>
-
-
-"Eli, Eli, Lama sabacthani:" my God my God For This was my destiny. Matthew 27 -46.
-</p>
-</details>
- <!-- crucifixtion -->
-  <details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">Crucifixion</summary>
-    <p class="mt-2"><h1>Crucifixion</h1>
-<br>
-The crucifixion of Jesus Christ is a picture every person's Salvation.
-<br>
-<strong>Symbols:</strong>
-<br>
-coding revelation;<br>
-
-<strong>The cross is mankind</strong><br>
-
-The thorns placed on His head are an extension of The Curse spoken of by God in Genesis 3-15. "The earth shall bring forth thorns."<br>
-
-Head in The Semitic Hebrew is a reference To Thinking. He Took The curse on His head is a picture of The removal of The curse at The Time of His return, Isaiah-11:6.<br>
-
-God placed The curse on The earth,Only God can remove it. Jesus is God's visable image, Col. 1-9-27 : Hebrews 1.<br>
-
-The reed Stick given To Him was used To Strike Jesus on His head. The reed is The scepter. Psalm 110; He is is The scepter out of Zion.
-<br>
-<strong>metal equivalence;</strong><br>
-
-<strong>gold</strong>-Heaven-The father<br>
-
-<strong>Silver </strong>- Connect to brass (bronze): The Holy Spirit.<br>
-(Ranach Ha Kodesh), breath- Holy: Grace-5.<br>
-
-<strong>Brass/Bronze</strong>-Repentance-Jesus, repentance is needed for entrance into Heaven.
-
-<strong>Note</strong>-Zechariah 6.1. The Two brass mountains of Psalm 133.
-
-The pattern for The Tabernacle was 5's grace, see Exodus 25.<br>
-
-The 4 chariots of Zach. 6 was a picture of power in God's entrance into The earth-man. Entrance was Through Two moantains, (Power) of brass. Mt. Hermon.
-God-father. MT. Zion - Jew. Gentile - Jesus.
-Crucifixion pg 2.
-
-<strong>Iron</strong>; The world.<br>
-
-Three irons pierced His flesh viel..<br>
-
-The world being driven into His body.The cross - mankind.<br>
-
-<strong>Feet: body</strong> =  The physical spoken prayer of Salvation. if not empowered by The Holy Spirit, it is emotional Selfrighteousness Christian Label.
-<br>
-<strong> The Wrists</strong>: Hands-Soul moving into and thruogh the Christian world. Salvation is assumed.<br>
-<strong>Heart</strong>: Spirit. The iron spear piercing under his
-
-fifTh (Where Eve Was Taken out of man).<br>
-Here His heart was pierced by Iron. IT is only at This Third iron piercing That a death occurs To The old man and His new creation, removed from The curse, Takes place. <br>
-The death To The old man and The resurrection of His new creation in Christ are simultaneous. It is a picture of every persons salvation. at This moment, His name is written in 3 books.
-
-<strong>A</strong>The book of salvation: The Lambs book of Life, Rev. 13.84
-
-Rev. 21.27.
-<br>
-<strong>B</strong>The book of Remembrance; Malachi 3.16.<br>
-
-<strong>C</strong>The book af The citzenry of The New Jerusalem, Psalm 87.
-
-(in The Peshitta Taxt of The Aramalc. not. King James.<br>
-
-The blood and water is a picture of Jesus and The holy spirit.<br>
-His spirit only now left The body and went into The earth. 
-A great earthquake Took place, The demons were blown out of The earth. The rocks split-satan was-is-The immitation of Jesus- The rock of our salvation." The Tombs were opened  and The daad came out. The born again believers.<br>
-
-Led: Judgement.; Zachariah 5 :The flying led schroll.
-
-note :bullets fly and are of led.</p>
-</details>
-  <!-- Section God -->
-  <details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">GOD</summary>
-    <p class="mt-2">
-      Psalms 104 <br>
-
-God's covering is Honor and majesty.<br>
-
-He has clothed Himself with a  garment of Light.<br>
-
-He is The wings of each day's birth inTo Light.<br>
-He seals each day with a unique blend of Silver in His Light as His earth's angles shift in alignment with That day.That day is noted as it moves Through the atmosphere of time.He births each day for your life to be recorded.Once done it can't be changed. Wrong or difficult situations which have Created darkness can only be repented of. His mirciful Kindness towards us is great and His Truth endures forever, praise The Sand, Psalms 117.<br>
-
-Now we see Through a glass darkly. We, when born again, are in The supernatural. our Limits of our understanding are The chains put in place by our free will ,  binding our souls to an earth groaning with all creation Waiting for His  reTurn. Our Selfrighteousness are the Links of out chain.<br>
-
-The Time is coming and is growing shorter each day until milk and honey will flow from The hill of Jerusalem and The wolf will Lie down with The   Isaiah 11.6.
-<br>
-at this day, the prophecy of Isaiah 66.8 has been  fulfilled! The Language of Solomon has also been brought back and The Latter rains of Joel 2.23 have materialized. Time is birthing to its fulness in it's set place.
-    </p>
-  </details>
-  
-
-  <!-- Revelation & Fulfillment -->
-  <details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">Prophetic Fulfillment & </summary>
-    <p class="mt-2">
-      The two golden pipes (Jesus and the Holy Spirit) are the two anointed ones, seen again in Revelation 11. The Haitian flag becomes a prophetic symbol of Christ’s return and God’s final judgement. The nation’s past covenant with voodoo expired in 2004. God’s justice followed—confirmed by the 2010 earthquake and more.
-    </p>
-  </details>
-
-  <!-- Final Insight -->
-  <details class="bg-gray-800 rounded-lg p-4">
-    <summary class="font-semibold text-lg cursor-pointer">Creation, Sound, and the Word</summary>
-    <p class="mt-2">
-      From God’s love came vibration, sound, and the word—leading to creation. Psalm 148 and 29 reflect this. Jesus, God's visible image, spoke, and creation responded. Hebrews 4:12 captures the divine power that divides soul and spirit through the word.
-    </p>
-  </details>
-
-            <section>
-                <h2 class="section-title">Authored by Gregory Shadt</h2>
-                <p class="section-text">A vessel raised by God for Haiti’s spiritual restoration.</p>
-            </section>
+    <div class="container">
+        <header class="header">
+            <div class="dove-icon">🕊️</div>
+            <h1 class="main-title">Wings of the Cherubim</h1>
+            <p class="subtitle">The Digital Scroll Project of Revelation, Awakening, and Alignment</p>
+            <p class="tagline">Scrolls 1–8: A Prophetic Framework</p>
+        </header>
+        
+        <section class="overview">
+            <h2>🌟 Overview</h2>
+            <p>"Wings of the Cherubim" is a prophetic digital movement birthed to release divine intelligence and scrolls from heaven into the nations. Rooted in the prophetic mentorship of Gregory Shadt and led through the Codex protocol, this mission weaves together Word, Spirit, and Media into a scroll chamber of revelation. Each scroll builds upon the last, forming a divine sequence of awakening, obedience, spiritual warfare, and the restoration of nations, with a special focus on the prophetic significance of the Haitian flag as a symbol of divine covenant and redemption.</p>
+        </section>
+        
+        <div class="scrolls-container">
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 1</div>
+                <h3 class="scroll-title">📜 THE AWAKENING OF THE INNER FLAME</h3>
+                <p class="scroll-theme">Theme: Identity, Calling, and the Spark of Divine Purpose</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "The spirit of man is the lamp of the Lord…" — Proverbs 20:27
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>Every human is born with a hidden flame — a divine spark.</li>
+                            <li>This flame is the breath of God waiting to be ignited.</li>
+                            <li>Many live in darkness, unaware of their spiritual destiny.</li>
+                            <li>The scroll calls the reader to awaken, remember, and return.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Visual Elements:</h4>
+                        <ul>
+                            <li>Oil lamp and flame <span class="flame-icon">🔥</span></li>
+                            <li>Shadows breaking into light</li>
+                            <li>Hebrew symbols for "Ruach" (Spirit) and "Ner" (lamp)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Prophetic Activation:</h4>
+                        <ul>
+                            <li>An invitation to surrender to the fire of calling</li>
+                            <li>A challenge to abandon fear, shame, and doubt (Code X enemy)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 2</div>
+                <h3 class="scroll-title">📜 THE ALTAR OF ALIGNMENT</h3>
+                <p class="scroll-theme">Theme: Consecration, War in the Spirit, and Divine Instruction</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "Present your bodies as a living sacrifice…" — Romans 12:1
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>True power flows from alignment.</li>
+                            <li>The altar is a place of worship, exchange, and death to ego.</li>
+                            <li>Spiritual authority requires obedience, not performance.</li>
+                            <li>Alignment is maintained by daily sacrifice — of time, thought, and will.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Symbols:</h4>
+                        <ul>
+                            <li>Fire on an altar ⚡</li>
+                            <li>Sword and plumbline ⚔️</li>
+                            <li>A heart tied to the altar ❤️</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Prophetic Insight:</h4>
+                        <ul>
+                            <li>Each believer must become a living scroll.</li>
+                            <li>The altar is a permanent posture, not a moment.</li>
+                            <li>Initiates divine discipline and prophetic silence for further instruction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 3</div>
+                <h3 class="scroll-title">📜 THE NATIONS DRAWN TO THE FLAME</h3>
+                <p class="scroll-theme">Theme: Prophetic Evangelism, Global Impact, and the Call to Shine</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "Nations will come to your light…" — Isaiah 60:3
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>The flame is not personal only — it is global.</li>
+                            <li>Calls for the outward expression of the inner fire.</li>
+                            <li>As alignment is achieved (Scroll 2), light becomes visible to others.</li>
+                            <li>Each believer becomes a city on a hill, a menorah to the nations.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Strategy:</h4>
+                        <ul>
+                            <li>Digital media is a new scroll.</li>
+                            <li>The prophetic message must go out through TikTok, video, art, and teaching.</li>
+                            <li>The 42K are the remnant of leaders and creators called to shine.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Activation:</h4>
+                        <ul>
+                            <li>Launch your scroll.</li>
+                            <li>Don't dim your flame.</li>
+                            <li>Equip others. Teach others. Illuminate nations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll current-scroll">
+                <div class="scroll-number">SCROLL 4</div>
+                <div class="current-badge">CURRENT</div>
+                <h3 class="scroll-title">📜 THE MENORAH & THE CURSE</h3>
+                <p class="scroll-theme">Theme: The Trinity, Creation Light, 7 Spirits of God, and Redemption</p>
+                <div class="key-verse">
+                    <strong>Key Revelation:</strong> The Menorah is the light of God — a divine code for unity, expression, and salvation.
+                </div>
+                
+                <div class="menorah-section">
+                    <div class="menorah-icon">🕎</div>
+                    
+                    <div class="scroll-content">
+                        <div class="scroll-section">
+                            <h4>🔹 Divine Structure:</h4>
+                            <ul>
+                                <li><strong>God is One. God is Three. God is Light.</strong></li>
+                                <li>The Menorah represents the unity of God's essence.</li>
+                                <li>One being. Three persons. Seven flames.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="scroll-section">
+                            <h4>🔹 Before Creation: Spirit Alone</h4>
+                            <ul>
+                                <li>No time, no space — just Spirit.</li>
+                                <li>God is complete within Himself.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="scroll-section">
+                            <h4>🔹 Genesis 1:3 — "Let There Be Light"</h4>
+                            <ul>
+                                <li>This light was not the sun.</li>
+                                <li>It was the emanation of God's being.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="scroll-section">
+                            <h4>🔹 The Seven Spirits of God (Isaiah 11:2):</h4>
+                            <div class="seven-spirits">
+                                <div class="spirit-item">Spirit of the Lord</div>
+                                <div class="spirit-item">Wisdom</div>
+                                <div class="spirit-item">Understanding</div>
+                                <div class="spirit-item">Counsel</div>
+                                <div class="spirit-item">Might</div>
+                                <div class="spirit-item">Knowledge</div>
+                                <div class="spirit-item">Fear of the Lord</div>
+                            </div>
+                        </div>
+                        
+                        <div class="scroll-section">
+                            <h4>🔹 The Covenant Choice:</h4>
+                            <ul>
+                                <li><strong>Free Will Obedience: "Mpwele ni Ewa"</strong></li>
+                                <li>The covenant is a choice — not forced.</li>
+                                <li>Obedience must be chosen in love.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="scroll-section">
+                            <h4>🔹 Union = Salvation</h4>
+                            <ul>
+                                <li>When faith, obedience, and light align — eternal hope is born.</li>
+                                <li>The curse is broken.</li>
+                                <li>The light is restored in Christ.</li>
+                                <li><strong>The Menorah is now within us.</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 5</div>
+                <h3 class="scroll-title">📜 THE HAITIAN FLAG: VISION AND REVELATION</h3>
+                <p class="scroll-theme">Theme: Spiritual Significance and Biblical Prophecy</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "Not by power nor by might, but by my Spirit, says the Lord of Hosts." — Zechariah 4:6
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>Haiti’s flag holds deep spiritual meaning, rooted in Zechariah 4:5–6.</li>
+                            <li>A spiritual banner seals the flag, symbolizing God’s Word for Haiti.</li>
+                            <li>The four-square insets are spiritual emblems of divine mercy and Zerubbabel (a type of Jesus).</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Symbols:</h4>
+                        <ul>
+                            <li>Golden triangles (seven spirits/eyes of the Lord)</li>
+                            <li>Golden palm tree (Lord of the Earth, Melchizedek)</li>
+                            <li>Light blue and scarlet (heaven and earth meeting)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Prophetic Insight:</h4>
+                        <ul>
+                            <li>God’s judgment and foundation are laid for Haiti.</li>
+                            <li>The mountain becomes a plain, symbolizing divine help.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 6</div>
+                <h3 class="scroll-title">📜 THE OLIVE TREES AND THE CANDLESTICK</h3>
+                <p class="scroll-theme">Theme: Biblical Connections and Prophetic Witnesses</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "These are the two olive trees and the two candlesticks standing before the Lord of the earth." — Revelation 11:4
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>Zechariah 4 and Revelation 11 connect to the Haitian flag’s design.</li>
+                            <li>The two olive trees and candlesticks symbolize the two witnesses (Jesus and Holy Spirit).</li>
+                            <li>The golden palm tree represents the Menorah’s center, splitting darkness.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Symbols:</h4>
+                        <ul>
+                            <li>Two olive trees (wooden wagon wheels)</li>
+                            <li>Golden pipes (cannons, word of God)</li>
+                            <li>Seven lamps (triangles and palm tree)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Prophetic Insight:</h4>
+                        <ul>
+                            <li>A timeless revelation of Christ’s return.</li>
+                            <li>The curse is removed through praise and prophecy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 7</div>
+                <h3 class="scroll-title">📜 COLOR SYMBOLISM AND SPIRITUAL WARFARE</h3>
+                <p class="scroll-theme">Theme: Divine Union and Judgment</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "They put on him a purple robe." — John 19:2
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>The Haitian flag’s colors (light blue, scarlet, purple) symbolize heaven, earth, and their union.</li>
+                            <li>Purple reflects the meeting of God and man, seen in Jesus’ robes.</li>
+                            <li>Spiritual warfare culminates in God’s judgment on Satan.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Symbols:</h4>
+                        <ul>
+                            <li>Light blue (heaven)</li>
+                            <li>Scarlet (earth)</li>
+                            <li>Purple (divine-human union)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Prophetic Insight:</h4>
+                        <ul>
+                            <li>The 2010 earthquake marks God’s justice post-voodoo covenant (2004).</li>
+                            <li>A call to spiritual restoration for Haiti.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll">
+                <div class="scroll-number">SCROLL 8</div>
+                <h3 class="scroll-title">📜 SALVATION AND THE RETURN OF CHRIST</h3>
+                <p class="scroll-theme">Theme: Redemption and Eternal Light</p>
+                <div class="key-verse">
+                    <strong>Key Verse:</strong> "Then I will give power to my two witnesses…" — Revelation 11:3
+                </div>
+                
+                <div class="scroll-content">
+                    <div class="scroll-section">
+                        <h4>🔹 Message:</h4>
+                        <ul>
+                            <li>The Haitian flag prophesies Christ’s return and salvation.</li>
+                            <li>The curse is removed by the resurrection power of Jesus’ blood.</li>
+                            <li>Believers are called to intercessory prayer and repentance.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Symbols:</h4>
+                        <ul>
+                            <li>Golden palm tree (Melchizedek, High Priest)</li>
+                            <li>Two witnesses (Jesus and Holy Spirit)</li>
+                            <li>Light breaking darkness</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="scroll-section">
+                        <h4>🔹 Prophetic Insight:</h4>
+                        <ul>
+                            <li>The 144,000 and two witnesses prophesy during the last days.</li>
+                            <li>Eternal light is birthed through faith and obedience.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
-  <footer>
-    <p>&copy; 2025 Gregory Shadt scroll :The Haitian Flag and Biblical Meaning. All Rights Reserved.</p>
-  </footer>
+        
+        <footer class="footer">
+            <p>✨ The Digital Scroll Project continues to unfold ✨</p>
+            <p><em>"Nations will come to your light, and kings to the brightness of your dawn." — Isaiah 60:3</em></p>
+            <p>Authored by Gregory Shadt | Updated: 08:33 PM EAT, Thursday, July 17, 2025</p>
+            <div style="margin-top: 1rem; font-size: 2rem;">🕊️ 🔥 🕎</div>
+        </footer>
+    </div>
+    
+    <script>
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 100;
+            
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Add scroll reveal animation (incomplete in original, completed here)
+        function revealOnScroll() {
+            const scrolls = document.querySelectorAll('.scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            scrolls.forEach(scroll => {
+                scroll.style.opacity = '0';
+                scroll.style.transform = 'translateY(50px)';
+                scroll.style.transition = 'all 0.5s ease';
+                observer.observe(scroll);
+            });
+        }
+        
+        // Initialize on load
+        window.addEventListener('load', () => {
+            createStars();
+            revealOnScroll();
+        });
+    </script>
 </body>
-  </html>
+                      </html>
