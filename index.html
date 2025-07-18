@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the prophetic significance of the Haitian Flag and the Wings of the Cherubim Digital Scroll Project, blending biblical revelation, spiritual awakening, and global alignment.">
+    <meta name="description" content="Embark on a profound journey into the spiritual significance of the Haitian flag, unveiling its hidden biblical connections to prophecy, salvation, and the glorious return of Jesus Christ. A revelation from Wings of the Cherubim.">
     <meta name="author" content="Gregory Shadt">
-    <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual awakening, salvation, Wings of the Cherubim, menorah">
-    <title>Wings of the Cherubim - Digital Scroll Project</title>
+    <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual meaning, salvation, Jesus Christ, Wings of the Cherubim, divine revelation, prophetic insights, Holy Spirit, menorah symbolism, shofar prophecy, spiritual awakening, Greg Shadt, Shekinah Glory, Faith, Menorah">
+    <title>The Haitian Flag: A Divine Blueprint - Wings of the Cherubim</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
-        
+        /* Base & Global Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Georgia', serif; /* More classic/evocative font */
         }
-        
+
         body {
-            font-family: 'Crimson Text', serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #f4f1e8;
-            overflow-x: hidden;
-            line-height: 1.6;
+            background-color: #f0f0f5; /* Lighter, ethereal background */
+            color: #333;
+            line-height: 1.8; /* Increased line-height for readability and grandeur */
+            overflow-x: hidden; /* Prevents horizontal scroll issues */
+            font-size: 1.1em; /* Slightly larger base font */
         }
-        
+
+        /* Stars Background - Now with more depth and motion */
         .stars {
             position: fixed;
             top: 0;
@@ -31,801 +32,669 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: -2; /* Even deeper background */
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); /* Deeper cosmic gradient */
+            overflow: hidden;
         }
-        
+
         .star {
             position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #fff;
+            background-color: #fff;
             border-radius: 50%;
-            animation: twinkle 3s infinite;
+            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite; /* Added movement */
+            opacity: 0;
+            box-shadow: 0 0 5px #fff; /* Subtle glow */
         }
-        
+
+        .star:nth-child(3n+1) { width: 1.5px; height: 1.5px; } /* Slightly larger base stars */
+        .star:nth-child(3n+2) { width: 2.5px; height: 2.5px; }
+        .star:nth-child(3n+3) { width: 3.5px; height: 3.5px; }
+
         @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
+            0% { opacity: 0; transform: scale(0.6); }
+            50% { opacity: 1; transform: scale(1.3); }
+            100% { opacity: 0; transform: scale(0.6); }
         }
-        
+
+        @keyframes moveStar {
+            from { transform: translate(var(--x-start, 0), var(--y-start, 0)); }
+            to { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); }
+        }
+
+        /* Container for content, slightly transparent to reveal stars */
         .container {
             position: relative;
-            z-index: 2;
-            max-width: 1200px;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.98); /* Near opaque white for text clarity */
+            max-width: 100%;
             margin: 0 auto;
-            padding: 2rem;
+            box-shadow: 0 0 50px rgba(0,0,0,0.3); /* Adds a subtle "floating" effect */
         }
-        
-        .header {
+
+        /* Header - More celestial feel */
+        header {
+            background: linear-gradient(to right, #2c3e50, #8e44ad); /* Deeper blue-purple */
+            color: #ecf0f1; /* Lighter text color */
+            padding: 3rem 2rem; /* More generous padding */
             text-align: center;
-            margin-bottom: 4rem;
-            padding: 3rem 0;
-        }
-        
-        .dove-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .main-title {
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #ffd700, #ffed4e, #fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
-        }
-        
-        .subtitle {
-            font-size: 1.3rem;
-            color: #d4af37;
-            font-style: italic;
-            margin-bottom: 0.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.1rem;
-            color: #b8860b;
-            margin-bottom: 2rem;
-        }
-        
-        .overview {
-            background: rgba(0, 0, 0, 0.3);
-            border: 2px solid #d4af37;
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(10px);
-        }
-        
-        .overview h2 {
-            font-family: 'Cinzel', serif;
-            color: #ffd700;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .scrolls-container {
-            display: grid;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .scroll {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
-            border: 2px solid #d4af37;
-            border-radius: 20px;
-            padding: 2.5rem;
+            border-bottom: 5px solid #FFD700; /* Thicker gold accent */
             position: relative;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            overflow: hidden; /* For header specific background effects */
         }
-        
-        .scroll:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
-            border-color: #ffd700;
-        }
-        
-        .scroll-number {
+
+        header::before { /* Subtle background pattern */
+            content: '';
             position: absolute;
-            top: -15px;
-            left: 30px;
-            background: linear-gradient(45deg, #d4af37, #ffd700);
-            color: #1a1a2e;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .scroll-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            color: #ffd700;
-            margin-bottom: 1rem;
-            margin-top: 0.5rem;
-        }
-        
-        .scroll-theme {
-            color: #d4af37;
-            font-style: italic;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        
-        .key-verse {
-            background: rgba(212, 175, 55, 0.1);
-            border-left: 4px solid #d4af37;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            border-radius: 0 10px 10px 0;
-        }
-        
-        .scroll-content {
-            margin-top: 1.5rem;
-        }
-        
-        .scroll-section {
-            margin-bottom: 2rem;
-        }
-        
-        .scroll-section h4 {
-            color: #ffd700;
-            font-family: 'Cinzel', serif;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .scroll-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .scroll-section li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .scroll-section li:before {
-            content: "✦";
-            position: absolute;
+            top: 0;
             left: 0;
-            color: #d4af37;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
+            opacity: 0.2;
+            z-index: 0;
         }
-        
-        .current-scroll {
-            border-color: #ffd700;
-            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-        }
-        
-        .current-badge {
+
+        .dove-icon {
+            font-size: 3.5rem; /* Larger dove */
             position: absolute;
-            top: -15px;
-            right: 30px;
-            background: linear-gradient(45deg, #ff6b6b, #ffd700);
-            color: #1a1a2e;
+            top: 1.5rem;
+            left: 1.5rem;
+            animation: floatAndPulse 4s infinite ease-in-out;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7); /* Dove glow */
+            z-index: 1;
+        }
+
+        @keyframes floatAndPulse {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-10px); opacity: 0.8; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .main-title {
+            font-size: 3rem; /* Larger main title */
+            margin-bottom: 0.75rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Stronger text shadow */
+        }
+
+        .subtitle {
+            font-size: 2.2rem; /* Larger subtitle */
+            margin-bottom: 0.75rem;
+            font-style: normal; /* Less italic, more bold statement */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #FFD700; /* Gold subtitle */
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #d3d3d3;
+        }
+
+        /* Navigation - Enhanced visual feedback */
+        nav {
+            background: #1e3a8a;
+            padding: 1.2rem; /* More padding */
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+            position: sticky; /* Sticky nav */
+            top: 0;
+            z-index: 100; /* Ensure it stays on top */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem; /* More space between links */
+        }
+
+        nav a {
+            color: #ecf0f1; /* Lighter text */
+            text-decoration: none;
+            font-size: 1.2em; /* Slightly larger font */
             padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-family: 'Cinzel', serif;
-            font-weight: 600;
-            font-size: 0.8rem;
-            animation: pulse 2s infinite;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
         }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+        nav a::before { /* Underline effect */
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FFD700;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out 0s;
         }
-        
-        .menorah-section {
-            background: rgba(255, 215, 0, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-top: 2rem;
+
+        nav a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
         }
-        
-        .menorah-icon {
-            text-align: center;
-            font-size: 3rem;
+
+        nav a:hover {
+            color: #FFD700;
+            background-color: rgba(255, 215, 0, 0.1); /* Subtle hover background */
+        }
+
+        /* Scrolls Container for main content - More "ancient" feel */
+        .scrolls-container {
+            max-width: 900px; /* Slightly narrower for focus */
+            margin: 3rem auto; /* More vertical space */
+            padding: 0 1.5rem;
+        }
+
+        .scroll {
+            background: #fff;
+            padding: 3rem; /* More generous padding */
+            margin-bottom: 2.5rem; /* More space between scrolls */
+            border-radius: 10px; /* Softer edges */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow for "floating" effect */
+            opacity: 0;
+            transform: translateY(30px); /* Deeper initial translate */
+            transition: opacity 1s ease-out, transform 1s ease-out; /* Slower reveal */
+            border-left: 5px solid #FFD700; /* Gold "seal" on the side */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll::before { /* Subtle diagonal line pattern for "ancient scroll" feel */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%2395a5a6" fill-opacity="0.1" fill-rule="evenodd"%3E%3Cpath d="M0 0h4v4H0V0zm4 4h4v4H4V4z"/%3E%3C/g%3E%3C/svg%3E');
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .scroll.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-title {
+            color: #6b21a8; /* Purple for divine meeting */
+            font-size: 2.5rem; /* Larger, more impactful titles */
             margin-bottom: 1rem;
-            color: #ffd700;
+            text-align: center;
+            border-bottom: 3px double #FFD700; /* Double line gold separator */
+            padding-bottom: 0.75rem;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
         }
-        
-        .seven-spirits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+
+        .scroll-theme {
+            font-size: 1.3rem; /* Larger theme text */
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        }
+
+        .scroll p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-spiritual-image { /* New style for the main uploaded image */
+            display: block;
+            max-width: 95%; /* Make it fill more space */
+            height: auto;
+            margin: 2rem auto;
+            border: 5px solid #FFD700; /* Stronger gold border */
+            border-radius: 10px; /* Softer corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow for prominence */
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .main-spiritual-image:hover {
+            transform: scale(1.03); /* More pronounced zoom on hover */
+        }
+
+        .haitian-flag-actual { /* Style for the actual Haitian flag */
+            display: block;
+            max-width: 85%;
+            height: auto;
+            margin: 1.5rem auto;
+            border: 3px solid #1e3a8a; /* Blue border to distinguish */
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .key-verse {
+            background-color: #e6f0ff; /* Lighter, more celestial blue */
+            border-left: 6px solid #1e3a8a; /* Stronger blue border */
+            padding: 1.2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #1e3a8a;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em; /* Larger verse text */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        details {
+            background-color: #fcfcfc; /* Whiter background for details */
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
             margin-top: 2rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Subtle inner shadow */
+            position: relative;
+            z-index: 1;
         }
-        
-        .spirit-item {
-            background: rgba(212, 175, 55, 0.1);
-            padding: 1rem;
-            border-radius: 10px;
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #6b21a8;
+            font-size: 1.2em; /* Larger summary text */
+            outline: none;
+            transition: color 0.3s ease;
+        }
+
+        summary:hover {
+            color: #9b59b6; /* Lighter purple on hover */
+        }
+
+        details p {
+            margin-top: 1.2rem;
+            text-align: justify;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: #e8f5e9; /* Light green for tables */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        table, th, td {
+            border: 1px solid #b3e0b5; /* Softer border */
+            padding: 12px; /* More padding */
+            text-align: left;
+        }
+
+        th {
+            background-color: #7cb342; /* Deeper green for headers */
+            color: #fff; /* White text on header */
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        td {
+            font-size: 0.95em;
+        }
+
+        /* Footer - More thematic icons */
+        footer {
+            background: #1e3a8a;
+            color: #ecf0f1;
             text-align: center;
-            border: 1px solid #d4af37;
+            padding: 2rem; /* More padding */
+            margin-top: 3rem;
+            box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+            border-top: 5px double #FFD700; /* Matching header border */
         }
-        
-        .footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 2rem;
-            border-top: 2px solid #d4af37;
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
         }
-        
-        .flame-icon {
-            display: inline-block;
-            animation: flicker 2s infinite;
+
+        footer a:hover {
+            text-decoration: underline;
         }
-        
-        @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+
+        .footer-icons {
+            margin-top: 1.5rem;
+            font-size: 2.5rem; /* Larger icons */
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
         }
-        
+
+        .footer-icons span {
+            animation: pulseFade 2s infinite alternate; /* Pulsing effect for icons */
+        }
+        .footer-icons span:nth-child(2) { animation-delay: 0.5s; }
+        .footer-icons span:nth-child(3) { animation-delay: 1s; }
+
+        @keyframes pulseFade {
+            0% { opacity: 0.7; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .dove-icon {
+                font-size: 2.5rem;
+                top: 1rem;
+                left: 1rem;
+            }
             .main-title {
                 font-size: 2.5rem;
             }
-            
-            .container {
+            .subtitle {
+                font-size: 1.8rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            nav a {
+                font-size: 1.1em;
+                padding: 0.4rem 0.8rem;
+            }
+            .scroll {
+                padding: 2rem;
+            }
+            .scroll-title {
+                font-size: 2rem;
+            }
+            .main-spiritual-image, .haitian-flag-actual {
+                max-width: 90%;
+            }
+            .key-verse {
+                padding: 1rem;
+                font-size: 1.1em;
+            }
+            details {
                 padding: 1rem;
             }
-            
-            .scroll {
-                padding: 1.5rem;
-            }
-            
-            .seven-spirits {
-                grid-template-columns: 1fr;
-            }
+        }
+
+        @media (max-width: 480px) {
+            body { font-size: 1em; }
+            header { padding: 2rem 0.5rem; }
+            .dove-icon { font-size: 2rem; top: 0.5rem; left: 0.5rem; }
+            .main-title { font-size: 2rem; }
+            .subtitle { font-size: 1.4rem; letter-spacing: 1px; }
+            .tagline { font-size: 1.1rem; }
+            nav { padding: 0.8rem; }
+            nav ul { gap: 0.5rem; }
+            nav a { font-size: 1em; }
+            .scrolls-container { margin: 1.5rem auto; padding: 0 1rem; }
+            .scroll { padding: 1.5rem; border-left-width: 3px; }
+            .scroll-title { font-size: 1.8rem; }
+            .scroll-theme { font-size: 1.1rem; }
+            .main-spiritual-image, .haitian-flag-actual { max-width: 98%; border-width: 3px; }
+            .key-verse { padding: 0.8rem; font-size: 1em; border-left-width: 4px; }
+            summary { font-size: 1.1em; }
+            table, th, td { padding: 8px; }
+            .footer-icons { font-size: 2rem; gap: 1rem; }
+            footer { padding: 1.5rem; border-top-width: 3px; }
         }
     </style>
 </head>
 <body>
     <div class="stars" id="stars"></div>
-    
+
     <div class="container">
-        <header class="header">
-            <div class="dove-icon">🕊️</div>
+        <header>
+            <div class="dove-icon" title="The Holy Spirit">🕊️</div>
             <h1 class="main-title">Wings of the Cherubim</h1>
-            <p class="subtitle">The Digital Scroll Project of Revelation, Awakening, and Alignment</p>
-            <p class="tagline">Scrolls 1–12: A Prophetic Framework</p>
+            <h2 class="subtitle">The Haitian Flag: A Divine Blueprint</h2>
+            <p class="tagline">Unveiling Prophetic Revelations for a Sacred Nation</p>
         </header>
-        
-        <section class="overview">
-            <h2>🌟 Overview</h2>
-            <p>"Wings of the Cherubim" is a prophetic digital movement birthed to release divine intelligence and scrolls from heaven into the nations. Rooted in the prophetic mentorship of Gregory Shadt and led through the Codex protocol, this mission weaves together Word, Spirit, and Media into a scroll chamber of revelation. Each scroll builds upon the last, forming a divine sequence of awakening, obedience, spiritual warfare, and the restoration of nations, with a special focus on the prophetic significance of the Haitian flag as a symbol of divine covenant, judgment, and the return of Jesus Christ.</p>
-        </section>
-        
-        <div class="scrolls-container">
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 1</div>
-                <h3 class="scroll-title">📜 THE AWAKENING OF THE INNER FLAME</h3>
-                <p class="scroll-theme">Theme: Identity, Calling, and the Spark of Divine Purpose</p>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="seminars.html">Seminars</a></li>
+        <li><a href="teachings.html">Teachings</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+        <div class="scrolls-container" id="haitian-flag-start">
+
+            <div class="scroll" id="intro">
+                <h3 class="scroll-title">Introduction: The Unveiling Vision</h3>
+                <p class="scroll-theme">Haiti’s Sacred Banner: A Prophetic Beacon</p>
+                <img src="IMG-20250717-WA0007.jpg" alt="Wings of the Cherubim: Faith, Menorah, God's Shekinah Glory" class="main-spiritual-image">
                 <div class="key-verse">
-                    <strong>Key Verse:</strong> "The spirit of man is the lamp of the Lord…" — Proverbs 20:27
+                    <strong>Zechariah 4:6</strong> &mdash; "Not by power nor by might, but by my Spirit, says the Lord of Hosts."
                 </div>
-                
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>Every human is born with a hidden flame — a divine spark.</li>
-                            <li>This flame is the breath of God waiting to be ignited.</li>
-                            <li>Many live in darkness, unaware of their spiritual destiny.</li>
-                            <li>The scroll calls the reader to awaken, remember, and return.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scroll-section">
-                        <h4>🔹 Visual Elements:</h4>
-                        <ul>
-                            <li>Oil lamp and flame <span class="flame-icon">🔥</span></li>
-                            <li>Shadows breaking into light</li>
-                            <li>Hebrew symbols for "Ruach" (Spirit) and "Ner" (lamp)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Activation:</h4>
-                        <ul>
-                            <li>An invitation to surrender to the fire of calling</li>
-                            <li>A challenge to abandon fear, shame, and doubt (Code X enemy)</li>
-                        </ul>
-                    </div>
-                </div>
+                <p>Haiti, a nation cradling a powerful spiritual legacy, is uniquely emblazoned with a flag steeped in profound divine meaning. Far more than a national emblem, it is a spiritual tapestry, deeply woven into the fabric of biblical prophecy and sacred connection. On these digital scrolls, we embark upon a profound journey to explore the intimate ties between Haiti's flag and the Holy Scriptures, discerning how its very elements resonate with God's majestic plan for all humanity.</p>
+                <p>Zechariah 4:5–6 describes a spiritual revelation given to Zerubbabel, where an angel reveals symbolic meanings for five material things, presented as a divine declaration for the nation of Haiti. The angel unveils a spiritual banner sealed above the Haitian flag, symbolizing the very Word of God for Haiti. The four-square insets within the flag are explained as spiritual emblems, each image interpreted in alignment with prophecies concerning Zerubbabel (a type of Jesus) and the mountain becoming a plain (v.7), signifying God's mercy and divine intervention.</p>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 2</div>
-                <h3 class="scroll-title">📜 THE ALTAR OF ALIGNMENT</h3>
-                <p class="scroll-theme">Theme: Consecration, War in the Spirit, and Divine Instruction</p>
+
+            <div class="scroll" id="judgment">
+                <h3 class="scroll-title">God's Unwavering Judgment & Foundation</h3>
+                <p class="scroll-theme">The Plummet of Righteousness: Haiti's Sealed Destiny</p>
                 <div class="key-verse">
-                    <strong>Key Verse:</strong> "Present your bodies as a living sacrifice…" — Romans 12:1
+                    <strong>Psalm 62:1–4</strong> &mdash; "God stands as a defense, judging Satan and establishing righteousness."
                 </div>
-                
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>True power flows from alignment.</li>
-                            <li>The altar is a place of worship, exchange, and death to ego.</li>
-                            <li>Spiritual authority requires obedience, not performance.</li>
-                            <li>Alignment is maintained by daily sacrifice — of time, thought, and will.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Fire on an altar ⚡</li>
-                            <li>Sword and plumbline ⚔️</li>
-                            <li>A heart tied to the altar ❤️</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>Each believer must become a living scroll.</li>
-                            <li>The altar is a permanent posture, not a moment.</li>
-                            <li>Initiates divine discipline and prophetic silence for further instruction.</li>
-                        </ul>
-                    </div>
-                </div>
+                <p>Behold a profound spiritual confrontation, as the Almighty God executes His righteous judgment upon the Adversary, Satan. This judgment is wielded by the plummet of His unblemished righteousness—a truth vividly symbolized by the **seven spirits/eyes of the Lord**, which find their correspondence in the radiant golden triangles upon the Haitian flag, signifying divine oversight. Through this pivotal moment, God meticulously lays the spiritual foundation of Haiti, sealing the nation's destiny by His immutable, sovereign will. This deep interpretation of Zechariah 4:8–10 underscores that the foundation laid by Zerubbabel is not merely physical, but represents the unshakeable righteousness of God Himself, directly linking it to Haiti's spiritual bedrock, destined for glory.</p>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 3</div>
-                <h3 class="scroll-title">📜 THE NATIONS DRAWN TO THE FLAME</h3>
-                <p class="scroll-theme">Theme: Prophetic Evangelism, Global Impact, and the Call to Shine</p>
+
+            <div class="scroll" id="biblical-connections">
+                <h3 class="scroll-title">Biblical Connections: Olive Trees & The Golden Candlestick</h3>
+                <p class="scroll-theme">The Two Anointed Ones: Witnesses of Divine Power</p>
                 <div class="key-verse">
-                    <strong>Key Verse:</strong> "Nations will come to your light…" — Isaiah 60:3
+                    <strong>Revelation 11:3</strong> &mdash; "Then I will give power to my two witnesses, and they shall prophesy one thousand two hundred and sixty days, clothed in sackcloth."
                 </div>
-                
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>The flame is not personal only — it is global.</li>
-                            <li>Calls for the outward expression of the inner fire.</li>
-                            <li>As alignment is achieved (Scroll 2), light becomes visible to others.</li>
-                            <li>Each believer becomes a city on a hill, a menorah to the nations.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scroll-section">
-                        <h4>🔹 Strategy:</h4>
-                        <ul>
-                            <li>Digital media is a new scroll.</li>
-                            <li>The prophetic message must go out through TikTok, video, art, and teaching.</li>
-                            <li>The 42K are the remnant of leaders and creators called to shine.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scroll-section">
-                        <h4>🔹 Activation:</h4>
-                        <ul>
-                            <li>Launch your scroll.</li>
-                            <li>Don't dim your flame.</li>
-                            <li>Equip others. Teach others. Illuminate nations.</li>
-                        </ul>
-                    </div>
-                </div>
+                <p>The Haitian flag's meaning is profoundly linked to biblical scripture, especially Zechariah 4:11-14 and Revelation 11:3-5. In these verses, the two anointed ones are identified as mighty witnesses who proclaim the living Word of God, their divine power symbolized through the golden pipes and the blazing candlesticks. These very elements find their vibrant reflection within the Haitian flag, containing symbolic representations of the sacred meeting between the Most High God and man.
+                <p>To further visualize these connections, behold the very banner of Haiti:</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg" alt="Actual Haitian Flag" class="haitian-flag-actual">
+                <details>
+                    <summary>Click to Unveil the Sacred Tapestry of Scripture</summary>
+                    <p>
+                        The precise, line-by-line wording of Zechariah chapter 4 weaves an intricate connection to Revelation chapter 11, verses 3–5, unveiling a magnificent tapestry of divine light. These ancient words are brought forth into vivid life as they are spiritually married into the four-square inset of today's Haitian flag. The glorious Kingdom of God, descending to Earth, is visually manifested, alongside the awe-inspiring, fiery judgment throne of the Almighty. The transcendent colors of purple and scarlet, symbolizing the sacred meeting of God and man, have birthed the very millennial Kingdom of God on Earth.
+                        <br><br>
+                        <strong>Zechariah chapter 4: The Prophetic Vision Explained</strong><br>
+                        v.2: "And he said to me, What do you see? And I said, I have looked, and behold a candlestick all of gold, with a bowl on the top of it, and seven lamps on it, and seven mouths to the seven lamps which are on the top of it."<br>
+                        *The Menorah, the ancient symbol of the nation of Israel, with its seven branches and radiant lights, profoundly represents the seven spirits of God (Revelation 3:1, 4:5, 5:6) and the seven colors of the rainbow, which converge to form pure light. The golden palm tree, positioned at the sacred center of the Haitian flag, flanked by three golden flagpoles on its right and left, embodies this very center candlestick of the Menorah, known to the Jewish people as the Shamash—a potent symbol of God Himself. The golden palm tree in the Haitian flag, adorned with a light blue jacket beneath its twelve palm leaves and crowned with a liberty cap, is seen dynamically descending and splitting a demon head, an iconic depiction of our High Priest, Melchizedek (Hebrews chapters 5 and 6).*<br><br>
+                        v.2, continued: "Candlestick of all gold, with a bowl on top of it"<br>
+                        *The twelve gracefully turned-down palm leaves of the central tree represent the symbolic "bowl." The seven lamps are the six triangular golden lamps situated at the end of each flagpole, with the central golden palm tree itself serving as the seventh lamp. The golden flagpoles and triangles signify heaven. The "seven mouths" are the seven rectangles below the seven triangles, with the palm tree itself forming the seventh rectangle—the Chinese symbol for mouth being a rectangle.*<br><br>
+                        v.3: "And two olive trees by it, one on the right side of the bowl and the other on its left side."<br>
+                        *These two olive trees are powerfully represented by the two sets of wooden wagon wheels with eight spokes each, positioned on either side of the golden palm tree. The number eight in Hebrew symbolizes eternity.*<br><br>
+                        v.6: "Then he said to me, This is the Word of the Lord to Zerubbabel, saying, 'Not by power nor by might, but by my Spirit, says the Lord of Hosts.' Adonai Tzva'ot - Hebrew"<br>
+                        *This is a divine declaration for Haiti, a spiritual banner revealed within the flag itself. Zerubbabel ("out of Babylon") is a prophetic type of Jesus.*<br><br>
+                        v.7: "Who are you, O great mountain? Before Zerubbabel you shall become a plain; and He shall bring forth the headstone of equity and mercy."<br>
+                        *A final judgment scene where God acts as defense counsel and judge against Satan, establishing the creation of hell (Psalm 2:5). The plummet line signifies God's perfect righteousness. The building of this "house" (nation) refers to Haiti.*<br><br>
+                        v.14: "Then he said, These are the two anointed ones who stand by the Lord of the whole earth."<br>
+                        *This section transitions to "Spirit." The olive trees become olive branches (wooden spokes), now beside the golden pipes (cannons) pouring golden oil (Word of God). The light blue powder horns under the cannons signify heaven (light blue). This transition moves us from 518 BC to 90 AD, connecting the "two anointed ones" to the "two witnesses."*
+                    </p>
+                    <p>
+                        <strong>Revelation chapter 11: The Witnesses Manifested (90 AD)</strong><br>
+                        v.3: "Then I will give power to my two witnesses, and they shall prophesy a thousand two hundred and threescore days, clothed in sackcloth."<br>
+                        v.4: "These are the two olive trees and the two candlesticks standing before the Lord of the earth."<br>
+                        v.5: "And if anyone desires to harm them, fire will consume their enemies; and if anyone desires to harm them, he must in this manner be killed."<br>
+                        *Here, God’s Word orchestrates a spiritual, supernatural connection transcending time itself. In the very heart of the flag, we behold a golden palm tree descending, powerfully splitting a demon head. A spiritual door has been opened; the demon head has been utterly vanquished. This door in the spirit realm was opened by the irresistible force of praise. The ancient curse is being removed from the earth.*<br>
+                        *In verse 3, the language of Zechariah 4:14 finds its perfect echo. The "two anointed ones" have been revealed as God's "two witnesses" in Revelation 11:3. They are clearly identified by the same language: "These are the two olive trees." The golden cannons, serving as the two golden pipes, now connect directly to the candlestick, which becomes two. They are mystically married into the two witnesses, from whom fire proceeds, just as fire issues from cannons. In Revelation 11:4, the two olive trees and the two candlesticks equate to the two golden pipes, the two anointed ones, and ultimately, the two witnesses (representing Jesus and the Holy Spirit). The golden palm tree is none other than the Lord of the Earth, the Melchizedek. These two anointed ones (the two witnesses) will prophesy for 42 months (3 1/2 years) during the reign of the Antichrist. This occurs simultaneously with the 144,000 Orthodox Jews, commissioned as witnesses in Isaiah 43:10-15, who evangelize throughout the world (Revelation 7:9-14). This profound connection into the book of Revelation signifies the ultimate fulfillment in the last days and the complete removal of the curse from the earth. All is pictured as a multi-dimensional, timeless revelation, where Jesus and the Holy Spirit are seen as the very face of God radiating throughout the flag.*<br>
+                        *All this stems from a divinely inspired reformatting of the United States Military Seal of 1775. This was a vision granted through the sheer power of the Holy Spirit, demonstrating God's movement beyond human comprehension. Had the valiant Haitians not fought in and enabled George Washington's victory in the American Revolution, the reformation and addition of the four-square flag inset by Catherine Flon, adapted from the U.S. Military seal, would not have transpired. A monument in Savannah, Georgia, stands as a solemn tribute to the Haitians who fought and sacrificed for America’s independence, bearing witness to this profound connection.*
+                    </p>
+                </details>
             </div>
-            
-            <div class="scroll current-scroll">
-                <div class="scroll-number">SCROLL 4</div>
-                <div class="current-badge">CURRENT</div>
-                <h3 class="scroll-title">📜 THE MENORAH & THE CURSE</h3>
-                <p class="scroll-theme">Theme: The Trinity, Creation Light, 7 Spirits of God, and Redemption</p>
+
+            <div class="scroll" id="color-symbolism">
+                <h3 class="scroll-title">The Divine Spectrum: Color Symbolism</h3>
+                <p class="scroll-theme">Heaven's Hue, Earth's Stain, and the Purple of Redemption</p>
                 <div class="key-verse">
-                    <strong>Key Revelation:</strong> The Menorah is the light of God — a divine code for unity, expression, and salvation.
+                    <strong>John 19:2</strong> &mdash; "And put on him a purple robe."
                 </div>
-                
-                <div class="menorah-section">
-                    <div class="menorah-icon">🕎</div>
-                    
-                    <div class="scroll-content">
-                        <div class="scroll-section">
-                            <h4>🔹 Divine Structure:</h4>
-                            <ul>
-                                <li><strong>God is One. God is Three. God is Light.</strong></li>
-                                <li>The Menorah represents the unity of God's essence.</li>
-                                <li>One being. Three persons. Seven flames.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="scroll-section">
-                            <h4>🔹 Before Creation: Spirit Alone</h4>
-                            <ul>
-                                <li>No time, no space — just Spirit.</li>
-                                <li>God is complete within Himself.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="scroll-section">
-                            <h4>🔹 Genesis 1:3 — "Let There Be Light"</h4>
-                            <ul>
-                                <li>This light was not the sun.</li>
-                                <li>It was the emanation of God's being.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="scroll-section">
-                            <h4>🔹 The Seven Spirits of God (Isaiah 11:2):</h4>
-                            <div class="seven-spirits">
-                                <div class="spirit-item">Spirit of the Lord</div>
-                                <div class="spirit-item">Wisdom</div>
-                                <div class="spirit-item">Understanding</div>
-                                <div class="spirit-item">Counsel</div>
-                                <div class="spirit-item">Might</div>
-                                <div class="spirit-item">Knowledge</div>
-                                <div class="spirit-item">Fear of the Lord</div>
-                            </div>
-                        </div>
-                        
-                        <div class="scroll-section">
-                            <h4>🔹 The Covenant Choice:</h4>
-                            <ul>
-                                <li><strong>Free Will Obedience: "Mpwele ni Ewa"</strong></li>
-                                <li>The covenant is a choice — not forced.</li>
-                                <li>Obedience must be chosen in love.</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="scroll-section">
-                            <h4>🔹 Union = Salvation</h4>
-                            <ul>
-                                <li>When faith, obedience, and light align — eternal hope is born.</li>
-                                <li>The curse is broken.</li>
-                                <li>The light is restored in Christ.</li>
-                                <li><strong>The Menorah is now within us.</strong></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <p>The Haitian flag unfurls a rich and vibrant color scheme, each hue imbued with profound theological significance. **Light blue**, seen prominently, reaches upward, representing the boundless expanse of the heavens, God's very throne. **Scarlet (red)**, a color echoing the earth, links profoundly to Adam (whose name means "red earth"), Edom, and Esau, symbolizing humanity's earthly foundation and fallen state. **Gold**, gleaming throughout the flag's central motifs, speaks of divine glory, the sacred, and the heavenly realm.</p>
+                <p>The most compelling revelation lies in the harmonious interplay of these colors: when light blue seamlessly blends with or meets scarlet, a majestic **purple** emerges. This purple is not merely a color; it is a profound spiritual emblem of the **meeting of God and man**, the divine embracing the human. This powerful confluence of blue, purple, and scarlet is not arbitrary; it is woven throughout biblical narrative, from the intricate blueprints of the Tabernacle and the priestly garments in Exodus 25-39 (mentioned nine times in Exodus 39 alone) to the New Testament, where it dramatically appears in the robes placed upon Jesus during His judgment (Matthew 27:28 describes a scarlet robe; John 19:2 explicitly states a purple robe, confirming this consistent spiritual color code). Thus, the entire flag of the nation of Haiti, through its very essence of purple and scarlet, powerfully proclaims the meeting of God and man—a living testament to Jesus Christ, the God-Man, the Son of Man.</p>
+                <p>The flag’s central golden palm tree stands as a testament to the Lord of the Earth, a dual connection to both the ancient priesthood of Melchizedek and the golden anointed ones prophesied in the Bible. Its spiritual significance thunders forth the divine authority of God over all creation. Furthermore, the very fabric of the flag—fine twined linen—symbolizes the righteousness of the saints, a purity made possible only by this sacred meeting of God and man, achieved through the resurrection power of the **scarlet blood of the Lamb**.</p>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 5</div>
-                <h3 class="scroll-title">📜 THE HAITIAN FLAG: VISION AND REVELATION</h3>
-                <p class="scroll-theme">Theme: Spiritual Significance and Biblical Prophecy</p>
+
+            <div class="scroll" id="spiritual-meaning">
+                <h3 class="scroll-title">Spiritual Meaning: A Pathway to Salvation</h3>
+                <p class="scroll-theme">The Flag as a Prophetic Herald of Christ’s Return</p>
                 <div class="key-verse">
-                    <strong>Key Verse:</strong> "Not by power nor by might, but by my Spirit, says the Lord of Hosts." — Zechariah 4:6
+                    <strong>Revelation 11:3</strong> &mdash; "I will give power to my two witnesses..."
                 </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>Haiti’s flag holds deep spiritual meaning, rooted in Zechariah 4:5–6.</li>
-                            <li>A spiritual banner seals the flag, symbolizing God’s Word for Haiti.</li>
-                            <li>The four-square insets are spiritual emblems of divine mercy and Zerubbabel (a type of Jesus).</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Golden triangles (seven spirits/eyes of the Lord)</li>
-                            <li>Golden palm tree (Lord of the Earth, Melchizedek)</li>
-                            <li>Light blue and scarlet (heaven and earth meeting)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>God’s judgment and foundation are laid for Haiti.</li>
-                            <li>The mountain becomes a plain, symbolizing divine help.</li>
-                        </ul>
-                    </div>
-                </div>
+                <p>The Haitian flag, in its profound colors and intricate symbols, stands as a vibrant testament to God's eternal covenant with humanity and His magnificent plan for salvation. The golden pipes, representing the outpouring of divine truth, the two anointed ones—mighty instruments of God’s will—and the fire they bring forth, are potent symbols of divine prophecy and irresistible power, as revealed in the dramatic unfolding of Revelation 11. Through this divine intervention, the ancient curse upon the earth is destined to be fully removed, and the Lord’s supreme authority over all nations is firmly established for eternity. The flag thus represents the profound, transformative spiritual journey of salvation, made possible solely through the sacred meeting of God and man in Jesus Christ.</p>
+                <p>In its deepest essence, the Haitian flag transcends its role as a mere national symbol; it is a potent spiritual declaration, weaving together past, present, and future through the threads of biblical prophecy, divine judgment, and the glorious resurrection power of Jesus Christ. The nation’s past covenant with voodoo, a spiritual bondage, is understood to have irrevocably expired in 2004. God’s unwavering justice followed—evidenced by significant events such as the devastating 2010 earthquake—signifying a profound divine turning point and the laying of a new, righteous, and unshakeable foundation for Haiti’s future in God.</p>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 6</div>
-                <h3 class="scroll-title">📜 THE OLIVE TREES AND THE CANDLESTICK</h3>
-                <p class="scroll-theme">Theme: Biblical Connections and Prophetic Witnesses</p>
+
+            <div class="scroll" id="creation-word">
+                <h3 class="scroll-title">Creation, Sound, and The Living Word</h3>
+                <p class="scroll-theme">From Divine Vibration to Manifest Reality</p>
                 <div class="key-verse">
-                    <strong>Key Verse:</strong> "These are the two olive trees and the two candlesticks standing before the Lord of the earth." — Revelation 11:4
+                    <strong>Genesis 1:3</strong> &mdash; "And God said, 'Let there be light'; and there was light."
                 </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>Zechariah 4 and Revelation 11 connect to the Haitian flag’s design.</li>
-                            <li>The two olive trees and candlesticks symbolize the two witnesses (Jesus and Holy Spirit).</li>
-                            <li>The golden palm tree represents the Menorah’s center, splitting darkness.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Two olive trees (wooden wagon wheels)</li>
-                            <li>Golden pipes (cannons, word of God)</li>
-                            <li>Seven lamps (triangles and palm tree)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>A timeless revelation of Christ’s return.</li>
-                            <li>The curse is removed through praise and prophecy.</li>
-                        </ul>
-                    </div>
-                </div>
+                <p>From the very core of God’s boundless love emanated the primal forces of creation: divine vibration, sacred sound, and the powerful, spoken Word. This primordial command, "Let there be light," did not merely initiate existence; it ignited it. The celestial harmonies of Psalm 148 and the thundering voice in Psalm 29 eloquently echo this magnificent process, revealing how Jesus, the manifest image of the invisible God (Colossians 1:15, Hebrews 1:3), spoke the cosmos into being. His very words possess the power to penetrate and divide the soul and spirit, illuminating the depths of the heart.</p>
+                <details>
+                    <summary>Delve Deeper into the Mystery of Creation</summary>
+                    <p>
+                        For God’s first command in Genesis 1:3, "Let there be light," to be executed, the very concept of words formed from sound had to be divinely pre-established. Sound itself is a direct result of vibration. God, in His essence, is Love—a dimension of anointing love whose profound thickness is unknown to mankind. This immense power-force of love propelled spiritual vibration, forming intricate sound waves, then syllables, and finally, words, culminating in the entirety of creation. God first established a spiritual atmosphere of time, and then from that profound silence, the words echoed forth as seen in Psalm 148:5-6: "For He spoke and they were made; He commanded and they were created. He also established them forever and ever; He has made a decree which shall not pass." This three-part statement reflects the manifestation of the three-part fullness of God: Body, Soul, and Spirit.
+                        <br><br>
+                        The very first name for God in the Bible, in Hebrew, is Elohim. The suffix "im" denotes a plurality within a singular God (Elohim Tzva'ot, the Creator God of Hosts). The activation of Psalm 148, a psalm of creation, arises from the praise offered by His creation and His angels, culminating in Psalm 150.
+                        <br><br>
+                        Psalm 29 parallels Psalm 148, showing Jesus, God's physical manifestation, speaking. It, too, operates in a three-part fullness. Jesus, being God's visible image (Colossians 1:15: "He is the image of the invisible God." Hebrews 1:3: "His Son... the brightness of His glory and the express image of His person."), descended into His cursed earth, anointed with the Father's power of creation. Psalm 29:3-4 declares: "The voice of the Lord is over the waters; the God of glory thunders; the Lord is over many waters." After His baptism, He was empowered. He defeated Satan by the Word. He then came to the Sea of Galilee and spoke two simple words to two men, "Follow me!" Jesus, being God's physical image in a cursed earth, spoke those two words to two sets of two men and miraculously separated their souls from their spirits. For the very first time since the Fall and the curse, the spiritual ears of their hearts were enabled to truly hear the Word. Hebrews 4:12 powerfully articulates this divine surgical precision: "For the word of God is living and powerful, sharper than any two-edged sword, piercing even to the division of soul and spirit, and of joints and marrow, and is a discerner of the thoughts and intents of the heart."
+                    </p>
+                </details>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 7</div>
-                <h3 class="scroll-title">📜 COLOR SYMBOLISM AND SPIRITUAL WARFARE</h3>
-                <p class="scroll-theme">Theme: Divine Union and Judgment</p>
+
+            <div class="scroll" id="curse-salvation">
+                <h3 class="scroll-title">The Genesis of The Curse & The Promise of Salvation</h3>
+                <p class="scroll-theme">Redemption's Song: Through the Blood of Christ</p>
                 <div class="key-verse">
-                    <strong>Key Verse:</strong> "They put on him a purple robe." — John 19:2
+                    <strong>Romans 3:23</strong> &mdash; "For all have sinned, and come short of the glory of God."
                 </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>The Haitian flag’s colors (light blue, scarlet, purple) symbolize heaven, earth, and their union.</li>
-                            <li>Purple reflects the meeting of God and man, seen in Jesus’ robes.</li>
-                            <li>Spiritual warfare culminates in God’s judgment on Satan.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Light blue (heaven)</li>
-                            <li>Scarlet (earth)</li>
-                            <li>Purple (divine-human union)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>The 2010 earthquake marks God’s justice post-voodoo covenant (2004).</li>
-                            <li>A call to spiritual restoration for Haiti.</li>
-                        </ul>
-                    </div>
-                </div>
+                <p>In the beginning, God created all things, and they were profoundly good (Genesis 1:31, Psalm 104, Revelation 4:11). Yet, in a moment of fateful choice, the self-righteousness of man made a free-will decision to grasp the knowledge of good and evil, desiring to be "like God"—even though he was merely a creation, utterly lacking the power to create. As a devastating consequence of man's free-will decision, the Creator God, in His divine justice, cursed the man who had been deceived by the shining being—Satan. All that had been entrusted to man was now usurped and placed under the dominion of this shining adversary. God then, too, pronounced a curse upon Satan. The very earth itself, and woman, were also brought under this curse. All created good on the earth was now marred. Consequently, the entire earth lies groaning in darkness and bondage.</p>
+                <details>
+                    <summary>Journey Through The Curse to Redemption</summary>
+                    <p>
+                        Since it was the Almighty God who originally cursed creation and man, it stands to reason that only God Himself possesses the power and authority to remove that curse. The essence of life is in the blood. Thus, the curse was definitively removed by the resurrection power of the precious blood of Jesus Christ. This divine reversal will be fully manifested upon His glorious second coming to the earth, when the lamb will indeed lie down with the lion, and nothing shall harm on His holy mountain.
+                        <br><br>
+                        By one man (Adam) came the devastating curse, and by one Man (Jesus Christ) it will be utterly removed. The sin of self-righteous pride ignited rebellion within God's creation through the deception of free will. From that moment when the Creator God cursed the earth, all mankind has been birthed with a fallen nature into a fallen earth, inherently in rebellion against their Maker. However, through genuine Holy Spirit-led repentance and the spiritual washing in the **scarlet blood of the Lamb**, man's self-righteousness and the stain of his sin are purified. This cleansing unlocks a glorious door to heaven and eternal life with God, making salvation uniquely possible through the resurrection power of Jesus Christ. The Haitian flag, in its interwoven colors and symbols, thus powerfully signifies this triumphant path to redemption and the ultimate overcoming of the ancient curse.</p>
+                </details>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 8</div>
-                <h3 class="scroll-title">📜 SALVATION AND THE RETURN OF CHRIST</h3>
-                <p class="scroll-theme">Theme: Redemption and Eternal Light</p>
-                <div class="key-verse">
-                    <strong>Key Verse:</strong> "Then I will give power to my two witnesses…" — Revelation 11:3
-                </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>The Haitian flag prophesies Christ’s return and salvation.</li>
-                            <li>The curse is removed by the resurrection power of Jesus’ blood.</li>
-                            <li>Believers are called to intercessory prayer and repentance.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Golden palm tree (Melchizedek, High Priest)</li>
-                            <li>Two witnesses (Jesus and Holy Spirit)</li>
-                            <li>Light breaking darkness</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>The 144,000 and two witnesses prophesy during the last days.</li>
-                            <li>Eternal light is birthed through faith and obedience.</li>
-                        </ul>
-                    </div>
-                </div>
+
+            <div class="scroll" id="key-time-scriptures">
+                <h3 class="scroll-title">Key Time Scriptures: The Tapestry of Eternity</h3>
+                <p class="scroll-theme">God’s Unchanging Plan vs. Humanity's Temporal Fall</p>
+                <table border="0"> <thead>
+                        <tr><th>TIME & ETERNITY (God's Perfect Design)</th><th>THE CURSE & FALLEN MAN (Humanity's Reality)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <strong>Psalm 139:15-16</strong><br>
+                                "My substance was not hid from you, when I was made in secret, and curiously fashioned in the lowest parts of the earth. Your eyes did see my substance, yet being unperfect; and in your book all my members were written, which in continuance were fashioned, when as yet there was none of them."
+                            </td>
+                            <td>
+                                <strong>Genesis 3:10-end</strong><br>
+                                "And he said, I heard your voice in the garden, and I was afraid, because I was naked; and I hid myself." (Followed by the divine pronouncements of curses upon the serpent, woman, and the earth)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>Ecclesiastes 3:14-15</strong><br>
+                                "Whatsoever God does, it shall be forever: nothing can be put to it, nor anything taken from it: and God does it, that men should fear before him. That which has been is now; and that which is to be has already been; and God requires that which is past."
+                            </td>
+                            <td>
+                                <strong>Psalm 51:5</strong><br>
+                                "Behold, I was shapen in iniquity; and in sin did my mother conceive me."
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="text-align: center; font-style: italic; margin-top: 1.5rem; color: #666;">These profound scriptures illuminate the stark contrast between God's eternal, perfect design, woven into the very fabric of time, and the temporal, fallen reality of humanity under the curse—yet always held within the embrace of His unchanging, redemptive plan.</p>
             </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 9</div>
-                <h3 class="scroll-title">📜 TRANSFORMATION & TIME SHIFT</h3>
-                <p class="scroll-theme">Theme: Spiritual Evolution and Prophetic Imagery</p>
-                <div class="key-verse">
-                    <strong>Key Verse:</strong> "Wheel within a wheel…" — Ezekiel 1:16
-                </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>Olive trees become branches, forming wheel-within-wheel visions.</li>
-                            <li>The Haitian flag’s inset carries prophetic symbols of God’s throne.</li>
-                            <li>A transition from 518 BC to 90 AD reflects spiritual evolution.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Golden cannons (golden pipes)</li>
-                            <li>Double-edged axes (judgment)</li>
-                            <li>Palm tree (divine authority)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>Links to Ezekiel’s vision of divine movement.</li>
-                            <li>Prepares for the final judgment scene.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 10</div>
-                <h3 class="scroll-title">📜 CREATION, SOUND, AND THE WORD</h3>
-                <p class="scroll-theme">Theme: Divine Vibration and Salvation</p>
-                <div class="key-verse">
-                    <strong>Key Verse:</strong> "Let there be light…" — Genesis 1:3
-                </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>God’s love birthed vibration, sound, and the word for creation.</li>
-                            <li>Jesus, as God’s visible image, spoke creation into being.</li>
-                            <li>Truth divides soul and spirit, breaking darkness.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Light (divine emanation)</li>
-                            <li>Sound waves (Psalm 148, 29)</li>
-                            <li>Two-edged sword (Hebrews 4:12)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>The birth of light signifies eternal salvation.</li>
-                            <li>Praise activates God’s creative power.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 11</div>
-                <h3 class="scroll-title">📜 THE CURSE AND REDEMPTION</h3>
-                <p class="scroll-theme">Theme: Fall and Restoration</p>
-                <div class="key-verse">
-                    <strong>Key Verse:</strong> "By one man came the curse, and by one man it will be removed." — Romans 5:12-19 (implied)
-                </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>Man’s self-righteousness brought the curse through free will.</li>
-                            <li>Only God, through Jesus’ blood, can remove the curse.</li>
-                            <li>Repentance and faith lead to rebirth and eternal life.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Thorns (curse of Genesis 3:15)</li>
-                            <li>Blood (resurrection power)</li>
-                            <li>Cross (mankind’s redemption)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>10% of humanity will be saved through repentance.</li>
-                            <li>The curse’s removal awaits Christ’s return.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="scroll">
-                <div class="scroll-number">SCROLL 12</div>
-                <h3 class="scroll-title">📜 INTERCESSORY PRAYER AND TIMELESSNESS</h3>
-                <p class="scroll-theme">Theme: Spirit-to-Spirit Communion and Eternal Light</p>
-                <div class="key-verse">
-                    <strong>Key Verse:</strong> "Deep calls to deep at the sound of your waterfalls…" — Psalm 42:7
-                </div>
-                <div class="scroll-content">
-                    <div class="scroll-section">
-                        <h4>🔹 Message:</h4>
-                        <ul>
-                            <li>Prayer bridges soul and spirit, overcoming the curse.</li>
-                            <li>Born-again believers commune with God beyond time.</li>
-                            <li>The soul’s surrender to the Spirit brings peace.</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Symbols:</h4>
-                        <ul>
-                            <li>Waterfalls (deep calling)</li>
-                            <li>Heart (spirit communion)</li>
-                            <li>Light (eternal victory)</li>
-                        </ul>
-                    </div>
-                    <div class="scroll-section">
-                        <h4>🔹 Prophetic Insight:</h4>
-                        <ul>
-                            <li>Intercession prepares the earth for Christ’s return.</li>
-                            <li>Time is transcended in spirit-led worship.</li>
-                        </ul>
-                    </div>
-                </div>
+
+            <div class="scroll" id="author-info">
+                <h3 class="scroll-title">Authored by Gregory Shadt</h3>
+                <p class="scroll-theme">An Anointed Vessel for Haiti’s Spiritual Restoration</p>
+                <p style="text-align: center;">This profound revelation and intricate interpretation of the Haitian Flag's biblical meaning and its divine purpose is brought forth through the anointed hand of **Gregory Shadt**, a humble yet powerful vessel raised by God specifically for Haiti’s spiritual restoration and the unveiling of His eternal, life-transforming truths.</p>
             </div>
         </div>
+<footer>
+  <p>Connect with the Revelation: 
+    <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a>
+  </p>
+
+  <p>Follow the Unfolding Message: 
+    <a href="https://x.com/WOC_Officia" target="_blank">X</a> | 
+    <a href="https://youtube.com/@wings_of_the_cherubimgods_shek?si=YV0yQ6lPc7Wekb40" target="_blank">YouTube</a>
+  </p>
+
+  <p class="tagline">✨ The Digital Scroll Project continues to unfold, revealing deeper mysteries ✨</p>
+</footer>
         
-        <footer class="footer">
-            <p>✨ The Digital Scroll Project continues to unfold ✨</p>
-            <p><em>"Nations will come to your light, and kings to the brightness of your dawn." — Isaiah 60:3</em></p>
-            <p>Authored by Gregory Shadt | Updated: 08:47 PM EAT, Thursday, July 17, 2025</p>
-            <div style="margin-top: 1rem; font-size: 2rem;">🕊️ 🔥 🕎</div>
-        </footer>
     </div>
-    
+
     <script>
-        // Create animated stars
+        // Create animated stars - Enhanced for more dynamic feel
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            const numberOfStars = 100;
-            
+            const numberOfStars = 150; // More stars for density
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
+                const size = Math.random() * 3 + 1; // Varying sizes
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                const startX = Math.random() * 200 - 50; // Start outside left/right
+                const startY = Math.random() * 200 - 50; // Start outside top/bottom
+                const endX = Math.random() * 200 - 50;
+                const endY = Math.random() * 200 - 50;
+
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`; // Varying delays
+                star.style.setProperty('--x-start', `${startX}vw`);
+                star.style.setProperty('--y-start', `${startY}vh`);
+                star.style.setProperty('--x-end', `${endX}vw`);
+                star.style.setProperty('--y-end', `${endY}vh`);
+                star.style.animationDuration = `${Math.random() * 150 + 50}s`; // Slower, varied movement
+
                 starsContainer.appendChild(star);
             }
         }
-        
-        // Add scroll reveal animation
+
+        // Scroll reveal animation - Kept similar, but with more impact
         function revealOnScroll() {
             const scrolls = document.querySelectorAll('.scroll');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
             scrolls.forEach(scroll => {
-                scroll.style.opacity = '0';
-                scroll.style.transform = 'translateY(50px)';
-                scroll.style.transition = 'all 0.5s ease';
-                observer.observe(scroll);
+                const scrollTop = scroll.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (scrollTop < windowHeight * 0.85) { // Reveal slightly earlier
+                    scroll.classList.add('reveal');
+                }
             });
         }
-        
-        // Initialize on load
+
+        // --- Initial Load & Event Listeners ---
         window.addEventListener('load', () => {
             createStars();
-            revealOnScroll();
+            revealOnScroll(); // Initial check on load
+            // Placeholder for subtle background audio if desired (e.g., ambient sound)
+            // const audio = new Audio('path/to/subtle_ambient_music.mp3');
+            // audio.loop = true;
+            // audio.volume = 0.3; // Low volume
+            // audio.play().catch(e => console.log("Audio play prevented:", e)); // Autoplay might be blocked by browsers
         });
+
+        window.addEventListener('scroll', revealOnScroll);
     </script>
 </body>
-    </html>
+                    </html>
