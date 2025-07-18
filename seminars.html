@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Wings of the Cherubim five-session online seminar. Explore deep biblical insights on the Menorah, Time & Eternity, Salvation, Shofar Prophecy, and the Haitian Flag's divine symbolism. Register now!">
+    <meta name="author" content="Gregory Shadt / Chris">
+    <meta name="keywords" content="biblical seminars, online teachings, Holy Spirit insights, Menorah prophecy, Haitian flag spiritual meaning, Zechariah 4, Revelation 11, spiritual growth, Christian education, Greg Shadt">
+    <title>Seminars & Registration - Wings of the Cherubim</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* Base & Global Reset (Copy from your main HTML or ensure style.css is linked) */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+        body {
+            background-color: #f0f0f5; /* Lighter, ethereal background */
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-size: 1.1em;
+        }
+        .stars { /* Celestial background for main site consistency */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); overflow: hidden;
+        }
+        .star { /* Star animation (copy from main HTML or ensure style.css) */
+            position: absolute; background-color: #fff; border-radius: 50%;
+            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite; opacity: 0; box-shadow: 0 0 5px #fff;
+        }
+        /* Keyframe animations for stars (copy from main HTML or ensure style.css) */
+        @keyframes twinkle { 0% { opacity: 0; transform: scale(0.6); } 50% { opacity: 1; transform: scale(1.3); } 100% { opacity: 0; transform: scale(0.6); } }
+        @keyframes moveStar { from { transform: translate(var(--x-start, 0), var(--y-start, 0)); } to { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); } }
+
+        .container {
+            position: relative; z-index: 1;
+            background-color: rgba(255, 255, 255, 0.98);
+            max-width: 100%; margin: 0 auto;
+            box-shadow: 0 0 50px rgba(0,0,0,0.3);
+        }
+        header { /* Consistent header styling */
+            background: linear-gradient(to right, #2c3e50, #8e44ad); color: #ecf0f1; padding: 3rem 2rem;
+            text-align: center; border-bottom: 5px solid #FFD700; position: relative; overflow: hidden;
+        }
+        .dove-icon { /* Optional: If you want the dove icon on this page header too */
+            font-size: 3.5rem; position: absolute; top: 1.5rem; left: 1.5rem; animation: floatAndPulse 4s infinite ease-in-out;
+            text-shadow: 0 0 10px rgba(255,255,255,0.7); z-index: 1;
+        }
+        @keyframes floatAndPulse { 0% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-10px); opacity: 0.8; } 100% { transform: translateY(0); opacity: 1; } }
+        .main-title { font-size: 3rem; margin-bottom: 0.75rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+        .subtitle { font-size: 2.2rem; margin-bottom: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #FFD700; }
+        .tagline { font-size: 1.3rem; font-style: italic; color: #d3d3d3; }
+
+        /* Navigation (Copy from your main HTML or ensure style.css is linked) */
+        nav { background: #1e3a8a; padding: 1.2rem; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); position: sticky; top: 0; z-index: 100; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; }
+        nav a { color: #ecf0f1; text-decoration: none; font-size: 1.2em; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease; position: relative; }
+        nav a::before { content: ''; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background-color: #FFD700; visibility: hidden; transform: scaleX(0); transition: all 0.3s ease-in-out 0s; }
+        nav a:hover::before { visibility: visible; transform: scaleX(1); }
+        nav a:hover { color: #FFD700; background-color: rgba(255, 215, 0, 0.1); }
+
+        /* Seminar Page Specific Styles */
+        .seminar-content {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2.5rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            border-left: 5px solid #6b21a8; /* Purple accent */
+            position: relative;
+            z-index: 1;
+        }
+        .seminar-content h2 {
+            color: #6b21a8;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            border-bottom: 3px double #FFD700;
+            padding-bottom: 0.8rem;
+        }
+        .seminar-content p {
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            font-size: 1.1em;
+        }
+        .seminar-details {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+        }
+        .seminar-details h3 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .seminar-details ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        .seminar-details ul li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%23FFD700"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            margin-bottom: 0.8rem;
+            font-size: 1.05em;
+            color: #555;
+        }
+        .price-info {
+            background-color: #e6ffe6; /* Light green for pricing */
+            border: 1px solid #7cb342;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1e3a8a;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        /* Payment Section Styling - NEW */
+        .payment-section {
+            text-align: center;
+            margin-top: 3.5rem;
+            padding: 2.5rem 1.5rem;
+            background-color: #fefefe; /* Very light background for prominence */
+            border: 2px solid #FFD700; /* Gold border */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .payment-section h3 {
+            font-size: 2.2em;
+            color: #6b21a8; /* Purple heading */
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .payment-section h3::after { /* Underline effect for the heading */
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #FFD700;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FFD700; /* Gold button */
+            color: #1e3a8a; /* Dark blue text */
+            padding: 1rem 2rem;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px; /* Pill shape */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 2.5rem;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+        .cta-button:hover {
+            background-color: #e0b800; /* Darker gold on hover */
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
+        .paypal-note {
+            font-size: 0.9em;
+            color: #777;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        /* Footer (Copy from your main HTML or ensure style.css is linked) */
+        footer {
+            background: #1e3a8a; color: #ecf0f1; text-align: center; padding: 2rem; margin-top: 3rem;
+            box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3); border-top: 5px double #FFD700;
+        }
+        footer a { color: #FFD700; text-decoration: none; transition: text-decoration 0.3s ease; }
+        footer a:hover { text-decoration: underline; }
+        .footer-icons { margin-top: 1.5rem; font-size: 2.5rem; display: flex; justify-content: center; gap: 1.5rem; }
+        .footer-icons span { animation: pulseFade 2s infinite alternate; }
+        .footer-icons span:nth-child(2) { animation-delay: 0.5s; }
+        .footer-icons span:nth-child(3) { animation-delay: 1s; }
+        @keyframes pulseFade { 0% { opacity: 0.7; transform: scale(1); } 100% { opacity: 1; transform: scale(1.1); } }
+
+        /* Responsive Design (Copy from main HTML or ensure style.css) */
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; } .subtitle { font-size: 1.8rem; }
+            nav ul { flex-direction: column; gap: 0.8rem; } nav a { font-size: 1.1em; }
+            .seminar-content { padding: 2rem; } .seminar-content h2 { font-size: 2rem; }
+            .seminar-details { padding: 1.5rem; }
+            .payment-section h3 { font-size: 1.8em; } .cta-button { font-size: 1.2em; padding: 0.8rem 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            body { font-size: 1em; } header { padding: 2rem 0.5rem; }
+            .main-title { font-size: 2rem; } .subtitle { font-size: 1.4rem; }
+            nav { padding: 0.8rem; } nav ul { gap: 0.5rem; }
+            .seminar-content { padding: 1.5rem; } .seminar-content h2 { font-size: 1.8rem; }
+            .payment-section h3 { font-size: 1.5em; } .cta-button { font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+        <header>
+            <div class="dove-icon" title="The Holy Spirit">🕊️</div>
+            <h1 class="main-title">Wings of the Cherubim</h1>
+            <h2 class="subtitle">Online Seminars & Registration</h2>
+            <p class="tagline">Deepening Your Understanding of God's Word Through Divine Revelation</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="seminars.html">Seminars</a></li>
+                <li><a href="teachings.html">Teachings</a></li>
+                <li><a href="outreach.html">Outreach</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="seminar-content">
+            <h2>Unlock Profound Spiritual Truths</h2>
+            <p>Embark on a transformative five-session online seminar led by Gregory Shadt, visionary of Wings of the Cherubim. Delve into Holy Spirit-led insights that connect ancient biblical prophecies with today's world, unveiling divine blueprints for your life and the nations.</p>
+            <p>Each session offers a unique perspective, designed to illuminate scripture and deepen your walk with the Lord. Prepare to have your understanding expanded and your spirit ignited!</p>
+
+            <div class="seminar-details">
+                <h3>Our Core Seminar Topics:</h3>
+                <ul>
+                    <li><strong>Menorah Symbolism:</strong> Discover the Menorah as God’s very Throne, linked to the emerald rainbow of Revelation 4 and the divine colors of the Haitian Flag.</li>
+                    <li><strong>Time and Eternity:</strong> Unveil the truth of humanity as eternal beings, created before time, with profound insights from Ecclesiastes 3:15 and Aramaic Revelation.</li>
+                    <li><strong>Salvation & The Holy Spirit:</strong> Understand the Holy Spirit’s indispensable role in our eternal destiny and the path to true salvation.</li>
+                    <li><strong>Shofar Prophecy:</strong> Explore the seven prophetic notes of the Shofar and their powerful ties to Zechariah 9 and end-time revelations.</li>
+                    <li><strong>The Haitian Flag's Divine Blueprint:</strong> A deep dive into the spiritual significance of its colors—heaven, earth, and the sacred meeting of God and man.</li>
+                </ul>
+
+                <h3>Seminar Format & Schedule:</h3>
+                <p>This seminar will be conducted online via **Zoom**, offering an interactive and accessible learning environment. Specific dates and times will be announced to registered participants, with flexible options to accommodate different time zones. Each session is approximately one hour in length, totaling five hours of in-depth teaching.</p>
+            </div>
+
+            <div class="price-info">
+                <h3>Investment in Revelation:</h3>
+                <p>The full five-session seminar is available for an investment of only **$100 USD**.</p>
+            </div>
+
+            <div class="payment-section" id="register-now">
+                <h3>Ready to Ascend? Register Now!</h3>
+                <p>Secure your place in this profound spiritual journey. Click the button below to register and gain access to all five transformative seminar sessions.</p>
+
+             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="PYHGJWCQ9BN5G" />
+  <input type="hidden" name="currency_code" value="USD" />
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Buy Now" />
+</form>
+        
+
+                <p class="paypal-note">
+                    *Upon successful payment, you will receive an email with details on how to access the seminar sessions. Please allow up to 24 hours for confirmation.*
+                </p>
+            </div>
+            </div>
+
+        <footer>
+            <p>Connect with the Revelation: <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a></p>
+            <p>Follow the Unfolding Message: <a href="https://x.com/wingsofthecherubim" target="_blank">X</a> | <a href="http://googleusercontent.com/youtube.com/channel/UC_YourYouTubeChannelID" target="_blank">YouTube</a></p>
+            <p class="tagline">✨ The Digital Scroll Project continues to unfold, revealing deeper mysteries ✨</p>
+            <div class="footer-icons">
+                <span title="The Holy Spirit">🕊️</span>
+                <span title="Divine Fire of Judgment and Purification">🔥</span>
+                <span title="The Menorah: God's Light and Presence">🕎</span>
+            </div>
+            <p style="margin-top: 1rem;">© 2025 Wings of the Cherubim. All rights reserved. Prophecies unfolding from Kenya to the Nations.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript for star animation (copy from your main HTML or ensure style.js is linked)
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const numberOfStars = 150;
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                const size = Math.random() * 3 + 1;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                const startX = Math.random() * 200 - 50;
+                const startY = Math.random() * 200 - 50;
+                const endX = Math.random() * 200 - 50;
+                const endY = Math.random() * 200 - 50;
+
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                star.style.setProperty('--x-start', `${startX}vw`);
+                star.style.setProperty('--y-start', `${startY}vh`);
+                star.style.setProperty('--x-end', `${endX}vw`);
+                star.style.setProperty('--y-end', `${endY}vh`);
+                star.style.animationDuration = `${Math.random() * 150 + 50}s`;
+
+                starsContainer.appendChild(star);
+            }
+        }
+        window.addEventListener('load', createStars);
+    </script>
+</body>
+</html>
