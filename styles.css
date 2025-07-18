@@ -1,92 +1,300 @@
-/* Basic styling for the website */
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #f4f1e8;
+    overflow-x: hidden;
+    line-height: 1.6;
 }
 
+/* Animated Stars */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
 header {
-  background-color: #eef;
-  color: black;
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 0;
 }
 
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.dove-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
 }
 
-p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
 }
 
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffd700, #ffed4e, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #d4af37;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #b8860b;
+    margin-bottom: 2rem;
+}
+
+/* Navigation */
 nav {
-  background-color: #003B5C;
-  padding: 10px;
-  text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+nav ul Eucharist {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-nav ul li {
-  display: inline;
-  margin: 0 20px;
+nav a {
+    color: #f4f1e8;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1em;
+nav a:hover {
+    color: #ffd700;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+/* Scroll Sections */
+.scroll {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
-section {
-  margin: 40px 20px;
+.scroll.reveal {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-h2 {
-  font-size: 2em;
-  color: #005B8C;
-  border-bottom: 2px solid #005B8C;
-  padding-bottom: 10px;
+.scroll:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+    border-color: #ffd700;
 }
 
+.scroll-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.scroll-theme {
+    color: #d4af37;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.key-verse, blockquote {
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 4px solid #d4af37;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.grid div {
+    background: rgba(212, 175, 55, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #d4af37;
+}
+
+/* Images */
+.haitian-flag, .scroll img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Details/Summary */
+details {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+details summary {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ffd700;
+    cursor: pointer;
+}
+
+details p {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #f4f1e8;
+}
+
+.contact-form button {
+    background: #ffd700;
+    color: #1a1a2e;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+}
+
+.contact-form button:hover {
+    background: #ff6b6b;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+table th, table td {
+    border: 1px solid #d4af37;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+/* Footer */
 footer {
-    animation-duration: 10px;
-  background-color: #003B5C;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-img{
-    width: 300;
-    height:auto;
-    object-fit: cover;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-top: 2px solid #d4af37;
 }
 
-    h1, h2, h3 {
-      color: #004080;
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
     }
 
-    blockquote {
-      background-color: #eef;
-      border-left: 5px solid #99c;
-      padding: 10px 15px;
-      margin: 1em 0;
+    .container {
+        padding: 1rem;
     }
+
+    .scroll {
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+  }
