@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Refuting evolution with evidence of Intelligent Design and biblical creation through Christ.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Refuting evolution with evidence of Intelligent Design and biblical creation through Christ." />
   <title>Scroll 1: The Flame of Intelligent Design</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -13,7 +13,7 @@
     <h1>Scroll 1: The Flame of Intelligent Design</h1>
     <p>A divine refutation of evolution and a revelation of the Creator’s fingerprints on all creation.</p>
     <nav>
-      <a href="index.html">Wings of the Cherubim</a>
+      <a href="/index.html">← Back to Wings of the Cherubim</a>
     </nav>
   </header>
 
@@ -31,7 +31,7 @@
         The theory of evolution collapses under the weight of divine order. DNA, the cell, the atom — each is encoded with intelligence. Creation was spoken, formed, and ordained — not random, but intentional.
       </p>
       <div class="gallery">
-        <img src="dna_helix.jpg" alt="DNA helix showing complex genetic code" onerror="this.src='fallback_dna.jpg';">
+        <img src="/images/dna_helix.jpg" alt="DNA helix showing complex genetic code" onerror="this.src='/images/fallback_dna.jpg';" />
       </div>
     </section>
 
@@ -41,7 +41,7 @@
         From Fibonacci spirals in sunflowers to the golden ratio in galaxies, God's design is evident in nature, biology, physics, and time. The heavens declare His glory, and nature preaches His name.
       </p>
       <div class="gallery">
-        <img src="bacterium_flagellum.jpg" alt="Bacterium flagellum demonstrating intricate design" onerror="this.src='fallback_flagellum.jpg';">
+        <img src="/images/bacterium_flagellum.jpg" alt="Bacterium flagellum demonstrating intricate design" onerror="this.src='/images/fallback_flagellum.jpg';" />
       </div>
     </section>
 
@@ -61,7 +61,7 @@
       </ul>
     </section>
 
-    <section class="scroll" id="scroll1">
+    <section id="scroll1">
       <div class="scroll-number">SCROLL 1</div>
       <h2 class="scroll-title">📜 Intelligent Design vs. Evolution</h2>
       <p class="scroll-theme">“In the beginning, Light. Not chaos. Not chance.”</p>
@@ -69,10 +69,12 @@
         <div class="chart">
           <p>Genesis 1 vs. Darwin Chart</p>
           <canvas id="chart1" width="400" height="200" aria-label="Bar chart comparing Genesis creation days to Darwinian evolution"></canvas>
-          <p class="chart-fallback" style="display: none;">Chart unavailable: Genesis 1 describes creation in six days; evolution assumes millions of years.</p>
+          <p class="chart-fallback" style="display: none;">
+            Chart unavailable: Genesis 1 describes creation in six days; evolution assumes millions of years.
+          </p>
         </div>
         <div class="gallery">
-          <img src="starry_skies.jpg" alt="Starry skies reflecting divine order" onerror="this.src='fallback_stars.jpg';">
+          <img src="/images/starry_skies.jpg" alt="Starry skies reflecting divine order" onerror="this.src='/images/fallback_stars.jpg';" />
         </div>
         <blockquote class="verse">Isaiah 45:18: “For thus says the Lord… He did not create it a chaos…”</blockquote>
       </div>
@@ -86,7 +88,7 @@
     </section>
 
     <section>
-      <h2 reverie="Supporting Scriptures">Supporting Scriptures</h2>
+      <h2>Supporting Scriptures</h2>
       <ul>
         <li>Genesis 1:1–5 – Light before luminaries</li>
         <li>John 1:1–5 – In Him was life, and that life was the light of men</li>
@@ -97,11 +99,11 @@
   </main>
 
   <footer>
-    <p>Return to <a href="index.html">Wings of the Cherubim</a></p>
+    <p>Return to <a href="/index.html">Wings of the Cherubim</a></p>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const ctx1 = document.getElementById('chart1');
       const fallback = document.querySelector('.chart-fallback');
       if (ctx1 && typeof Chart !== 'undefined') {
@@ -132,20 +134,37 @@
               y: {
                 beginAtZero: true,
                 max: 1,
-                ticks: { stepSize: 1, callback: value => value === 1 ? 'Present' : 'Absent' }
+                ticks: {
+                  stepSize: 1,
+                  callback: value => (value === 1 ? 'Present' : 'Absent')
+                }
               },
-              x: { ticks: { autoSkip: false, maxRotation: 45, minRotation: 45 } }
+              x: {
+                ticks: {
+                  autoSkip: false,
+                  maxRotation: 45,
+                  minRotation: 45
+                }
+              }
             },
             plugins: {
-              legend: { labels: { color: '#2b2b2b' } },
-              title: { display: true, text: 'Genesis Creation vs. Evolution', color: '#2b2b2b' }
+              legend: {
+                labels: {
+                  color: '#2b2b2b'
+                }
+              },
+              title: {
+                display: true,
+                text: 'Genesis Creation vs. Evolution',
+                color: '#2b2b2b'
+              }
             }
           }
         });
-      } else {
-        if (fallback) fallback.style.display = 'block';
+      } else if (fallback) {
+        fallback.style.display = 'block';
       }
     });
   </script>
 </body>
-      </html>
+</html>
