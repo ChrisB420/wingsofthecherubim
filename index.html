@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Embark on a profound journey into the spiritual significance of the Haitian flag, unveiling its hidden biblical connections to prophecy, salvation, and the glorious return of Jesus Christ. A revelation from Wings of the Cherubim.">
     <meta name="author" content="Gregory Shadt">
-    <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual meaning, salvation, Jesus Christ, Wings of the Cherubim, divine revelation, prophetic insights, Holy Spirit, menorah symbolism, shofar prophecy, spiritual awakening, Greg Shadt, Shekinah Glory, Faith, Menorah">
+    <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual meaning, salvation, Jesus Christ">
+    <<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">!-- Open Graph Meta Tags -->
+<meta property="og:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
+<meta property="og:description" content="Unveiling the divine mysteries hidden in nations, symbols, and prophecy—beginning with the spiritual meaning of the Haitian flag through a biblical lens.">
+<meta property="og:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
+<meta property="og:url" content="https://wingsofthecherubim.quest">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
+<meta name="twitter:description" content="Explore the spiritual significance of national symbols and biblical prophecy. Haitian Flag Scroll now live.">
+<meta name="twitter:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
+   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="preload" href="assets/models/cherub.glb" as="fetch" crossorigin>
+<link rel="preload" href="assets/audio/celestial-burst.mp3" as="audio">
+    <link rel="manifest" href="/manifest.json">
     <title>Wings of the Cherubim</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -20,7 +36,7 @@
 
         body {
             background-color: #f0f0f5; /* Lighter, ethereal background */
-            color: #333;
+            color: #333;md
             line-height: 1.8; /* Increased line-height for readability and grandeur */
             overflow-x: hidden; /* Prevents horizontal scroll issues */
             font-size: 1.1em; /* Slightly larger base font */
@@ -467,10 +483,6 @@
     transition: all 0.3s ease;
   }
 
-  .scroll-link:hover {
-    background-color: #fde68a;
-    color: #000;
-  }
 .scroll-grid a {
   background: #f4e9d8;
   border: 2px solid gold;
@@ -608,7 +620,9 @@
                 <h3 class="scroll-title">Introduction: The Unveiling Vision</h3>
                 <p class="scroll-theme">SCROLL INSIGHTS</p>
                 <img src="IMG-20250717-WA0007.jpg" alt="Wings of the Cherubim: Faith, Menorah, God's Shekinah Glory" class="main-spiritual-image">
-    <div id="threejs-container"></div>
+    <div id="threejs-container">
+    <img src="fallback-cherub-image.jpg" alt="Cherub Fallback" style="display: none;" id="fallback-image">
+    </div>
 
 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3"></audio>
 
@@ -619,20 +633,22 @@
   <p>Explore the divine scrolls revealed through Wings of the Cherubim.</p>
     
                   </section>
+                
               <button>  <a href="/scrolls/scroll1.html">Scroll 1: Intelligent Design</a></button>
-                <sectìon id="scroll">
-  <div class="scroll-grid">
-      
-  <a href="scrolls/scroll1.html">Scroll 1: Intelligent Design</a>
-    <a href="Scroll2-lamp-of-illumination.html"l>Scroll 2: Truth of Israel</a>
-    <a href="Scroll3-nations-to-the-flame.html">Scroll 3: Nations Drawn to the Flame</a>
-    <a href="scroll4-menorah.html">Scroll 4: The Menorah & The Curse</a>
-    <a href="scroll7-dragon.html">Scroll 7: The Dragon & the Nile</a>
-    <a href="scroll8-rev12.html">Scroll 8: Woman, Child & War</a>
-    <a href="scroll9-6000years.html">Scroll 9: 6,000-Year Countdown</a>
-    <a href="scroll11-baptism.html">Scroll 11: Baptism & Deliverance</a>
-  </div>
-              </section>
+                <section id="scrolls" class="scroll-section">
+    <h2>🕊️ Scrolls of Revelation</h2>
+    <p>Explore the divine scrolls revealed through Wings of the Cherubim.</p>
+    <div class="scroll-grid">
+        <a href="scrolls/scroll1.html" class="scroll-link">Scroll 1: Intelligent Design</a>
+        <a href="scrolls/scroll2-lamp-of-illumination.html" class="scroll-link">Scroll 2: Truth of Israel</a>
+        <a href="scrolls/scroll3-nations-to-the-flame.html" class="scroll-link">Scroll 3: Nations Drawn to the Flame</a>
+        <a href="scrolls/scroll4-menorah.html" class="scroll-link">Scroll 4: The Menorah & The Curse</a>
+        <a href="scrolls/scroll7-dragon.html" class="scroll-link">Scroll 7: The Dragon & the Nile</a>
+        <a href="scrolls/scroll8-rev12.html" class="scroll-link">Scroll 8: Woman, Child & War</a>
+        <a href="scrolls/scroll9-6000years.html" class="scroll-link">Scroll 9: 6,000-Year Countdown</a>
+        <a href="scrolls/scroll11-baptism.html" class="scroll-link">Scroll 11: Baptism & Deliverance</a>
+    </div>
+                </section>
                 <div class="key-verse">
                     <strong>Zechariah 4:6</strong> &mdash; "Not by power nor by might, but by my Spirit, says the Lord of Hosts."
                 </div>
@@ -902,6 +918,32 @@ window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
 });
+        loader.load('assets/models/cherub.glb', function(gltf) {
+    // Success
+}, undefined, function(error) {
+    console.error('Failed to load 3D model:', error);
+    // Fallback: Display a static image or message
+});
+        function optimizeRenderer() {
+    const isMobile = window.innerWidth < 768;
+    renderer.setPixelRatio(isMobile ? 1 : window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+window.addEventListener('resize', optimizeRenderer);
+optimizeRenderer();
+        loader.load('assets遵1), function(gltf) {
+    // Success
+}, undefined, function(error) {
+    console.error(error);
+    document.getElementById('fallback-image').style.display = 'block';
+});
     </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-X');
+</script>
 </body>
                     </html>
