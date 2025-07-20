@@ -6,7 +6,7 @@
     <meta name="description" content="Embark on a profound journey into the spiritual significance of the Haitian flag, unveiling its hidden biblical connections to prophecy, salvation, and the glorious return of Jesus Christ. A revelation from Wings of the Cherubim.">
     <meta name="author" content="Gregory Shadt">
     <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual meaning, salvation, Jesus Christ">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://upload.wikimedia.org data:; media-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://upload.wikimedia.org data:;">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
     <meta property="og:description" content="Unveiling the divine mysteries hidden in nations, symbols, and prophecy—beginning with the spiritual meaning of the Haitian flag through a biblical lens.">
@@ -20,10 +20,6 @@
     <meta name="twitter:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
     <!-- Font Imports -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Preload Assets -->
-    <link rel="preload" href="assets/models/cherub.glb" as="fetch" crossorigin>
-    <link rel="preload" href="assets/audio/celestial-burst.mp3" as="audio">
-    <link rel="manifest" href="/manifest.json">
     <title>Wings of the Cherubim</title>
     <style>
         /* Base & Global Reset */
@@ -160,15 +156,9 @@
         }
 
         @keyframes glowPulse {
-            0% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 215, 0, 0.7);
-            }
-            100% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
-            }
+            0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 215, 0, 0.7); }
+            100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5); }
         }
 
         .prophetic-header {
@@ -463,50 +453,6 @@
             box-shadow: 0 0 20px goldenrod;
         }
 
-        /* Three.js Container */
-        #threejs-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            opacity: 0.7;
-        }
-
-        /* Portal Trigger */
-        .portal-trigger {
-            position: relative;
-            z-index: 1;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #6b48ff, #ffd700);
-            color: white;
-            text-align: center;
-            cursor: pointer;
-            margin: 20px auto;
-            width: 200px;
-            border-radius: 5px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            font-weight: bold;
-        }
-
-        .portal-trigger:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px #ffd700;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255, 215, 0, 0.8);
-            border-radius: 50%;
-            animation: burst 1.5s forwards;
-        }
-
-        @keyframes burst {
-            0% { transform: scale(0); opacity: 1; }
-            100% { transform: scale(2); opacity: 0; }
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .dove-icon {
@@ -547,26 +493,26 @@
         }
 
         @media (max-width: 480px) {
-            body { font-size: 1em; }
-            header { padding: 2rem 0.5rem; }
-            .dove-icon { font-size: 2rem; top: 0.5rem; left: 0.5rem; }
-            .main-title { font-size: 2rem; }
-            .subtitle { font-size: 1.4rem; letter-spacing: 1px; }
-            .tagline { font-size: 1.1rem; }
-            nav { padding: 0.8rem; }
-            nav ul { gap: 0.5rem; }
-            nav a { font-size: 1em; }
-            .scrolls-container { margin: 1.5rem auto; padding: 0 1rem; }
-            .scroll { padding: 1.5rem; border-left-width: 3px; }
-            .scroll-title { font-size: 1.8rem; }
-            .scroll-theme { font-size: 1.1rem; }
-            .main-spiritual-image, .haitian-flag-actual { max-width: 98%; border-width: 3px; }
-            .key-verse { padding: 0.8rem; font-size: 1em; border-left-width: 4px; }
-            summary { font-size: 1.1em; }
-            table, th, td { padding: 8px; }
-            .footer-icons { font-size: 2rem; gap: 1rem; }
-            footer { padding: 1.5rem; border-top-width: 3px; }
-        }
+        body { font-size: 1em; }
+        header { padding: 2rem 0.5rem; }
+        .dove-icon { font-size: 2rem; top: 0.5rem; left: 0.5rem; }
+        .main-title { font-size: 2rem; }
+        .subtitle { font-size: 1.4rem; letter-spacing: 1px; }
+        .tagline { font-size: 1.1rem; }
+        nav { padding: 0.8rem; }
+        nav ul { gap: 0.5rem; }
+        nav a { font-size: 1em; }
+        .scrolls-container { margin: 1.5rem auto; padding: 0 1rem; }
+        .scroll { padding: 1.5rem; border-left-width: 3px; }
+        .scroll-title { font-size: 1.8rem; }
+        .scroll-theme { font-size: 1.1rem; }
+        .main-spiritual-image, .haitian-flag-actual { max-width: 98%; border-width: 3px; }
+        .key-verse { padding: 0.8rem; font-size: 1em; border-left-width: 4px; }
+        summary { font-size: 1.1em; }
+        table, th, td { padding: 8px; }
+        .footer-icons { font-size: 2rem; gap: 1rem; }
+        footer { padding: 1.5rem; border-top-width: 3px; }
+    }
     </style>
 </head>
 <body>
@@ -596,11 +542,6 @@
                 <h3 class="scroll-title">Introduction: The Unveiling Vision</h3>
                 <p class="scroll-theme">SCROLL INSIGHTS</p>
                 <img src="IMG-20250717-WA0007.jpg" alt="Wings of the Cherubim: Faith, Menorah, God's Shekinah Glory" class="main-spiritual-image" loading="lazy">
-                <div id="threejs-container">
-                    <img src="fallback-cherub-image.jpg" alt="Cherub Fallback" style="display: none;" id="fallback-image">
-                </div>
-                <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
-                <button class="portal-trigger" onclick="triggerPortalBurst()" onkeydown="if(event.key === 'Enter') triggerPortalBurst()">Enter the Vision</button>
                 <section id="scrolls" class="scroll-section">
                     <h2>🕊️ Scrolls of Revelation</h2>
                     <p>Explore the divine scrolls revealed through Wings of the Cherubim.</p>
@@ -827,50 +768,13 @@
             });
         }
 
-        // Three.js Setup
-        
-
-        // Optimize renderer for mobile
-        function optimizeRenderer() {
-            const isMobile = window.innerWidth < 768;
-            renderer.setPixelRatio(isMobile ? 1 : window.devicePixelRatio);
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-        }
-
-        // Portal Burst Effect
-        function triggerPortalBurst() {
-            const audio = document.getElementById('celestialBurst');
-            audio.currentTime = 0;
-            audio.play().catch(e => console.log("Audio play prevented:", e));
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = `${Math.random() * 100}vw`;
-                particle.style.top = `${Math.random() * 100}vh`;
-                particle.style.background = `rgba(${Math.random() * 255}, ${Math.random() * 215}, 0, 0.8)`;
-                document.body.appendChild(particle);
-                setTimeout(() => particle.remove(), 1500);
-            }
-        }
-
         // Event Listeners
         window.addEventListener('load', () => {
             createStars();
             revealOnScroll();
-            optimizeRenderer();
         });
 
         window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('resize', optimizeRenderer);
-
-        // Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-XXXXX-X');
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
 </body>
-            </html>
+</html>
