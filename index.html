@@ -7,6 +7,8 @@
     <meta name="author" content="Gregory Shadt">
     <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual meaning, salvation, Jesus Christ, Wings of the Cherubim, divine revelation, prophetic insights, Holy Spirit, menorah symbolism, shofar prophecy, spiritual awakening, Greg Shadt, Shekinah Glory, Faith, Menorah">
     <title>Wings of the Cherubim</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
     <style>
         /* Base & Global Reset */
         * {
@@ -485,6 +487,46 @@
   background: #fffef2;
   box-shadow: 0 0 20px goldenrod;
 }
+ #threejs-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.portal-trigger {
+    position: relative;
+    z-index: 1;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #6b48ff, #ffd700);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px auto;
+    width: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portal-trigger:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ffd700;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 215, 0, 0.8);
+    border-radius: 50%;
+    animation: burst 1.5s forwards;
+}
+
+@keyframes burst {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
     </style>
 </head>
 <body>
@@ -515,7 +557,11 @@
                 <h3 class="scroll-title">Introduction: The Unveiling Vision</h3>
                 <p class="scroll-theme">SCROLL INSIGHTS</p>
                 <img src="IMG-20250717-WA0007.jpg" alt="Wings of the Cherubim: Faith, Menorah, God's Shekinah Glory" class="main-spiritual-image">
-            
+    <div id="threejs-container"></div>
+
+<audio id="celestialBurst" src="assets/audio/celestial-burst.mp3"></audio>
+
+<div class="portal-trigger" onclick="triggerPortalBurst()">Enter the Vision</div>        
   <h2>📜 The Scrolls of Revelation</h2>
                   <section id="scrolls" class="scroll-section">
   <h2>🕊️ Scrolls of Revelation</h2>
@@ -755,6 +801,56 @@
         });
 
         window.addEventListener('scroll', revealOnScroll);
+        const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+const loader = new THREE.GLTFLoader();
+loader.load('assets/models/cherub.glb', function(gltf) {
+    const cherub = gltf.scene;
+    cherub.position.set(0, 0, -2);
+    cherub.scale.set(0.6, 0.6, 0.6);
+    scene.add(cherub);
+
+    function animate() {
+        requestAnimationFrame(animate);
+        cherub.rotation.y += 0.003;
+        renderer.render(scene, camera);
+    }
+    animate();
+}, undefined, function(error) {
+    console.error(error);
+});
+
+const light = new THREE.PointLight(0xffffff, 1, 100);
+light.position.set(0, 5, 5);
+scene.add(light);
+
+camera.position.z = 5;
+
+function triggerPortalBurst() {
+    const audio = document.getElementById('celestialBurst');
+    audio.currentTime = 0;
+    audio.play();
+
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = `${Math.random() * 100}vw`;
+        particle.style.top = `${Math.random() * 100}vh`;
+        particle.style.background = `rgba(${Math.random() * 255}, ${Math.random() * 215}, 0, 0.8)`;
+        document.body.appendChild(particle);
+        setTimeout(() => particle.remove(), 1500);
+    }
+}
+
+window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+});
     </script>
 </body>
                     </html>
