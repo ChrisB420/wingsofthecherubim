@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap'); /* Include existing fonts for consistency */
+
+/* Base & Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif; /* More classic/evocative font */
+}
+
+body {
+    background-color: #f0f0f5; /* Lighter, ethereal background */
+    color: #333;
+    line-height: 1.8; /* Increased line-height for readability and grandeur */
+    overflow-x: hidden; /* Prevents horizontal scroll issues */
+    font-size: 1.1em; /* Slightly larger base font */
+}
+
+/* Stars Background - Now with more depth and motion */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2; /* Even deeper background */
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); /* Deeper cosmic gradient */
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 4s infinite alternate, moveStar 200s linear infinite; /* Added movement */
+    opacity: 0;
+    box-shadow: 0 0 5px #fff; /* Subtle glow */
+}
+
+.star:nth-child(3n+1) { width: 1.5px; height: 1.5px; } /* Slightly larger base stars */
+.star:nth-child(3n+2) { width: 2.5px; height: 2.5px; }
+.star:nth-child(3n+3) { width: 3.5px; height: 3.5px; }
+
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.6); }
+    50% { opacity: 1; transform: scale(1.3); }
+    100% { opacity: 0; transform: scale(0.6); }
+}
+
+@keyframes moveStar {
+    from { transform: translate(var(--x-start, 0), var(--y-start, 0)); }
+    to { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); }
+}
+
+/* Container for content, slightly transparent to reveal stars */
+.container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.98); /* Near opaque white for text clarity */
+    max-width: 100%; /* Can adjust this for different layouts */
+    margin: 0 auto;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3); /* Adds a subtle "floating" effect */
+}
+
+/* Header - More celestial feel */
+header {
+    background: linear-gradient(to right, #2c3e50, #8e44ad); /* Deeper blue-purple */
+    color: #ecf0f1; /* Lighter text color */
+    padding: 3rem 2rem; /* More generous padding */
+    text-align: center;
+    border-bottom: 5px solid #FFD700; /* Thicker gold accent */
+    position: relative;
+    overflow: hidden; /* For header specific background effects */
+    font-family: 'Cinzel', serif; /* Apply Cinzel to header */
+}
+
+header::before { /* Subtle background pattern */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1" fill-rule="evenodd"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.dove-icon {
+    font-size: 3.5rem; /* Larger dove */
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    animation: floatAndPulse 4s infinite ease-in-out;
+    text-shadow: 0 0 10px rgba(255,255,255,0.7); /* Dove glow */
+    z-index: 1;
+}
+
+@keyframes floatAndPulse {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-10px); opacity: 0.8; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.main-title {
+    font-size: 3rem; /* Larger main title */
+    margin-bottom: 0.75rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Stronger text shadow */
+}
+
+.subtitle {
+    font-size: 2.2rem; /* Larger subtitle */
+    margin-bottom: 0.75rem;
+    font-style: normal; /* Less italic, more bold statement */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFD700; /* Gold subtitle */
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #d3d3d3;
+}
+
+/* Navigation - Enhanced visual feedback */
+nav {
+    background: #1e3a8a;
+    padding: 1.2rem; /* More padding */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    position: sticky; /* Sticky nav */
+    top: 0;
+    z-index: 100; /* Ensure it stays on top */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem; /* More space between links */
+}
+
+nav a {
+    color: #ecf0f1; /* Lighter text */
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly larger font */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'Cinzel', serif; /* Apply Cinzel to nav links */
+}
+
+nav a::before { /* Underline effect */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD700;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+nav a:hover {
+    color: #FFD700;
+    background-color: rgba(255, 215, 0, 0.1); /* Subtle hover background */
+}
+
+/* Scrolls Container for main content - More "ancient" feel */
+.scrolls-container {
+    max-width: 900px; /* Slightly narrower for focus */
+    margin: 3rem auto; /* More vertical space */
+    padding: 0 1.5rem;
+}
+
+.scroll {
+    background: #fff;
+    padding: 3rem; /* More generous padding */
+    margin-bottom: 2.5rem; /* More space between scrolls */
+    border-radius: 10px; /* Softer edges */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow for "floating" effect */
+    opacity: 0;
+    transform: translateY(30px); /* Deeper initial translate */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Slower reveal */
+    border-left: 5px solid #FFD700; /* Gold "seal" on the side */
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll::before { /* Subtle diagonal line pattern for "ancient scroll" feel */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,%3Csvg width="8" height="8" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%2395a5a6" fill-opacity="0.1" fill-rule="evenodd"%3E%3Cpath d="M0 0h4v4H0V0zm4 4h4v4H4V4z"/%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.scroll.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-title {
+    color: #6b21a8; /* Purple for divine meeting */
+    font-size: 2.5rem; /* Larger, more impactful titles */
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 3px double #FFD700; /* Double line gold separator */
+    padding-bottom: 0.75rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    font-family: 'Cinzel', serif; /* Apply Cinzel to scroll titles */
+}
+
+.scroll-theme {
+    font-size: 1.3rem; /* Larger theme text */
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+.scroll p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+}
+
+.main-spiritual-image { /* New style for the main uploaded image */
+    display: block;
+    max-width: 95%; /* Make it fill more space */
+    height: auto;
+    margin: 2rem auto;
+    border: 5px solid #FFD700; /* Stronger gold border */
+    border-radius: 10px; /* Softer corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow for prominence */
+    transition: transform 0.4s ease-in-out;
+}
+
+.main-spiritual-image:hover {
+    transform: scale(1.03); /* More pronounced zoom on hover */
+}
+
+.haitian-flag-actual { /* Style for the actual Haitian flag */
+    display: block;
+    max-width: 85%;
+    height: auto;
+    margin: 1.5rem auto;
+    border: 3px solid #1e3a8a; /* Blue border to distinguish */
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.key-verse {
+    background-color: #e6f0ff; /* Lighter, more celestial blue */
+    border-left: 6px solid #1e3a8a; /* Stronger blue border */
+    padding: 1.2rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #1e3a8a;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em; /* Larger verse text */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+details {
+    background-color: #fcfcfc; /* Whiter background for details */
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Subtle inner shadow */
+    position: relative;
+    z-index: 1;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    color: #6b21a8;
+    font-size: 1.2em; /* Larger summary text */
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+summary:hover {
+    color: #9b59b6; /* Lighter purple on hover */
+}
+
+details p {
+    margin-top: 1.2rem;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: #e8f5e9; /* Light green for tables */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+}
+
+table, th, td {
+    border: 1px solid #b3e0b5; /* Softer border */
+    padding: 12px; /* More padding */
+    text-align: left;
+}
+
+th {
+    background-color: #7cb342; /* Deeper green for headers */
+    color: #fff; /* White text on header */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+td {
+    font-size: 0.95em;
+}
+
+/* Footer - More thematic icons */
+footer {
+    background: #1e3a8a;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem; /* More padding */
+    margin-top: 3rem;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+    border-top: 5px double #FFD700; /* Matching header border */
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin-top: 1.5rem;
+    font-size: 2.5rem; /* Larger icons */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-icons span {
+    animation: pulseFade 2s infinite alternate; /* Pulsing effect for icons */
+}
+.footer-icons span:nth-child(2) { animation-delay: 0.5s; }
+.footer-icons span:nth-child(3) { animation-delay: 1s; }
+
+@keyframes pulseFade {
+    0% { opacity: 0.7; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dove-icon {
+        font-size: 2.5rem;
+        top: 1rem;
+        left: 1rem;
+    }
+    .main-title {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    nav a {
+        font-size: 1.1em;
+        padding: 0.4rem 0.8rem;
+    }
+    .scroll {
+        padding: 2rem;
+    }
+    .scroll-title {
+        font-size: 2rem;
+    }
+    .main-spiritual-image, .haitian-flag-actual {
+        max-width: 90%;
+    }
+    .key-verse {
+        padding: 1rem;
+        font-size: 1.1em;
+    }
+    details {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 1em; }
+    header { padding: 2rem 0.5rem; }
+    .dove-icon { font-size: 2rem; top: 0.5rem; left: 0.5rem; }
+    .main-title { font-size: 2rem; }
+    .subtitle { font-size: 1.4rem; letter-spacing: 1px; }
+    .tagline { font-size: 1.1rem; }
+    nav { padding: 0.8rem; }
+    nav ul { gap: 0.5rem; }
+    nav a { font-size: 1em; }
+    .scrolls-container { margin: 1.5rem auto; padding: 0 1rem; }
+    .scroll { padding: 1.5rem; border-left-width: 3px; }
+    .scroll-title { font-size: 1.8rem; }
+    .scroll-theme { font-size: 1.1rem; }
+    .main-spiritual-image, .haitian-flag-actual { max-width: 98%; border-width: 3px; }
+    .key-verse { padding: 0.8rem; font-size: 1em; border-left-width: 4px; }
+    summary { font-size: 1.1em; }
+    table, th, td { padding: 8px; }
+    .footer-icons { font-size: 2rem; gap: 1rem; }
+    footer { padding: 1.5rem; border-top-width: 3px; }
+}
+
+/* New/Revised styles for scroll grid */
+.scroll-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted min-width for better fit */
+  gap: 1.5rem; /* Increased gap */
+  padding: 1.5rem; /* More padding */
+  margin-top: 2rem; /* Spacing from previous content */
+  background-color: rgba(255, 215, 0, 0.05); /* Subtle gold background for the grid */
+  border-radius: 15px; /* Rounded corners for the grid container */
+  border: 1px solid rgba(255, 215, 0, 0.3); /* Soft gold border */
+}
+
+.scroll-grid a {
+  background: #fef3c7; /* Lighter, parchment-like background for links */
+  border: 2px solid #d4af37; /* Consistent gold border */
+  padding: 1.2rem 1rem; /* Adjusted padding */
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1a1a2e; /* Darker text for contrast */
+  border-radius: 10px; /* Softer rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  transition: all 0.3s ease;
+  font-family: 'Cinzel', serif; /* Apply Cinzel font */
+  font-size: 1.1em; /* Slightly larger font size */
+}
+
+.scroll-grid a:hover {
+  background: #ffed4e; /* Brighter gold on hover */
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.8); /* Stronger glow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  color: #000; /* Black text on hover */
+}
+
+/* Styles for specific sections within a scroll */
+.scroll-content section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-left: 4px solid #d4af37;
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 0 8px 8px 0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-content section h2 {
+    font-family: 'Cinzel', serif;
+    color: #ffd700;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+}
+
+.scroll-content section p {
+    color: #f4f1e8; /* Adjusted for better contrast on rgba background */
+}
+
+/* Chart and Gallery (from other scrolls) */
+.chart {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.rainbow-breakdown, .parchment-text {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid #ffd700;
+    border-radius: 0 5px 5px 0;
+}
+
+.rainbow-breakdown ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    color: #e0e0d0;
+}
+
+.prayer, .call-to-action {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.gallery {
+    margin: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05) rotate(1deg);
+    border-color: #ffd700;
+}
+
+.verse { /* Used in Scroll 1 for Isaiah verse */
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px dashed #ffd700;
+    text-align: center;
+    font-style: italic;
+    color: #ffd700;
+    border-radius: 8px;
+  }
