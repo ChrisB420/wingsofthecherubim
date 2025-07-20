@@ -6,43 +6,45 @@
     <meta name="description" content="Embark on a profound journey into the spiritual significance of the Haitian flag, unveiling its hidden biblical connections to prophecy, salvation, and the glorious return of Jesus Christ. A revelation from Wings of the Cherubim.">
     <meta name="author" content="Gregory Shadt">
     <meta name="keywords" content="Haitian flag, biblical prophecy, Zechariah 4, Revelation 11, spiritual meaning, salvation, Jesus Christ">
-    <<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline';">!-- Open Graph Meta Tags -->
-<meta property="og:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
-<meta property="og:description" content="Unveiling the divine mysteries hidden in nations, symbols, and prophecy—beginning with the spiritual meaning of the Haitian flag through a biblical lens.">
-<meta property="og:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
-<meta property="og:url" content="https://wingsofthecherubim.quest">
-<meta property="og:type" content="website">
-
-<!-- Twitter Card Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
-<meta name="twitter:description" content="Explore the spiritual significance of national symbols and biblical prophecy. Haitian Flag Scroll now live.">
-<meta name="twitter:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
-   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
-   <link rel="preload" href="assets/models/cherub.glb" as="fetch" crossorigin>
-<link rel="preload" href="assets/audio/celestial-burst.mp3" as="audio">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://upload.wikimedia.org data:; media-src 'self';">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
+    <meta property="og:description" content="Unveiling the divine mysteries hidden in nations, symbols, and prophecy—beginning with the spiritual meaning of the Haitian flag through a biblical lens.">
+    <meta property="og:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
+    <meta property="og:url" content="https://wingsofthecherubim.quest">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Wings of the Cherubim | Prophetic Revelation and Divine Insight">
+    <meta name="twitter:description" content="Explore the spiritual significance of national symbols and biblical prophecy. Haitian Flag Scroll now live.">
+    <meta name="twitter:image" content="https://wingsofthecherubim.quest/images/scroll-preview.jpg">
+    <!-- Font Imports -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Preload Assets -->
+    <link rel="preload" href="assets/models/cherub.glb" as="fetch" crossorigin>
+    <link rel="preload" href="assets/audio/celestial-burst.mp3" as="audio">
     <link rel="manifest" href="/manifest.json">
     <title>Wings of the Cherubim</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
     <style>
         /* Base & Global Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif; /* More classic/evocative font */
+            font-family: 'Georgia', serif;
         }
 
         body {
-            background-color: #f0f0f5; /* Lighter, ethereal background */
-            color: #333;md
-            line-height: 1.8; /* Increased line-height for readability and grandeur */
-            overflow-x: hidden; /* Prevents horizontal scroll issues */
-            font-size: 1.1em; /* Slightly larger base font */
+            background-color: #f0f0f5;
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-size: 1.1em;
         }
 
-        /* Stars Background - Now with more depth and motion */
+        /* Stars Background */
         .stars {
             position: fixed;
             top: 0;
@@ -50,8 +52,8 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: -2; /* Even deeper background */
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); /* Deeper cosmic gradient */
+            z-index: -2;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
             overflow: hidden;
         }
 
@@ -59,12 +61,12 @@
             position: absolute;
             background-color: #fff;
             border-radius: 50%;
-            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite; /* Added movement */
+            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite;
             opacity: 0;
-            box-shadow: 0 0 5px #fff; /* Subtle glow */
+            box-shadow: 0 0 5px #fff;
         }
 
-        .star:nth-child(3n+1) { width: 1.5px; height: 1.5px; } /* Slightly larger base stars */
+        .star:nth-child(3n+1) { width: 1.5px; height: 1.5px; }
         .star:nth-child(3n+2) { width: 2.5px; height: 2.5px; }
         .star:nth-child(3n+3) { width: 3.5px; height: 3.5px; }
 
@@ -79,28 +81,28 @@
             to { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); }
         }
 
-        /* Container for content, slightly transparent to reveal stars */
+        /* Container */
         .container {
             position: relative;
             z-index: 1;
-            background-color: rgba(255, 255, 255, 0.98); /* Near opaque white for text clarity */
+            background-color: rgba(255, 255, 255, 0.98);
             max-width: 100%;
             margin: 0 auto;
-            box-shadow: 0 0 50px rgba(0,0,0,0.3); /* Adds a subtle "floating" effect */
+            box-shadow: 0 0 50px rgba(0,0,0,0.3);
         }
 
-        /* Header - More celestial feel */
+        /* Header */
         header {
-            background: linear-gradient(to right, #2c3e50, #8e44ad); /* Deeper blue-purple */
-            color: #ecf0f1; /* Lighter text color */
-            padding: 3rem 2rem; /* More generous padding */
+            background: linear-gradient(to right, #2c3e50, #8e44ad);
+            color: #ecf0f1;
+            padding: 3rem 2rem;
             text-align: center;
-            border-bottom: 5px solid #FFD700; /* Thicker gold accent */
+            border-bottom: 5px solid #FFD700;
             position: relative;
-            overflow: hidden; /* For header specific background effects */
+            overflow: hidden;
         }
 
-        header::before { /* Subtle background pattern */
+        header::before {
             content: '';
             position: absolute;
             top: 0;
@@ -113,12 +115,12 @@
         }
 
         .dove-icon {
-            font-size: 3.5rem; /* Larger dove */
+            font-size: 3.5rem;
             position: absolute;
             top: 1.5rem;
             left: 1.5rem;
             animation: floatAndPulse 4s infinite ease-in-out;
-            text-shadow: 0 0 10px rgba(255,255,255,0.7); /* Dove glow */
+            text-shadow: 0 0 10px rgba(255,255,255,0.7);
             z-index: 1;
         }
 
@@ -129,55 +131,86 @@
         }
 
         .main-title {
-            font-size: 3rem; /* Larger main title */
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: #f5f5f5;
+            animation: glowPulse 3s infinite;
+            letter-spacing: 2px;
             margin-bottom: 0.75rem;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Stronger text shadow */
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         }
 
         .subtitle {
-            font-size: 2.2rem; /* Larger subtitle */
-            margin-bottom: 0.75rem;
-            font-style: normal; /* Less italic, more bold statement */
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+            animation: glowPulse 4s infinite;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #FFD700; /* Gold subtitle */
         }
 
         .tagline {
-            font-size: 1.3rem;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            color: #ddd;
+            margin-top: 10px;
+            opacity: 0.9;
             font-style: italic;
-            color: #d3d3d3;
         }
 
-        /* Navigation - Enhanced visual feedback */
+        @keyframes glowPulse {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 215, 0, 0.7);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .prophetic-header {
+            background: linear-gradient(135deg, #4b0082, #8a2be2, #ffffff);
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            box-shadow: 0 0 30px rgba(139, 0, 139, 0.5);
+            border-bottom: 2px solid #ffd700;
+        }
+
+        /* Navigation */
         nav {
             background: #1e3a8a;
-            padding: 1.2rem; /* More padding */
+            padding: 1.2rem;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-            position: sticky; /* Sticky nav */
+            position: sticky;
             top: 0;
-            z-index: 100; /* Ensure it stays on top */
+            z-index: 100;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 2.5rem; /* More space between links */
+            gap: 2.5rem;
         }
 
         nav a {
-            color: #ecf0f1; /* Lighter text */
+            color: #ecf0f1;
             text-decoration: none;
-            font-size: 1.2em; /* Slightly larger font */
+            font-size: 1.2em;
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: all 0.3s ease;
             position: relative;
         }
 
-        nav a::before { /* Underline effect */
+        nav a::before {
             content: '';
             position: absolute;
             width: 100%;
@@ -197,31 +230,31 @@
 
         nav a:hover {
             color: #FFD700;
-            background-color: rgba(255, 215, 0, 0.1); /* Subtle hover background */
+            background-color: rgba(255, 215, 0, 0.1);
         }
 
-        /* Scrolls Container for main content - More "ancient" feel */
+        /* Scrolls Container */
         .scrolls-container {
-            max-width: 900px; /* Slightly narrower for focus */
-            margin: 3rem auto; /* More vertical space */
+            max-width: 900px;
+            margin: 3rem auto;
             padding: 0 1.5rem;
         }
 
         .scroll {
             background: #fff;
-            padding: 3rem; /* More generous padding */
-            margin-bottom: 2.5rem; /* More space between scrolls */
-            border-radius: 10px; /* Softer edges */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* Deeper shadow for "floating" effect */
+            padding: 3rem;
+            margin-bottom: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
             opacity: 0;
-            transform: translateY(30px); /* Deeper initial translate */
-            transition: opacity 1s ease-out, transform 1s ease-out; /* Slower reveal */
-            border-left: 5px solid #FFD700; /* Gold "seal" on the side */
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            border-left: 5px solid #FFD700;
             position: relative;
             overflow: hidden;
         }
 
-        .scroll::before { /* Subtle diagonal line pattern for "ancient scroll" feel */
+        .scroll::before {
             content: '';
             position: absolute;
             top: 0;
@@ -239,11 +272,11 @@
         }
 
         .scroll-title {
-            color: #6b21a8; /* Purple for divine meeting */
-            font-size: 2.5rem; /* Larger, more impactful titles */
+            color: #6b21a8;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
             text-align: center;
-            border-bottom: 3px double #FFD700; /* Double line gold separator */
+            border-bottom: 3px double #FFD700;
             padding-bottom: 0.75rem;
             font-weight: bold;
             position: relative;
@@ -251,7 +284,7 @@
         }
 
         .scroll-theme {
-            font-size: 1.3rem; /* Larger theme text */
+            font-size: 1.3rem;
             font-style: italic;
             text-align: center;
             margin-bottom: 2rem;
@@ -267,54 +300,53 @@
             z-index: 1;
         }
 
-        .main-spiritual-image { /* New style for the main uploaded image */
+        .main-spiritual-image {
             display: block;
-            max-width: 95%; /* Make it fill more space */
+            max-width: 95%;
             height: auto;
             margin: 2rem auto;
-            border: 5px solid #FFD700; /* Stronger gold border */
-            border-radius: 10px; /* Softer corners */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow for prominence */
+            border: 5px solid #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.4s ease-in-out;
         }
 
         .main-spiritual-image:hover {
-            transform: scale(1.03); /* More pronounced zoom on hover */
+            transform: scale(1.03);
         }
 
-        .haitian-flag-actual { /* Style for the actual Haitian flag */
+        .haitian-flag-actual {
             display: block;
             max-width: 85%;
             height: auto;
             margin: 1.5rem auto;
-            border: 3px solid #1e3a8a; /* Blue border to distinguish */
+            border: 3px solid #1e3a8a;
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-
         .key-verse {
-            background-color: #e6f0ff; /* Lighter, more celestial blue */
-            border-left: 6px solid #1e3a8a; /* Stronger blue border */
+            background-color: #e6f0ff;
+            border-left: 6px solid #1e3a8a;
             padding: 1.2rem;
             margin: 2rem 0;
             font-style: italic;
             color: #1e3a8a;
             text-align: center;
             font-weight: bold;
-            font-size: 1.2em; /* Larger verse text */
+            font-size: 1.2em;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: relative;
             z-index: 1;
         }
 
         details {
-            background-color: #fcfcfc; /* Whiter background for details */
+            background-color: #fcfcfc;
             border: 1px solid #eee;
             border-radius: 8px;
             padding: 1.5rem;
             margin-top: 2rem;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.05); /* Subtle inner shadow */
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
             position: relative;
             z-index: 1;
         }
@@ -323,13 +355,13 @@
             font-weight: bold;
             cursor: pointer;
             color: #6b21a8;
-            font-size: 1.2em; /* Larger summary text */
+            font-size: 1.2em;
             outline: none;
             transition: color 0.3s ease;
         }
 
         summary:hover {
-            color: #9b59b6; /* Lighter purple on hover */
+            color: #9b59b6;
         }
 
         details p {
@@ -341,38 +373,39 @@
             width: 100%;
             border-collapse: collapse;
             margin: 2rem 0;
-            background-color: #e8f5e9; /* Light green for tables */
+            background-color: #e8f5e9;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             position: relative;
             z-index: 1;
         }
 
         table, th, td {
-            border: 1px solid #b3e0b5; /* Softer border */
-            padding: 12px; /* More padding */
+            border: 1px solid #b3e0b5;
+            padding: 12px;
             text-align: left;
         }
 
         th {
-            background-color: #7cb342; /* Deeper green for headers */
-            color: #fff; /* White text on header */
+            background-color: #7cb342;
+            color: #fff;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         td {
             font-size: 0.95em;
         }
 
-        /* Footer - More thematic icons */
+        /* Footer */
         footer {
             background: #1e3a8a;
             color: #ecf0f1;
             text-align: center;
-            padding: 2rem; /* More padding */
+            padding: 2rem;
             margin-top: 3rem;
             box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
-            border-top: 5px double #FFD700; /* Matching header border */
+            border-top: 5px double #FFD700;
         }
 
         footer a {
@@ -387,21 +420,93 @@
 
         .footer-icons {
             margin-top: 1.5rem;
-            font-size: 2.5rem; /* Larger icons */
+            font-size: 2.5rem;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
         }
 
         .footer-icons span {
-            animation: pulseFade 2s infinite alternate; /* Pulsing effect for icons */
+            animation: pulseFade 2s infinite alternate;
         }
+
         .footer-icons span:nth-child(2) { animation-delay: 0.5s; }
         .footer-icons span:nth-child(3) { animation-delay: 1s; }
 
         @keyframes pulseFade {
             0% { opacity: 0.7; transform: scale(1); }
             100% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* Scroll Grid */
+        .scroll-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .scroll-link {
+            display: inline-block;
+            padding: 1rem;
+            background: #f4e9d8;
+            border: 2px solid gold;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2e1f0f;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .scroll-link:hover {
+            background: #fffef2;
+            box-shadow: 0 0 20px goldenrod;
+        }
+
+        /* Three.js Container */
+        #threejs-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.7;
+        }
+
+        /* Portal Trigger */
+        .portal-trigger {
+            position: relative;
+            z-index: 1;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #6b48ff, #ffd700);
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            margin: 20px auto;
+            width: 200px;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: bold;
+        }
+
+        .portal-trigger:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #ffd700;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(255, 215, 0, 0.8);
+            border-radius: 50%;
+            animation: burst 1.5s forwards;
+        }
+
+        @keyframes burst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
         }
 
         /* Responsive Design */
@@ -464,193 +569,56 @@
             .footer-icons { font-size: 2rem; gap: 1rem; }
             footer { padding: 1.5rem; border-top-width: 3px; }
         }
-        .scroll-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-    
-  .scroll-link {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #fef3c7;
-    color: #111827;
-    font-weight: bold;
-    border-radius: 8px;
-    text-decoration: none;
-    margin: 10px;
-    transition: all 0.3s ease;
-  }
-
-.scroll-grid a {
-  background: #f4e9d8;
-  border: 2px solid gold;
-  padding: 1rem;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  color: #2e1f0f;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-  transition: all 0.3s ease;
-}
-.scroll-grid a:hover {
-  background: #fffef2;
-  box-shadow: 0 0 20px goldenrod;
-}
- #threejs-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    opacity: 0.7;
-}
-
-.portal-trigger {
-    position: relative;
-    z-index: 1;
-    padding: 15px 30px;
-    background: linear-gradient(45deg, #6b48ff, #ffd700);
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    margin: 20px auto;
-    width: 200px;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.portal-trigger:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #ffd700;
-}
-
-.particle {
-    position: absolute;
-    background: rgba(255, 215, 0, 0.8);
-    border-radius: 50%;
-    animation: burst 1.5s forwards;
-}
-
-@keyframes burst {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(2); opacity: 0; }
-} 
-    @keyframes glowPulse {
-    0% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
-                     0 0 20px rgba(255, 255, 255, 0.5);
-    }
-    50% {
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9),
-                     0 0 30px rgba(255, 215, 0, 0.7);
-    }
-    100% {
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
-                     0 0 20px rgba(255, 255, 255, 0.5);
-    }
-}
-
-.prophetic-header {
-    background: linear-gradient(135deg, #4b0082, #8a2be2, #ffffff);
-    padding: 60px 20px;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    box-shadow: 0 0 30px rgba(139, 0, 139, 0.5);
-    border-bottom: 2px solid #ffd700;
-}
-
-.main-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-    color: #f5f5f5;
-    animation: glowPulse 3s infinite;
-    letter-spacing: 2px;
-}
-
-.subtitle {
-    color: #ffd700;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.5rem;
-    margin-top: 10px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-    animation: glowPulse 4s infinite;
-}
-
-.tagline {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
-    color: #ddd;
-    margin-top: 10px;
-    opacity: 0.9;
-}
-        
     </style>
 </head>
 <body>
     <div class="stars" id="stars"></div>
 
     <div class="container">
-        
-            <header class="prophetic-header">
-                <div class="dove-icon" title="The Holy Spirit">🕊️</div>
-    <h1 class="main-title">Wings of the Cherubim</h1>
-    <h2 class="subtitle">THE RETURN</h2>
-    <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
-            </header>
+        <header class="prophetic-header">
+            <div class="dove-icon" title="The Holy Spirit">🕊️</div>
+            <h1 class="main-title">Wings of the Cherubim</h1>
+            <h2 class="subtitle">THE RETURN</h2>
+            <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
+        </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="seminars.html">Seminars</a></li>
-        <li><a href="teachings.html">Teachings</a></li>
-        <li><a href="outreach.html">Outreach</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="seminars.html">Seminars</a></li>
+                <li><a href="teachings.html">Teachings</a></li>
+                <li><a href="outreach.html">Outreach</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
         <div class="scrolls-container" id="haitian-flag-start">
-
             <div class="scroll" id="intro">
                 <h3 class="scroll-title">Introduction: The Unveiling Vision</h3>
                 <p class="scroll-theme">SCROLL INSIGHTS</p>
-                <img src="IMG-20250717-WA0007.jpg" alt="Wings of the Cherubim: Faith, Menorah, God's Shekinah Glory" class="main-spiritual-image">
-    <div id="threejs-container">
-    <img src="fallback-cherub-image.jpg" alt="Cherub Fallback" style="display: none;" id="fallback-image">
-    </div>
-
-<audio id="celestialBurst" src="assets/audio/celestial-burst.mp3"></audio>
-
-<div class="portal-trigger" onclick="triggerPortalBurst()">Enter the Vision</div>        
-  <h2>📜 The Scrolls of Revelation</h2>
-                  <section id="scrolls" class="scroll-section">
-  <h2>🕊️ Scrolls of Revelation</h2>
-  <p>Explore the divine scrolls revealed through Wings of the Cherubim.</p>
-    
-                  </section>
-                
-              <button>  <a href="/scrolls/scroll1.html">Scroll 1: Intelligent Design</a></button>
+                <img src="IMG-20250717-WA0007.jpg" alt="Wings of the Cherubim: Faith, Menorah, God's Shekinah Glory" class="main-spiritual-image" loading="lazy">
+                <div id="threejs-container">
+                    <img src="fallback-cherub-image.jpg" alt="Cherub Fallback" style="display: none;" id="fallback-image">
+                </div>
+                <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
+                <button class="portal-trigger" onclick="triggerPortalBurst()" onkeydown="if(event.key === 'Enter') triggerPortalBurst()">Enter the Vision</button>
                 <section id="scrolls" class="scroll-section">
-    <h2>🕊️ Scrolls of Revelation</h2>
-    <p>Explore the divine scrolls revealed through Wings of the Cherubim.</p>
-    <div class="scroll-grid">
-        <a href="scrolls/scroll1.html" class="scroll-link">Scroll 1: Intelligent Design</a>
-        <a href="scrolls/scroll2-lamp-of-illumination.html" class="scroll-link">Scroll 2: Truth of Israel</a>
-        <a href="scrolls/scroll3-nations-to-the-flame.html" class="scroll-link">Scroll 3: Nations Drawn to the Flame</a>
-        <a href="scrolls/scroll4-menorah.html" class="scroll-link">Scroll 4: The Menorah & The Curse</a>
-        <a href="scrolls/scroll7-dragon.html" class="scroll-link">Scroll 7: The Dragon & the Nile</a>
-        <a href="scrolls/scroll8-rev12.html" class="scroll-link">Scroll 8: Woman, Child & War</a>
-        <a href="scrolls/scroll9-6000years.html" class="scroll-link">Scroll 9: 6,000-Year Countdown</a>
-        <a href="scrolls/scroll11-baptism.html" class="scroll-link">Scroll 11: Baptism & Deliverance</a>
-    </div>
+                    <h2>🕊️ Scrolls of Revelation</h2>
+                    <p>Explore the divine scrolls revealed through Wings of the Cherubim.</p>
+                    <div class="scroll-grid">
+                        <a href="scrolls/scroll1.html" class="scroll-link">Scroll 1: Intelligent Design</a>
+                        <a href="scrolls/scroll2-lamp-of-illumination.html" class="scroll-link">Scroll 2: Truth of Israel</a>
+                        <a href="scrolls/scroll3-nations-to-the-flame.html" class="scroll-link">Scroll 3: Nations Drawn to the Flame</a>
+                        <a href="scrolls/scroll4-menorah.html" class="scroll-link">Scroll 4: The Menorah & The Curse</a>
+                        <a href="scrolls/scroll7-dragon.html" class="scroll-link">Scroll 7: The Dragon & the Nile</a>
+                        <a href="scrolls/scroll8-rev12.html" class="scroll-link">Scroll 8: Woman, Child & War</a>
+                        <a href="scrolls/scroll9-6000years.html" class="scroll-link">Scroll 9: 6,000-Year Countdown</a>
+                        <a href="scrolls/scroll11-baptism.html" class="scroll-link">Scroll 11: Baptism & Deliverance</a>
+                    </div>
                 </section>
                 <div class="key-verse">
-                    <strong>Zechariah 4:6</strong> &mdash; "Not by power nor by might, but by my Spirit, says the Lord of Hosts."
+                    <strong>Zechariah 4:6</strong> — "Not by power nor by might, but by my Spirit, says the Lord of Hosts."
                 </div>
                 <p>Haiti, a nation cradling a powerful spiritual legacy, is uniquely emblazoned with a flag steeped in profound divine meaning. Far more than a national emblem, it is a spiritual tapestry, deeply woven into the fabric of biblical prophecy and sacred connection. On these digital scrolls, we embark upon a profound journey to explore the intimate ties between Haiti's flag and the Holy Scriptures, discerning how its very elements resonate with God's majestic plan for all humanity.</p>
                 <p>Zechariah 4:5–6 describes a spiritual revelation given to Zerubbabel, where an angel reveals symbolic meanings for five material things, presented as a divine declaration for the nation of Haiti. The angel unveils a spiritual banner sealed above the Haitian flag, symbolizing the very Word of God for Haiti. The four-square insets within the flag are explained as spiritual emblems, each image interpreted in alignment with prophecies concerning Zerubbabel (a type of Jesus) and the mountain becoming a plain (v.7), signifying God's mercy and divine intervention.</p>
@@ -660,20 +628,20 @@
                 <h3 class="scroll-title">God's Unwavering Judgment & Foundation</h3>
                 <p class="scroll-theme">The Plummet of Righteousness: Haiti's Sealed Destiny</p>
                 <div class="key-verse">
-                    <strong>Psalm 62:1–4</strong> &mdash; "God stands as a defense, judging Satan and establishing righteousness."
+                    <strong>Psalm 62:1–4</strong> — "God stands as a defense, judging Satan and establishing righteousness."
                 </div>
-                <p>Behold a profound spiritual confrontation, as the Almighty God executes His righteous judgment upon the Adversary, Satan. This judgment is wielded by the plummet of His unblemished righteousness—a truth vividly symbolized by the **seven spirits/eyes of the Lord**, which find their correspondence in the radiant golden triangles upon the Haitian flag, signifying divine oversight. Through this pivotal moment, God meticulously lays the spiritual foundation of Haiti, sealing the nation's destiny by His immutable, sovereign will. This deep interpretation of Zechariah 4:8–10 underscores that the foundation laid by Zerubbabel is not merely physical, but represents the unshakeable righteousness of God Himself, directly linking it to Haiti's spiritual bedrock, destined for glory.</p>
+                <p>Behold a profound spiritual confrontation, as the Almighty God executes His righteous judgment upon the Adversary, Satan. This judgment is wielded by the plummet of His unblemished righteousness—a truth vividly symbolized by the <strong>seven spirits/eyes of the Lord</strong>, which find their correspondence in the radiant golden triangles upon the Haitian flag, signifying divine oversight. Through this pivotal moment, God meticulously lays the spiritual foundation of Haiti, sealing the nation's destiny by His immutable, sovereign will. This deep interpretation of Zechariah 4:8–10 underscores that the foundation laid by Zerubbabel is not merely physical, but represents the unshakeable righteousness of God Himself, directly linking it to Haiti's spiritual bedrock, destined for glory.</p>
             </div>
 
             <div class="scroll" id="biblical-connections">
                 <h3 class="scroll-title">Biblical Connections: Olive Trees & The Golden Candlestick</h3>
                 <p class="scroll-theme">The Two Anointed Ones: Witnesses of Divine Power</p>
                 <div class="key-verse">
-                    <strong>Revelation 11:3</strong> &mdash; "Then I will give power to my two witnesses, and they shall prophesy one thousand two hundred and sixty days, clothed in sackcloth."
+                    <strong>Revelation 11:3</strong> — "Then I will give power to my two witnesses, and they shall prophesy one thousand two hundred and sixty days, clothed in sackcloth."
                 </div>
-                <p>The Haitian flag's meaning is profoundly linked to biblical scripture, especially Zechariah 4:11-14 and Revelation 11:3-5. In these verses, the two anointed ones are identified as mighty witnesses who proclaim the living Word of God, their divine power symbolized through the golden pipes and the blazing candlesticks. These very elements find their vibrant reflection within the Haitian flag, containing symbolic representations of the sacred meeting between the Most High God and man.
+                <p>The Haitian flag's meaning is profoundly linked to biblical scripture, especially Zechariah 4:11-14 and Revelation 11:3-5. In these verses, the two anointed ones are identified as mighty witnesses who proclaim the living Word of God, their divine power symbolized through the golden pipes and the blazing candlesticks. These very elements find their vibrant reflection within the Haitian flag, containing symbolic representations of the sacred meeting between the Most High God and man.</p>
                 <p>To further visualize these connections, behold the very banner of Haiti:</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg" alt="Actual Haitian Flag" class="haitian-flag-actual">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg" alt="Actual Haitian Flag" class="haitian-flag-actual" loading="lazy">
                 <details>
                     <summary>Click to Unveil the Sacred Tapestry of Scripture</summary>
                     <p>
@@ -709,18 +677,18 @@
                 <h3 class="scroll-title">The Divine Spectrum: Color Symbolism</h3>
                 <p class="scroll-theme">Heaven's Hue, Earth's Stain, and the Purple of Redemption</p>
                 <div class="key-verse">
-                    <strong>John 19:2</strong> &mdash; "And put on him a purple robe."
+                    <strong>John 19:2</strong> — "And put on him a purple robe."
                 </div>
-                <p>The Haitian flag unfurls a rich and vibrant color scheme, each hue imbued with profound theological significance. **Light blue**, seen prominently, reaches upward, representing the boundless expanse of the heavens, God's very throne. **Scarlet (red)**, a color echoing the earth, links profoundly to Adam (whose name means "red earth"), Edom, and Esau, symbolizing humanity's earthly foundation and fallen state. **Gold**, gleaming throughout the flag's central motifs, speaks of divine glory, the sacred, and the heavenly realm.</p>
-                <p>The most compelling revelation lies in the harmonious interplay of these colors: when light blue seamlessly blends with or meets scarlet, a majestic **purple** emerges. This purple is not merely a color; it is a profound spiritual emblem of the **meeting of God and man**, the divine embracing the human. This powerful confluence of blue, purple, and scarlet is not arbitrary; it is woven throughout biblical narrative, from the intricate blueprints of the Tabernacle and the priestly garments in Exodus 25-39 (mentioned nine times in Exodus 39 alone) to the New Testament, where it dramatically appears in the robes placed upon Jesus during His judgment (Matthew 27:28 describes a scarlet robe; John 19:2 explicitly states a purple robe, confirming this consistent spiritual color code). Thus, the entire flag of the nation of Haiti, through its very essence of purple and scarlet, powerfully proclaims the meeting of God and man—a living testament to Jesus Christ, the God-Man, the Son of Man.</p>
-                <p>The flag’s central golden palm tree stands as a testament to the Lord of the Earth, a dual connection to both the ancient priesthood of Melchizedek and the golden anointed ones prophesied in the Bible. Its spiritual significance thunders forth the divine authority of God over all creation. Furthermore, the very fabric of the flag—fine twined linen—symbolizes the righteousness of the saints, a purity made possible only by this sacred meeting of God and man, achieved through the resurrection power of the **scarlet blood of the Lamb**.</p>
+                <p>The Haitian flag unfurls a rich and vibrant color scheme, each hue imbued with profound theological significance. <strong>Light blue</strong>, seen prominently, reaches upward, representing the boundless expanse of the heavens, God's very throne. <strong>Scarlet (red)</strong>, a color echoing the earth, links profoundly to Adam (whose name means "red earth"), Edom, and Esau, symbolizing humanity's earthly foundation and fallen state. <strong>Gold</strong>, gleaming throughout the flag's central motifs, speaks of divine glory, the sacred, and the heavenly realm.</p>
+                <p>The most compelling revelation lies in the harmonious interplay of these colors: when light blue seamlessly blends with or meets scarlet, a majestic <strong>purple</strong> emerges. This purple is not merely a color; it is a profound spiritual emblem of the <strong>meeting of God and man</strong>, the divine embracing the human. This powerful confluence of blue, purple, and scarlet is not arbitrary; it is woven throughout biblical narrative, from the intricate blueprints of the Tabernacle and the priestly garments in Exodus 25-39 (mentioned nine times in Exodus 39 alone) to the New Testament, where it dramatically appears in the robes placed upon Jesus during His judgment (Matthew 27:28 describes a scarlet robe; John 19:2 explicitly states a purple robe, confirming this consistent spiritual color code). Thus, the entire flag of the nation of Haiti, through its very essence of purple and scarlet, powerfully proclaims the meeting of God and man—a living testament to Jesus Christ, the God-Man, the Son of Man.</p>
+                <p>The flag’s central golden palm tree stands as a testament to the Lord of the Earth, a dual connection to both the ancient priesthood of Melchizedek and the golden anointed ones prophesied in the Bible. Its spiritual significance thunders forth the divine authority of God over all creation. Furthermore, the very fabric of the flag—fine twined linen—symbolizes the righteousness of the saints, a purity made possible only by this sacred meeting of God and man, achieved through the resurrection power of the <strong>scarlet blood of the Lamb</strong>.</p>
             </div>
 
             <div class="scroll" id="spiritual-meaning">
                 <h3 class="scroll-title">Spiritual Meaning: A Pathway to Salvation</h3>
                 <p class="scroll-theme">The Flag as a Prophetic Herald of Christ’s Return</p>
                 <div class="key-verse">
-                    <strong>Revelation 11:3</strong> &mdash; "I will give power to my two witnesses..."
+                    <strong>Revelation 11:3</strong> — "I will give power to my two witnesses..."
                 </div>
                 <p>The Haitian flag, in its profound colors and intricate symbols, stands as a vibrant testament to God's eternal covenant with humanity and His magnificent plan for salvation. The golden pipes, representing the outpouring of divine truth, the two anointed ones—mighty instruments of God’s will—and the fire they bring forth, are potent symbols of divine prophecy and irresistible power, as revealed in the dramatic unfolding of Revelation 11. Through this divine intervention, the ancient curse upon the earth is destined to be fully removed, and the Lord’s supreme authority over all nations is firmly established for eternity. The flag thus represents the profound, transformative spiritual journey of salvation, made possible solely through the sacred meeting of God and man in Jesus Christ.</p>
                 <p>In its deepest essence, the Haitian flag transcends its role as a mere national symbol; it is a potent spiritual declaration, weaving together past, present, and future through the threads of biblical prophecy, divine judgment, and the glorious resurrection power of Jesus Christ. The nation’s past covenant with voodoo, a spiritual bondage, is understood to have irrevocably expired in 2004. God’s unwavering justice followed—evidenced by significant events such as the devastating 2010 earthquake—signifying a profound divine turning point and the laying of a new, righteous, and unshakeable foundation for Haiti’s future in God.</p>
@@ -730,7 +698,7 @@
                 <h3 class="scroll-title">Creation, Sound, and The Living Word</h3>
                 <p class="scroll-theme">From Divine Vibration to Manifest Reality</p>
                 <div class="key-verse">
-                    <strong>Genesis 1:3</strong> &mdash; "And God said, 'Let there be light'; and there was light."
+                    <strong>Genesis 1:3</strong> — "And God said, 'Let there be light'; and there was light."
                 </div>
                 <p>From the very core of God’s boundless love emanated the primal forces of creation: divine vibration, sacred sound, and the powerful, spoken Word. This primordial command, "Let there be light," did not merely initiate existence; it ignited it. The celestial harmonies of Psalm 148 and the thundering voice in Psalm 29 eloquently echo this magnificent process, revealing how Jesus, the manifest image of the invisible God (Colossians 1:15, Hebrews 1:3), spoke the cosmos into being. His very words possess the power to penetrate and divide the soul and spirit, illuminating the depths of the heart.</p>
                 <details>
@@ -749,7 +717,7 @@
                 <h3 class="scroll-title">The Genesis of The Curse & The Promise of Salvation</h3>
                 <p class="scroll-theme">Redemption's Song: Through the Blood of Christ</p>
                 <div class="key-verse">
-                    <strong>Romans 3:23</strong> &mdash; "For all have sinned, and come short of the glory of God."
+                    <strong>Romans 3:23</strong> — "For all have sinned, and come short of the glory of God."
                 </div>
                 <p>In the beginning, God created all things, and they were profoundly good (Genesis 1:31, Psalm 104, Revelation 4:11). Yet, in a moment of fateful choice, the self-righteousness of man made a free-will decision to grasp the knowledge of good and evil, desiring to be "like God"—even though he was merely a creation, utterly lacking the power to create. As a devastating consequence of man's free-will decision, the Creator God, in His divine justice, cursed the man who had been deceived by the shining being—Satan. All that had been entrusted to man was now usurped and placed under the dominion of this shining adversary. God then, too, pronounced a curse upon Satan. The very earth itself, and woman, were also brought under this curse. All created good on the earth was now marred. Consequently, the entire earth lies groaning in darkness and bondage.</p>
                 <details>
@@ -757,15 +725,20 @@
                     <p>
                         Since it was the Almighty God who originally cursed creation and man, it stands to reason that only God Himself possesses the power and authority to remove that curse. The essence of life is in the blood. Thus, the curse was definitively removed by the resurrection power of the precious blood of Jesus Christ. This divine reversal will be fully manifested upon His glorious second coming to the earth, when the lamb will indeed lie down with the lion, and nothing shall harm on His holy mountain.
                         <br><br>
-                        By one man (Adam) came the devastating curse, and by one Man (Jesus Christ) it will be utterly removed. The sin of self-righteous pride ignited rebellion within God's creation through the deception of free will. From that moment when the Creator God cursed the earth, all mankind has been birthed with a fallen nature into a fallen earth, inherently in rebellion against their Maker. However, through genuine Holy Spirit-led repentance and the spiritual washing in the **scarlet blood of the Lamb**, man's self-righteousness and the stain of his sin are purified. This cleansing unlocks a glorious door to heaven and eternal life with God, making salvation uniquely possible through the resurrection power of Jesus Christ. The Haitian flag, in its interwoven colors and symbols, thus powerfully signifies this triumphant path to redemption and the ultimate overcoming of the ancient curse.</p>
+                        By one man (Adam) came the devastating curse, and by one Man (Jesus Christ) it will be utterly removed. The sin of self-righteous pride ignited rebellion within God's creation through the deception of free will. From that moment when the Creator God cursed the earth, all mankind has been birthed with a fallen nature into a fallen earth, inherently in rebellion against their Maker. However, through genuine Holy Spirit-led repentance and the spiritual washing in the <strong>scarlet blood of the Lamb</strong>, man's self-righteousness and the stain of his sin are purified. This cleansing unlocks a glorious door to heaven and eternal life with God, making salvation uniquely possible through the resurrection power of Jesus Christ. The Haitian flag, in its interwoven colors and symbols, thus powerfully signifies this triumphant path to redemption and the ultimate overcoming of the ancient curse.
+                    </p>
                 </details>
             </div>
 
             <div class="scroll" id="key-time-scriptures">
                 <h3 class="scroll-title">Key Time Scriptures: The Tapestry of Eternity</h3>
                 <p class="scroll-theme">God’s Unchanging Plan vs. Humanity's Temporal Fall</p>
-                <table border="0"> <thead>
-                        <tr><th>TIME & ETERNITY (God's Perfect Design)</th><th>THE CURSE & FALLEN MAN (Humanity's Reality)</th></tr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TIME & ETERNITY (God's Perfect Design)</th>
+                            <th>THE CURSE & FALLEN MAN (Humanity's Reality)</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -796,154 +769,136 @@
             <div class="scroll" id="author-info">
                 <h3 class="scroll-title">Authored by Gregory Shadt</h3>
                 <p class="scroll-theme">An Anointed Vessel for Haiti’s Spiritual Restoration</p>
-                <p style="text-align: center;">This profound revelation and intricate interpretation of the Haitian Flag's biblical meaning and its divine purpose is brought forth through the anointed hand of **Gregory Shadt**, a humble yet powerful vessel raised by God specifically for Haiti’s spiritual restoration and the unveiling of His eternal, life-transforming truths.</p>
+                <p style="text-align: center;">This profound revelation and intricate interpretation of the Haitian Flag's biblical meaning and its divine purpose is brought forth through the anointed hand of <strong>Gregory Shadt</strong>, a humble yet powerful vessel raised by God specifically for Haiti’s spiritual restoration and the unveiling of His eternal, life-transforming truths.</p>
             </div>
         </div>
-<footer>
-  <p>Connect with the Revelation: 
-    <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a>
-  </p>
 
-  <p>Follow the Unfolding Message: 
-    <a href="https://x.com/WOC_Officia" target="_blank">X</a> | 
-    <a href="https://youtube.com/@wings_of_the_cherubimgods_shek?si=YV0yQ6lPc7Wekb40" target="_blank">YouTube</a>
-  </p>
-
-  <p class="tagline">✨ The Digital Scroll Project continues to unfold, revealing deeper mysteries ✨</p>
-</footer>
-        
+        <footer>
+            <p>Connect with the Revelation: 
+                <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a>
+            </p>
+            <p>Follow the Unfolding Message: 
+                <a href="https://x.com/WOC_Officia" target="_blank" rel="noopener">X</a> | 
+                <a href="https://youtube.com/@wings_of_the_cherubimgods_shek?si=YV0yQ6lPc7Wekb40" target="_blank" rel="noopener">YouTube</a>
+            </p>
+            <p class="tagline">✨ The Digital Scroll Project continues to unfold, revealing deeper mysteries ✨</p>
+            <div class="footer-icons">
+                <span>🕊️</span>
+                <span>📜</span>
+                <span>✨</span>
+            </div>
+        </footer>
     </div>
 
     <script>
-        // Create animated stars - Enhanced for more dynamic feel
+        // Create animated stars
         function createStars() {
             const starsContainer = document.getElementById('stars');
-            const numberOfStars = 150; // More stars for density
+            const numberOfStars = 150;
             for (let i = 0; i < numberOfStars; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
-                const size = Math.random() * 3 + 1; // Varying sizes
+                const size = Math.random() * 3 + 1;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
-                
-                const startX = Math.random() * 200 - 50; // Start outside left/right
-                const startY = Math.random() * 200 - 50; // Start outside top/bottom
+                const startX = Math.random() * 200 - 50;
+                const startY = Math.random() * 200 - 50;
                 const endX = Math.random() * 200 - 50;
                 const endY = Math.random() * 200 - 50;
-
                 star.style.left = `${Math.random() * 100}%`;
                 star.style.top = `${Math.random() * 100}%`;
-                star.style.animationDelay = `${Math.random() * 5}s`; // Varying delays
+                star.style.animationDelay = `${Math.random() * 5}s`;
                 star.style.setProperty('--x-start', `${startX}vw`);
                 star.style.setProperty('--y-start', `${startY}vh`);
                 star.style.setProperty('--x-end', `${endX}vw`);
                 star.style.setProperty('--y-end', `${endY}vh`);
-                star.style.animationDuration = `${Math.random() * 150 + 50}s`; // Slower, varied movement
-
+                star.style.animationDuration = `${Math.random() * 150 + 50}s`;
                 starsContainer.appendChild(star);
             }
         }
 
-        // Scroll reveal animation - Kept similar, but with more impact
+        // Scroll reveal animation
         function revealOnScroll() {
             const scrolls = document.querySelectorAll('.scroll');
             scrolls.forEach(scroll => {
                 const scrollTop = scroll.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                if (scrollTop < windowHeight * 0.85) { // Reveal slightly earlier
+                if (scrollTop < windowHeight * 0.85) {
                     scroll.classList.add('reveal');
                 }
             });
         }
 
-        // --- Initial Load & Event Listeners ---
+        // Three.js Setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('threejs-container').appendChild(renderer.domElement);
+
+        const loader = new THREE.GLTFLoader();
+        loader.load('assets/models/cherub.glb', function(gltf) {
+            const cherub = gltf.scene;
+            cherub.position.set(0, 0, -2);
+            cherub.scale.set(0.6, 0.6, 0.6);
+            scene.add(cherub);
+            function animate() {
+                requestAnimationFrame(animate);
+                cherub.rotation.y += 0.003;
+                renderer.render(scene, camera);
+            }
+            animate();
+        }, undefined, function(error) {
+            console.error('Failed to load 3D model:', error);
+            document.getElementById('fallback-image').style.display = 'block';
+        });
+
+        const light = new THREE.PointLight(0xffffff, 1, 100);
+        light.position.set(0, 5, 5);
+        scene.add(light);
+        camera.position.z = 5;
+
+        // Optimize renderer for mobile
+        function optimizeRenderer() {
+            const isMobile = window.innerWidth < 768;
+            renderer.setPixelRatio(isMobile ? 1 : window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        }
+
+        // Portal Burst Effect
+        function triggerPortalBurst() {
+            const audio = document.getElementById('celestialBurst');
+            audio.currentTime = 0;
+            audio.play().catch(e => console.log("Audio play prevented:", e));
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.background = `rgba(${Math.random() * 255}, ${Math.random() * 215}, 0, 0.8)`;
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 1500);
+            }
+        }
+
+        // Event Listeners
         window.addEventListener('load', () => {
             createStars();
-            revealOnScroll(); // Initial check on load
-            // Placeholder for subtle background audio if desired (e.g., ambient sound)
-            // const audio = new Audio('path/to/subtle_ambient_music.mp3');
-            // audio.loop = true;
-            // audio.volume = 0.3; // Low volume
-            // audio.play().catch(e => console.log("Audio play prevented:", e)); // Autoplay might be blocked by browsers
+            revealOnScroll();
+            optimizeRenderer();
         });
 
         window.addEventListener('scroll', revealOnScroll);
-        const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ alpha: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.getElementById('threejs-container').appendChild(renderer.domElement);
+        window.addEventListener('resize', optimizeRenderer);
 
-const loader = new THREE.GLTFLoader();
-loader.load('assets/models/cherub.glb', function(gltf) {
-    const cherub = gltf.scene;
-    cherub.position.set(0, 0, -2);
-    cherub.scale.set(0.6, 0.6, 0.6);
-    scene.add(cherub);
-
-    function animate() {
-        requestAnimationFrame(animate);
-        cherub.rotation.y += 0.003;
-        renderer.render(scene, camera);
-    }
-    animate();
-}, undefined, function(error) {
-    console.error(error);
-});
-
-const light = new THREE.PointLight(0xffffff, 1, 100);
-light.position.set(0, 5, 5);
-scene.add(light);
-
-camera.position.z = 5;
-
-function triggerPortalBurst() {
-    const audio = document.getElementById('celestialBurst');
-    audio.currentTime = 0;
-    audio.play();
-
-    for (let i = 0; i < 50; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.background = `rgba(${Math.random() * 255}, ${Math.random() * 215}, 0, 0.8)`;
-        document.body.appendChild(particle);
-        setTimeout(() => particle.remove(), 1500);
-    }
-}
-
-window.addEventListener('resize', () => {
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-});
-        loader.load('assets/models/cherub.glb', function(gltf) {
-    // Success
-}, undefined, function(error) {
-    console.error('Failed to load 3D model:', error);
-    // Fallback: Display a static image or message
-});
-        function optimizeRenderer() {
-    const isMobile = window.innerWidth < 768;
-    renderer.setPixelRatio(isMobile ? 1 : window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-}
-window.addEventListener('resize', optimizeRenderer);
-optimizeRenderer();
-        loader.load('assets遵1), function(gltf) {
-    // Success
-}, undefined, function(error) {
-    console.error(error);
-    document.getElementById('fallback-image').style.display = 'block';
-});
+        // Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-X');
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-XXXXX-X');
-</script>
 </body>
-                    </html>
+            </html>
