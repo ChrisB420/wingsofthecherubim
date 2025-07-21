@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Scroll 2 of Wings of the Cherubim: The Wind Over the Waters - exploring the eternal movement of the Holy Spirit from creation to Pentecost."/>
+  <meta name="author" content="Gregory Shadt"/>
+  <meta name="keywords" content="Holy Spirit, Scroll 2, Wings of the Cherubim, Pentecost, Ruach, flame, Word of God, Genesis, light"/>
+  <title>Wings of the Cherubim - Scroll 2: The Wind Over the Waters</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Crimson Text', serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #f4f1e8;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+  .nav-buttons {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .nav-buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 0 10px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-buttons a:hover {
+    background-color: #444;
+  }
+<
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .main-header {
+      text-align: center;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 2px solid #d4af37;
+      font-family: 'Cinzel', serif;
+    }
+
+    .main-header h1 {
+      color: #ffd700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .main-header p {
+      color: #f4f1e8;
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .scroll {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.3));
+      border: 2px solid #d4af37;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+      animation: scrollReveal 1s ease-out;
+    }
+
+    @keyframes scrollReveal {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    .scroll-number {
+      position: absolute;
+      top: -15px;
+      left: 30px;
+      background: #ffd700;
+      color: #1a1a2e;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-family: 'Cinzel', serif;
+    }
+
+    .scroll-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: #ffd700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .scroll-theme {
+      font-size: 1.1rem;
+      color: #d4af37;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .scroll-content {
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .scroll-content section {
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-left: 4px solid #d4af37;
+      background: rgba(212, 175, 55, 0.05);
+      border-radius: 0 5px 5px 0;
+    }
+
+    .scroll-content section h2 {
+      font-family: 'Cinzel', serif;
+      color: #ffd700;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .scroll-content section p {
+      color: #f4f1e8;
+    }
+
+    .rainbow-breakdown {
+      margin: 1rem 0;
+      padding: 0.5rem;
+      background: rgba(212, 175, 55, 0.05);
+      border-left: 3px solid #ffd700;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .rainbow-breakdown ul {
+      margin-top: 0.5rem;
+      padding-left: 1.5rem;
+      color: #e0e0d0;
+    }
+
+    .parchment-text {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: rgba(212, 175, 55, 0.07);
+      border-left: 4px solid #ffd700;
+      border-radius: 5px;
+      font-style: italic;
+    }
+
+    .prayer, .call-to-action {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .prayer a, .call-to-action a, .footer a {
+      color: #ffd700;
+      text-decoration: none;
+      border-bottom: 1px dotted #ffd700;
+      transition: color 0.3s ease;
+    }
+
+    .prayer a:hover, .call-to-action a:hover, .footer a:hover {
+      color: #ffed4e;
+      border-bottom-color: #ffed4e;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.5);
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+    .footer em {
+      font-style: italic;
+      color: #d4af37;
+    }
+
+    .footer div {
+      margin-top: 1rem;
+      color: #ffd700;
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 1rem; }
+      .scroll { padding: 1.5rem; }
+      .scroll-title { font-size: 1.8rem; }
+      .main-header h1 { font-size: 2rem; }
+    }
+    img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <header class="main-header">
+    <h1>Scroll 2: The Wind Over the Waters</h1>
+    <p>The Spirit hovered over the deep — awakening divine order and life.</p>
+  </header>
+
+  <div class="container">
+    <div class="scroll" id="scroll2">
+      <div class="scroll-number">SCROLL 2</div>
+      <h2 class="scroll-title">📜 Scroll 2: The Wind Over the Waters</h2>
+      <p class="scroll-theme">From the chaos of creation to Pentecost’s fire — the Spirit is always moving.</p>
+      <div class="scroll-content">
+
+        <section>
+          <h2>The Hovering Spirit</h2>
+          <p>Genesis 1:2 reveals the Spirit not as static but in motion — hovering over chaos, initiating divine order. This movement shows God’s Spirit is a first responder to disorder.</p>
+          <img src="Dove.jpg"  alt="hovering Spirit" onerror="this.src='fallback_Dove.jpg';">
+        </section>
+
+        <section>
+          <h2>The Breath of Life</h2>
+          <p>"The Spirit of God has made me; the breath of the Almighty gives me life." (Job 33:4). From Adam’s nostrils to your lungs today, the breath of God animates us with purpose.</p>
+             <img src="section2.jpg"  alt="breath of life" onerror="this.src='fallback_section2.jpg';">
+        </section>
+
+        <section>
+          <h2>Symbols of the Spirit</h2>
+          <p>The dove, oil, and fire are visible signs of the invisible Spirit. In Jesus’ baptism, a dove descends. In David’s anointing, oil flows. At Pentecost, tongues of fire descend upon believers</p>
+              <img src="section5.jpg"  alt="Symbols" onerror="this.src='fallback_section5.jpg';">
+        </section>
+
+        <section>
+          <h2>Pentecost Fire</h2>
+          <p>The same wind that hovered now rushes in Acts 2. It fills the room, empowers disciples, and launches the Church with boldness, miracles, and prophecy.</p>
+              <img src="section3.jpg"  alt="fire" onerror="this.src='fallback_section3.jpg';">
+        </section>
+
+        <section>
+          <h2>The Spirit in Prophecy</h2>
+          <p>From Joel’s vision to Revelation’s trumpet blasts, the Spirit always points to Christ, inspires speech, and drives transformation in nations.</p>
+              <img src="section4.jpg"  alt="prophesy" onerror="this.src='fallback_section4.jpg';">
+        </section>
+
+        <div class="rainbow-breakdown">
+          <p>7 Manifestations of the Spirit (Isaiah 11:2):</p>
+          <ul>
+            <li>Spirit of the LORD</li>
+            <li>Wisdom</li>
+            <li>Understanding</li>
+            <li>Counsel</li>
+            <li>Might</li>
+            <li>Knowledge</li>
+            <li>Fear of the LORD</li>
+          </ul>
+        </div>
+
+        <p class="parchment-text">The Holy Spirit hovered, then ignited fire. Today, He hovers again — ready to fill those who wait, burn with those who believe, and speak through those who yield.</p>
+
+        <div class="prayer">
+          Scroll-Launch Prayer: “Holy Spirit, You who hovered over chaos, hover over me. Breathe into my silence, stir the flame, and fill me with eternal light.”
+        </div>
+
+        <div class="call-to-action">
+          Download the full Scroll PDF: <a href="scroll2.pdf">Download</a> | Seminar Guide: <a href="seminar-scroll2.pdf">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Return to <a href="index.html">Wings of the Cherubim</a></p>
+      <p>✨ The Wind still speaks ✨</p>
+      <p><em>“The Spirit blows where it wills…” — John 3:8</em></p>
+      <p>Authored by Gregory Shadt</p>
+      <div style="font-size: 2rem;">🕊️ 💨 🔥</div>
+    </footer>
+  </div>
+
+  <script>
+    function createStars() {
+      const starsContainer = document.getElementById('stars');
+      for (let i = 0; i < 50; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        starsContainer.appendChild(star);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', createStars);
+  </script>
+<div class="nav-buttons">
+  <a href="in.html">← Previous</a>
+  <a href="Scroll3-nations-to-the-flame.html">Next Page →</a>
+</div>
+</body>
+
+</html>

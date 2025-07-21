@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wings of the Cherubim</title>
+  <meta name="description" content="Wings of the Cherubim: A prophetic scroll project unveiling divine mysteries and preparing the way for the Lord.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Crimson Text', serif;
+  background: url('images/cherubim-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+/* Header */
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  z-index: 1;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  animation: pulse 4s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.music-toggle {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Intro */
+.intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.scroll-previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.scroll-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-card:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-card h3 {
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.scroll-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* Floating Scroll Menu (Fixed Right) */
+.scroll-menu {
+  position: fixed;
+  top: 5.5rem; /* moved below top nav */
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scroll-menu a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+
+.scroll-menu a:hover {
+  color: #fff;
+}
+/* Top Navigation Bar */
+.top-nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 0.8rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  border-bottom: 2px solid #ffd700;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  transition: color 0.3s ease;
+}
+
+.top-nav li a:hover {
+  color: #fff;
+}
+.hero {
+  text-align: center;
+  padding: 7rem 1rem 3rem; /* Increased top padding */
+  z-index: 1;
+  position: relative;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.6);
+}</style>
+</head>
+
+
+<body>
+    <!-- Top Navigation Bar -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="index.html">🏠 Home</a></li>
+    <li><a href="teachings.html">📖 Teachings</a></li>
+    <li><a href="seminars.html">🙏 Seminar</a></li>
+     <li><a href="outreach.html">outreach</a></li>
+    <li><a href="about.html">✍️ About</a></li>
+    <li><a href="contact.html">📩 Contact</a></li>
+  </ul>
+</nav>
+  <!-- Background overlay -->
+  
+  <div class="background-overlay"></div>
+
+  <!-- Header with animated logo -->
+  <header class="hero">
+     <div class="dove-icon">🕊️</div>
+    <img src="Faith.jpg" alt="Wings of the Cherubim" class="logo" />
+    <h1>Wings of the Cherubim</h1>
+    <p class="subtitle">A Prophetic Scroll Project for the Final Generation</p>
+    <button class="music-toggle" onclick="toggleMusic()">🔊 Music</button>
+  </header>
+
+  <!-- Scroll Menu Floating Nav -->
+  <nav class="scroll-menu">
+  <a href="scroll1.html">1️⃣ Scroll 1</a>
+  <a href="scroll2.html">2️⃣ Scroll 2</a>
+  <a href="scroll3.html">3️⃣ Scroll 3</a>
+  <a href="scroll4.html">4️⃣ Scroll 4</a>
+</nav>
+
+  <!-- Main content -->
+  <main class="intro">
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        This is the sacred chamber of revelation. Each scroll unveils a divine mystery—from the light of the Menorah to the judgment on Egypt. Explore. Align. Prepare.
+      </p>
+    </section>
+
+    <!-- Scroll preview cards -->
+    <section class="scroll-previews">
+      <div class="scroll-card">
+        <h3>🔥 Scroll 1: The Light Before Time</h3>
+        <p>Unveil the creation light and God's eternal plan.</p>
+        <a href="scroll1.html">Read Scroll 1 →</a>
+      </div>
+      <div class="scroll-card">
+        <h3>🌿 Scroll 2: The Menorah & the Curse</h3>
+        <p>Discover the 7 Spirits of God and redemption through Christ.</p>
+        <a href="scroll2.html">Read Scroll 2 →</a>
+      </div>
+      <div class="scroll-card">
+        <h3>🌍 Scroll 3: The Nations Drawn to the Flame</h3>
+        <p>A calling to the Gentiles through prophetic fire.</p>
+        <a href="scroll3.html">Read Scroll 3 →</a>
+      </div>
+      <div class="scroll-card">
+        <h3>🐉 Scroll 4: The Dragon of the Nile</h3>
+        <p>Judgment against Pharaoh and the spiritual Nile serpent.</p>
+        <a href="scroll4.html">Read Scroll 4 →</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Wings of the Cherubim • Powered by Scroll System & Greg’s Prophetic Teachings</p>
+  </footer>
+
+  <!-- Background Music & Shofar -->
+  <audio id="shofar" src="audio/shofar.mp3" autoplay></audio>
+  <audio id="bgmusic" src="audio/background.mp3" loop></audio>
+
+  <script>
+    const bgMusic = document.getElementById("bgmusic");
+    let playing = false;
+
+    function toggleMusic() {
+      playing = !playing;
+      playing ? bgMusic.play() : bgMusic.pause();
+    }
+
+    window.onload = () => {
+      document.getElementById("shofar").play();
+    };
+  </script>
+</body>
+</html>
