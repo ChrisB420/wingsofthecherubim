@@ -183,12 +183,47 @@ footer {
   padding: 1rem;
   font-size: 0.85rem;
   background: rgba(0, 0, 0, 0.6);
+}
+/* Exclusive Menorah Background */
+.menorah-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* keeps it behind all content */
+  width: 350px; /* adjust size */
+  opacity: 0.85;
+  pointer-events: none; /* prevents blocking clicks */
+}
+
+.menorah-bg img {
+  width: 100%;
+  height: auto;
+  transform-origin: center;
+  animation: zoomBreath 25s ease-in-out infinite, pulse 12s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px gold);
+}
+
+/* glowing pulse */
+@keyframes pulse {
+  0%, 100% { filter: drop-shadow(0 0 25px gold); }
+  50% { filter: drop-shadow(0 0 60px goldenrod); }
+}
+
+/* smooth zoom in/out breathing effect */
+@keyframes zoomBreath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(2.5); }
 }</style>
 </head>
 
 
 <body>
     <!-- Top Navigation Bar -->
+  <!-- Add this inside <body> on your homepage -->
+<div class="menorah-bg">
+  <img src="Faith.jpg" alt="Faith Menorah">
+</div>
 <nav class="top-nav">
   <ul>
     <li><a href="index.html">🏠 Home</a></li>
@@ -264,6 +299,14 @@ footer {
   <audio id="bgmusic" src="audio/background.mp3" loop></audio>
 
   <script>
+    // Gentle parallax following mouse
+document.addEventListener("mousemove", e => {
+  const menorah = document.querySelector(".menorah-bg img");
+  if (!menorah) return;
+  let x = (e.clientX / window.innerWidth - 0.5) * 30;
+  let y = (e.clientY / window.innerHeight - 0.5) * 30;
+  menorah.style.transform = `scale(2) translate(${x}px, ${y}px)`;
+});
     const bgMusic = document.getElementById("bgmusic");
     let playing = false;
 
