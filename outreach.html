@@ -1,320 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Support the Wings of the Cherubim outreach ministries, including the T-shirt evangelism in Mombasa, Kenya. Learn how your donations make a difference.">
-    <meta name="author" content="Gregory Shadt / Chris">
-    <meta name="keywords" content="Christian outreach, Mombasa Kenya ministry, T-shirt evangelism, gospel distribution, spiritual support, donate, Holy Spirit missions, African outreach, Wings of the Cherubim giving">
-    <title>Outreach & Missions - Wings of the Cherubim</title>
-    <link rel="stylesheet" href="style.css"> 
-    <style>
-        /* Base & Global Reset (Copy from your main HTML or ensure style.css is linked) */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
-        body {
-            background-color: #f0f0f5; /* Lighter, ethereal background */
-            color: #333;
-            line-height: 1.8;
-            overflow-x: hidden;
-            font-size: 1.1em;
-        }
-        .stars { /* Celestial background for main site consistency */
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2;
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); overflow: hidden;
-        }
-        .star { /* Star animation (copy from main HTML or ensure style.css) */
-            position: absolute; background-color: #fff; border-radius: 50%;
-            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite; opacity: 0; box-shadow: 0 0 5px #fff;
-        }
-        /* Keyframe animations for stars (copy from main HTML or ensure style.css) */
-        @keyframes twinkle { 0% { opacity: 0; transform: scale(0.6); } 50% { opacity: 1; transform: scale(1.3); } 100% { opacity: 0; transform: scale(0.6); } }
-        @keyframes moveStar { from { transform: translate(var(--x-start, 0), var(--y-start, 0)); } to { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); } }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wings of the Cherubim Outreach – EJIM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
 
-        .container {
-            position: relative; z-index: 1;
-            background-color: rgba(255, 255, 255, 0.98);
-            max-width: 100%; margin: 0 auto;
-            box-shadow: 0 0 50px rgba(0,0,0,0.3);
-        }
-        header { /* Consistent header styling */
-            background: linear-gradient(to right, #2c3e50, #8e44ad); color: #ecf0f1; padding: 3rem 2rem;
-            text-align: center; border-bottom: 5px solid #FFD700; position: relative; overflow: hidden;
-        }
-        .dove-icon { /* Optional: If you want the dove icon on this page header too */
-            font-size: 3.5rem; position: absolute; top: 1.5rem; left: 1.5rem; animation: floatAndPulse 4s infinite ease-in-out;
-            text-shadow: 0 0 10px rgba(255,255,255,0.7); z-index: 1;
-        }
-        @keyframes floatAndPulse { 0% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-10px); opacity: 0.8; } 100% { transform: translateY(0); opacity: 1; } }
-        .main-title { font-size: 3rem; margin-bottom: 0.75rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-        .subtitle { font-size: 2.2rem; margin-bottom: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #FFD700; }
-        .tagline { font-size: 1.3rem; font-style: italic; color: #d3d3d3; }
+    header {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
 
-        /* Navigation (Copy from your main HTML or ensure style.css is linked) */
-        nav { background: #1e3a8a; padding: 1.2rem; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; }
-        nav a { color: #ecf0f1; text-decoration: none; font-size: 1.2em; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease; position: relative; }
-        nav a::before { content: ''; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background-color: #FFD700; visibility: hidden; transform: scaleX(0); transition: all 0.3s ease-in-out 0s; }
-        nav a:hover::before { visibility: visible; transform: scaleX(1); }
-        nav a:hover { color: #FFD700; background-color: rgba(255, 215, 0, 0.1); }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
 
-        /* Outreach Page Specific Styles */
-        .outreach-content {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 2.5rem;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            border-right: 5px solid #FF4500; /* Orange-red accent for outreach/passion */
-            position: relative;
-            z-index: 1;
-        }
-        .outreach-content h2 {
-            color: #FF4500; /* Orange-red heading */
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            border-bottom: 3px double #FFD700;
-            padding-bottom: 0.8rem;
-        }
-        .outreach-intro, .ministry-section p, .updates-section p {
-            text-align: justify;
-            margin-bottom: 1.5rem;
-            font-size: 1.1em;
-            color: #444;
-        }
-        .ministry-section, .updates-section, .support-section {
-            background-color: #f9f9f9;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-top: 2.5rem;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
-        }
-        .ministry-section h3, .updates-section h3, .support-section h3 {
-            color: #1e3a8a;
-            font-size: 1.8em;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 0.5rem;
-            text-align: center;
-        }
-        .highlight-text {
-            color: #FF4500;
-            font-weight: bold;
-        }
-        .update-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        .update-card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            padding-bottom: 15px; /* Padding for text below image */
-        }
-        .update-card img {
-            width: 100%;
-            height: 200px; /* Fixed height for consistency */
-            object-fit: cover; /* Crop image to fit */
-            border-bottom: 1px solid #eee;
-            margin-bottom: 10px;
-        }
-        .update-card h4 {
-            color: #1e3a8a;
-            font-size: 1.2em;
-            margin-bottom: 0.5rem;
-        }
-        .update-card p {
-            font-size: 0.95em;
-            color: #666;
-            padding: 0 15px;
-            margin-bottom: 0.8rem;
-        }
+    header h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
 
-        /* Donation Section Styling */
-        .support-section {
-            background-color: #e6f7ff; /* Light blue for support */
-            border: 2px solid #1e3a8a; /* Dark blue border */
-            text-align: center;
-            margin-top: 3.5rem;
-            padding: 2.5rem 1.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        .support-section h3 {
-            color: #1e3a8a; /* Dark blue heading */
-            font-size: 2.2em;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        .support-section h3::after { /* Underline effect */
-            content: '';
-            width: 80px;
-            height: 4px;
-            background-color: #FFD700;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        .donation-cta-text {
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-        .donate-button {
-            display: inline-block;
-            background-color: #FFD700; /* Gold button */
-            color: #1e3a8a; /* Dark blue text */
-            padding: 1rem 2rem;
-            font-size: 1.4em;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 50px; /* Pill shape */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
-        }
-        .donate-button:hover {
-            background-color: #e0b800; /* Darker gold on hover */
-            transform: translateY(-3px); /* Subtle lift effect */
-        }
-        .paypal-note { /* For donation button if needed */
-            font-size: 0.9em;
-            color: #777;
-            text-align: center;
-            margin-top: 1rem;
-        }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        /* Footer (Copy from your main HTML or ensure style.css is linked) */
-        footer {
-            background: #1e3a8a; color: #ecf0f1; text-align: center; padding: 2rem; margin-top: 3rem;
-            box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3); border-top: 5px double #FFD700;
-        }
-        footer a { color: #FFD700; text-decoration: none; transition: text-decoration 0.3s ease; }
-        footer a:hover { text-decoration: underline; }
-        .footer-icons { margin-top: 1.5rem; font-size: 2.5rem; display: flex; justify-content: center; gap: 1.5rem; }
-        .footer-icons span { animation: pulseFade 2s infinite alternate; }
-        .footer-icons span:nth-child(2) { animation-delay: 0.5s; }
-        .footer-icons span:nth-child(3) { animation-delay: 1s; }
-        @keyframes pulseFade { 0% { opacity: 0.7; transform: scale(1); } 100% { opacity: 1; transform: scale(1.1); } }
+    section h3 {
+      color: #1e3c72;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
 
-        /* Responsive Design (Copy from main HTML or ensure style.css) */
-        @media (max-width: 768px) {
-            .main-title { font-size: 2.5rem; } .subtitle { font-size: 1.8rem; }
-            nav ul { flex-direction: column; gap: 0.8rem; } nav a { font-size: 1.1em; }
-            .outreach-content { padding: 2rem; } .outreach-content h2 { font-size: 2rem; }
-            .update-grid { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 480px) {
-            body { font-size: 1em; } header { padding: 2rem 0.5rem; }
-            .main-title { font-size: 2rem; } .subtitle { font-size: 1.4rem; }
-            nav { padding: 0.8rem; } nav ul { gap: 0.5rem; }
-            .outreach-content { padding: 1.5rem; } .outreach-content h2 { font-size: 1.8rem; }
-        }
-    </style>
+    section p, section ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    .ejim-highlight {
+      background: #fff9e6;
+      padding: 1.5rem;
+      border-left: 6px solid #f7b733;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      background: #f7b733;
+      color: #333;
+      padding: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #1e3c72;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Optional creative elements */
+    .scroll-section {
+      border: 2px dashed #f7b733;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      background: #fffef5;
+      border-radius: 12px;
+    }
+  </style>
 </head>
 <body>
-    <div class="stars" id="stars"></div>
 
-    <div class="container">
-        <header>
-            <div class="dove-icon" title="The Holy Spirit">🕊️</div>
-            <h1 class="main-title">Wings of the Cherubim</h1>
-            <h2 class="subtitle">Global Outreach & Missions</h2>
-            <p class="tagline">Spreading the Light of Truth to the Nations</p>
-        </header>
+  <header>
+    <h1>Wings of the Cherubim Outreach</h1>
+    <h2>Featuring EJIM: Encounter Jesus Intercessory Ministry</h2>
+  </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="seminars.html">Seminars</a></li>
-                <li><a href="teachings.html">Teachings</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <section class="ejim-highlight">
+    <h3>Mission</h3>
+    <p>
+      EJIM exists to intercede, pray, and reach communities with the love of Jesus. It operates as a key movement under Wings of the Cherubim, combining intercessory prayer with tangible outreach to transform lives spiritually and physically.
+    </p>
+  </section>
 
-        <div class="outreach-content">
-            <h2>Our Heart for Missions</h2>
-            <p class="outreach-intro">
-                The vision of Wings of the Cherubim extends beyond teaching to active evangelism and support for communities in need. Through the leading of the Holy Spirit, we are committed to practical outreach that shares the Gospel and demonstrates God's love.
-            </p>
+  <section class="scroll-section">
+    <h3>Activities</h3>
+    <ul>
+      <li>Intercessory prayer initiatives for families, individuals, and nations.</li>
+      <li>Community outreach and evangelism in Mombasa and surrounding regions.</li>
+      <li>Faith-based programs like T-shirt ministry to spread the Gospel.</li>
+      <li>Bible teaching seminars and mentorship for spiritual growth.</li>
+      <li>Support for local communities with tangible needs, aligned with Wings’ mission.</li>
+    </ul>
+  </section>
 
-            <div class="ministry-section">
-                <h3>The Mombasa T-Shirt Ministry, Kenya</h3>
-                <p>One of our foundational outreach initiatives is the distribution of T-shirts in **Mombasa, Kenya**. These T-shirts are not merely garments; they are powerful tools of evangelism, bearing the name of **Jesus Christ** and foundational Bible verses like **John 3:16** in Swahili.</p>
-                <p>This ministry, managed by our dedicated contact Vanessa in Mombasa, directly impacts lives by providing clothing while simultaneously sowing seeds of the Gospel. It's a tangible way to spread the truth and love of Christ in a vibrant community.</p>
-                <p class="highlight-text">"For God so loved the world that He gave His only begotten Son, that whoever believes in Him should not perish but have everlasting life." - John 3:16 (Swahili: "Mungu alipenda ulimwengu hata akamtoa Mwanawe wa pekee, ili kila amwaminiye asipotee bali awe na uzima wa milele.")</p>
-            </div>
+  <section class="scroll-section">
+    <h3>Updates & Transparency</h3>
+    <p>
+      EJIM reports regularly on its activities. We provide updates, photos, and reports from the field, ensuring that every contribution is used directly for ministry and outreach, impacting lives for Christ.
+    </p>
+  </section>
 
-            <div class="updates-section">
-                <h3>Outreach Updates & Transparency</h3>
-                <p>We believe in transparent stewardship of every donation. While this section is currently being populated, we are committed to providing regular updates, including photos and reports from the ground in Mombasa, showing exactly how your support is making a difference.</p>
+  <section class="scroll-section">
+    <h3>Partner with EJIM</h3>
+    <p>
+      Join us in this mission. Your support helps EJIM bring the light of Jesus to communities in need. Donations are used directly for ministry activities and community support.
+    </p>
+    <p>Email: <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a></p>
+    <div class="cta">Support EJIM Today & Make a Difference</div>
+  </section>
 
-                <div class="update-grid">
-                    <div class="update-card">
-                        <img src="https://via.placeholder.com/300x200?text=Mombasa+Update+1" alt="Placeholder image of T-shirt distribution in Mombasa">
-                        <h4>First T-Shirt Distribution (Aug 2025)</h4>
-                        <p>Funds sent in July enabled the purchase of 20 T-shirts, distributed to children and youth in specific areas of Mombasa.</p>
-                    </div>
-                    <div class="update-card">
-                        <img src="https://via.placeholder.com/300x200?text=Community+Impact" alt="Placeholder image of community receiving aid">
-                        <h4>Community Engagement (Sept 2025)</h4>
-                        <p>Beyond T-shirts, initial funds also supported groceries and school fees for families in need, fostering goodwill.</p>
-                    </div>
-                    </div>
-                <p style="text-align: center; margin-top: 2rem; font-style: italic; color: #777;">
-                    Please check back soon for more exciting updates and photos from our missions!
-                </p>
-            </div>
+  <footer>
+    &copy; 2025 Wings of the Cherubim. All Rights Reserved. EJIM is a movement under Wings of the Cherubim.
+  </footer>
 
-            <div class="support-section">
-                <h3>Partner with Us in Ministry!</h3>
-                <p class="donation-cta-text">
-                    Your generous contribution directly fuels our outreach efforts, spreading the Gospel and providing tangible support to communities like Mombasa. Every donation, big or small, makes an eternal difference.
-                </p>
-<form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="8D28CLZLEH3S8" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
-</form>>
-
-                <p class="paypal-note">
-                    *All donations are processed securely through PayPal. Funds are directed to support our direct ministry efforts.*
-                </p>
-            </div>
-
-        </div>
-
-        <footer>
-            <p>Connect with the Revelation: <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a></p>
-            <p>Follow the Unfolding Message: <a href="https://x.com/wingsofthecherubim" target="_blank">X</a> | <a href="http://googleusercontent.com/youtube.com/channel/UC_YourYouTubeChannelID" target="_blank">YouTube</a></p>
-            <p class="tagline">✨ The Digital Scroll Project continues to unfold, revealing deeper mysteries ✨</p>
-            <div class="footer-icons">
-                <span title="The Holy Spirit">🕊️</span>
-                <span title="Divine Fire of Judgment and Purification">🔥</span>
-                <span title="The Menorah: God's Light and Presence">🕎</span>
-            </div>
-            <p style="margin-top: 1rem;">© 2025 Wings of the Cherubim. All rights reserved. Prophecies unfolding from Kenya to the Nations.</p>
-        </footer>
-    </div>
-
-    <script>
-        // JavaScript for star animation (copy from your main HTML or ensure style.js is linked)
-        function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const numberOfStars = 150;
-            for (let i = 0; i < numberOfStars; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                const size = Math.random() * 3 + 1;
+</body>
+</html>
