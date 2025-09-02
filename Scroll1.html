@@ -173,6 +173,141 @@
         <li>Romans 1:20 – God’s invisible qualities clearly seen through creation</li>
       </ul>
     </section>
+    <!-- =========================
+Wings of the Cherubim — Scroll Footer Module
+Drop this near the end of each Scroll page (inside your main frame/container).
+Update the data-* attributes per scroll.
+========================= -->
+<section class="wotc-scroll-footer" 
+         data-scroll-id="scroll-1"
+         data-scroll-title="The Light Before Time">
+
+  <!-- Headline -->
+  <h2 class="wotc-h">Align & Engage</h2>
+
+  <!-- Scripture Strip -->
+  <details class="wotc-details" open>
+    <summary class="wotc-summary">Key Scriptures</summary>
+    <ul class="wotc-refs">
+      <!-- Replace these per scroll -->
+      <li><a href="https://www.biblegateway.com/passage/?search=Genesis+1%3A1-3" target="_blank" rel="noopener">Genesis 1:1–3</a></li>
+      <li><a href="https://www.biblegateway.com/passage/?search=John+1%3A1-5" target="_blank" rel="noopener">John 1:1–5</a></li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Revelation+22%3A5" target="_blank" rel="noopener">Revelation 22:5</a></li>
+    </ul>
+  </details>
+
+  <!-- Daily Alignment Prayer -->
+  <div class="wotc-card">
+    <div class="wotc-card-head">
+      <h3 class="wotc-subh">Daily Alignment Prayer</h3>
+      <button type="button" class="wotc-btn" data-copy="#wotc-prayer-text">Copy</button>
+    </div>
+    <!-- Replace this text per scroll -->
+    <p id="wotc-prayer-text" class="wotc-prayer">
+      Lord Jesus, Eternal Light before all time, align my heart, mind, and steps with Your brightness today.
+      Drive out every shadow in me and through me; let Your Word be the lamp to my feet and the flame that I carry. Amen.
+    </p>
+  </div>
+
+  <!-- Optional Video Embed (replace src or remove block) -->
+  <div class="wotc-card">
+    <div class="wotc-card-head">
+      <h3 class="wotc-subh">Watch the Scroll</h3>
+    </div>
+    <!-- Example: YouTube embed; swap the src with your video link -->
+    <div class="wotc-video">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+              title="Scroll Video"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Actions: Download + Join -->
+  <div class="wotc-actions">
+    <!-- PDF Download (replace href) -->
+    <a class="wotc-btn wotc-btn-primary" href="/assets/scroll-1.pdf" download>
+      Download this Scroll (PDF)
+    </a>
+
+    <!-- Join the 42K (Formspree example; replace action with your endpoint) -->
+    <form class="wotc-form" action="https://formspree.io/f/your_form_id" method="POST">
+      <input type="hidden" name="scroll" value="The Light Before Time">
+      <label class="wotc-input">
+        <span>Name</span>
+        <input name="name" type="text" required placeholder="Your name">
+      </label>
+      <label class="wotc-input">
+        <span>Email</span>
+        <input name="email" type="email" required placeholder="you@example.com">
+      </label>
+      <button class="wotc-btn" type="submit">Join the 42K</button>
+      <p class="wotc-hint">By joining, you’ll receive prayer guides and mission updates.</p>
+    </form>
+  </div>
+</section>
+
+<!-- =========================
+Scoped Styles (safe, low-specificity)
+========================= -->
+<style>
+  .wotc-scroll-footer{--bg:#0f0f12;--muted:#7b7f8a;--border:#23242a;--card:#14151a;--txt:#eaeaf2;--accent:#e4c171;--btn:#1d1f27;--btnp:#2a2e3a;--radius:16px;--pad:16px;margin:2rem 0;padding:clamp(16px,2vw,24px);background:linear-gradient(180deg,rgba(20,21,26,.6),rgba(20,21,26,.95)),url('/assets/bg-parchment.jpg') center/cover no-repeat;color:var(--txt);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .wotc-h{font-size:1.35rem;line-height:1.2;margin:0 0 1rem;color:var(--accent);letter-spacing:.3px}
+  .wotc-subh{margin:0;color:var(--txt);font-size:1.05rem}
+  .wotc-details{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:0;margin:0 0 1rem}
+  .wotc-summary{cursor:pointer;list-style:none;padding:var(--pad);font-weight:600}
+  .wotc-refs{margin:0;padding:0 var(--pad) var(--pad) var(--pad);display:grid;gap:.4rem}
+  .wotc-refs li{list-style:none}
+  .wotc-refs a{color:var(--accent);text-decoration:none;border-bottom:1px dashed rgba(228,193,113,.4)}
+  .wotc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:var(--pad);margin:0 0 1rem}
+  .wotc-card-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:0 0 .5rem}
+  .wotc-prayer{margin:.5rem 0 0;line-height:1.7}
+  .wotc-btn{appearance:none;border:1px solid var(--border);background:var(--btn);color:var(--txt);padding:.6rem .9rem;border-radius:999px;cursor:pointer;font-weight:600;transition:.2s ease;white-space:nowrap}
+  .wotc-btn:hover{transform:translateY(-1px);background:var(--btnp)}
+  .wotc-btn-primary{background:var(--accent);color:#1a1208;border-color:#b99a4e}
+  .wotc-btn-primary:hover{filter:brightness(.95)}
+  .wotc-actions{display:grid;gap:1rem}
+  @media (min-width:880px){.wotc-actions{grid-template-columns:1fr 1fr;align-items:start}}
+  .wotc-form{display:grid;gap:.7rem;background:var(--card);border:1px dashed var(--border);padding:var(--pad);border-radius:var(--radius)}
+  .wotc-input{display:grid;gap:.25rem}
+  .wotc-input input{width:100%;padding:.6rem .75rem;border-radius:10px;border:1px solid var(--border);background:#0f1014;color:var(--txt)}
+  .wotc-hint{margin:0;font-size:.85rem;color:var(--muted)}
+  .wotc-video{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#000}
+  .wotc-video iframe{position:absolute;inset:0;width:100%;height:100%}
+</style>
+
+<!-- =========================
+Behavior (copy button, auto-fill scroll title)
+========================= -->
+<script>
+  (function(){
+    // Fill hidden form input with the scroll title (if present)
+    var root = document.currentScript.previousElementSibling.previousElementSibling.previousElementSibling; 
+    // This relies on the structure above; safer query:
+    root = document.querySelector('.wotc-scroll-footer') || root;
+    if(root){
+      var t = root.getAttribute('data-scroll-title') || '';
+      var hidden = root.querySelector('input[name="scroll"]');
+      if(hidden && t) hidden.value = t;
+    }
+    // Copy prayer text
+    root?.querySelectorAll('[data-copy]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var sel = btn.getAttribute('data-copy');
+        var el = root.querySelector(sel);
+        if(!el) return;
+        var text = el.innerText.trim();
+        navigator.clipboard.writeText(text).then(function(){
+          var prev = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(function(){ btn.textContent = prev; }, 1400);
+        });
+      });
+    });
+  })();
+          </script>
   </main>
 
   <footer>
