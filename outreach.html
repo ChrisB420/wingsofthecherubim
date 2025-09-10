@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wings of the Cherubim – Outreach Hub</title>
+  <style>
+    :root {
+      --accent: #0fdba8;
+      --bg: #0b1a2b;
+      --panel: #13263f;
+      --text: #f5f7fa;
+      --muted: #bcd2e8;
+      --warn: #ffb020;
+      --ok: #20c997;
+      --err: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: #1f2833;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: var(--accent);
+    }
+    nav {
+      background: #45a29e;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      padding: 1rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,.22);
+      margin-bottom: 2rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    @media (max-width: 900px) { .g3 { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .g2 { grid-template-columns: 1fr; } }
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.12);
+      background: transparent;
+      color: var(--text);
+      padding: 0.55rem 0.8rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn.primary { background: var(--accent); color: #08131f; border-color: transparent; }
+    .btn.warn { background: var(--warn); color: #1b1203; border-color: transparent; }
+    .btn.ok { background: var(--ok); color: #03140f; border-color: transparent; }
+    .btn.small { padding: 0.3rem 0.6rem; font-size: 0.85rem; }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.55rem 0.6rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: #0e2136;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    textarea { resize: vertical; }
+    label { display: block; font-size: 0.9rem; color: #dfe9f5; margin-top: 0.5rem; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .between { justify-content: space-between; }
+    .right { justify-content: flex-end; }
+    .chip {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      color: var(--muted);
+      margin: 0.2rem 0.25rem 0 0;
+    }
+    .table { width: 100%; border-collapse: collapse; }
+    .table th, .table td { border-bottom: 1px dashed rgba(255,255,255,.12); padding: 0.5rem 0.4rem; text-align: left; }
+    .tag { font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 8px; color: #0b1a2b; background: var(--accent); margin-left: 0.35rem; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); margin: 0.6rem 0; }
+    .lock { filter: grayscale(0.2) drop-shadow(0 2px 8px rgba(0,0,0,.5)); }
+    .notice { padding: 0.6rem 0.8rem; border: 1px dashed rgba(255,255,255,.18); border-radius: 10px; background: rgba(255,255,255,.03); }
+    .success { color: var(--ok); }
+    .error { color: var(--err); }
+    .small { font-size: 0.85rem; }
+    .muted { color: var(--muted); }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🕊️ Wings of the Cherubim – TEOM Outreach</h1>
+    <p>"The End of Mombasa shall be turned into Light"</p>
+  </header>
+
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#churches">Churches & Warriors</a>
+    <a href="#finance">Finance</a>
+    <a href="#evidence">Evidence</a>
+    <a href="#admin">Admin</a>
+  </nav>
+
+  <section id="overview">
+    <div class="card">
+      <h2>Mission Overview</h2>
+      <p>
+        This hub tracks all outreach under TEOM. Our calling is to carry the Flame of Christ into 
+        Mombasa through prayer, service, testimony, and light-bearing action.
+      </p>
+      <p><strong>Director:</strong> Gregory Schadt<br>
+         <strong>President - Field Lead:</strong> Vanessa<br>
+         <strong>General Secretary - Coordinator:</strong> Chris Beda</p>
+    </div>
+  </section>
+
+  <section id="teom-outreach">
+    <header class="card">
+      <h1>The Great Evangelist Outreach – Mombasa</h1>
+      <p><strong>Mission:</strong> To bring the love, the light, and the salvation of Jesus Christ to all souls in Mombasa through united prayer and evangelism.</p>
+      <div class="row between">
+        <div>
+          <span class="chip">Director: Gregory Schadt</span>
+          <span class="chip">President: Vanessa Juma</span>
+          <span class="chip">Secretary and Treasurer: Chris Beda</span>
+        </div>
+        <div class="row">
+          <button class="btn" id="btnPrint">Print</button>
+          <button class="btn" id="btnExport">Export Data</button>
+          <label class="small" style="display:flex;align-items:center;gap:6px">
+            <input type="file" id="importFile" accept="application/json"> Import Data
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid g3">
+      <section class="card" id="schedule">
+        <h2>Upcoming Actions <span class="tag">Schedule</span></h2>
+        <ul id="scheduleList" class="small"></ul>
+        <div class="divider"></div>
+        <p class="muted small">Saturday market (11:00–12:00) and Sunday after-service outreach are the default anchors. Adjust below if needed.</p>
+        <div class="card">
+          <h3>Outreach Tasks</h3>
+          <label for="outreachDate">Date</label>
+          <input type="date" id="outreachDate">
+          <label for="outreachTask">Task</label>
+          <input type="text" id="outreachTask" placeholder="Enter task">
+          <button class="btn ok" id="btnAddTask">Add Task</button>
+          <ul id="taskList" class="small"></ul>
+        </div>
+      </section>
+
+      <section class="card" id="churches">
+        <h2>Participating Churches <span class="tag">Prayer Warriors</span></h2>
+        <table class="table" id="churchTable">
+          <thead>
+            <tr><th>Church</th><th>Pastor</th><th>Prayer Warriors (target 5)</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p class="small muted">Add churches and prayer warriors in the Admin panel.</p>
+      </section>
+
+      <section class="card" id="evidence">
+        <h2>Evidence Log <span class="tag">Photos and Links</span></h2>
+        <div id="evidenceList" class="grid"></div>
+        <p class="small muted">Add testimonies, links, and media in the Admin panel.</p>
+      </section>
+    </div>
+
+    <section class="card" id="admin">
+      <div class="row between">
+        <h2 class="row" style="align-items:center;gap:8px">Administrative Controls <img class="lock" alt="lock" width="18" height="18" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='%23ffd700'><path d='M12 1a5 5 0 00-5 5v3H5a2 2 0 00-2 2v8a2 2 0 002 2h14a2 2 0 002-2v-8a2 2 0 00-2-2h-2V6a5 5 0 00-5-5zm-3 8V6a3 3 0 016 0v3H9z'/></svg>"></h2>
+        <div class="row">
+          <input type="password" id="adminKey" placeholder="Enter secret key to unlock">
+          <button class="btn primary" id="btnUnlock">Unlock</button>
+          <button class="btn warn hidden" id="btnLock">Lock</button>
+        </div>
+      </div>
+      <p id="adminNote" class="notice small">Administrative controls are hidden until the correct secret key is entered. The key is stored only in this browser (localStorage) for your convenience. Clear it with “Lock”.</p>
+
+      <div id="adminPanels" class="grid g2 hidden">
+        <div class="card">
+          <h3>Schedule Manager</h3>
+          <div class="grid g2">
+            <div>
+              <label>Day</label>
+              <select id="schDay">
+                <option>Saturday</option>
+                <option>Sunday</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+              </select>
+            </div>
+            <div>
+              <label>Time Range</label>
+              <input id="schTime" placeholder="e.g., 11:00–12:00">
+            </div>
+          </div>
+          <label>Location</label>
+          <input id="schLocation" placeholder="e.g., Kengeleni Market">
+          <label>Focus</label>
+          <input id="schFocus" placeholder="e.g., public prayer, preaching, distribution">
+          <div class="row right" style="margin-top:8px">
+            <button class="btn ok" id="btnAddSchedule">Add Action</button>
+          </div>
+          <div class="divider"></div>
+          <ul id="adminSchedule" class="small"></ul>
+        </div>
+
+        <div class="card">
+          <h3>Church and Prayer Warriors</h3>
+          <label>Church Name</label>
+          <input id="chName" placeholder="e.g., Gospel Light Church">
+          <label>Pastor Name</label>
+          <input id="chPastor" placeholder="e.g., Pastor John">
+          <label>Prayer Warriors (comma-separated, target five)</label>
+          <input id="chWarriors" placeholder="e.g., Mary, Peter, Joy, Kevin, Ruth">
+          <div class="row right" style="margin-top:8px">
+            <button class="btn ok" id="btnAddChurch">Add Church</button>
+          </div>
+          <div class="divider"></div>
+          <ul id="adminChurchList" class="small"></ul>
+        </div>
+
+        <div class="card">
+          <h3>Financial Allocation</h3>
+          <label>Total Funds Received (currency as sent)</label>
+          <input id="faTotal" type="number" min="0" step="0.01" placeholder="e.g., 200">
+          <div class="grid g3">
+            <div>
+              <label>Shirts and Hats (%)</label>
+              <input id="faApparel" type="number" min="0" max="100" value="30">
+            </div>
+            <div>
+              <label>Food and Meals (%)</label>
+              <input id="faFood" type="number" min="0" max="100" value="40">
+            </div>
+            <div>
+              <label>Logistics and Transport (%)</label>
+              <input id="faLog" type="number" min="0" max="100" value="30">
+            </div>
+          </div>
+          <div class="row right" style="margin-top:8px">
+            <button class="btn ok" id="btnCalc">Calculate Allocation</button>
+          </div>
+          <p id="faResult" class="small muted"></p>
+        </div>
+
+        <div class="card">
+          <h3>Evidence and Testimonies</h3>
+          <label>Title</label>
+          <input id="evTitle" placeholder="e.g., Prayer at Kengeleni">
+          <label>Media Link (photo, video, or post)</label>
+          <input id="evLink" placeholder="https://">
+          <label>Notes or Testimony</label>
+          <textarea id="evNotes" rows="3" placeholder="What happened? Who was touched?"></textarea>
+          <div class="row right" style="margin-top:8px">
+            <button class="btn ok" id="btnAddEvidence">Add Evidence</button>
+          </div>
+          <div class="divider"></div>
+          <ul id="adminEvidence" class="small"></ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="row between" style="margin-top:10px">
+      <div class="small muted">Motto: “Light Up Mombasa with Christ!” • Scriptural anchor: 1 Timothy 2:3–4</div>
+      <div class="small muted">Module: TEOM Outreach • Client-side data with optional JSON export</div>
+    </footer>
+  </section>
+
+  <script>
+    (function () {
+      const storeKey = 'teom_outreach_store_v1';
+      const adminKeyStore = 'teom_admin_key_saved';
+      const adminPasscode = 'LightOfMombasa2025'; // Specific admin passcode
+      const $ = (sel, root = document) => root.querySelector(sel);
+      const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+      const initial = {
+        schedule: [
+          { day: 'Saturday', time: '11:00–12:00', location: 'Kengeleni Market', focus: 'Public prayer and evangelism' },
+          { day: 'Sunday', time: 'After service (30 minutes)', location: 'Local partner church', focus: 'Prayer and testimonies' }
+        ],
+        churches: [],
+        evidence: [],
+        tasks: []
+      };
+
+      let state = load();
+
+      // Renderers
+      function renderPublic() {
+        // Schedule
+        const sl = $('#scheduleList');
+        sl.innerHTML = '';
+        state.schedule.forEach((s) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${s.day}</strong> — ${s.time} • <span class="muted">${s.location}</span><br><span class="small muted">${s.focus || ''}</span>`;
+          sl.appendChild(li);
+        });
+
+        // Tasks
+        const tl = $('#taskList');
+        tl.innerHTML = '';
+        state.tasks.forEach((t, idx) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${t.date}</strong> — ${escapeHtml(t.task)} <button class="btn small" data-del-task="${idx}">Remove</button>`;
+          tl.appendChild(li);
+        });
+
+        // Churches table
+        const tbody = $('#churchTable tbody');
+        tbody.innerHTML = '';
+        state.churches.forEach(ch => {
+          const tr = document.createElement('tr');
+          const warriors = (ch.warriors || []);
+          tr.innerHTML = `
+            <td>${escapeHtml(ch.name)}</td>
+            <td>${escapeHtml(ch.pastor || '')}</td>
+            <td>${warriors.length} / 5 ${warriors.length ? warriors.map(w => `<span class="chip">${escapeHtml(w)}</span>`).join('') : ''}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+
+        // Evidence list
+        const ev = $('#evidenceList');
+        ev.innerHTML = '';
+        if (state.evidence.length === 0) {
+          const p = document.createElement('p');
+          p.className = 'small muted';
+          p.textContent = 'No evidence added yet.';
+          ev.appendChild(p);
+        } else {
+          state.evidence.slice().reverse().forEach(e => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+              <strong>${escapeHtml(e.title || 'Untitled')}</strong>
+              ${e.link ? ` • <a href="${escapeAttr(e.link)}" target="_blank" rel="noopener" style="color:var(--accent)">Open</a>` : ''}
+              <div class="small muted" style="margin-top:.3rem">${escapeHtml(e.notes || '')}</div>
+            `;
+            ev.appendChild(card);
+          });
+        }
+      }
+
+      function renderAdmin() {
+        // Schedule
+        const ul = $('#adminSchedule');
+        ul.innerHTML = '';
+        state.schedule.forEach((s, idx) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${s.day}</strong> — ${s.time} • <span class="muted">${s.location}</span> — <span class="small muted">${s.focus || ''}</span>
+            <button class="btn small" data-del-schedule="${idx}" style="margin-left:.5rem">Remove</button>`;
+          ul.appendChild(li);
+        });
+
+        // Churches
+        const cl = $('#adminChurchList');
+        cl.innerHTML = '';
+        state.churches.forEach((c, idx) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${escapeHtml(c.name)}</strong> — ${escapeHtml(c.pastor || '')}
+            <div class="small muted">Prayer warriors: ${(c.warriors || []).map(w => `<span class="chip">${escapeHtml(w)}</span>`).join('') || 'None yet'}</div>
+            <div class="row" style="margin-top:.3rem">
+              <input placeholder="Add warrior name" data-warrior-input="${idx}">
+              <button class="btn small ok" data-add-warrior="${idx}">Add</button>
+              <button class="btn small" data-del-church="${idx}" style="margin-left:auto">Remove Church</button>
+            </div>`;
+          cl.appendChild(li);
+        });
+
+        // Evidence
+        const el = $('#adminEvidence');
+        el.innerHTML = '';
+        state.evidence.forEach((e, idx) => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${escapeHtml(e.title || 'Untitled')}</strong>
+            ${e.link ? ` • <a href="${escapeAttr(e.link)}" target="_blank" rel="noopener" style="color:var(--accent)">Open</a>` : ''}
+            <span class="small muted"> — ${escapeHtml((e.notes || '').slice(0, 80))}${e.notes && e.notes.length > 80 ? '…' : ''}</span>
+            <button class="btn small" data-del-evidence="${idx}" style="margin-left:.5rem">Remove</button>`;
+          el.appendChild(li);
+        });
+      }
+
+      // Event Listeners
+      function setupListeners() {
+        // Add Schedule
+        $('#btnAddSchedule').addEventListener('click', () => {
+          const day = $('#schDay').value;
+          const time = $('#schTime').value;
+          const location = $('#schLocation').value;
+          const focus = $('#schFocus').value;
+          if (day && time && location) {
+            state.schedule.push({ day, time, location, focus });
+            save();
+            renderPublic();
+            renderAdmin();
+            $('#schTime').value = $('#schLocation').value = $('#schFocus').value = '';
+          } else {
+            showNotice('Please fill in all required fields.', 'error');
+          }
+        });
+
+        // Add Task
+        $('#btnAddTask').addEventListener('click', () => {
+          const date = $('#outreachDate').value;
+          const task = $('#outreachTask').value;
+          if (date && task) {
+            state.tasks.push({ date, task });
+            save();
+            renderPublic();
+            $('#outreachDate').value = $('#outreachTask').value = '';
+          } else {
+            showNotice('Date and task are required.', 'error');
+          }
+        });
+
+        // Add Church
+        $('#btnAddChurch').addEventListener('click', () => {
+          const name = $('#chName').value;
+          const pastor = $('#chPastor').value;
+          const warriors = $('#chWarriors').value.split(',').map(w => w.trim()).filter(w => w);
+          if (name) {
+            state.churches.push({ name, pastor, warriors });
+            save();
+            renderPublic();
+            renderAdmin();
+            $('#chName').value = $('#chPastor').value = $('#chWarriors').value = '';
+          } else {
+            showNotice('Church name is required.', 'error');
+          }
+        });
+
+        // Add Evidence
+        $('#btnAddEvidence').addEventListener('click', () => {
+          const title = $('#evTitle').value;
+          const link = $('#evLink').value;
+          const notes = $('#evNotes').value;
+          if (title || notes) {
+            state.evidence.push({ title, link, notes });
+            save();
+            renderPublic();
+            renderAdmin();
+            $('#evTitle').value = $('#evLink').value = $('#evNotes').value = '';
+          } else {
+            showNotice('Title or notes are required.', 'error');
+          }
+        });
+
+        // Financial Allocation
+        $('#btnCalc').addEventListener('click', () => {
+          const total = parseFloat($('#faTotal').value) || 0;
+          const apparel = parseFloat($('#faApparel').value) || 0;
+          const food = parseFloat($('#faFood').value) || 0;
+                    const logistics = parseFloat($('#faLog').value) || 0;
+          if (apparel + food + logistics !== 100) {
+            showNotice('Allocation percentages must sum to 100%.', 'error');
+            return;
+          }
+          const result = `Allocation: Shirts/Hats: ${(total * apparel / 100).toFixed(2)}, Food: ${(total * food / 100).toFixed(2)}, Logistics: ${(total * logistics / 100).toFixed(2)}`;
+          $('#faResult').textContent = result;
+        });
+
+        // Admin Unlock/Lock
+        $('#btnUnlock').addEventListener('click', () => {
+          const key = $('#adminKey').value;
+          if (key === adminPasscode) {
+            localStorage.setItem(adminKeyStore, key);
+            $('#adminPanels').classList.remove('hidden');
+            $('#btnUnlock').classList.add('hidden');
+            $('#btnLock').classList.remove('hidden');
+            $('#adminNote').textContent = 'Admin controls unlocked.';
+            $('#adminNote').classList.remove('error');
+          } else {
+            showNotice('Incorrect key.', 'error');
+          }
+        });
+
+        $('#btnLock').addEventListener('click', () => {
+          localStorage.removeItem(adminKeyStore);
+          $('#adminPanels').classList.add('hidden');
+          $('#btnUnlock').classList.remove('hidden');
+          $('#btnLock').classList.add('hidden');
+          $('#adminKey').value = '';
+          $('#adminNote').textContent = 'Administrative controls are hidden until the correct secret key is entered.';
+        });
+
+        // Remove Items
+        document.addEventListener('click', (e) => {
+          if (e.target.matches('[data-del-schedule]')) {
+            const idx = e.target.dataset.delSchedule;
+            state.schedule.splice(idx, 1);
+            save();
+            renderPublic();
+            renderAdmin();
+          }
+          if (e.target.matches('[data-del-task]')) {
+            const idx = e.target.dataset.delTask;
+            state.tasks.splice(idx, 1);
+            save();
+            renderPublic();
+          }
+          if (e.target.matches('[data-del-church]')) {
+            const idx = e.target.dataset.delChurch;
+            state.churches.splice(idx, 1);
+            save();
+            renderPublic();
+            renderAdmin();
+          }
+          if (e.target.matches('[data-del-evidence]')) {
+            const idx = e.target.dataset.delEvidence;
+            state.evidence.splice(idx, 1);
+            save();
+            renderPublic();
+            renderAdmin();
+          }
+          if (e.target.matches('[data-add-warrior]')) {
+            const idx = e.target.dataset.addWarrior;
+            const input = $(`[data-warrior-input="${idx}"]`);
+            const warrior = input.value.trim();
+            if (warrior) {
+              state.churches[idx].warriors = state.churches[idx].warriors || [];
+              state.churches[idx].warriors.push(warrior);
+              save();
+              renderPublic();
+              renderAdmin();
+              input.value = '';
+            }
+          }
+        });
+
+        // Print and Export
+        $('#btnPrint').addEventListener('click', () => {
+          window.print();
+        });
+
+        $('#btnExport').addEventListener('click', () => {
+          const data = JSON.stringify(state, null, 2);
+          const blob = new Blob([data], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'teom_outreach_data.json';
+          a.click();
+          URL.revokeObjectURL(url);
+        });
+
+        $('#importFile').addEventListener('change', (e) => {
+          const file = e.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+              try {
+                state = JSON.parse(ev.target.result);
+                save();
+                renderPublic();
+                renderAdmin();
+                showNotice('Data imported successfully.', 'success');
+              } catch (err) {
+                showNotice('Invalid JSON file.', 'error');
+              }
+            };
+            reader.readAsText(file);
+          }
+        });
+      }
+
+      // Utility Functions
+      function save() {
+        localStorage.setItem(storeKey, JSON.stringify(state));
+      }
+
+      function load() {
+        return JSON.parse(localStorage.getItem(storeKey)) || initial;
+      }
+
+      function escapeHtml(str) {
+        return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+
+      function escapeAttr(str) {
+        return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+
+      function showNotice(msg, type) {
+        const note = $('#adminNote');
+        note.textContent = msg;
+        note.className = `notice small ${type}`;
+        setTimeout(() => {
+          note.className = 'notice small';
+          note.textContent = 'Administrative controls are hidden until the correct secret key is entered.';
+        }, 3000);
+      }
+
+      // Initialize
+      setupListeners();
+      renderPublic();
+      renderAdmin();
+
+      // Check if admin is unlocked
+      if (localStorage.getItem(adminKeyStore) === adminPasscode) {
+        $('#adminPanels').classList.remove('hidden');
+        $('#btnUnlock').classList.add('hidden');
+        $('#btnLock').classList.remove('hidden');
+        $('#adminNote').textContent = 'Admin controls unlocked.';
+      }
+    })();
+  </script>
+</body>
+</html>
