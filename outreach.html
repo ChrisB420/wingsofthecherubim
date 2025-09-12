@@ -119,6 +119,14 @@
     .small { font-size: 0.85rem; }
     .muted { color: var(--muted); }
     .hidden { display: none !important; }
+     .outreach-gallery img {
+    max-width: 200px;   /* shrink image */
+    height: auto;       /* keep proportions */
+    margin: 10px;       /* spacing around each image */
+    border-radius: 8px; /* optional: rounded corners */
+    display: inline-block;
+    
+    }
   </style>
 </head>
 <body>
@@ -159,11 +167,13 @@
           <span class="chip">President: Vanessa Juma</span>
           <span class="chip">Secretary and Treasurer: Chris Beda</span>
         </div>
-        <img src="IMG-20250912-WA0005.jpg" alt="First Outreach">
-        <img src="IMG-20250912-WA0010.jpg" alt="First Outreach">.
-        <img src="IMG-20250912-WA0014.jpg" alt="First Outreach">.
-        <img src="IMG-20250912-WA0007.jpg" alt="First Outreach">.
-        <img src="IMG-20250912-WA0001.jpg" alt="First Outreach">.
+        <div class="outreach-gallery">
+  <img src="IMG-20250912-WA0005.jpg" alt="First Outreach">
+  <img src="IMG-20250912-WA0010.jpg" alt="First Outreach">
+  <img src="IMG-20250912-WA0014.jpg" alt="First Outreach">
+  <img src="IMG-20250912-WA0007.jpg" alt="First Outreach">
+  <img src="IMG-20250912-WA0001.jpg" alt="First Outreach">
+        </div>
         
         <div class="row">
           <button class="btn" id="btnPrint">Print</button>
