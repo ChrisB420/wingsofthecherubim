@@ -1,5 +1,30 @@
-/* styles.css */
+/* styles.css - Upgraded for Divine Mission: End Times Prophetic Theme */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+
+/* Fuse in Animate.css for divine/apocalyptic animations (add CDN in HTML) */
+/* Custom end-times animations */
+@keyframes fireFlicker {
+  0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ff4500; opacity: 1; }
+  50% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff4500, 0 0 30px #8b0000; opacity: 0.8; }
+  100% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ff4500; opacity: 1; }
+}
+
+@keyframes revelationFade {
+  from { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@keyframes apocalypticShake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes divineGlow {
+  0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+}
 
 * {
   margin: 0;
@@ -15,6 +40,9 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
+  /* End-times upgrade: Subtle red tint for apocalyptic urgency */
+  background-blend-mode: multiply;
+  background-color: rgba(139, 0, 0, 0.2); /* Dark red overlay for judgment */
 }
 
 .background-overlay {
@@ -25,6 +53,8 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.65);
   z-index: 0;
+  /* Upgrade: Add divine glow pulse */
+  animation: divineGlow 10s infinite ease-in-out;
 }
 
 .menorah-cover {
@@ -38,6 +68,8 @@ body {
   z-index: -1;
   opacity: 0.9;
   animation: zoomBreath 20s ease-in-out infinite;
+  /* End-times upgrade: Add fire flicker for burning bush/revelation */
+  filter: brightness(1.2) contrast(1.1);
 }
 
 .menorah-cover::after {
@@ -47,7 +79,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(0, 120, 255, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 69, 0, 0.3), transparent 70%); /* Fiery red for end times */
   animation: pulse 10s infinite ease-in-out;
 }
 
@@ -66,17 +98,19 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: -2; /* Prevent overlap */
+  z-index: -2;
   width: 350px;
   opacity: 0.85;
   pointer-events: none;
+  /* Upgrade: Infinite fire flicker for divine presence */
+  animation: fireFlicker 2s infinite alternate;
 }
 
 .menorah-bg img {
   width: 100%;
   height: auto;
   animation: zoomBreath 25s ease-in-out infinite;
-  filter: drop-shadow(0 0 25px gold);
+  filter: drop-shadow(0 0 25px #ffd700); /* Gold for glory */
 }
 
 .top-nav {
@@ -88,6 +122,12 @@ body {
   left: 0;
   z-index: 20;
   border-bottom: 2px solid #ffd700;
+  /* Upgrade: Add subtle shake on hover for end-times urgency */
+  transition: transform 0.3s ease;
+}
+
+.top-nav:hover {
+  animation: apocalypticShake 0.5s;
 }
 
 .top-nav ul {
@@ -107,10 +147,13 @@ body {
   font-weight: bold;
   font-size: 16px;
   transition: color 0.3s ease;
+  /* Divine upgrade: Glow on hover */
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
 }
 
 .top-nav li a:hover {
   color: #fff;
+  animation: fireFlicker 1s infinite;
 }
 
 .hero {
@@ -118,18 +161,24 @@ body {
   padding: 7rem 1rem 3rem; /* Space for top-nav */
   z-index: 1;
   position: relative;
+  /* Revelation upgrade: Fade in on load */
+  animation: revelationFade 2s ease-in;
 }
 
 .logo {
   width: 120px;
   height: auto;
   margin-bottom: 1rem;
-  animation: pulse 4s infinite;
+  animation: pulse 4s infinite; /* From original */
+  /* Fuse Animate.css: Add heartBeat for divine pulse */
+  animation: animate__animated animate__heartBeat 4s infinite;
 }
 
 .hero h1 {
   font-family: 'Cinzel', serif;
   font-size: 3rem;
+  /* End-times: Fiery text shadow */
+  text-shadow: 0 0 10px #ff4500, 0 0 20px #8b0000;
 }
 
 .subtitle {
@@ -137,6 +186,8 @@ body {
   font-size: 1.3rem;
   color: #ccc;
   margin-top: 0.5rem;
+  /* Upgrade: Wobble for prophetic emphasis */
+  animation: animate__animated animate__wobble 5s infinite;
 }
 
 .music-toggle {
@@ -149,10 +200,12 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease;
+  /* Apocalyptic: Flash on hover */
 }
 
 .music-toggle:hover {
   transform: scale(1.05);
+  animation: animate__animated animate__flash 1s;
 }
 
 .intro {
@@ -160,6 +213,8 @@ body {
   padding: 2rem 1rem;
   z-index: 1;
   position: relative;
+  /* Divine upgrade: Slow fadeInDown */
+  animation: animate__animated animate__fadeInDown 3s;
 }
 
 .scroll-previews {
@@ -178,22 +233,39 @@ body {
   border-radius: 10px;
   padding: 1rem;
   transition: transform 0.3s ease;
+  /* Revelation upgrade: Fade in with delay based on order */
+  opacity: 0;
+  animation: revelationFade 1.5s forwards;
 }
+
+.scroll-card:nth-child(1) { animation-delay: 0.2s; }
+.scroll-card:nth-child(2) { animation-delay: 0.4s; }
+.scroll-card:nth-child(3) { animation-delay: 0.6s; }
+.scroll-card:nth-child(4) { animation-delay: 0.8s; }
 
 .scroll-card:hover {
   transform: translateY(-5px);
+  /* Apocalyptic: Shake on hover */
+  animation: animate__animated animate__shakeX 0.5s;
 }
 
 .scroll-card h3 {
   color: #ffd700;
   font-family: 'Cinzel', serif;
   margin-bottom: 0.5rem;
+  /* End-times: Fire flicker */
+  animation: fireFlicker 3s infinite alternate;
 }
 
 .scroll-card a {
   color: #fff;
   text-decoration: underline;
   font-family: 'Crimson Text', serif;
+  /* Divine: Tada on hover */
+}
+
+.scroll-card a:hover {
+  animation: animate__animated animate__tada 1s;
 }
 
 .scroll-menu {
@@ -207,6 +279,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  /* Upgrade: RubberBand for elastic divine pull */
+  animation: animate__animated animate__rubberBand 2s;
 }
 
 .scroll-menu a {
@@ -218,6 +292,7 @@ body {
 
 .scroll-menu a:hover {
   color: #fff;
+  animation: fireFlicker 1s infinite;
 }
 
 footer {
@@ -227,8 +302,14 @@ footer {
   background: rgba(0, 0, 0, 0.6);
   position: relative;
   z-index: 1;
+  /* Upgrade: Swing for pendulum-like end-times doom */
+  animation: animate__animated animate__swing 5s infinite;
 }
 
+/* Accessibility upgrades: Higher contrast for text */
+a, h1, h3 { color-contrast: #fff >= 4.5:1; }
+
+/* Media queries - Enhanced for mobile end-times urgency */
 @media (max-width: 600px) {
   .top-nav ul {
     flex-direction: column;
@@ -245,13 +326,18 @@ footer {
   .hero h1 {
     font-size: 2rem;
   }
+  /* Reduce animation intensity on mobile */
+  .scroll-card:hover {
+    animation: none;
+  }
 }
 
-/* Scroll-specific icons */
+/* Scroll-specific icons - Upgraded with divine glow */
 .scroll-card[data-scroll="1"]::before {
   content: url('/assets/flame.svg');
   display: block;
   margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 10px #ff4500); /* Fiery glow */
 }
 .scroll-card[data-scroll="2"]::before {
   content: url('/assets/leaf.svg');
@@ -261,4 +347,6 @@ footer {
 }
 .scroll-card[data-scroll="4"]::before {
   content: url('/assets/dragon.svg');
-}
+  /* End-times dragon: Add shake */
+  animation: apocalypticShake 2s infinite;
+  }
