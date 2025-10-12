@@ -1,4 +1,4 @@
-/* styles.css - Upgraded for Divine Mission: End Times Prophetic Theme */
+/* styles.css - Upgraded for Divine Mission: End Times Prophetic Theme (Footer Sticky + New Background) */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
 
 /* Fuse in Animate.css for divine/apocalyptic animations (add CDN in HTML) */
@@ -32,12 +32,17 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%; /* For sticky footer */
+}
+
 body {
   font-family: 'Crimson Text', serif;
   background: url('images/cherubim-bg.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
-  position: relative;
+  display: flex; /* Flex for sticky footer */
+  flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
   /* End-times upgrade: Subtle red tint for apocalyptic urgency */
@@ -63,7 +68,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('/assets/menorah-faith.png') no-repeat center center;
+  background: url('/assets/faith-poster.jpg') no-repeat center center; /* Changed to new Faith poster */
   background-size: cover;
   z-index: -1;
   opacity: 0.9;
@@ -300,8 +305,9 @@ footer {
   padding: 1rem;
   font-size: 0.85rem;
   background: rgba(0, 0, 0, 0.6);
-  position: relative;
   z-index: 1;
+  margin-top: auto; /* Sticky footer: Pushes to bottom */
+  width: 100%;
   /* Upgrade: Swing for pendulum-like end-times doom */
   animation: animate__animated animate__swing 5s infinite;
 }
@@ -347,6 +353,6 @@ a, h1, h3 { color-contrast: #fff >= 4.5:1; }
 }
 .scroll-card[data-scroll="4"]::before {
   content: url('/assets/dragon.svg');
-  /* End-times dragon: Add shake */
+  /* End-times: Add shake */
   animation: apocalypticShake 2s infinite;
-  }
+                     }
