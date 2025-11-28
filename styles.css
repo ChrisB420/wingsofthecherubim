@@ -1,358 +1,407 @@
-/* styles.css - Upgraded for Divine Mission: End Times Prophetic Theme (Footer Sticky + New Background) */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+/* ===============================================
+   Wings of the Cherubim – Professional 2025 Design
+   Clean, reverent, powerful, mobile-perfect
+   =============================================== */
 
-/* Fuse in Animate.css for divine/apocalyptic animations (add CDN in HTML) */
-/* Custom end-times animations */
-@keyframes fireFlicker {
-  0% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ff4500; opacity: 1; }
-  50% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff4500, 0 0 30px #8b0000; opacity: 0.8; }
-  100% { text-shadow: 0 0 5px #ffd700, 0 0 10px #ff4500; opacity: 1; }
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap');
 
-@keyframes revelationFade {
-  from { opacity: 0; transform: translateY(20px); filter: blur(5px); }
-  to { opacity: 1; transform: translateY(0); filter: blur(0); }
-}
-
-@keyframes apocalypticShake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-  20%, 40%, 60%, 80% { transform: translateX(5px); }
-}
-
-@keyframes divineGlow {
-  0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
-  50% { box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 69, 0, 0.8); }
-  100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
-}
-
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  height: 100%; /* For sticky footer */
-}
-
 body {
-  font-family: 'Crimson Text', serif;
-  background: url('images/cherubim-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  display: flex; /* Flex for sticky footer */
-  flex-direction: column;
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: #e6e6e6;
+  line-height: 1.7;
   overflow-x: hidden;
-  /* End-times upgrade: Subtle red tint for apocalyptic urgency */
-  background-blend-mode: multiply;
-  background-color: rgba(139, 0, 0, 0.2); /* Dark red overlay for judgment */
 }
 
-.background-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 0;
-  /* Upgrade: Add divine glow pulse */
-  animation: divineGlow 10s infinite ease-in-out;
+h1, h2, h3, h4, h5 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
-.menorah-cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+/* ===============================================
+   HERO SECTION – Full-screen glory
+   =================================== */
+.hero-section {
+  position: relative;
   height: 100vh;
-  background: url('/assets/faith-poster.jpg') no-repeat center center; /* Changed to new Faith poster */
-  background-size: cover;
-  z-index: -1;
-  opacity: 0.9;
-  animation: zoomBreath 20s ease-in-out infinite;
-  /* End-times upgrade: Add fire flicker for burning bush/revelation */
-  filter: brightness(1.2) contrast(1.1);
-}
-
-.menorah-cover::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 69, 0, 0.3), transparent 70%); /* Fiery red for end times */
-  animation: pulse 10s infinite ease-in-out;
-}
-
-@keyframes zoomBreath {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-.menorah-bg {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -2;
-  width: 350px;
-  opacity: 0.85;
-  pointer-events: none;
-  /* Upgrade: Infinite fire flicker for divine presence */
-  animation: fireFlicker 2s infinite alternate;
-}
-
-.menorah-bg img {
-  width: 100%;
-  height: auto;
-  animation: zoomBreath 25s ease-in-out infinite;
-  filter: drop-shadow(0 0 25px #ffd700); /* Gold for glory */
-}
-
-.top-nav {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 0.8rem 1rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 20;
-  border-bottom: 2px solid #ffd700;
-  /* Upgrade: Add subtle shake on hover for end-times urgency */
-  transition: transform 0.3s ease;
-}
-
-.top-nav:hover {
-  animation: apocalypticShake 0.5s;
-}
-
-.top-nav ul {
-  list-style: none;
+  min-height: 700px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.top-nav li a {
-  color: #ffd700;
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  font-size: 16px;
-  transition: color 0.3s ease;
-  /* Divine upgrade: Glow on hover */
-  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
-}
-
-.top-nav li a:hover {
-  color: #fff;
-  animation: fireFlicker 1s infinite;
-}
-
-.hero {
   text-align: center;
-  padding: 7rem 1rem 3rem; /* Space for top-nav */
-  z-index: 1;
-  position: relative;
-  /* Revelation upgrade: Fade in on load */
-  animation: revelationFade 2s ease-in;
+  overflow: hidden;
 }
 
-.logo {
-  width: 120px;
-  height: auto;
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+              url('images/hero-bg.jpg') center/cover no-repeat fixed;
+  filter: brightness(0.8);
+  z-index: -3;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(212,175,55,0.15) 0%, transparent 70%);
+  z-index: -2;
+}
+
+.wing-left, .wing-right {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: url('images/wing-left.png') center/contain no-repeat;
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: -1;
+  animation: float 20s ease-in-out infinite;
+}
+.wing-right {
+  background-image: url('images/wing-right.png');
+  right: 0;
+  animation-delay: -10s;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(5deg); }
+}
+
+.golden-menorah {
+  font-size: 5rem;
   margin-bottom: 1rem;
-  animation: pulse 4s infinite; /* From original */
-  /* Fuse Animate.css: Add heartBeat for divine pulse */
-  animation: animate__animated animate__heartBeat 4s infinite;
+  filter: drop-shadow(0 0 40px #d4af37);
 }
 
-.hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 3rem;
-  /* End-times: Fiery text shadow */
-  text-shadow: 0 0 10px #ff4500, 0 0 20px #8b0000;
-}
-
-.subtitle {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #ccc;
-  margin-top: 0.5rem;
-  /* Upgrade: Wobble for prophetic emphasis */
-  animation: animate__animated animate__wobble 5s infinite;
-}
-
-.music-toggle {
-  margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
-  background-color: #ffd700;
-  border: none;
-  border-radius: 5px;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  /* Apocalyptic: Flash on hover */
-}
-
-.music-toggle:hover {
-  transform: scale(1.05);
-  animation: animate__animated animate__flash 1s;
-}
-
-.intro {
-  text-align: center;
-  padding: 2rem 1rem;
-  z-index: 1;
+.hero-content {
   position: relative;
-  /* Divine upgrade: Slow fadeInDown */
-  animation: animate__animated animate__fadeInDown 3s;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 900px;
 }
 
-.scroll-previews {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+.site-title {
+  font-size: 4.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 30px rgba(212,175,55,0.6);
+  margin-bottom: 0.5rem;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 20px rgba(212,175,55,0.4); }
+  to { text-shadow: 0 0 50px rgba(212,175,55,0.8); }
+}
+
+.site-subtitle {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.hero-verse {
+  font-size: 1.4rem;
+  color: #d4af37;
+  font-style: italic;
+  margin: 2rem 0;
+  opacity: 0.95;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(45deg, #d4af37, #f1c40f);
+  color: #000;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+  transition: all 0.4s;
+}
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(212,175,55,0.6);
+}
+
+/* ===================================
+   NAVIGATION
+   =================================== */
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover, .btn-nav {
+  color: #d4af37;
+}
+.btn-nav {
+  background: rgba(212,175,55,0.2);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===================================
+   SECTIONS
+   =================================== */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+.proclamation {
+  background: linear-gradient(135deg, #0f1a3c, #1a0b2e);
+  text-align: center;
+}
+.proclamation h2 {
+  font-size: 2.8rem;
+  color: #d4af37;
+  margin-bottom: 2rem;
+}
+.proclamation-text {
+  font-size: 1.35rem;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  line-height: 2;
+ 2;
+  font-style: italic;
+}
+.voice {
+  color: #d4af37;
+  font-weight: 600;
+}
+
+/* ===================================
+   FOUR SCROLLS GRID
+   =================================== */
+.scrolls-section {
+  background: #000;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #d4af37;
+  margin-bottom: 4rem;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrolls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
 .scroll-card {
-  background: url('https://www.transparenttextures.com/patterns/paper.png'), rgba(255, 255, 255, 0.05);
-  background-blend-mode: overlay;
-  border: 1px solid #ffd700;
-  border-radius: 10px;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-  /* Revelation upgrade: Fade in with delay based on order */
+  background: rgba(15,26,60,0.6);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.scroll-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(212,175,55,0.1));
   opacity: 0;
-  animation: revelationFade 1.5s forwards;
+  transition: opacity 0.4s;
+}
+.scroll-card:hover::before {
+  opacity: 1;
+}
+.scroll-card:hover {
+  transform: translateY(-15px);
+  border-color: #d4af37;
+  box-shadow: 0 20px 40px rgba(212,175,55,0.2);
 }
 
-.scroll-card:nth-child(1) { animation-delay: 0.2s; }
-.scroll-card:nth-child(2) { animation-delay: 0.4s; }
-.scroll-card:nth-child(3) { animation-delay: 0.6s; }
-.scroll-card:nth-child(4) { animation-delay: 0.8s; }
-
-.scroll-card:hover {
-  transform: translateY(-5px);
-  /* Apocalyptic: Shake on hover */
-  animation: animate__animated animate__shakeX 0.5s;
+.scroll-number {
+  font-size: 4rem;
+  color: #d4af37;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  opacity: 0.3;
 }
 
 .scroll-card h3 {
-  color: #ffd700;
-  font-family: 'Cinzel', serif;
-  margin-bottom: 0.5rem;
-  /* End-times: Fire flicker */
-  animation: fireFlicker 3s infinite alternate;
-}
-
-.scroll-card a {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
   color: #fff;
-  text-decoration: underline;
-  font-family: 'Crimson Text', serif;
-  /* Divine: Tada on hover */
 }
 
-.scroll-card a:hover {
-  animation: animate__animated animate__tada 1s;
+.read-more {
+  color: #d4af37;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  display: inline-block;
 }
 
-.scroll-menu {
-  position: fixed;
-  top: 5.5rem;
-  right: 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  /* Upgrade: RubberBand for elastic divine pull */
-  animation: animate__animated animate__rubberBand 2s;
+/* ===================================
+   LATEST SECTION
+   =================================== */
+.latest-section {
+  background: #0a0a0a;
 }
 
-.scroll-menu a {
-  color: #ffd700;
-  text-decoration: none;
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
-.scroll-menu a:hover {
-  color: #fff;
-  animation: fireFlicker 1s infinite;
+.latest-item {
+  background: rgba(15,26,60,0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
 }
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.85rem;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-  margin-top: auto; /* Sticky footer: Pushes to bottom */
+.latest-item:hover {
+  transform: scale(1.03);
+}
+.latest-item img {
   width: 100%;
-  /* Upgrade: Swing for pendulum-like end-times doom */
-  animation: animate__animated animate__swing 5s infinite;
+  height: 200px;
+  object-fit: cover;
 }
-
-/* Accessibility upgrades: Higher contrast for text */
-a, h1, h3 { color-contrast: #fff >= 4.5:1; }
-
-/* Media queries - Enhanced for mobile end-times urgency */
-@media (max-width: 600px) {
-  .top-nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .scroll-menu {
-    position: static;
-    margin: 1rem auto;
-    width: fit-content;
-  }
-  .hero {
-    padding: 5rem 1rem 2rem;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  /* Reduce animation intensity on mobile */
-  .scroll-card:hover {
-    animation: none;
-  }
+.latest-item h4 {
+  padding: 1.5rem 1.5rem 0.5rem;
+  color: #d4af37;
 }
-
-/* Scroll-specific icons - Upgraded with divine glow */
-.scroll-card[data-scroll="1"]::before {
-  content: url('/assets/flame.svg');
+.latest-item p {
+  padding: 0 1.5rem 1.5rem;
+}
+.btn-small {
   display: block;
+  text-align: center;
+  background: #d4af37;
+  color: #000;
+  padding: 0.8rem;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+.site-footer {
+  background: #000;
+  border-top: 1px solid #222;
+  padding: 4rem 0 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.footer-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #d4af37;
   margin-bottom: 0.5rem;
-  filter: drop-shadow(0 0 10px #ff4500); /* Fiery glow */
 }
-.scroll-card[data-scroll="2"]::before {
-  content: url('/assets/leaf.svg');
+
+/* ===================================
+   MOBILE RESPONSIVE
+   =================================== */
+@media (max-width: 768px) {
+  .site-title { font-size: 3rem; }
+  .site-subtitle { font-size: 1.4rem; }
+  .hero-verse { font-size: 1.2rem; }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0,0,0,0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    transition: left 0.4s;
+  }
+  .nav-links.active { left: 0; }
+  .mobile-toggle { display: block; }
+
+  .scrolls-grid { grid-template-columns: 1fr; }
+  section { padding: 4rem 0; }
 }
-.scroll-card[data-scroll="3"]::before {
-  content: url('/assets/globe.svg');
+
+/* Optional: Very small screens */
+@media (max-width: 480px) {
+  .site-title { font-size: 2.5rem; }
+  .container { padding: 0 0 1rem; }
 }
-.scroll-card[data-scroll="4"]::before {
-  content: url('/assets/dragon.svg');
-  /* End-times: Add shake */
-  animation: apocalypticShake 2s infinite;
-                     }
