@@ -7,237 +7,187 @@
     <meta name="author" content="Gregory Shadt / Chris">
     <meta name="keywords" content="biblical teachings, Holy Spirit insights, Christian articles, spiritual videos, prophecy, Menorah, Shofar, eternal destiny, Wings of the Cherubim content">
     <title>Teachings - Wings of the Cherubim</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Base & Global Reset (Copy from your main HTML or ensure style.css is linked) */
+        /* === Global & Reset === */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
         body {
-            background-color: #f0f0f5; /* Lighter, ethereal background */
+            background-color: #f0f0f5;
             color: #333;
             line-height: 1.8;
             overflow-x: hidden;
             font-size: 1.1em;
         }
-        .stars { /* Celestial background for main site consistency */
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2;
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); overflow: hidden;
-        }
-        .star { /* Star animation (copy from main HTML or ensure style.css) */
-            position: absolute; background-color: #fff; border-radius: 50%;
-            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite; opacity: 0; box-shadow: 0 0 5px #fff;
-        }
-        /* Keyframe animations for stars (copy from main HTML or ensure style.css) */
-        @keyframes twinkle { 0% { opacity: 0; transform: scale(0.6); } 50% { opacity: 1; transform: scale(1.3); } 100% { opacity: 0; transform: scale(0.6); } }
-        @keyframes moveStar { from { transform: translate(var(--x-start, 0), var(--y-start, 0)); } to { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); } }
 
+        /* === Celestial Background === */
+        .stars {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2;
+            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+        }
+        .star {
+            position: absolute; background: #fff; border-radius: 50%;
+            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite;
+            opacity: 0; box-shadow: 0 0 5px #fff;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; transform: scale(0.6); }
+            50% { opacity: 1; transform: scale(1.3); }
+            100% { opacity: 0; transform: scale(0.6); }
+        }
+        @keyframes moveStar {
+            from { transform: translate(var(--x-start, 0), var(--y-start, 0)); }
+            to   { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); }
+        }
+
+        /* === Layout === */
         .container {
             position: relative; z-index: 1;
-            background-color: rgba(255, 255, 255, 0.98);
+            background: rgba(255,255,255,0.98);
             max-width: 100%; margin: 0 auto;
             box-shadow: 0 0 50px rgba(0,0,0,0.3);
+            min-height: 100vh;
         }
-        header { /* Consistent header styling */
-            background: linear-gradient(to right, #2c3e50, #8e44ad); color: #ecf0f1; padding: 3rem 2rem;
-            text-align: center; border-bottom: 5px solid #FFD700; position: relative; overflow: hidden;
+
+        /* === Header === */
+        header {
+            background: linear-gradient(to right, #2c3e50, #8e44ad);
+            color: #ecf0f1; padding: 3rem 2rem;
+            text-align: center; border-bottom: 5px solid #FFD700;
+            position: relative; overflow: hidden;
         }
-        .dove-icon { /* Optional: If you want the dove icon on this page header too */
-            font-size: 3.5rem; position: absolute; top: 1.5rem; left: 1.5rem; animation: floatAndPulse 4s infinite ease-in-out;
-            text-shadow: 0 0 10px rgba(255,255,255,0.7); z-index: 1;
+        .dove-icon {
+            font-size: 3.5rem; position: absolute; top: 1.5rem; left: 1.5rem;
+            animation: floatAndPulse 4s infinite ease-in-out;
         }
-        @keyframes floatAndPulse { 0% { transform: translateY(0); opacity: 1; } 50% { transform: translateY(-10px); opacity: 0.8; } 100% { transform: translateY(0); opacity: 1; } }
+        @keyframes floatAndPulse {
+            0%,100% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-10px); opacity: 0.8; }
+        }
         .main-title { font-size: 3rem; margin-bottom: 0.75rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-        .subtitle { font-size: 2.2rem; margin-bottom: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #FFD700; }
+        .subtitle { font-size: 2.2rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #FFD700; }
         .tagline { font-size: 1.3rem; font-style: italic; color: #d3d3d3; }
 
-        /* Navigation (Copy from your main HTML or ensure style.css is linked) */
-        nav { background: #1e3a8a; padding: 1.2rem; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); position: sticky; top: 0; z-index: 100; }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; }
-        nav a { color: #ecf0f1; text-decoration: none; font-size: 1.2em; padding: 0.5rem 1rem; border-radius: 5px; transition: all 0.3s ease; position: relative; }
-        nav a::before { content: ''; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0; background-color: #FFD700; visibility: hidden; transform: scaleX(0); transition: all 0.3s ease-in-out 0s; }
+        /* === Navigation === */
+        nav {
+            background: #1e3a8a; padding: 1.2rem; box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+            position: sticky; top: 0; z-index: 100;
+        }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
+        nav a {
+            color: #ecf0f1; text-decoration: none; font-size: 1.2em; padding: 0.5rem 1rem;
+            border-radius: 5px; transition: all 0.3s ease; position: relative;
+        }
+        nav a::before {
+            content: ''; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0;
+            background: #FFD700; visibility: hidden; transform: scaleX(0); transition: all 0.3s;
+        }
         nav a:hover::before { visibility: visible; transform: scaleX(1); }
-        nav a:hover { color: #FFD700; background-color: rgba(255, 215, 0, 0.1); }
+        nav a:hover { color: #FFD700; background: rgba(255,215,0,0.1); }
 
-        /* Teachings Page Specific Styles */
+        /* === Teachings Content === */
         .teachings-content {
-            max-width: 1000px; /* Slightly wider for content cards */
-            margin: 3rem auto;
-            padding: 2.5rem;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            border-right: 5px solid #8e44ad; /* Purple accent on right */
-            position: relative;
-            z-index: 1;
+            max-width: 1100px; margin: 3rem auto; padding: 2.5rem;
+            background: #fff; border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            border-right: 5px solid #8e44ad;
         }
         .teachings-content h2 {
-            color: #8e44ad; /* Purple heading */
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            border-bottom: 3px double #FFD700;
-            padding-bottom: 0.8rem;
+            color: #8e44ad; font-size: 2.8rem; text-align: center;
+            margin-bottom: 1.5rem; border-bottom: 3px double #FFD700; padding-bottom: 0.8rem;
         }
         .teachings-intro {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 1.15em;
-            color: #555;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            text-align: center; max-width: 700px; margin: 0 auto 3rem;
+            font-size: 1.15em; color: #555;
         }
+
         .content-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.5rem;
-            margin-top: 3rem;
         }
         .content-card {
-            background-color: #f8f8f8;
-            border: 1px solid #eee;
-            border-radius: 12px;
-            padding: 1.8rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            display: flex;
-            flex-direction: column;
+            background: #f8f8f8; border: 1px solid #eee; border-radius: 12px;
+            padding: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex; flex-direction: column;
         }
         .content-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
         .content-card h3 {
-            color: #1e3a8a; /* Dark blue heading */
-            font-size: 1.6em;
-            margin-bottom: 0.8rem;
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 0.5rem;
+            color: #1e3a8a; font-size: 1.6em; margin-bottom: 0.8rem;
+            border-bottom: 2px solid #FFD700; padding-bottom: 0.5rem;
         }
-        .content-card p {
-            font-size: 1em;
-            margin-bottom: 1.2rem;
-            flex-grow: 1; /* Make paragraphs take up available space */
-        }
+        .content-card p { flex-grow: 1; margin-bottom: 1.2rem 0; }
         .content-card .read-more {
-            display: inline-block;
-            background-color: #FFD700;
-            color: #1e3a8a;
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-            align-self: flex-start; /* Align button to start of flex item */
+            align-self: flex-start; background: #FFD700; color: #1e3a8a;
+            padding: 0.6rem 1.2rem; border-radius: 25px; text-decoration: none;
+            font-weight: bold; transition: background 0.3s;
         }
-        .content-card .read-more:hover {
-            background-color: #e0b800;
-        }
+        .content-card .read-more:hover { background: #e0b800; }
+
         .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9 / 16 * 100) */
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 1rem;
-            border-radius: 8px;
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border-radius: 8px; margin-bottom: 1rem;
         }
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
-        .video-card .read-more {
-             align-self: center; /* Center "Watch on YouTube" button */
+        .video-card .read-more { align-self: center; }
+
+        /* === Scroll Previews Section === */
+        .scroll-previews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem; padding: 2rem 0;
         }
+        .scroll-card {
+            background: rgba(255,255,255,0.1); border: 1px solid #FFD700;
+            border-radius: 10px; padding: 1.2rem; text-align: center;
+            transition: transform 0.3s;
+        }
+        .scroll-card:hover { transform: translateY(-5px); }
+        .scroll-card h3 { color: #FFD700; margin-bottom: 0.5rem; }
+        .scroll-card a { color: #fff; text-decoration: underline; }
 
+        /* === Floating Scroll Menu (right side) === */
+        .scroll-menu {
+            position: fixed; top: 5.5rem; right: 1rem;
+            background: rgba(0,0,0,0.6); padding: 0.8rem 1.2rem;
+            border-radius: 12px; z-index: 99;
+            display: flex; flex-direction: column; gap: 0.8rem;
+            font-family: 'Cinzel', serif;
+        }
+        .scroll-menu a {
+            color: #FFD700; text-decoration: none; font-weight: bold;
+        }
+        .scroll-menu a:hover { color: #fff; }
 
-        /* Footer (Copy from your main HTML or ensure style.css is linked) */
+        /* === Footer === */
         footer {
-            background: #1e3a8a; color: #ecf0f1; text-align: center; padding: 2rem; margin-top: 3rem;
-            box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3); border-top: 5px double #FFD700;
+            background: #1e3a8a; color: #ecf0f1; text-align: center;
+            padding: 2.5rem; border-top: 5px double #FFD700;
         }
-        footer a { color: #FFD700; text-decoration: none; transition: text-decoration 0.3s ease; }
+        footer a { color: #FFD700; }
         footer a:hover { text-decoration: underline; }
         .footer-icons { margin-top: 1.5rem; font-size: 2.5rem; display: flex; justify-content: center; gap: 1.5rem; }
         .footer-icons span { animation: pulseFade 2s infinite alternate; }
         .footer-icons span:nth-child(2) { animation-delay: 0.5s; }
         .footer-icons span:nth-child(3) { animation-delay: 1s; }
-        @keyframes pulseFade { 0% { opacity: 0.7; transform: scale(1); } 100% { opacity: 1; transform: scale(1.1); } }
+        @keyframes pulseFade {
+            0% { opacity: 0.7; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.1); }
+        }
 
-        /* Responsive Design (Copy from main HTML or ensure style.css) */
+        /* === Responsive === */
         @media (max-width: 768px) {
             .main-title { font-size: 2.5rem; } .subtitle { font-size: 1.8rem; }
-            nav ul { flex-direction: column; gap: 0.8rem; } nav a { font-size: 1.1em; }
-            .teachings-content { padding: 2rem; } .teachings-content h2 { font-size: 2rem; }
-            .content-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            nav ul { flex-direction: column; gap: 0.8rem; }
+            .teachings-content { padding: 2rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .scroll-menu { position: static; margin: 2rem auto; max-width: 300px; }
         }
-        @media (max-width: 480px) {
-            body { font-size: 1em; } header { padding: 2rem 0.5rem; }
-            .main-title { font-size: 2rem; } .subtitle { font-size: 1.4rem; }
-            nav { padding: 0.8rem; } nav ul { gap: 0.5rem; }
-            .teachings-content { padding: 1.5rem; } .teachings-content h2 { font-size: 1.8rem; }
-        }
-.scroll-previews {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.scroll-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #ffd700;
-  border-radius: 10px;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.scroll-card:hover {
-  transform: translateY(-5px);
-}
-
-.scroll-card h3 {
-  color: #ffd700;
-  margin-bottom: 0.5rem;
-}
-
-.scroll-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #fff;
-  text-decoration: underline;
-}
-
-
-/* Floating Scroll Menu (Fixed Right) */
-.scroll-menu {
-  position: fixed;
-  top: 5.5rem; /* moved below top nav */
-  right: 1rem;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.scroll-menu a {
-  color: #ffd700;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Cinzel', serif;
-}
-
-.scroll-menu a:hover {
-  color: #fff;
-}
     </style>
 </head>
 <body>
@@ -245,7 +195,7 @@
 
     <div class="container">
         <header>
-            <div class="dove-icon" title="The Holy Spirit">🕊️</div>
+            <div class="dove-icon" title="The Holy Spirit">Holy Spirit</div>
             <h1 class="main-title">Wings of the Cherubim</h1>
             <h2 class="subtitle">Holy Spirit-Led Teachings</h2>
             <p class="tagline">Journey into Deeper Biblical Understanding</p>
@@ -262,130 +212,114 @@
             </ul>
         </nav>
 
+        <!-- Floating Scroll Menu (always visible on right) -->
+        <nav class="scroll-menu">
+            <a href="scroll1.html">1️⃣ Scroll 1</a>
+            <a href="scroll2.html">2️⃣ Scroll 2</a>
+            <a href="scroll3.html">3️⃣ Scroll 3</a>
+            <a href="scroll4.html">4️⃣ Scroll 4</a>
+        </nav>
+
         <div class="teachings-content">
             <h2>Our Latest Revelations & Insights</h2>
             <p class="teachings-intro">
                 Dive into a collection of Holy Spirit-led teachings and prophetic insights from Gregory Shadt. Here you will find articles and video excerpts that expand on the themes of our seminars, guiding you toward a profound understanding of God's Word and His unfolding plan.
             </p>
 
-           <div class="content-grid">
-                <div class="content-card">
-                    <h3>SCROLL 📜</h3>
-<p>
-<!-- Scroll Menu Floating Nav -->
-  <nav class="scroll-menu">
-  <a href="scroll1.html">1️⃣ Scroll 1</a>
-  <a href="scroll2.html">2️⃣ Scroll 2</a>
-  <a href="scroll3.html">3️⃣ Scroll 3</a>
-  <a href="scroll4.html">4️⃣ Scroll 4</a>
-</nav>
-                    <!-- Scroll preview cards -->
-    <section class="scroll-previews">
-      <div class="scroll-card">
-        <h3>🔥 Scroll 1: The Light Before Time</h3>
-        <p>Unveil the creation light and God's eternal plan.</p>
-        <a href="Scroll1.html">Read Scroll 1 →</a>
-      </div>
-      <div class="scroll-card">
-        <h3>🌿 Scroll 2: The Menorah & the Curse</h3>
-        <p>Discover the 7 Spirits of God and redemption through Christ.</p>
-        <a href="scroll2.html">Read Scroll 2 →</a>
-      </div>
-      <div class="scroll-card">
-        <h3>🌍 Scroll 3: The Nations Drawn to the Flame</h3>
-        <p>A calling to the Gentiles through prophetic fire.</p>
-        <a href="scroll3.html">Read Scroll 3 →</a>
-      </div>
-      <div class="scroll-card">
-        <h3>🐉 Scroll 4: The Dragon of the Nile</h3>
-        <p>Judgment against Pharaoh and the spiritual Nile serpent.</p>
-        <a href="scroll4.html">Read Scroll 4 →</a>
-      </div>
-    </section></p>
-                    <a href="Scroll1.html" class="read-more">Read More &rarr;</a>
+            <!-- Scroll Previews -->
+            <section class="scroll-previews">
+                <div class="scroll-card">
+                    <h3>Scroll 1: The Light Before Time</h3>
+                    <p>Unveil the creation light and God's eternal plan.</p>
+                    <a href="scroll1.html">Read Scroll 1 →</a>
                 </div>
- <div class="content-grid">
+                <div class="scroll-card">
+                    <h3>Scroll 2: The Menorah & the Curse</h3>
+                    <p>Discover the 7 Spirits of God and redemption through Christ.</p>
+                    <a href="scroll2.html">Read Scroll 2 →</a>
+                </div>
+                <div class="scroll-card">
+                    <h3>Scroll 3: The Nations Drawn to the Flame</h3>
+                    <p>A calling to the Gentiles through prophetic fire.</p>
+                    <a href="scroll3.html">Read Scroll 3 →</a>
+                </div>
+                <div class="scroll-card">
+                    <h3>Scroll 4: The Dragon of the Nile</h3>
+                    <p>Judgment against Pharaoh and the spiritual Nile serpent.</p>
+                    <a href="scroll4.html">Read Scroll 4 →</a>
+                </div>
+            </section>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
                 <div class="content-card">
                     <h3>The Menorah: God's Throne Revealed</h3>
                     <p>Explore the deep symbolism of the Menorah, not just as a lampstand, but as the very Throne of God, connected to the emerald rainbow in Revelation 4 and its ties to divine colors.</p>
-                    <a href="article-menorah.html" class="read-more">Read More &rarr;</a>
+                    <a href="article-menorah.html" class="read-more">Read More →</a>
                 </div>
 
                 <div class="content-card video-card">
-                    <h3>Video: Time Before Creation</h3>
-                 <div class="content-card video-card">
-            <h3>WINGS OF THE CHERUBIM</h3>
-            <div class="video-container">
-                <iframe src="https://youtube.com/shorts/yjRzHIVySTw?si=u4NPg4Ny4y64x6wX" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-            </div>
-            <p>[A brief description of what this video is about, e.g., "A powerful message on [topic] from Gregory Shadt."]</p>
-            <a href="https://youtube.com/shorts/yjRzHIVySTw?si=u4NPg4Ny4y64x6wX" target="_blank" class="read-more">Watch on YouTube →</a>
-        </div>
-                    <p>A short teaching on how humanity existed as eternal beings before the concept of earthly time, drawing from Ecclesiastes and ancient texts.</p>
-                    <a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID_HERE" target="_blank" class="read-more">Watch on YouTube &rarr;</a>
+                    <h3>WINGS OF THE CHERUBIM – Short Teaching</h3>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yjRzHIVySTw" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <p>A powerful short message on the eternal nature of God’s presence.</p>
+                    <a href="https://youtube.com/shorts/yjRzHIVySTw" target="_blank" class="read-more">Watch on YouTube →</a>
                 </div>
 
                 <div class="content-card">
                     <h3>The Seven Notes of the Shofar & Prophecy</h3>
-                    <p>Uncover the prophetic significance behind the seven distinct notes of the Shofar, and how they relate to the unfolding of God's purposes in Zechariah 9.</p>
-                    <a href="article-shofar.html" class="read-more">Read More &rarr;</a>
+                    <p>Uncover the prophetic significance behind the seven distinct notes of the Shofar and how they relate to God's purposes in Zechariah 9.</p>
+                    <a href="article-shofar.html" class="read-more">Read More →</a>
                 </div>
 
                 <div class="content-card video-card">
-                    <h3>Video: The Haitian Flag's Secret</h3>
+                    <h3>Video: Time Before Creation</h3>
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/YOUR_SECOND_YOUTUBE_VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/YOUR_SECOND_VIDEO_ID" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
                     </div>
-                    <p>Discover the profound spiritual symbolism encoded within the Haitian Flag's colors, representing heaven, earth, and the divine meeting place.</p>
-                    <a href="https://www.youtube.com/watch?v=YOUR_SECOND_YOUTUBE_VIDEO_ID_HERE" target="_blank" class="read-more">Watch on YouTube &rarr;</a>
+                    <p>A short teaching on how humanity existed as eternal beings before earthly time.</p>
+                    <a href="https://www.youtube.com/watch?v=YOUR_SECOND_VIDEO_ID" target="_blank" class="read-more">Watch on YouTube →</a>
                 </div>
-
-                </div>
+            </div>
         </div>
 
         <footer>
             <p>Connect with the Revelation: <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a></p>
-            <p>Follow the Unfolding Message: <a href="https://x.com/wingsofthecherubim" target="_blank">X</a> | <a href="http://googleusercontent.com/youtube.com/channel/UC_YourYouTubeChannelID" target="_blank">YouTube</a></p>
-            <p class="tagline">✨ The Digital Scroll Project continues to unfold, revealing deeper mysteries ✨</p>
+            <p>Follow the Unfolding Message: <a href="https://x.com/wingsofthecherubim" target="_blank">X</a> | <a href="https://www.youtube.com/channel/YOUR_CHANNEL" target="_blank">YouTube</a></p>
+            <p class="tagline">The Digital Scroll Project continues to unfold, revealing deeper mysteries</p>
             <div class="footer-icons">
-                <span title="The Holy Spirit">🕊️</span>
-                <span title="Divine Fire of Judgment and Purification">🔥</span>
-                <span title="The Menorah: God's Light and Presence">🕎</span>
+                <span title="The Holy Spirit">Holy Spirit</span>
+                <span title="Divine Fire">Fire</span>
+                <span title="The Menorah">Menorah</span>
             </div>
             <p style="margin-top: 1rem;">© 2025 Wings of the Cherubim. All rights reserved. Prophecies unfolding from Kenya to the Nations.</p>
         </footer>
     </div>
 
     <script>
-        // JavaScript for star animation (copy from your main HTML or ensure style.js is linked)
         function createStars() {
-            const starsContainer = document.getElementById('stars');
-            const numberOfStars = 150;
-            for (let i = 0; i < numberOfStars; i++) {
+            const container = document.getElementById('stars');
+            const count = 150;
+            for (let i = 0; i < count; i++) {
                 const star = document.createElement('div');
                 star.className = 'star';
                 const size = Math.random() * 3 + 1;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
-                
-                const startX = Math.random() * 200 - 50;
-                const startY = Math.random() * 200 - 50;
-                const endX = Math.random() * 200 - 50;
-                const endY = Math.random() * 200 - 50;
-
-                star.style.left = `${Math.random() * 100}%`;
-                star.style.top = `${Math.random() * 100}%`;
-                star.style.animationDelay = `${Math.random() * 5}s`;
-                star.style.setProperty('--x-start', `${startX}vw`);
-                star.style.setProperty('--y-start', `${startY}vh`);
-                star.style.setProperty('--x-end', `${endX}vw`);
-                star.style.setProperty('--y-end', `${endY}vh`);
-                star.style.animationDuration = `${Math.random() * 150 + 50}s`;
-
-                starsContainer.appendChild(star);
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.setProperty('--x-start', (Math.random() * 200 - 50) + 'vw');
+                star.style.setProperty('--y-start', (Math.random() * 200 - 50) + 'vh');
+                star.style.setProperty('--x-end', (Math.random() * 200 - 50) + 'vw');
+                star.style.setProperty('--y-end', (Math.random() * 200 - 50) + 'vh');
+                star.style.animationDuration = (Math.random() * 150 + 50) + 's';
+                container.appendChild(star);
             }
         }
         window.addEventListener('load', createStars);
