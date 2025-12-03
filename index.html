@@ -258,6 +258,62 @@
             .scroll { padding: 2rem; }
             .scroll-title { font-size: 2rem; }
         }
+.scroll-previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.scroll-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-card:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-card h3 {
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.scroll-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* Floating Scroll Menu (Fixed Right) */
+.scroll-menu {
+  position: fixed;
+  top: 5.5rem; /* moved below top nav */
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scroll-menu a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+
+.scroll-menu a:hover {
+  color: #fff;
+}
     </style>
 </head>
 <body>
@@ -296,7 +352,36 @@
                 <div class="portal-trigger" onclick="triggerPortalBurst()">Enter the Vision</div>
 
                 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
-
+<!-- Scroll Menu Floating Nav -->
+  <nav class="scroll-menu">
+  <a href="scroll1.html">1️⃣ Scroll 1</a>
+  <a href="scroll2.html">2️⃣ Scroll 2</a>
+  <a href="scroll3.html">3️⃣ Scroll 3</a>
+  <a href="scroll4.html">4️⃣ Scroll 4</a>
+</nav>
+<!-- Scroll preview cards -->
+    <section class="scroll-previews">
+      <div class="scroll-card">
+        <h3>🔥 Scroll 1: The Light Before Time</h3>
+        <p>Unveil the creation light and God's eternal plan.</p>
+        <a href="scroll1.html">Read Scroll 1 →</a>
+      </div>
+      <div class="scroll-card">
+        <h3>🌿 Scroll 2: The Menorah & the Curse</h3>
+        <p>Discover the 7 Spirits of God and redemption through Christ.</p>
+        <a href="scroll2.html">Read Scroll 2 →</a>
+      </div>
+      <div class="scroll-card">
+        <h3>🌍 Scroll 3: The Nations Drawn to the Flame</h3>
+        <p>A calling to the Gentiles through prophetic fire.</p>
+        <a href="scroll3.html">Read Scroll 3 →</a>
+      </div>
+      <div class="scroll-card">
+        <h3>🐉 Scroll 4: The Dragon of the Nile</h3>
+        <p>Judgment against Pharaoh and the spiritual Nile serpent.</p>
+        <a href="scroll4.html">Read Scroll 4 →</a>
+      </div>
+    </section>
                 <div class="key-verse">
                     <strong>Zechariah 4:6</strong> — “Not by might, nor by power, but by my Spirit, says the LORD of hosts.”
                 </div>
