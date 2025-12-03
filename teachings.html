@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore Holy Spirit-led biblical teachings from Wings of the Cherubim. Discover articles and videos on Menorah symbolism, time and eternity, prophecy, and more.">
-    <meta name="author" content="Gregory Shadt / Chris">
+    <meta name="author" content="Gregory Schadt / Chris">
     <meta name="keywords" content="biblical teachings, Holy Spirit insights, Christian articles, spiritual videos, prophecy, Menorah, Shofar, eternal destiny, Wings of the Cherubim content">
     <title>Teachings - Wings of the Cherubim</title>
     <link rel="stylesheet" href="style.css">
@@ -188,6 +188,44 @@
             .content-grid { grid-template-columns: 1fr; }
             .scroll-menu { position: static; margin: 2rem auto; max-width: 300px; }
         }
+‎.fire-button {
+‎  display: inline-block;
+‎  background: linear-gradient(45deg, #8e44ad, #FFD700);
+‎  color: white;
+‎  font-weight: bold;
+‎  padding: 1rem 2.2rem;
+‎  border-radius: 50px;
+‎  text-decoration: none;
+‎  font-size: 1.1em;
+‎  border: 3px solid #FFD700;
+‎  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+‎  transition: all 0.4s ease;
+‎  position: relative;
+‎  overflow: hidden;
+‎}
+‎
+‎.fire-button span {
+‎  position: relative;
+‎  z-index: 2;
+‎}
+‎
+‎.fire-button::before {
+‎  content: '';
+‎  position: absolute;
+‎  top: 0; left: -100%;
+‎  width: 100%; height: 100%;
+‎  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+‎  transition: 0.7s;
+‎}
+‎
+‎.fire-button:hover::before {
+‎  left: 100%;
+‎}
+‎
+‎.fire-button:hover {
+‎  transform: scale(1.08);
+‎  box-shadow: 0 0 35px rgba(255, 215, 0, 0.9);
+‎}
     </style>
 </head>
 <body>
@@ -223,7 +261,7 @@
         <div class="teachings-content">
             <h2>Our Latest Revelations & Insights</h2>
             <p class="teachings-intro">
-                Dive into a collection of Holy Spirit-led teachings and prophetic insights from Gregory Shadt. Here you will find articles and video excerpts that expand on the themes of our seminars, guiding you toward a profound understanding of God's Word and His unfolding plan.
+                Dive into a collection of Holy Spirit-led teachings and prophetic insights from Gregory Schadt. Here you will find articles and video excerpts that expand on the themes of our seminars, guiding you toward a profound understanding of God's Word and His unfolding plan.
             </p>
 
             <!-- Scroll Previews -->
@@ -232,25 +270,33 @@
                     <h3>Scroll 1: The Light Before Time</h3>
                     <p>Unveil the creation light and God's eternal plan.</p>
                    
-<a href="Scroll1.html" class="read-more">Read Scroll 1 →</a>
+‎<a href="Scroll1.html" class="fire-button">
+‎  <span>Read Scroll 1</span>
+‎</a>
                 </div>
                 <div class="scroll-card">
                     <h3>Scroll 2: The Menorah & the Curse</h3>
                     <p>Discover the 7 Spirits of God and redemption through Christ.</p>
-   <a href="scroll2.html" class="read-more">Read Scroll 2 →</a>
+   ‎<a href="scroll2.html" class="fire-button">
+‎  <span>Read Scroll 2</span>
+‎</a>
            
                 </div>
                 <div class="scroll-card">
                     <h3>Scroll 3: The Nations Drawn to the Flame</h3>
                     <p>A calling to the Gentiles through prophetic fire.</p>
                   
-<a href="scroll3.html" class="read-more">Read Scroll 3 →</a>
-    </div>
+‎<a href="scroll3.html" class="fire-button">
+‎  <span>Read Scroll 3</span>
+‎</a>
+</div>
                 <div class="scroll-card">
                     <h3>Scroll 4: The Dragon of the Nile</h3>
                     <p>Judgment against Pharaoh and the spiritual Nile serpent.</p>
                    
-<a href="scroll4.html" class="read-more">Read Scroll 4 →</a>
+‎<a href="scroll4.html" class="fire-button">
+‎  <span>Read Scroll 4</span>
+‎</a>
                 </div>
             </section>
 
