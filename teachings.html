@@ -182,6 +182,62 @@
             nav { padding: 0.8rem; } nav ul { gap: 0.5rem; }
             .teachings-content { padding: 1.5rem; } .teachings-content h2 { font-size: 1.8rem; }
         }
+.scroll-previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.scroll-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.scroll-card:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-card h3 {
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.scroll-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* Floating Scroll Menu (Fixed Right) */
+.scroll-menu {
+  position: fixed;
+  top: 5.5rem; /* moved below top nav */
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scroll-menu a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+
+.scroll-menu a:hover {
+  color: #fff;
+}
     </style>
 </head>
 <body>
@@ -212,7 +268,13 @@
                 Dive into a collection of Holy Spirit-led teachings and prophetic insights from Gregory Shadt. Here you will find articles and video excerpts that expand on the themes of our seminars, guiding you toward a profound understanding of God's Word and His unfolding plan.
             </p>
 
-            <div class="content-grid">
+           <div class="content-grid">
+                <div class="content-card">
+                    <h3>Creation</h3>
+                    <p>The flame of intelligent design</p>
+                    <a href="Scroll1.html" class="read-more">Read More &rarr;</a>
+                </div>
+ <div class="content-grid">
                 <div class="content-card">
                     <h3>The Menorah: God's Throne Revealed</h3>
                     <p>Explore the deep symbolism of the Menorah, not just as a lampstand, but as the very Throne of God, connected to the emerald rainbow in Revelation 4 and its ties to divine colors.</p>
