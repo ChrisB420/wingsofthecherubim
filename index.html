@@ -31,7 +31,7 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
 
    <style>
-/* ==== Reset & Base ==== */
+/* ==== RESET & BASE ==== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body, #root { height: 100%; }
 body {
@@ -43,7 +43,7 @@ body {
   font-size: 1.15em;
 }
 
-/* ==== Stars Background ==== */
+/* ==== STARS BACKGROUND ==== */
 .stars {
   position: fixed;
   inset: 0;
@@ -63,7 +63,7 @@ body {
   100% { opacity: 1; transform: scale(1.2); }
 }
 
-/* ==== Three.js Layer ==== */
+/* ==== THREE.JS LAYER ==== */
 #threejs-container {
   position: fixed;
   inset: 0;
@@ -76,7 +76,7 @@ body {
   background-position: center;
 }
 
-/* ==== Global Container ==== */
+/* ==== GLOBAL CONTAINER ==== */
 .container {
   position: relative;
   z-index: 1;
@@ -90,20 +90,44 @@ body {
   border-radius: 12px;
 }
 
-/* ==== Header / HERO ==== */
-header.hero {
+/* ==== HERO SECTION ==== */
+header.hero, .hero-simple, .faith-hero {
   position: relative;
   min-height: 100vh;
-  background: radial-gradient(circle at top, #4a2d82, #0a0a14);
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   overflow: hidden;
+  color: #fff;
+}
+
+header.hero {
+  background: radial-gradient(circle at top, #4a2d82, #0a0a14);
   padding: 4rem 2rem 3rem;
   border-bottom: 6px solid #FFD700;
   border-radius: 12px 12px 0 0;
 }
-.holy-light {
+
+.hero-simple {
+  height: 70vh;
+  min-height: 420px;
+}
+
+.hero-simple .hero-bg, .holy-light, .faith-bg {
   position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero-simple .hero-bg {
+  background:
+    radial-gradient(ellipse at center, rgba(212,175,55,0.08) 0%, rgba(0,0,0,0.6) 60%),
+    url('images/hero-bg.jpg') center/cover no-repeat;
+  filter: saturate(0.9) brightness(0.6);
+}
+
+.holy-light {
   top: -20%;
   left: 50%;
   transform: translateX(-50%);
@@ -113,10 +137,21 @@ header.hero {
   animation: pulse 6s infinite ease-in-out;
   z-index: 0;
 }
+.faith-bg {
+  background: url('/1000137115.jpg') center/cover no-repeat;
+  filter: brightness(0.95) contrast(1.1);
+  z-index: 0;
+}
+
+/* HERO ANIMATIONS */
 @keyframes pulse {
   0%,100% { opacity: 0.5; }
   50% { opacity: 0.9; }
 }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+@keyframes float-slow { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-18px) rotate(3deg); } }
+
+/* DOVE ICON */
 .dove-icon {
   font-size: 4rem;
   position: absolute;
@@ -125,22 +160,18 @@ header.hero {
   animation: float 6s ease-in-out infinite;
   z-index: 2;
 }
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-.main-title, .glow-text {
+
+/* HERO TEXT */
+.main-title, .glow-text, .hero-title {
   font-family: 'Cinzel Decorative', cursive;
   font-size: clamp(2.8rem, 6vw, 4.5rem);
   line-height: 1.1;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  text-shadow:
-    0 0 10px rgba(255,215,100,0.8),
-    0 0 30px rgba(255,215,100,0.4);
+  text-shadow: 0 0 10px rgba(255,215,100,0.8), 0 0 30px rgba(255,215,100,0.4);
   z-index: 2;
 }
-.subtitle {
+.subtitle, .hero-sub {
   font-family: 'Cinzel', serif;
   font-size: clamp(1.4rem, 2.2vw, 2.4rem);
   color: #FFD700;
@@ -148,29 +179,35 @@ header.hero {
   letter-spacing: 0.3em;
   z-index: 2;
 }
-.tagline {
+.tagline, .hero-tag {
   font-style: italic;
   opacity: 0.9;
   margin-top: 1.5rem;
   z-index: 2;
 }
-@keyframes glowPulse {
-  from { text-shadow: 0 0 15px gold; }
-  to { text-shadow: 0 0 30px gold, 0 0 40px orange; }
-}
 
-/* Wings */
-.wings { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
-.wing {
+/* HERO WINGS */
+.wings, .wing {
   position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.wing {
   width: 45%;
   opacity: 0.35;
   top: 20%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform-origin: center;
+  will-change: transform;
+  animation: float-slow 18s ease-in-out infinite;
 }
-.wing.left { left: -10%; transform: rotate(-8deg); }
-.wing.right { right: -10%; transform: rotate(8deg); }
+.wing.left { left: -10%; transform: rotate(-8deg); background-image: url('images/wings-left.png'); }
+.wing.right { right: -10%; transform: rotate(8deg); background-image: url('images/wings-right.png'); animation-delay: -9s; }
 
-/* Glass Navigation (hero bottom) */
+/* GLASS NAVIGATION */
 .glass-nav {
   position: absolute;
   bottom: 3rem;
@@ -189,11 +226,17 @@ header.hero {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
 }
-.glass-nav a:hover { color: gold; }
+.glass-nav a:hover {
+  background: linear-gradient(90deg, rgba(212,175,55,0.14), rgba(212,175,55,0.06));
+  color: #ffdca3;
+  transform: translateY(-2px);
+}
 
-/* Sticky top nav used elsewhere */
+/* STICKY NAV */
 nav {
   background: #1e3a8a;
   padding: 1rem;
@@ -204,47 +247,99 @@ nav {
   border-radius: 8px;
 }
 nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.8rem; list-style: none; }
-nav a {
-  color: #ecf0f1;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
+nav a { color: #ecf0f1; font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 6px; transition: all 0.3s ease; }
 nav a:hover { background: rgba(255,215,0,0.25); color: gold; }
 
-/* ==== Scrolls / Content ==== */
-.scrolls-container { max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem; z-index: 2; }
-.scroll {
-  background: #fefefe;
-  padding: 3rem;
-  margin-bottom: 3rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-  border-left: 6px solid gold;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1.2s ease-out;
+/* ==== FAITH HERO SCROLL ==== */
+.faith-hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #05070c;
 }
-.scroll.reveal { opacity: 1; transform: translateY(0); }
-.scroll-title {
-  font-size: 2.2rem;
-  color: #6b21a8;
+.faith-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
-  border-bottom: 3px double gold;
-  padding-bottom: 0.8rem;
+  color: #fff;
 }
-.scroll-theme {
-  text-align: center;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 1rem;
-  font-size: 1.15rem;
+.faith-title { font-size: 3.5rem; letter-spacing: 0.08em; font-family: Georgia, serif; margin-bottom: 1rem; }
+.menorah-glow {
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,215,150,0.6), transparent 70%);
+  margin: 1.5rem 0;
+  animation: pulse 6s infinite ease-in-out;
+}
+.scroll-text {
+  max-width: 720px;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  background: rgba(0,0,0,0.45);
+  padding: 1.6rem 2.2rem;
+  border-radius: 14px;
 }
 
-/* Key verse block */
+/* ==== PARCHMENT SCROLL ==== */
+.scroll.parchment {
+  background: #f5ecd9;
+  color: #2e2a24;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 4rem 2.5rem;
+  font-family: Georgia, serif;
+  line-height: 1.9;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+  position: relative;
+}
+.scroll.parchment.visible { opacity: 1; transform: translateY(0); }
+.scroll.parchment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width=\"200\" height=\"200\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\"/></filter><rect width=\"200\" height=\"200\" filter=\"url(%23n)\" opacity=\"0.04\"/></svg>');
+  pointer-events: none;
+}
+.scroll.parchment h1, .scroll.parchment h2, .scroll.parchment h3 {
+  font-family: "Cinzel", Georgia, serif;
+  color: #c9a24d;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+}
+.scroll.parchment h1 { text-align: center; font-size: 2.4rem; }
+.scroll.parchment h2 { text-align: center; font-size: 1.4rem; }
+.scroll.parchment h3 { font-size: 1.25rem; }
+.scroll.parchment .theme { text-align: center; font-style: italic; margin-bottom: 2rem; }
+.scroll.parchment blockquote {
+  border-left: 4px solid #c9a24d;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+.scroll.parchment .call { text-align: center; font-size: 1.15rem; font-weight: bold; }
+.scroll.parchment .prayer {
+  font-style: italic;
+  background: rgba(255,255,255,0.6);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+.scroll.parchment hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  margin: 3rem 0;
+}
+
+/* ==== KEY VERSE ==== */
 .key-verse {
   background: #e6f0ff;
   border-left: 8px solid #1e3a8a;
@@ -258,7 +353,7 @@ nav a:hover { background: rgba(255,215,0,0.25); color: gold; }
   border-radius: 8px;
 }
 
-/* Images */
+/* ==== IMAGES ==== */
 .main-spiritual-image, .haitian-flag-actual {
   display: block;
   max-width: 100%;
@@ -270,28 +365,14 @@ nav a:hover { background: rgba(255,215,0,0.25); color: gold; }
 .main-spiritual-image { border: 6px solid gold; }
 .haitian-flag-actual { max-width: 80%; border: 4px solid #1e3a8a; background: white; }
 
-/* Details / summary */
+/* ==== DETAILS / TABLES ==== */
 details { margin: 1.5rem 0; background:#fcfcfc; padding:1.25rem; border-radius:10px; }
 summary { font-weight:bold; color:#6b21a8; cursor:pointer; font-size:1.1rem; }
-
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  background: #e8f5e9;
-  border-radius: 8px;
-  overflow: hidden;
-}
-th, td {
-  border: 1px solid #b3e0b5;
-  padding: 0.75rem;
-  text-align: left;
-  vertical-align: top;
-}
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: #e8f5e9; border-radius: 8px; overflow: hidden; }
+th, td { border: 1px solid #b3e0b5; padding: 0.75rem; text-align: left; vertical-align: top; }
 th { background:#7cb342; color:#fff; }
 
-/* Portal trigger button */
+/* ==== PORTAL TRIGGER BUTTON ==== */
 .portal-trigger {
   display: inline-block;
   width: 260px;
@@ -309,7 +390,7 @@ th { background:#7cb342; color:#fff; }
 }
 .portal-trigger:hover { transform: scale(1.05); box-shadow: 0 0 40px gold; }
 
-/* Particles */
+/* ==== PARTICLES ==== */
 .particle {
   position: fixed;
   border-radius: 50%;
@@ -317,12 +398,9 @@ th { background:#7cb342; color:#fff; }
   animation: burst 1.8s forwards;
   z-index: 999;
 }
-@keyframes burst {
-  0% { transform: scale(0); opacity: 1; }
-  100% { transform: scale(3); opacity: 0; }
-}
+@keyframes burst { 0% { transform: scale(0); opacity: 1; } 100% { transform: scale(3); opacity: 0; } }
 
-/* Footer */
+/* ==== FOOTER ==== */
 footer {
   background: #1e3a8a;
   color: #ecf0f1;
@@ -334,37 +412,7 @@ footer {
 footer a { color: gold; text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 
-/* ===== FAITH HERO (full-screen section) ===== */
-.faith-hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #05070c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-.faith-bg {
-  position: absolute;
-  inset: 0;
-  background: url('/1000137115.jpg') center/cover no-repeat;
-  filter: brightness(0.95) contrast(1.1);
-  z-index: 0;
-}
-.faith-overlay {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  padding: 2rem;
-  text-align: center;
-  color: #fff;
-}
-.faith-title { font-size: 3.5rem; letter-spacing: 0.08em; }
-.menorah-glow { height: 6px; margin: 1rem auto; width: 70%; background: linear-gradient(90deg,#ffd700,#ffea00); box-shadow: 0 0 20px rgba(255,215,0,0.5); border-radius: 6px; }
-
-/* ===== Responsive ===== */
+/* ==== RESPONSIVE ADJUSTMENTS ==== */
 @media (max-width: 1024px) {
   .main-title { font-size: 3.2rem; }
   .subtitle { font-size: 2rem; }
@@ -374,7 +422,6 @@ footer a:hover { text-decoration: underline; }
   .wing { width: 60%; opacity: 0.28; }
   .glass-nav { bottom: 2rem; }
 }
-
 @media (max-width: 768px) {
   .main-title { font-size: 2.8rem; }
   .subtitle { font-size: 1.8rem; }
@@ -384,7 +431,6 @@ footer a:hover { text-decoration: underline; }
   .glass-nav { bottom: 1.5rem; flex-wrap: wrap; justify-content: center; }
   .portal-trigger { width: 220px; font-size: 1.05rem; }
 }
-
 @media (max-width: 480px) {
   .main-title { font-size: 2.4rem; }
   .subtitle { font-size: 1.6rem; letter-spacing: 0.15em; }
@@ -393,6 +439,7 @@ footer a:hover { text-decoration: underline; }
   .key-verse { font-size: 1rem; }
   .portal-trigger { width: 200px; padding: 0.9rem 1rem; }
 }
+
 </style>
     
 </head>
