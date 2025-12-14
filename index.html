@@ -360,7 +360,149 @@ footer a:hover { text-decoration: underline; }
                 <div class="portal-trigger" onclick="triggerPortalBurst()">Enter the Vision</div>
 
                 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
+<!-- FAITH SCROLL TEACHING : Wings of the Cherubim -->
+<section id="faith-teaching" class="scroll parchment">
 
+  <h1>FAITH — Wings of the Cherubim</h1>
+  <h2>God’s Shekinah Glory</h2>
+
+  <p class="theme">
+    <strong>Theme:</strong> The Seven Lamps, the Living Word, and the Curse of Death
+  </p>
+
+  <hr>
+
+  <h3>The Wings of the Cherubim: God Is Shining Glory</h3>
+
+  <p>
+    The Menorah is the picture of the symbol of the nation of Israel. It is the
+    subliminal revelation of the fullness of the Creator God, His oneness,
+    His threefold being, and His seven Spirits manifested in light.
+  </p>
+
+  <p>
+    The rainbow is refracted light. In unity it forms pure light, ascending from God,
+    unified as one. As the six wings of the seraphim surround Him, the central shaft
+    remains the fullness of God’s righteousness.
+  </p>
+
+  <p>
+    This light is made manifest in the gift of light, descending from the throne of God.
+    The ascending and descending light is a declaration of man’s right of salvation.
+  </p>
+
+  <blockquote>
+    <strong>Revelation Insight Unveiled</strong>
+  </blockquote>
+
+  <ul>
+    <li><strong>1 Kings 6:24–25</strong> — The cherubim of Solomon’s Temple, each touching the other.</li>
+    <li><strong>Ezekiel 1:6</strong> — Each living creature with four faces and four wings.</li>
+  </ul>
+
+  <hr>
+
+  <h3>The Living Word of God</h3>
+
+  <p>
+    The Word of God is living, powerful, and sharper than any two-edged sword,
+    piercing even to the division of soul and spirit, joints and marrow.
+    It is a discerner of the thoughts and intents of the heart (Hebrews 4:12).
+  </p>
+
+  <p>
+    This is the living Word of God. It is the death blow to division.
+    Man can pass into eternal life only through this death-and-life union
+    with his Creator.
+  </p>
+
+  <p>
+    This narrow way is the result of the curse placed on the earth in Genesis 3:15.
+    The curse is a result of man’s free will to know and choose evil.
+  </p>
+
+  <hr>
+
+  <h3>The Fall, Authority, and the Curse</h3>
+
+  <p>
+    In his rebellion, authority was transferred to Lucifer.
+    God declared a curse over man, woman, Satan, and the earth.
+    The Book of Life was closed and sealed by seven seals —
+    the seven Spirits of God.
+  </p>
+
+  <p>
+    No one could open it until the Lamb was found worthy.
+    The seals represent judgment restrained by mercy,
+    time bound within God’s eternal sabbath,
+    and the coming final judgment.
+  </p>
+
+  <hr>
+
+  <h3>The Condition of Man</h3>
+
+  <p>
+    As a result of this curse, all men are born spiritually dead.
+    The eyes of the spiritual heart are blind.
+    The question “What will happen to me when I die?”
+    lingers deep within every soul.
+  </p>
+
+  <p>
+    Religion, created by man to please God, cannot remove the curse.
+    In spiritual death, man has no awareness of his need for salvation.
+  </p>
+
+  <hr>
+
+  <h3>The Pursuit of Vanity</h3>
+
+  <p>
+    Man passes through life seeking pleasure, wealth, and recognition,
+    yet peace is never found. Joy is temporary.
+    The question of death is never removed.
+  </p>
+
+  <hr>
+
+  <h3>The Call of Light</h3>
+
+  <p class="call">
+    The descending light from God is mercy.<br>
+    The ascending light from man is faith.<br>
+    <strong>Where they meet, salvation is revealed.</strong>
+  </p>
+
+  <p>
+    This is the message of <strong>Wings of the Cherubim</strong>:
+    the light still shines, the seals will be opened by the Lamb,
+    and the way back to life remains open through faith.
+  </p>
+
+  <hr>
+
+  <h3>Scroll-Sealing Prayer</h3>
+
+  <p class="prayer">
+    Father of Light,<br>
+    Creator of the heavens and the earth,<br>
+    We receive the descending light of Your mercy<br>
+    And lift the ascending light of faith.<br><br>
+
+    Let the seals be opened by the Lamb,<br>
+    Let the eyes of the blind be awakened,<br>
+    Let the curse be broken by truth.<br><br>
+
+    Cover this work with the Wings of the Cherubim.<br>
+    Let Your Shekinah Glory rest upon it.<br>
+    Lead many from darkness into eternal life.<br><br>
+
+    <strong>Amen.</strong>
+  </p>
+
+</section>
                 <div class="key-verse">
                     <strong>Zechariah 4:6</strong> — “Not by might, nor by power, but by my Spirit, says the LORD of hosts.”
                 </div>
@@ -696,6 +838,16 @@ footer a:hover { text-decoration: underline; }
             revealOnScroll();
             window.addEventListener('scroll', revealOnScroll);
         };
+        const scrollEl = document.querySelector('.scroll.parchment');
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    },
+    { threshold: 0.1 }
+  );
+  observer.observe(scrollEl);
     </script>
     <style>
 /* ===== FAITH HERO SECTION ===== */
@@ -766,6 +918,107 @@ footer a:hover { text-decoration: underline; }
   padding: 1.6rem 2.2rem;
   border-radius: 14px;
 }
+ /* ===== PARCHMENT SCROLL STYLE ===== */
+.scroll.parchment {
+  background: #f5ecd9;
+  color: #2e2a24;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+  font-family: Georgia, serif;
+  line-height: 1.9;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  border-radius: 6px;
+}
+
+/* Subtle parchment grain */
+.scroll.parchment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width=\"200\" height=\"200\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\"/></filter><rect width=\"200\" height=\"200\" filter=\"url(%23n)\" opacity=\"0.04\"/></svg>');
+  pointer-events: none;
+}
+
+/* Headings */
+.scroll.parchment h1,
+.scroll.parchment h2,
+.scroll.parchment h3 {
+  font-family: "Cinzel", Georgia, serif;
+  color: #c9a24d;
+  letter-spacing: 0.08em;
+  margin-top: 3rem;
+}
+
+.scroll.parchment h1 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.scroll.parchment h2 {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.scroll.parchment h3 {
+  font-size: 1.25rem;
+}
+
+/* Theme line */
+.scroll.parchment .theme {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* Scripture / insight */
+.scroll.parchment blockquote {
+  border-left: 4px solid #c9a24d;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+/* Call of Light emphasis */
+.scroll.parchment .call {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+/* Prayer */
+.scroll.parchment .prayer {
+  font-style: italic;
+  background: rgba(255,255,255,0.6);
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+/* Horizontal rule */
+.scroll.parchment hr {
+  border: none;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  margin: 3rem 0;
+}
+
+/* ===== SCROLL FADE-IN ANIMATION ===== */
+.scroll.parchment {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.scroll.parchment.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  .scroll.parchment {
+    padding: 2.5rem 1.5rem;
+  }
+}       
 </style>
 </body>
 </html>
