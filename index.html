@@ -297,6 +297,125 @@ footer a:hover { text-decoration: underline; }
     .scroll-theme { font-size: 1.1rem; }
     .key-verse { font-size: 1.1rem; }
 }
+/* ===== HERO BASE ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #4a2d82, #0a0a14);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+/* ===== HOLY SPIRIT LIGHT ===== */
+.holy-light {
+  position: absolute;
+  top: -20%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 60%);
+  animation: pulse 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+/* ===== WINGS ===== */
+.wings {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wing {
+  position: absolute;
+  width: 45%;
+  opacity: 0.35;
+}
+
+.wing.left {
+  left: -10%;
+  top: 20%;
+  transform: rotate(-8deg);
+}
+
+.wing.right {
+  right: -10%;
+  top: 20%;
+  transform: rotate(8deg);
+}
+
+/* ===== TEXT ===== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.glow-text {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 10px rgba(255,215,100,0.8),
+    0 0 30px rgba(255,215,100,0.4);
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: gold;
+  letter-spacing: 0.3em;
+}
+
+.tagline {
+  margin-top: 1.5rem;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* ===== GLASS NAV ===== */
+.glass-nav {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  gap: 1.2rem;
+  padding: 1rem 1.8rem;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.glass-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.glass-nav a:hover {
+  color: gold;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .glass-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    bottom: 1.5rem;
+  }
+
+  .wing {
+    width: 70%;
+    opacity: 0.2;
+  }
+}
 
     </style>
 </head>
@@ -306,23 +425,37 @@ footer a:hover { text-decoration: underline; }
     <div id="threejs-container"></div>
 
     <div class="container">
+<!-- ===== MODERN HERO SECTION ===== -->
+<header class="hero">
 
-        <header>
-            <div class="dove-icon" title="The Holy Spirit">Holy Spirit</div>
-            <h1 class="main-title">Wings of the Cherubim</h1>
-            <h2 class="subtitle">THE RETURN</h2>
-            <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
-        </header>
+  <!-- Background Light -->
+  <div class="holy-light"></div>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="seminars.html">Seminars</a></li>
-                <li><a href="teachings.html">Teachings</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+  <!-- Wings -->
+  <div class="wings">
+    <img src="wings-left.png" class="wing left" alt="Left Wing">
+    <img src="wings-right.png" class="wing right" alt="Right Wing">
+  </div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1 class="glow-text">Wings of the Cherubim</h1>
+    <h2 class="subtitle">THE RETURN</h2>
+    <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <a href="index.html">Home</a>
+    <a href="seminars.html">Seminars</a>
+    <a href="teachings.html">Teachings</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+</header>
+      
         </nav>
 
         <div class="scrolls-container">
