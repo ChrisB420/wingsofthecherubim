@@ -30,359 +30,153 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
 
-    <style>
-       /* ==== Global Reset & Base ==== */
+   <style>
+/* ==== Reset & Base ==== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #root { height: 100%; }
 body {
-    font-family: Georgia, serif;
-    background: #090A0F;
-    color: #eee;
-    line-height: 1.9;
-    overflow-x: hidden;
-    font-size: 1.15em;
+  font-family: Georgia, serif;
+  background: #090A0F;
+  color: #eee;
+  line-height: 1.9;
+  overflow-x: hidden;
+  font-size: 1.15em;
 }
 
-/* ==== Cosmic Background & Stars ==== */
+/* ==== Stars Background ==== */
 .stars {
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-    pointer-events: none;
-    z-index: -2;
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  pointer-events: none;
+  z-index: -2;
 }
 .star {
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 8px #fff;
-    animation: twinkle 5s infinite alternate;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #fff;
+  animation: twinkle 5s infinite alternate;
 }
 @keyframes twinkle {
-    0% { opacity: 0.3; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1.2); }
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.2); }
 }
 
-/* ==== Main Layout ==== */
-.container {
-    position: relative;
-    z-index: 1;
-    background: rgba(255,255,255,0.97);
-    color: #222;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 100vh;
-    box-shadow: 0 0 60px rgba(0,0,0,0.6);
-    padding: 2rem;
-    border-radius: 12px;
-}
-
-/* ==== Header ==== */
-header {
-    background: linear-gradient(135deg, #2c3e50, #8e44ad);
-    color: #fff;
-    text-align: center;
-    padding: 4rem 2rem 3rem;
-    position: relative;
-    border-bottom: 6px solid #FFD700;
-}
-.dove-icon { 
-    font-size: 4rem; 
-    position: absolute; 
-    top: 20px; left: 30px; 
-    animation: float 6s ease-in-out infinite; 
-}
-@keyframes float { 
-    0%,100% { transform: translateY(0); } 
-    50% { transform: translateY(-15px); } 
-}
-.main-title {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 3.8rem;
-    text-shadow: 0 0 20px gold;
-    animation: glowPulse 4s infinite alternate;
-    line-height: 1.1;
-}
-.subtitle { 
-    font-family: 'Cinzel', serif; 
-    font-size: 2.4rem; 
-    color: #FFD700; 
-    margin: 0.5rem 0; 
-}
-.tagline { font-style: italic; opacity: 0.9; }
-@keyframes glowPulse {
-    from { text-shadow: 0 0 15px gold; }
-    to { text-shadow: 0 0 30px gold, 0 0 40px orange; }
-}
-
-/* ==== Navigation ==== */
-nav {
-    background: #1e3a8a;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    border-radius: 8px;
-}
-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.8rem;
-    list-style: none;
-}
-nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-}
-nav a:hover {
-    background: rgba(255,215,0,0.25);
-    color: gold;
-}
-
-/* ==== Content Scrolls ==== */
-.scrolls-container {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
-}
-.scroll {
-    background: #fefefe;
-    padding: 3rem;
-    margin-bottom: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-    border-left: 6px solid gold;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.2s ease-out;
-}
-.scroll.reveal { opacity: 1; transform: translateY(0); }
-.scroll-title {
-    font-size: 2.8rem;
-    color: #6b21a8;
-    text-align: center;
-    margin-bottom: 1rem;
-    border-bottom: 3px double gold;
-    padding-bottom: 0.8rem;
-}
-.scroll-theme {
-    text-align: center;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 2rem;
-    font-size: 1.35rem;
-}
-.key-verse {
-    background: #e6f0ff;
-    border-left: 8px solid #1e3a8a;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.4rem;
-    text-align: center;
-    color: #1e3a8a;
-}
-.main-spiritual-image, .haitian-flag-actual {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 2rem auto;
-    border: 6px solid gold;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-.haitian-flag-actual { max-width: 80%; border: 4px solid #1e3a8a; }
-
-/* ==== Details / Summary ==== */
-details { margin: 2rem 0; background:#fcfcfc; padding:1.5rem; border-radius:10px; }
-summary { font-weight:bold; color:#6b21a8; cursor:pointer; font-size:1.35rem; }
-
-/* ==== Table ==== */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    background: #e8f5e9;
-    border-radius: 8px;
-    overflow: hidden;
-}
-th, td {
-    border: 1px solid #b3e0b5;
-    padding: 1rem;
-    text-align: left;
-}
-th { background:#7cb342; color:#fff; }
-
-/* ==== Portal Button ==== */
-.portal-trigger {
-    display: block;
-    width: 260px;
-    margin: 3rem auto;
-    padding: 1.3rem;
-    background: linear-gradient(45deg, #6b48ff, #ffd700);
-    color: white;
-    font-weight: bold;
-    font-size: 1.45rem;
-    text-align: center;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0 22px gold;
-    transition: all 0.4s ease;
-}
-.portal-trigger:hover { transform: scale(1.1); box-shadow: 0 0 40px gold; }
-
-/* ==== Three.js Container ==== */
+/* ==== Three.js Layer ==== */
 #threejs-container {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: -1;
-    opacity: 0.6;
-    pointer-events: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
 }
 
-/* ==== Particles ==== */
-.particle {
-    position: fixed;
-    border-radius: 50%;
-    pointer-events: none;
-    animation: burst 1.8s forwards;
-    z-index: 999;
-}
-@keyframes burst {
-    0% { transform: scale(0); opacity: 1; }
-    100% { transform: scale(3); opacity: 0; }
+/* ==== Global Container ==== */
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.97);
+  color: #222;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-shadow: 0 0 60px rgba(0,0,0,0.6);
+  padding: 2rem;
+  border-radius: 12px;
 }
 
-/* ==== Footer ==== */
-footer {
-    background: #1e3a8a;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 3rem 1rem;
-    border-top: 6px double gold;
-    border-radius: 0 0 12px 12px;
-}
-footer a { color: gold; text-decoration: none; }
-footer a:hover { text-decoration: underline; }
-
-/* ==== Responsive ==== */
-@media (max-width: 1024px) {
-    .main-title { font-size: 3.2rem; }
-    .subtitle { font-size: 2rem; }
-    .scroll { padding: 2.5rem; }
-    .scroll-title { font-size: 2.3rem; }
-    .scroll-theme { font-size: 1.25rem; }
-    .key-verse { font-size: 1.3rem; }
-}
-@media (max-width: 768px) {
-    .main-title { font-size: 2.8rem; }
-    .subtitle { font-size: 1.8rem; }
-    .scroll { padding: 2rem; }
-    .scroll-title { font-size: 2rem; }
-    .scroll-theme { font-size: 1.2rem; }
-    .key-verse { font-size: 1.2rem; }
-}
-@media (max-width: 480px) {
-    .main-title { font-size: 2.4rem; }
-    .subtitle { font-size: 1.6rem; }
-    .scroll { padding: 1.5rem; }
-    .scroll-title { font-size: 1.8rem; }
-    .scroll-theme { font-size: 1.1rem; }
-    .key-verse { font-size: 1.1rem; }
-}
-/* ===== HERO BASE ===== */
-.hero {
+/* ==== Header / HERO ==== */
+header.hero {
   position: relative;
   min-height: 100vh;
   background: radial-gradient(circle at top, #4a2d82, #0a0a14);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  color: white;
+  color: #fff;
   text-align: center;
+  overflow: hidden;
+  padding: 4rem 2rem 3rem;
+  border-bottom: 6px solid #FFD700;
+  border-radius: 12px 12px 0 0;
 }
-
-/* ===== HOLY SPIRIT LIGHT ===== */
 .holy-light {
   position: absolute;
   top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 120%;
   height: 120%;
   background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 60%);
   animation: pulse 6s infinite ease-in-out;
+  z-index: 0;
 }
-
 @keyframes pulse {
   0%,100% { opacity: 0.5; }
   50% { opacity: 0.9; }
 }
-
-/* ===== WINGS ===== */
-.wings {
+.dove-icon {
+  font-size: 4rem;
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.wing {
-  position: absolute;
-  width: 45%;
-  opacity: 0.35;
-}
-
-.wing.left {
-  left: -10%;
-  top: 20%;
-  transform: rotate(-8deg);
-}
-
-.wing.right {
-  right: -10%;
-  top: 20%;
-  transform: rotate(8deg);
-}
-
-/* ===== TEXT ===== */
-.hero-content {
-  position: relative;
+  top: 20px;
+  left: 30px;
+  animation: float 6s ease-in-out infinite;
   z-index: 2;
 }
-
-.glow-text {
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.main-title, .glow-text {
+  font-family: 'Cinzel Decorative', cursive;
   font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-shadow:
     0 0 10px rgba(255,215,100,0.8),
     0 0 30px rgba(255,215,100,0.4);
+  z-index: 2;
 }
-
 .subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.4rem);
+  color: #FFD700;
   margin-top: 1rem;
-  font-size: 1.4rem;
-  color: gold;
   letter-spacing: 0.3em;
+  z-index: 2;
 }
-
 .tagline {
-  margin-top: 1.5rem;
   font-style: italic;
-  opacity: 0.85;
+  opacity: 0.9;
+  margin-top: 1.5rem;
+  z-index: 2;
+}
+@keyframes glowPulse {
+  from { text-shadow: 0 0 15px gold; }
+  to { text-shadow: 0 0 30px gold, 0 0 40px orange; }
 }
 
-/* ===== GLASS NAV ===== */
+/* Wings */
+.wings { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.wing {
+  position: absolute;
+  width: 45%;
+  opacity: 0.35;
+  top: 20%;
+}
+.wing.left { left: -10%; transform: rotate(-8deg); }
+.wing.right { right: -10%; transform: rotate(8deg); }
+
+/* Glass Navigation (hero bottom) */
 .glass-nav {
   position: absolute;
   bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
   display: flex;
   gap: 1.2rem;
   padding: 1rem 1.8rem;
@@ -391,33 +185,216 @@ footer a:hover { text-decoration: underline; }
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
-
 .glass-nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
+.glass-nav a:hover { color: gold; }
 
-.glass-nav a:hover {
-  color: gold;
+/* Sticky top nav used elsewhere */
+nav {
+  background: #1e3a8a;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.8rem; list-style: none; }
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+nav a:hover { background: rgba(255,215,0,0.25); color: gold; }
+
+/* ==== Scrolls / Content ==== */
+.scrolls-container { max-width: 1000px; margin: 3rem auto; padding: 0 1.5rem; z-index: 2; }
+.scroll {
+  background: #fefefe;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  border-left: 6px solid gold;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1.2s ease-out;
+}
+.scroll.reveal { opacity: 1; transform: translateY(0); }
+.scroll-title {
+  font-size: 2.2rem;
+  color: #6b21a8;
+  text-align: center;
+  margin-bottom: 1rem;
+  border-bottom: 3px double gold;
+  padding-bottom: 0.8rem;
+}
+.scroll-theme {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
 }
 
-/* ===== MOBILE ===== */
+/* Key verse block */
+.key-verse {
+  background: #e6f0ff;
+  border-left: 8px solid #1e3a8a;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #1e3a8a;
+  border-radius: 8px;
+}
+
+/* Images */
+.main-spiritual-image, .haitian-flag-actual {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.main-spiritual-image { border: 6px solid gold; }
+.haitian-flag-actual { max-width: 80%; border: 4px solid #1e3a8a; background: white; }
+
+/* Details / summary */
+details { margin: 1.5rem 0; background:#fcfcfc; padding:1.25rem; border-radius:10px; }
+summary { font-weight:bold; color:#6b21a8; cursor:pointer; font-size:1.1rem; }
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background: #e8f5e9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid #b3e0b5;
+  padding: 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+th { background:#7cb342; color:#fff; }
+
+/* Portal trigger button */
+.portal-trigger {
+  display: inline-block;
+  width: 260px;
+  margin: 2rem auto;
+  padding: 1.05rem 1.3rem;
+  background: linear-gradient(45deg, #6b48ff, #ffd700);
+  color: white;
+  font-weight: bold;
+  font-size: 1.15rem;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 22px gold;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.portal-trigger:hover { transform: scale(1.05); box-shadow: 0 0 40px gold; }
+
+/* Particles */
+.particle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: burst 1.8s forwards;
+  z-index: 999;
+}
+@keyframes burst {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* Footer */
+footer {
+  background: #1e3a8a;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 6px double gold;
+  border-radius: 0 0 12px 12px;
+}
+footer a { color: gold; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ===== FAITH HERO (full-screen section) ===== */
+.faith-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #05070c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.faith-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/1000137115.jpg') center/cover no-repeat;
+  filter: brightness(0.95) contrast(1.1);
+  z-index: 0;
+}
+.faith-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+.faith-title { font-size: 3.5rem; letter-spacing: 0.08em; }
+.menorah-glow { height: 6px; margin: 1rem auto; width: 70%; background: linear-gradient(90deg,#ffd700,#ffea00); box-shadow: 0 0 20px rgba(255,215,0,0.5); border-radius: 6px; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .main-title { font-size: 3.2rem; }
+  .subtitle { font-size: 2rem; }
+  .scroll { padding: 2.5rem; }
+  .scroll-title { font-size: 2rem; }
+  .key-verse { font-size: 1.05rem; }
+  .wing { width: 60%; opacity: 0.28; }
+  .glass-nav { bottom: 2rem; }
+}
+
 @media (max-width: 768px) {
-  .glass-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    bottom: 1.5rem;
-  }
-
-  .wing {
-    width: 70%;
-    opacity: 0.2;
-  }
+  .main-title { font-size: 2.8rem; }
+  .subtitle { font-size: 1.8rem; }
+  .scroll { padding: 2rem; }
+  .scroll-title { font-size: 1.8rem; }
+  .wing { width: 70%; opacity: 0.2; left: -20%; right: -20%; }
+  .glass-nav { bottom: 1.5rem; flex-wrap: wrap; justify-content: center; }
+  .portal-trigger { width: 220px; font-size: 1.05rem; }
 }
 
-    </style>
+@media (max-width: 480px) {
+  .main-title { font-size: 2.4rem; }
+  .subtitle { font-size: 1.6rem; letter-spacing: 0.15em; }
+  .scroll { padding: 1.5rem; }
+  .scroll-title { font-size: 1.6rem; }
+  .key-verse { font-size: 1rem; }
+  .portal-trigger { width: 200px; padding: 0.9rem 1rem; }
+}
+</style>
+    
 </head>
 <body>
 
