@@ -25,138 +25,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#090A0F;
-      --card:#fbfbfa;
-      --accent:#c9a24d;
-      --nav:#1e3a8a;
-      --gold: #ffd700;
-      --muted:#6b6b6b;
-      --container-width:1100px;
-    }
-
-    /* Reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: Georgia, serif;
-      background:var(--bg);
-      color:#efecec;
-      -webkit-font-smoothing:antialiased;
-      line-height:1.7;
-      padding: 2rem 1rem;
-    }
-
-    /* Page wrapper */
-    .wrap{
-      max-width:var(--container-width);
-      margin:0 auto;
-      background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
-      color:#222;
-      border-radius:12px;
-      box-shadow: 0 10px 60px rgba(0,0,0,0.5);
-      overflow: hidden;
-    }
-
-    /* Top nav */
-    nav.site-nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:1rem;
-      padding:1rem 1.5rem;
-      background:var(--nav);
-      color:#fff;
-    }
-    nav .brand{
-      display:flex;align-items:center;gap:1rem;font-weight:700;
-      font-family:'Cinzel Decorative',serif;
-      letter-spacing:0.06em;
-    }
-    nav .links{display:flex;gap:0.6rem}
-    nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:6px;font-weight:600}
-    nav a:hover{background:rgba(255,215,0,0.12);color:var(--gold)}
-
-    /* Hero */
-    header.hero{
-      display:grid;
-      grid-template-columns: 1fr 420px;
-      gap:2rem;
-      align-items:center;
-      padding:3rem 2rem;
-      background:
-        radial-gradient(ellipse at top left, rgba(106,44,163,0.12), transparent 25%),
-        linear-gradient(180deg,#4a2d82,#0a0a14);
-      color:#fff;
-      position:relative;
-    }
-    .hero-copy h1{
-      font-family:'Cinzel Decorative',serif;
-      font-size:clamp(2rem,3.8vw,3.6rem);
-      margin-bottom:.6rem;
-      text-transform:uppercase;
-      letter-spacing:0.14em;
-      text-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
-    .hero-copy p.lead{color:#ffdca3;font-family:'Cinzel',serif;margin-bottom:1.25rem}
-    .hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
-    .btn{
-      display:inline-block;padding:.9rem 1.2rem;border-radius:999px;background:linear-gradient(90deg,#6b48ff,#ffd700);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,0.25)
-    }
-    .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.12);color:#fff}
-
-    /* Hero visual */
-    .hero-visual{
-      display:flex;flex-direction:column;align-items:center;gap:1rem;
-    }
-    .hero-visual img{max-width:100%;border-radius:10px;border:6px solid var(--gold);box-shadow:0 14px 30px rgba(0,0,0,0.4)}
-    .hero-visual .wings{width:100%;opacity:.95;transform:translateY(-6px)}
-
-    /* Main content columns */
-    main{padding:2rem}
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:start}
-    @media (max-width:980px){ header.hero{grid-template-columns:1fr; padding:2rem} .grid{grid-template-columns:1fr} }
-
-    /* Card */
-    .card{background:var(--card);border-radius:10px;padding:1.4rem;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
-    .card h3{color:var(--nav);margin-bottom:.6rem}
-    .muted{color:var(--muted);font-size:0.95rem}
-
-    /* Teaching teaser */
-    .teach-list{display:flex;flex-direction:column;gap:1rem}
-    .teach{
-      display:flex;gap:1rem;align-items:flex-start;
-      border-radius:8px;padding:.8rem;background:linear-gradient(180deg,#fff,#fbf8ef);
-      border:1px solid rgba(0,0,0,0.04)
-    }
-    .teach img{width:84px;height:64px;object-fit:cover;border-radius:6px;flex-shrink:0}
-    .teach .meta{font-weight:600;color:#333}
-
-    /* CTA strip */
+    :root{--bg:#090A0F;--card:#fbfbfa;--accent:#c9a24d;--nav:#1e3a8a;--gold:#ffd700;--muted:#6b6b6b;--container-width:1100px}
+    *{box-sizing:border-box;margin:0;padding:0}html,body{height:100%}body{font-family:Georgia,serif;background:var(--bg);color:#efecec;-webkit-font-smoothing:antialiased;line-height:1.7;padding:2rem 1rem}
+    .wrap{max-width:var(--container-width);margin:0 auto;background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));color:#222;border-radius:12px;box-shadow:0 10px 60px rgba(0,0,0,0.5);overflow:hidden}
+    nav.site-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;background:var(--nav);color:#fff}
+    nav .brand{display:flex;align-items:center;gap:1rem;font-weight:700;font-family:'Cinzel Decorative',serif;letter-spacing:0.06em}
+    nav .links{display:flex;gap:0.6rem}nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:6px;font-weight:600}nav a:hover{background:rgba(255,215,0,0.12);color:var(--gold)}
+    header.hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 2rem;background:radial-gradient(ellipse at top left, rgba(106,44,163,0.12), transparent 25%),linear-gradient(180deg,#4a2d82,#0a0a14);color:#fff;position:relative}
+    .hero-copy h1{font-family:'Cinzel Decorative',serif;font-size:clamp(2rem,3.8vw,3.6rem);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:0.14em;text-shadow:0 0 20px rgba(0,0,0,0.3)}
+    .hero-copy p.lead{color:#ffdca3;font-family:'Cinzel',serif;margin-bottom:1.25rem}.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}.btn{display:inline-block;padding:.9rem 1.2rem;border-radius:999px;background:linear-gradient(90deg,#6b48ff,#ffd700);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,0.25)}.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.12);color:#fff}
+    .hero-visual{display:flex;flex-direction:column;align-items:center;gap:1rem}.hero-visual img{max-width:100%;border-radius:10px;border:6px solid var(--gold);box-shadow:0 14px 30px rgba(0,0,0,0.4)}.hero-visual .wings{width:100%;opacity:.95;transform:translateY(-6px)}
+    main{padding:2rem}.grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:start}@media (max-width:980px){header.hero{grid-template-columns:1fr;padding:2rem}.grid{grid-template-columns:1fr}}
+    .card{background:var(--card);border-radius:10px;padding:1.4rem;box-shadow:0 8px 30px rgba(0,0,0,0.08)}.card h3{color:var(--nav);margin-bottom:.6rem}.muted{color:var(--muted);font-size:0.95rem}
+    .teach-list{display:flex;flex-direction:column;gap:1rem}.teach{display:flex;gap:1rem;align-items:flex-start;border-radius:8px;padding:.8rem;background:linear-gradient(180deg,#fff,#fbf8ef);border:1px solid rgba(0,0,0,0.04)}.teach img{width:84px;height:64px;object-fit:cover;border-radius:6px;flex-shrink:0}.teach .meta{font-weight:600;color:#333}
     .cta-strip{display:flex;justify-content:space-between;align-items:center;padding:1.25rem;border-radius:8px;margin:1.2rem 0;background:linear-gradient(90deg,rgba(106,44,163,0.06),rgba(255,215,0,0.02))}
-
-    /* Footer */
-    footer{padding:2rem;text-align:center;background:var(--nav);color:#fff;border-top:6px double var(--gold)}
-
-    /* Small helpers & accessibility */
-    .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    a:focus{outline:3px solid rgba(255,215,0,0.22);outline-offset:3px}
-
-    /* Reveal animation for scroll */
-    .parchment{background:#f5ecd9;color:#2e2a24;border-radius:10px;padding:1.25rem;opacity:0;transform:translateY(20px);transition:all .9s ease}
-    .parchment.visible{opacity:1;transform:none}
+    footer{padding:2rem;text-align:center;background:var(--nav);color:#fff;border-top:6px double var(--gold)}.sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}a:focus{outline:3px solid rgba(255,215,0,0.22);outline-offset:3px}
+    .parchment{background:#f5ecd9;color:#2e2a24;border-radius:10px;padding:1.25rem;opacity:0;transform:translateY(20px);transition:all .9s ease}.parchment.visible{opacity:1;transform:none}
+    details.full-teaching{margin-top:1rem;background:#fffef8;border-radius:8px;padding:1rem;border:1px solid #efe2c0}
+    .author-card{display:flex;gap:1rem;align-items:center}
+    .author-card img{width:96px;height:96px;border-radius:12px;object-fit:cover;border:3px solid var(--gold)}
+    .share{display:flex;gap:.6rem;margin-top:.6rem}
+    .share a{display:inline-block;padding:.45rem .6rem;border-radius:6px;background:#1e3a8a;color:#fff;text-decoration:none}
+    @media (max-width:640px){header.hero{grid-template-columns:1fr}.author-card{flex-direction:row}}
   </style>
 </head>
 <body>
-
   <div class="wrap" role="document" aria-labelledby="site-title">
     <nav class="site-nav" role="navigation" aria-label="Main navigation">
       <div class="brand">
         <img src="/Favicon.png" alt="" width="36" height="36" aria-hidden="true">
         <span id="site-title">Wings of the Cherubim</span>
       </div>
-
-      <div class="links" aria-hidden="false">
+      <div class="links">
         <a href="#teachings">Teachings</a>
         <a href="#events">Events</a>
         <a href="#media">Media</a>
@@ -168,15 +68,12 @@
       <div class="hero-copy">
         <h1>Wings of the Cherubim</h1>
         <p class="lead">Prophetic revelation made simple and practical. Discover the vision behind Zechariah 4 and Revelation 11 and how it connects to nations, symbols, and the call to faith.</p>
-
         <p class="muted">Short, clear teachings • Weekly audio • Local seminars</p>
-
         <div class="hero-cta" style="margin-top:1.2rem">
           <a class="btn" href="#faith-scroll" id="cta-start">Read the Scroll</a>
           <a class="btn ghost" href="#teachings">Latest Teachings</a>
         </div>
-
-        <div style="margin-top:1rem;color:#ffefc8;font-style:italic">New: Haitian Flag Revelation — a short visual teaching (5 min)</div>
+        <div style="margin-top:1rem;color:#ffefc8;font-style:italic">New: Haitian Flag Revelation — a short visual teaching (5 min). <a href="#teaching-full" style="color:#ffd700;text-decoration:underline">Jump to insights</a></div>
       </div>
 
       <div class="hero-visual" aria-hidden="false">
@@ -188,16 +85,11 @@
     <main>
       <div class="grid">
         <section id="main-col">
-          <!-- Faith Scroll (focus content, compact) -->
           <article id="faith-scroll" class="card parchment" aria-labelledby="faith-title">
             <h2 id="faith-title" style="color:var(--nav)">Faith — Wings of the Cherubim</h2>
             <p class="muted">Theme: The Seven Lamps, the Living Word, and the Call to Life</p>
 
-            <p style="margin-top:1rem">
-              The descending mercy of God and the ascending faith of man meet in a way that
-              reveals salvation. Below is a short, practical summary of the teaching — with
-              links to read deeper or listen to the audio teaching.
-            </p>
+            <p style="margin-top:1rem">The descending mercy of God and the ascending faith of man meet in a way that reveals salvation. Below is a concise summary of the teaching, plus the complete teaching collapsed for sharing and reference.</p>
 
             <div style="display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap">
               <a class="btn" href="#teaching-full" onclick="revealParchment(event)">Listen (5 min)</a>
@@ -205,22 +97,111 @@
             </div>
 
             <div id="teaching-full" style="margin-top:1.25rem">
-              <h3 style="color:var(--accent)">Core Points</h3>
+              <h3 style="color:var(--accent)">Core Points — quick takeaways</h3>
               <ul style="margin-left:1.1rem;color:#333">
-                <li><strong>Menorah / Lampstand</strong> — God's light and the sevenfold Spirit.</li>
-                <li><strong>Two Olive Trees</strong> — empowerment for the witnesses in Revelation.</li>
-                <li><strong>Practical call</strong> — how to respond in worship, witness, and mercy.</li>
+                <li><strong>Menorah / Lampstand</strong> — God's light and the sevenfold Spirit; central shaft represents God's righteousness.</li>
+                <li><strong>Two Olive Trees</strong> — continuous anointing and provision for the Two Witnesses (see <a href="https://www.biblegateway.com/passage/?search=Zechariah+4&version=ESV" target="_blank" rel="noopener">Zechariah 4</a> and <a href="https://www.biblegateway.com/passage/?search=Revelation+11&version=ESV" target="_blank" rel="noopener">Revelation 11</a>).</li>
+                <li><strong>The Living Word</strong> — Hebrews 4:12: the Word pierces and is the decisive power in transformation.</li>
+                <li><strong>Practical call</strong> — worship, witness, and mercy as tangible responses to the vision.</li>
               </ul>
 
-              <blockquote style="margin:1rem 0;padding: .8rem 1rem;border-left:4px solid var(--accent);background:#fff8e6">
-                "Not by might, nor by power, but by my Spirit." (Zechariah 4:6)
-              </blockquote>
+              <blockquote style="margin:1rem 0;padding:.8rem 1rem;border-left:4px solid var(--accent);background:#fff8e6">"Not by might, nor by power, but by my Spirit." (Zechariah 4:6)</blockquote>
 
-              <p class="muted">This page highlights the practical application of those images — not just theory. If you want the full transcript and references, open the teaching card or download the audio.</p>
+              <details class="full-teaching" open>
+                <summary style="font-weight:700;cursor:pointer">Full Teaching & References (expand/collapse)</summary>
+
+                <h4>WINGS OF THE CHERUBIM — Full Text (condensed but complete)</h4>
+
+                <p><strong>Theme:</strong> The Seven Lamps, the Living Word, and the Curse of Death.</p>
+
+                <p>The Menorah is the picture of the symbol of the nation of Israel. It is the subliminal revelation of the fullness of the Creator God, His oneness, His threefold being, and His seven Spirits manifested in light.</p>
+
+                <p>The rainbow is refracted light. In unity it forms pure light, ascending from God, unified as one. As the six wings of the seraphim surround Him, the central shaft remains the fullness of God’s righteousness.</p>
+
+                <p>This light is made manifest in the gift of light, descending from the throne of God. The ascending and descending light is a declaration of man’s right of salvation.</p>
+
+                <blockquote><strong>Revelation Insight Unveiled</strong></blockquote>
+
+                <ul>
+                  <li><strong>1 Kings 6:24–25</strong> — The cherubim of Solomon’s Temple, each touching the other.</li>
+                  <li><strong>Ezekiel 1:6</strong> — Each living creature with four faces and four wings.</li>
+                </ul>
+
+                <h5>The Living Word of God</h5>
+                <p>The Word of God is living, powerful, and sharper than any two-edged sword, piercing even to the division of soul and spirit, joints and marrow. It is a discerner of the thoughts and intents of the heart (Hebrews 4:12).</p>
+
+                <p>This is the living Word of God. It is the death blow to division. Man can pass into eternal life only through this death-and-life union with his Creator.</p>
+
+                <p>This narrow way is the result of the curse placed on the earth in Genesis 3:15. The curse is a result of man’s free will to know and choose evil.</p>
+
+                <h5>The Fall, Authority, and the Curse</h5>
+                <p>In his rebellion, authority was transferred to Lucifer. God declared a curse over man, woman, Satan, and the earth. The Book of Life was closed and sealed by seven seals — the seven Spirits of God.</p>
+
+                <p>No one could open it until the Lamb was found worthy. The seals represent judgment restrained by mercy, time bound within God’s eternal sabbath, and the coming final judgment.</p>
+
+                <h5>The Condition of Man</h5>
+                <p>As a result of this curse, all men are born spiritually dead. The eyes of the spiritual heart are blind. The question “What will happen to me when I die?” lingers deep within every soul.</p>
+
+                <p>Religion, created by man to please God, cannot remove the curse. In spiritual death, man has no awareness of his need for salvation.</p>
+
+                <h5>The Pursuit of Vanity</h5>
+                <p>Man passes through life seeking pleasure, wealth, and recognition, yet peace is never found. Joy is temporary. The question of death is never removed.</p>
+
+                <h5>The Call of Light</h5>
+                <p class="call" style="font-weight:700">The descending light from God is mercy. The ascending light from man is faith. <strong>Where they meet, salvation is revealed.</strong></p>
+
+                <p>This is the message of <strong>Wings of the Cherubim</strong>: the light still shines, the seals will be opened by the Lamb, and the way back to life remains open through faith.</p>
+
+                <h5>Scroll-Sealing Prayer</h5>
+                <p class="prayer" style="background:#fff8e6;padding:1rem;border-radius:6px">Father of Light, Creator of the heavens and the earth, We receive the descending light of Your mercy And lift the ascending light of faith.
+
+Let the seals be opened by the Lamb, Let the eyes of the blind be awakened, Let the curse be broken by truth.
+
+Cover this work with the Wings of the Cherubim. Let Your Shekinah Glory rest upon it. Lead many from darkness into eternal life. <strong>Amen.</strong></p>
+
+                <hr>
+
+                <h4>Scriptural anchor points & cross-references</h4>
+                <ul>
+                  <li><a href="https://www.biblegateway.com/passage/?search=Zechariah+4&version=ESV" target="_blank" rel="noopener">Zechariah 4 (full)</a> — lampstand, seven lamps, two olive trees.</li>
+                  <li><a href="https://www.biblegateway.com/passage/?search=Revelation+11&version=ESV" target="_blank" rel="noopener">Revelation 11</a> — the Two Witnesses described as the two olive trees and two lampstands.</li>
+                  <li><a href="https://www.biblegateway.com/passage/?search=Hebrews+4:12&version=ESV" target="_blank" rel="noopener">Hebrews 4:12</a> — the living Word of God.</li>
+                </ul>
+
+                <h4>Historical & artistic notes</h4>
+                <p>Images and artistic renders used on this site are illustrative—artwork that helps visualize the lampstand and olive tree symbolism. If you wish to use these images in print or distribution please contact the author for licensing.</p>
+
+                <p style="margin-top:1rem">[Original extended notes, references, and image cards retained for archival purposes. Contact the author for the full annotated manuscript and citation pack.]</p>
+
+              </details>
+
+              <div class="key-verse" style="margin-top:1rem;padding:1rem;background:#e6f0ff;border-left:8px solid var(--nav);border-radius:8px;color:var(--nav)"><strong>Zechariah 4:6</strong> — “Not by might, nor by power, but by my Spirit, says the LORD of hosts.”</div>
+
             </div>
+
+            <!-- Author / client showcase -->
+            <div class="card" style="margin-top:1rem;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+              <div class="author-card">
+                <img src="images/author.jpg" alt="Gregory Schadt portrait" onerror="this.style.display='none'">
+                <div>
+                  <div style="font-weight:700">Gregory Schadt</div>
+                  <div class="muted" style="max-width:420px">Author & Prophet — Gregory Schadt is the author of "Wings of the Cherubim" and speaker on prophetic revelation, blending biblical exposition with contemporary application. Contact for speaking, licensing, and interviews.</div>
+                </div>
+              </div>
+
+              <div style="text-align:right">
+                <div class="share">
+                  <a href="mailto:hello@wingsofthecherubim.quest?subject=Sharing%20the%20Haitian%20Flag%20Revelation&body=I%20thought%20you%20might%20be%20interested%20in%20this%20teaching%20-%20https://wingsofthecherubim.quest" title="Share by email">Email</a>
+                  <a href="https://twitter.com/intent/tweet?text=Check%20out%20'%20Wings%20of%20the%20Cherubim'%20-%20https://wingsofthecherubim.quest" target="_blank" rel="noopener" title="Share on Twitter">Twitter</a>
+                  <a href="#" id="copy-link" title="Copy page link">Copy link</a>
+                </div>
+                <div style="margin-top:.5rem" class="muted">Download: <a href="/assets/Wings-of-the-Cherubim-summary.pdf">Summary PDF</a> (author permission required)</div>
+              </div>
+            </div>
+
           </article>
 
-          <!-- Featured teaching list -->
+          <!-- Recent teachings list -->
           <section id="teachings" class="card" style="margin-top:1.25rem">
             <h3>Recent Teachings</h3>
             <div class="teach-list">
@@ -228,7 +209,7 @@
                 <img src="images/haiti-flag-thumb.jpg" alt="Haitian flag with lampstand illustration">
                 <div>
                   <div class="meta">The Haitian Flag Revelation</div>
-                  <div class="muted">A short visual teaching connecting Zechariah and Revelation to modern symbolism — 6 min</div>
+                  <div class="muted">A short visual teaching connecting Zechariah and Revelation to modern symbolism — 6 min. <a href="#teaching-full">Read / Share</a></div>
                 </div>
               </div>
 
@@ -242,25 +223,6 @@
             </div>
           </section>
 
-          <!-- Events -->
-          <section id="events" class="card" style="margin-top:1.25rem">
-            <h3>Upcoming Events</h3>
-            <p class="muted">Small, local seminars and online gatherings. Practical Q&A and community prayer.</p>
-            <ul style="margin-left:1.1rem">
-              <li><strong>Monthly Online Study</strong> — Next: 2026-02-05 — Zoom (register)</li>
-              <li><strong>Local Teaching Night</strong> — Details coming soon</li>
-            </ul>
-          </section>
-
-          <!-- Media -->
-          <section id="media" class="card" style="margin-top:1.25rem">
-            <h3>Media</h3>
-            <p class="muted">Quick listen — short audio preview of the Haitian Flag teaching.</p>
-            <audio controls preload="none" aria-label="Audio preview">
-              <source src="assets/audio/preview.mp3" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-          </section>
         </section>
 
         <aside id="side-col">
@@ -268,7 +230,7 @@
             <h3>Quick Links</h3>
             <ul style="list-style:none;margin-top:.6rem;padding-left:0">
               <li><a href="#faith-scroll">Read the Scroll</a></li>
-              <li><a href="#teachings">Full Teachings</a></li>
+              <li><a href="#teaching-full">Full Teaching</a></li>
               <li><a href="#events">Events & Registration</a></li>
               <li><a href="#contact">Contact the Team</a></li>
             </ul>
@@ -303,25 +265,12 @@
   </div>
 
   <script>
-    // Small progressive interactions:
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Reveal parchment when user clicks "Read full teaching" or lands on anchor
-    function revealParchment(e){
-      e && e.preventDefault && e.preventDefault();
-      const p = document.querySelector('.parchment');
-      if(p) p.classList.add('visible');
-      // optional: scroll to element
-      p && p.scrollIntoView({behavior:'smooth',block:'center'});
-    }
-
-    // If URL has hash to faith-scroll reveal the content:
-    if(location.hash === '#faith-scroll') revealParchment();
-
-    // Lightweight accessibility: move focus to main content when CTA clicked
-    document.getElementById('cta-start').addEventListener('click', function(){
-      setTimeout(()=>{ document.getElementById('faith-title').focus(); }, 400);
-    });
+    function revealParchment(e){e&&e.preventDefault&&e.preventDefault();const p=document.querySelector('.parchment');if(p)p.classList.add('visible');p&&p.scrollIntoView({behavior:'smooth',block:'center'})}
+    if(location.hash==='#faith-scroll')revealParchment();
+    document.getElementById('cta-start').addEventListener('click',function(){setTimeout(()=>{document.getElementById('faith-title').focus()},400)});
+    // Copy link helper
+    document.getElementById('copy-link').addEventListener('click',function(e){e.preventDefault();navigator.clipboard&&navigator.clipboard.writeText(location.href).then(()=>{alert('Page link copied to clipboard')})});
   </script>
 </body>
 </html>
