@@ -1,378 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Holy Spirit-led biblical teachings from Wings of the Cherubim. Discover articles and videos on Menorah symbolism, time and eternity, prophecy, and more.">
-    <meta name="author" content="Gregory Schadt / Chris">
-    <meta name="keywords" content="biblical teachings, Holy Spirit insights, Christian articles, spiritual videos, prophecy, Menorah, Shofar, eternal destiny, Wings of the Cherubim content">
-    <title>Teachings - Wings of the Cherubim</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* === Global & Reset === */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
-        body {
-            background-color: #f0f0f5;
-            color: #333;
-            line-height: 1.8;
-            overflow-x: hidden;
-            font-size: 1.1em;
-        }
-
-        /* === Celestial Background === */
-        .stars {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -2;
-            background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-        }
-        .star {
-            position: absolute; background: #fff; border-radius: 50%;
-            animation: twinkle 4s infinite alternate, moveStar 200s linear infinite;
-            opacity: 0; box-shadow: 0 0 5px #fff;
-        }
-        @keyframes twinkle {
-            0% { opacity: 0; transform: scale(0.6); }
-            50% { opacity: 1; transform: scale(1.3); }
-            100% { opacity: 0; transform: scale(0.6); }
-        }
-        @keyframes moveStar {
-            from { transform: translate(var(--x-start, 0), var(--y-start, 0)); }
-            to   { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); }
-        }
-
-        /* === Layout === */
-        .container {
-            position: relative; z-index: 1;
-            background: rgba(255,255,255,0.98);
-            max-width: 100%; margin: 0 auto;
-            box-shadow: 0 0 50px rgba(0,0,0,0.3);
-            min-height: 100vh;
-        }
-
-        /* === Header === */
-        header {
-            background: linear-gradient(to right, #2c3e50, #8e44ad);
-            color: #ecf0f1; padding: 3rem 2rem;
-            text-align: center; border-bottom: 5px solid #FFD700;
-            position: relative; overflow: hidden;
-        }
-        .dove-icon {
-            font-size: 3.5rem; position: absolute; top: 1.5rem; left: 1.5rem;
-            animation: floatAndPulse 4s infinite ease-in-out;
-        }
-        @keyframes floatAndPulse {
-            0%,100% { transform: translateY(0); opacity: 1; }
-            50% { transform: translateY(-10px); opacity: 0.8; }
-        }
-        .main-title { font-size: 3rem; margin-bottom: 0.75rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
-        .subtitle { font-size: 2.2rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; color: #FFD700; }
-        .tagline { font-size: 1.3rem; font-style: italic; color: #d3d3d3; }
-
-        /* === Navigation === */
-        nav {
-            background: #1e3a8a; padding: 1.2rem; box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-            position: sticky; top: 0; z-index: 100;
-        }
-        nav ul { list-style: none; display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
-        nav a {
-            color: #ecf0f1; text-decoration: none; font-size: 1.2em; padding: 0.5rem 1rem;
-            border-radius: 5px; transition: all 0.3s ease; position: relative;
-        }
-        nav a::before {
-            content: ''; position: absolute; width: 100%; height: 2px; bottom: 0; left: 0;
-            background: #FFD700; visibility: hidden; transform: scaleX(0); transition: all 0.3s;
-        }
-        nav a:hover::before { visibility: visible; transform: scaleX(1); }
-        nav a:hover { color: #FFD700; background: rgba(255,215,0,0.1); }
-
-        /* === Teachings Content === */
-        .teachings-content {
-            max-width: 1100px; margin: 3rem auto; padding: 2.5rem;
-            background: #fff; border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-            border-right: 5px solid #8e44ad;
-        }
-        .teachings-content h2 {
-            color: #8e44ad; font-size: 2.8rem; text-align: center;
-            margin-bottom: 1.5rem; border-bottom: 3px double #FFD700; padding-bottom: 0.8rem;
-        }
-        .teachings-intro {
-            text-align: center; max-width: 700px; margin: 0 auto 3rem;
-            font-size: 1.15em; color: #555;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-        .content-card {
-            background: #f8f8f8; border: 1px solid #eee; border-radius: 12px;
-            padding: 1.8rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex; flex-direction: column;
-        }
-        .content-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        .content-card h3 {
-            color: #1e3a8a; font-size: 1.6em; margin-bottom: 0.8rem;
-            border-bottom: 2px solid #FFD700; padding-bottom: 0.5rem;
-        }
-        .content-card p { flex-grow: 1; margin-bottom: 1.2rem 0; }
-        .content-card .read-more {
-            align-self: flex-start; background: #FFD700; color: #1e3a8a;
-            padding: 0.6rem 1.2rem; border-radius: 25px; text-decoration: none;
-            font-weight: bold; transition: background 0.3s;
-        }
-        .content-card .read-more:hover { background: #e0b800; }
-
-        .video-container {
-            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-            border-radius: 8px; margin-bottom: 1rem;
-        }
-        .video-container iframe {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
-        }
-        .video-card .read-more { align-self: center; }
-
-        /* === Scroll Previews Section === */
-        .scroll-previews {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem; padding: 2rem 0;
-        }
-        .scroll-card {
-            background: rgba(255,255,255,0.1); border: 1px solid #FFD700;
-            border-radius: 10px; padding: 1.2rem; text-align: center;
-            transition: transform 0.3s;
-        }
-        .scroll-card:hover { transform: translateY(-5px); }
-        .scroll-card h3 { color: #FFD700; margin-bottom: 0.5rem; }
-        .scroll-card a { color: #fff; text-decoration: underline; }
-
-        /* === Floating Scroll Menu (right side) === */
-        .scroll-menu {
-            position: fixed; top: 5.5rem; right: 1rem;
-            background: rgba(0,0,0,0.6); padding: 0.8rem 1.2rem;
-            border-radius: 12px; z-index: 99;
-            display: flex; flex-direction: column; gap: 0.8rem;
-            font-family: 'Cinzel', serif;
-        }
-        .scroll-menu a {
-            color: #FFD700; text-decoration: none; font-weight: bold;
-        }
-        .scroll-menu a:hover { color: #fff; }
-
-        /* === Footer === */
-        footer {
-            background: #1e3a8a; color: #ecf0f1; text-align: center;
-            padding: 2.5rem; border-top: 5px double #FFD700;
-        }
-        footer a { color: #FFD700; }
-        footer a:hover { text-decoration: underline; }
-        .footer-icons { margin-top: 1.5rem; font-size: 2.5rem; display: flex; justify-content: center; gap: 1.5rem; }
-        .footer-icons span { animation: pulseFade 2s infinite alternate; }
-        .footer-icons span:nth-child(2) { animation-delay: 0.5s; }
-        .footer-icons span:nth-child(3) { animation-delay: 1s; }
-        @keyframes pulseFade {
-            0% { opacity: 0.7; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.1); }
-        }
-
-        /* === Responsive === */
-        @media (max-width: 768px) {
-            .main-title { font-size: 2.5rem; } .subtitle { font-size: 1.8rem; }
-            nav ul { flex-direction: column; gap: 0.8rem; }
-            .teachings-content { padding: 2rem; }
-            .content-grid { grid-template-columns: 1fr; }
-            .scroll-menu { position: static; margin: 2rem auto; max-width: 300px; }
-        }
-‎.fire-button {
-‎  display: inline-block;
-‎  background: linear-gradient(45deg, #8e44ad, #FFD700);
-‎  color: white;
-‎  font-weight: bold;
-‎  padding: 1rem 2.2rem;
-‎  border-radius: 50px;
-‎  text-decoration: none;
-‎  font-size: 1.1em;
-‎  border: 3px solid #FFD700;
-‎  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-‎  transition: all 0.4s ease;
-‎  position: relative;
-‎  overflow: hidden;
-‎}
-‎
-‎.fire-button span {
-‎  position: relative;
-‎  z-index: 2;
-‎}
-‎
-‎.fire-button::before {
-‎  content: '';
-‎  position: absolute;
-‎  top: 0; left: -100%;
-‎  width: 100%; height: 100%;
-‎  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-‎  transition: 0.7s;
-‎}
-‎
-‎.fire-button:hover::before {
-‎  left: 100%;
-‎}
-‎
-‎.fire-button:hover {
-‎  transform: scale(1.08);
-‎  box-shadow: 0 0 35px rgba(255, 215, 0, 0.9);
-‎}
-    </style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Teachings — Wings of the Cherubim</title>
+  <meta name="description" content="All teachings, transcripts, audio, and downloads from Wings of the Cherubim">
+  <link rel="icon" href="/Favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Georgia,serif;margin:0;background:#f7f7f6;color:#222}
+    .wrap{max-width:900px;margin:2rem auto;padding:2rem;background:#fff;border-radius:10px}
+    header{display:flex;justify-content:space-between;align-items:center}
+    .teach{margin-top:1rem;padding:1rem;border-radius:8px;background:#fffef8;border:1px solid #efe2c0}
+    a.btn{display:inline-block;padding:.6rem 1rem;background:#1e3a8a;color:#fff;border-radius:8px;text-decoration:none}
+  </style>
 </head>
 <body>
-    <div class="stars" id="stars"></div>
+  <div class="wrap">
+    <header>
+      <h1>Teachings</h1>
+      <nav><a class="btn" href="/">Home</a></nav>
+    </header>
 
-    <div class="container">
-        <header>
-            <div class="dove-icon" title="The Holy Spirit">Holy Spirit</div>
-            <h1 class="main-title">Wings of the Cherubim</h1>
-            <h2 class="subtitle">Holy Spirit-Led Teachings</h2>
-            <p class="tagline">Journey into Deeper Biblical Understanding</p>
-        </header>
+    <p class="muted">Full archive of teachings — audio, transcript, and downloadable summaries.</p>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="seminars.html">Seminars</a></li>
-                <li><a href="teachings.html">Teachings</a></li>
-                <li><a href="outreach.html">Outreach</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <article id="haiti-flag" class="teach">
+      <h2>The Haitian Flag Revelation</h2>
+      <p>A short visual teaching connecting Zechariah 4 and Revelation 11 to symbolic imagery in modern nations. Includes audio (6 min), transcript, and a downloadable summary.</p>
+      <p><strong>Resources:</strong> <a href="/assets/Wings-of-the-Cherubim-summary.pdf">Summary PDF</a> | <a href="#transcript">Read transcript</a></p>
+      <h3 id="transcript">Transcript (excerpt)</h3>
+      <p>The descending light from God is mercy. The ascending light from man is faith. Where they meet, salvation is revealed...</p>
+    </article>
 
-        <!-- Floating Scroll Menu (always visible on right) -->
-        <nav class="scroll-menu">
-            <a href="Scroll1.html">1️⃣ Scroll 1</a>
-            <a href="scroll2.html">2️⃣ Scroll 2</a>
-            <a href="scroll3.html">3️⃣ Scroll 3</a>
-            <a href="scroll4.html">4️⃣ Scroll 4</a>
-        </nav>
+    <article id="living-word" class="teach">
+      <h2>The Living Word — Hebrews 4:12</h2>
+      <p>Explains how the living Word cuts to the heart and produces transformation. Includes audio and study questions.</p>
+    </article>
 
-        <div class="teachings-content">
-            <h2>Our Latest Revelations & Insights</h2>
-            <p class="teachings-intro">
-                Dive into a collection of Holy Spirit-led teachings and prophetic insights from Gregory Schadt. Here you will find articles and video excerpts that expand on the themes of our seminars, guiding you toward a profound understanding of God's Word and His unfolding plan.
-            </p>
-
-            <!-- Scroll Previews -->
-            <section class="scroll-previews">
-                <div class="scroll-card">
-                    <h3>Scroll 1: The Light Before Time</h3>
-                    <p>Unveil the creation light and God's eternal plan.</p>
-                   
-‎<a href="Scroll1.html" class="fire-button">
-‎  <span>Read Scroll 1</span>
-‎</a>
-                </div>
-                <div class="scroll-card">
-                    <h3>Scroll 2: The Menorah & the Curse</h3>
-                    <p>Discover the 7 Spirits of God and redemption through Christ.</p>
-   ‎<a href="scroll2.html" class="fire-button">
-‎  <span>Read Scroll 2</span>
-‎</a>
-           
-                </div>
-                <div class="scroll-card">
-                    <h3>Scroll 3: The Nations Drawn to the Flame</h3>
-                    <p>A calling to the Gentiles through prophetic fire.</p>
-                  
-‎<a href="scroll3.html" class="fire-button">
-‎  <span>Read Scroll 3</span>
-‎</a>
-</div>
-                <div class="scroll-card">
-                    <h3>Scroll 4: The Dragon of the Nile</h3>
-                    <p>Judgment against Pharaoh and the spiritual Nile serpent.</p>
-                   
-‎<a href="scroll4.html" class="fire-button">
-‎  <span>Read Scroll 4</span>
-‎</a>
-                </div>
-            </section>
-
-            <!-- Main Content Grid -->
-            <div class="content-grid">
-                <div class="content-card">
-                    <h3>The Menorah: God's Throne Revealed</h3>
-                    <p>Explore the deep symbolism of the Menorah, not just as a lampstand, but as the very Throne of God, connected to the emerald rainbow in Revelation 4 and its ties to divine colors.</p>
-                    <a href="article-menorah.html" class="read-more">Read More →</a>
-                </div>
-
-                <div class="content-card video-card">
-                    <h3>WINGS OF THE CHERUBIM – Short Teaching</h3>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/yjRzHIVySTw" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <p>A powerful short message on the eternal nature of God’s presence.</p>
-                    <a href="https://youtube.com/shorts/yjRzHIVySTw" target="_blank" class="read-more">Watch on YouTube →</a>
-                </div>
-
-                <div class="content-card">
-                    <h3>The Seven Notes of the Shofar & Prophecy</h3>
-                    <p>Uncover the prophetic significance behind the seven distinct notes of the Shofar and how they relate to God's purposes in Zechariah 9.</p>
-                    <a href="article-shofar.html" class="read-more">Read More →</a>
-                </div>
-
-                <div class="content-card video-card">
-                    <h3>Video: Time Before Creation</h3>
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/YOUR_SECOND_VIDEO_ID" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen></iframe>
-                    </div>
-                    <p>A short teaching on how humanity existed as eternal beings before earthly time.</p>
-                    <a href="https://www.youtube.com/watch?v=YOUR_SECOND_VIDEO_ID" target="_blank" class="read-more">Watch on YouTube →</a>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <p>Connect with the Revelation: <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a></p>
-            <p>Follow the Unfolding Message: <a href="https://x.com/wingsofthecherubim" target="_blank">X</a> | <a href="https://www.youtube.com/channel/YOUR_CHANNEL" target="_blank">YouTube</a></p>
-            <p class="tagline">The Digital Scroll Project continues to unfold, revealing deeper mysteries</p>
-            <div class="footer-icons">
-                <span title="The Holy Spirit">Holy Spirit</span>
-                <span title="Divine Fire">Fire</span>
-                <span title="The Menorah">Menorah</span>
-            </div>
-            <p style="margin-top: 1rem;">© 2025 Wings of the Cherubim. All rights reserved. Prophecies unfolding from Kenya to the Nations.</p>
-        </footer>
-    </div>
-
-    <script>
-        function createStars() {
-            const container = document.getElementById('stars');
-            const count = 150;
-            for (let i = 0; i < count; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                const size = Math.random() * 3 + 1;
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 5 + 's';
-                star.style.setProperty('--x-start', (Math.random() * 200 - 50) + 'vw');
-                star.style.setProperty('--y-start', (Math.random() * 200 - 50) + 'vh');
-                star.style.setProperty('--x-end', (Math.random() * 200 - 50) + 'vw');
-                star.style.setProperty('--y-end', (Math.random() * 200 - 50) + 'vh');
-                star.style.animationDuration = (Math.random() * 150 + 50) + 's';
-                container.appendChild(star);
-            }
-        }
-        window.addEventListener('load', createStars);
-    </script>
+    <p style="margin-top:1rem">Want to request a teaching or topic? Email: <a href="mailto:hello@wingsofthecherubim.quest">hello@wingsofthecherubim.quest</a></p>
+  </div>
 </body>
 </html>
