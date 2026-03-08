@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wings of the Cherubim Kingdom Outreach – TEOM Mombasa. Hospital ministry, prison ministry, street evangelism, and prayer warrior network. Souls surrendering to Jesus Christ.">
+  <meta name="author" content="Gregory Schadt">
+  <meta name="keywords" content="outreach, Mombasa, Kenya, hospital ministry, prison ministry, street evangelism, prayer warriors, Wings of the Cherubim">
+
+  <title>Kingdom Outreach | Wings of the Cherubim</title>
+
+  <link rel="icon" type="image/png" href="../Favicon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheets -->
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <style>
+    .outreach-hero-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom, #001133, #0a001f);
+      color: #fff;
+      text-align: center;
+    }
+    .outreach-hero-section h2 {
+      font-size: 2.2rem;
+      color: var(--gold);
+      text-shadow: 0 0 15px rgba(255,215,0,.6);
+      margin-bottom: 1rem;
+    }
+    .outreach-hero-section p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 1rem; }
+    .outreach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .outreach-photos { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1rem 0; }
+    .outreach-photos img { max-width: 200px; height: 160px; object-fit: cover; border-radius: 8px; }
+
+    /* Prayer warrior form */
+    .prayer-form-section {
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
+      border-left: 5px solid var(--gold);
+    }
+    .prayer-form-section h2 { color: var(--blue-deep); margin-bottom: 1rem; }
+    .prayer-form label { display: block; font-weight: bold; margin: 1rem 0 0.3rem; color: #333; }
+    .prayer-form input, .prayer-form textarea {
+      width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px;
+      font-size: 1em; box-sizing: border-box; font-family: Georgia, serif;
+      transition: border-color 0.3s;
+    }
+    .prayer-form input:focus, .prayer-form textarea:focus {
+      border-color: var(--gold); outline: none;
+      box-shadow: 0 0 5px rgba(255,215,0,.5);
+    }
+    .prayer-form textarea { min-height: 100px; resize: vertical; }
+    .prayer-form button { margin-top: 1.5rem; width: 100%; }
+  </style>
+</head>
+<body>
+
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="dove-icon" aria-hidden="true" title="The Holy Spirit">🕊️</div>
+      <h1>Wings of the Cherubim</h1>
+      <p class="subtitle">Kingdom Outreach – TEOM Mombasa</p>
+      <p class="tagline">"The End of Mombasa shall be turned into Light"</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul role="list">
+        <li><a href="../index.html">🏠 Home</a></li>
+        <li><a href="about.html">ℹ️ About</a></li>
+        <li><a href="teachings.html">📖 Teachings</a></li>
+        <li><a href="seminars.html">📚 Seminars</a></li>
+        <li><a href="outreach.html" aria-current="page">🤝 Outreach</a></li>
+        <li><a href="contact.html">✉️ Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+      <!-- Ministry highlights hero -->
+      <section class="outreach-hero-section" aria-labelledby="outreach-main-heading">
+        <h2 id="outreach-main-heading">Ministry in Action – The Gospel Advancing</h2>
+        <p>
+          By the grace of God, the revelation of the Haitian Flag and the plumb line of Zechariah is being
+          taken into the highways and hedges of Mombasa.
+          <strong style="color:var(--gold);">Souls have already surrendered their lives to Jesus Christ!</strong>
+        </p>
+        <p>
+          <strong>Director:</strong> Gregory Schadt &nbsp;|&nbsp;
+          <strong>Field Lead:</strong> Vanessa Juma &nbsp;|&nbsp;
+          <strong>Coordinator:</strong> Chris Beda Oticha
+        </p>
+      </section>
+
+      <!-- Outreach cards -->
+      <section class="scrolls-container" aria-labelledby="outreach-activities-heading">
+        <h2 id="outreach-activities-heading" style="text-align:center; color:var(--blue-deep); padding:1rem 0;">
+          Our Outreach Activities
+        </h2>
+        <div class="outreach-grid">
+
+          <!-- Hospital Outreach -->
+          <article class="outreach-card" aria-labelledby="hospital-heading">
+            <div class="outreach-photos">
+              <img src="../hospital1.jpeg" alt="Hospital ministry – praying with patients">
+              <img src="../hospital2.jpeg" alt="Hospital ministry – laying hands and praying">
+            </div>
+            <div class="outreach-card-body">
+              <h3 id="hospital-heading">Hospital Ministry</h3>
+              <p>Praying for the sick and seeing miracles of healing and salvation in Mombasa hospitals.</p>
+            </div>
+          </article>
+
+          <!-- Prison Outreach -->
+          <article class="outreach-card" aria-labelledby="prison-heading">
+            <div class="outreach-photos">
+              <img src="../prison1.jpeg" alt="Prison ministry at Shimo la Tewa Women's Prison">
+              <img src="../prison2.jpeg" alt="Prison ministry – sharing the Gospel">
+            </div>
+            <div class="outreach-card-body">
+              <h3 id="prison-heading">Prison Ministry</h3>
+              <p>Proclaiming liberty inside the walls of Shimo la Tewa – chains are breaking in Jesus' name.</p>
+            </div>
+          </article>
+
+          <!-- Street Evangelism -->
+          <article class="outreach-card" aria-labelledby="street-heading">
+            <div class="outreach-photos">
+              <img src="../IMG-20250912-WA0005.jpg" alt="Street evangelism outreach">
+              <img src="../IMG-20250912-WA0010.jpg" alt="Street evangelism – sharing the Word">
+              <img src="../IMG-20250912-WA0014.jpg" alt="Outreach team at Kengeleni Market">
+            </div>
+            <div class="outreach-card-body">
+              <h3 id="street-heading">Street &amp; Market Evangelism</h3>
+              <p>
+                Every Saturday at Kengeleni Market (11:00–12:00) and Sunday after-service outreaches—preaching
+                in the open air and leading lost souls to the Cross.
+              </p>
+            </div>
+          </article>
+
+          <!-- Mombasa Revival -->
+          <article class="outreach-card" aria-labelledby="revival-heading">
+            <div class="outreach-photos">
+              <img src="../mombasa_revival.jpg" alt="Mombasa revival event">
+            </div>
+            <div class="outreach-card-body">
+              <h3 id="revival-heading">Mombasa Revival</h3>
+              <p>
+                A city-wide awakening — uniting churches, prayer warriors, and the community under the
+                prophetic banner of Wings of the Cherubim.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Key verse -->
+      <blockquote class="key-verse" style="margin: 2rem auto; max-width:900px;">
+        <strong>1 Timothy 2:3–4</strong> — "God our Saviour desires all men to be saved and to come to the knowledge of the truth."
+      </blockquote>
+
+      <!-- T-shirt ministry -->
+      <section class="section-content" aria-labelledby="tshirt-heading" style="max-width:900px;">
+        <h2 id="tshirt-heading">🎽 T-Shirt Ministry</h2>
+        <p>
+          Every product is a seed. Our outreach T-shirts fund the mission and spread the Word—worn as a testimony
+          in the streets of Mombasa and beyond.
+        </p>
+        <div style="text-align:center; margin-top:1rem;">
+          <img src="../tshirt_kenya.jpg" alt="Wings of the Cherubim outreach T-shirt" style="max-width:300px; border-radius:10px; border:2px solid var(--gold);">
+        </div>
+      </section>
+
+      <!-- Prayer Warrior Sign-up -->
+      <div class="prayer-form-section" id="prayer-warrior">
+        <h2>🙏 Become a Prayer Warrior</h2>
+        <p>
+          We are calling five prayer warriors per church to intercede for revival in Mombasa and beyond.
+          Sign up below to join the front lines of spiritual warfare.
+        </p>
+        <form action="../submit_prayer_warrior.php" method="POST" class="prayer-form"
+              aria-label="Prayer warrior sign-up form">
+          <label for="pw-name">Your Name</label>
+          <input type="text" id="pw-name" name="name" placeholder="Your full name" required>
+
+          <label for="pw-email">Your Email</label>
+          <input type="email" id="pw-email" name="email" placeholder="your@email.com" required>
+
+          <label for="pw-church">Your Church (optional)</label>
+          <input type="text" id="pw-church" name="church" placeholder="Church name">
+
+          <label for="pw-prayer">Prayer Focus / Request</label>
+          <textarea id="pw-prayer" name="prayer_request" placeholder="What will you stand in prayer for?" required></textarea>
+
+          <button type="submit" class="cta-button">Sign Up as Prayer Warrior 🙏</button>
+        </form>
+      </div>
+
+      <!-- Link to admin hub -->
+      <div class="section-content" style="text-align:center; max-width:600px;">
+        <h2>⚙️ Outreach Admin Hub</h2>
+        <p>
+          Team members can access the full outreach management hub for scheduling, church coordination,
+          financial allocation, and evidence logging.
+        </p>
+        <a href="../outreach.html" class="cta-button">Open Admin Hub →</a>
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+      <p>Connect with the Revelation:
+        <a href="mailto:info@wingsofthecherubim.quest">info@wingsofthecherubim.quest</a>
+        | Contact Vanessa:
+        <a href="mailto:wingsofthecherubim01@gmail.com">wingsofthecherubim01@gmail.com</a>
+      </p>
+      <p>Follow the Unfolding Message:
+        <a href="https://x.com/WOC_Officia" target="_blank" rel="noopener noreferrer">X (Twitter)</a> |
+        <a href="https://www.youtube.com/@wingsofthecherubim" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </p>
+      <p class="tagline">✨ Light Up Mombasa with Christ! – 1 Timothy 2:3–4 ✨</p>
+      <div class="footer-icons" aria-hidden="true">
+        <span title="The Holy Spirit">🕊️</span>
+        <span title="Divine Fire">🔥</span>
+        <span title="The Menorah">🕎</span>
+      </div>
+      <p style="margin-top:1rem; font-size:0.9rem;">
+        © 2025 Wings of the Cherubim. All rights reserved. Prophecies unfolding from Kenya to the Nations.
+      </p>
+    </footer>
+
+  </div><!-- /.container -->
+
+  <!-- External JS -->
+  <script src="../js/particles.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+</html>

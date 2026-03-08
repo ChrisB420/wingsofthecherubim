@@ -1,0 +1,55 @@
+/* ============================================================
+   WINGS OF THE CHERUBIM – Animations
+   ============================================================ */
+
+/* Stars */
+@keyframes twinkle {
+  0%   { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1;   transform: scale(1.2); }
+}
+
+@keyframes moveStar {
+  from { transform: translate(var(--x-start, 0), var(--y-start, 0)); }
+  to   { transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)); }
+}
+
+/* Hero / glow */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50%       { opacity: 0.9; transform: scale(1.12); }
+}
+
+/* Wing float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-15px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-18px) rotate(3deg); }
+}
+
+/* Portal particle burst */
+@keyframes burst {
+  0%   { transform: scale(0); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* Footer icons */
+@keyframes pulseFade {
+  0%   { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1;   transform: scale(1.1); }
+}
+
+/* Dove / header icon */
+@keyframes floatAndPulse {
+  0%, 100% { transform: translateY(0);    opacity: 1; }
+  50%       { transform: translateY(-10px); opacity: 0.8; }
+}
+
+/* Shine sweep on fire-buttons */
+@keyframes shineSweep {
+  from { left: -100%; }
+  to   { left: 100%; }
+}
