@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="/Favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Embark on a profound journey into the spiritual significance of the Haitian flag, unveiling its hidden biblical connections to prophecy, salvation, and the glorious return of Jesus Christ. A revelation from Wings of the Cherubim.">
@@ -23,55 +22,69 @@
 
     <title>Wings of the Cherubim | The Haitian Flag Revelation</title>
 
-    <!-- Fonts -->
+    <link rel="icon" type="image/png" href="/Favicon.png">
+
+    <!-- Preload critical hero images -->
+    <link rel="preload" href="images/wings-left.png" as="image">
+    <link rel="preload" href="images/wings-right.png" as="image">
+
+    <!-- Fonts with swap to avoid invisible text -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- External Stylesheet -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
+    <!-- Preconnect only once -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Other head elements -->
 </head>
 <body>
 
     <div class="stars" id="stars"></div>
-    <div id="threejs-container"></div>
 
     <div class="container">
-<!-- ===== MODERN HERO SECTION ===== -->
-<header class="hero">
+        <!-- ===== MODERN HERO SECTION ===== -->
+        <header class="hero">
+            <!-- Background Light -->
+            <div class="holy-light"></div>
 
-  <!-- Background Light -->
-  <div class="holy-light"></div>
+            <!-- Wings – critical, eager load with dimensions -->
+            <div class="wings">
+                <img 
+                    src="images/wings-left.png" 
+                    class="wing left" 
+                    alt="Left Wing" 
+                    width="320" 
+                    height="240" 
+                    loading="eager"
+                >
+                <img 
+                    src="images/wings-right.png" 
+                    class="wing right" 
+                    alt="Right Wing" 
+                    width="320" 
+                    height="240" 
+                    loading="eager"
+                >
+            </div>
 
-  <!-- Wings -->
-  <div class="wings">
-    <img src="images/wings-left.png" class="wing left" alt="Left Wing">
-    <img src="images/wings-right.png" class="wing right" alt="Right Wing">
-  </div>
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1 class="glow-text">Wings of the Cherubim</h1>
+                <h2 class="subtitle">THE RETURN</h2>
+                <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
+            </div>
 
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <h1 class="glow-text">Wings of the Cherubim</h1>
-    <h2 class="subtitle">THE RETURN</h2>
-    <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="glass-nav">
-    <a href="index.html">Home</a>
-    <a href="seminars.html">Seminars</a>
-    <a href="teachings.html">Teachings</a>
-    <a href="outreach.html">Outreach</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-</header>
+            <!-- Navigation -->
+            <nav class="glass-nav">
+                <a href="index.html">Home</a>
+                <a href="seminars.html">Seminars</a>
+                <a href="teachings.html">Teachings</a>
+                <a href="outreach.html">Outreach</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
 
         <div class="scrolls-container">
 
@@ -80,7 +93,7 @@
                 <h3 class="scroll-title">Introduction: The Unveiling Vision</h3>
                 <p class="scroll-theme">SCROLL INSIGHTS</p>
                 <!-- FAITH HERO SCROLL : Wings of the Cherubim -->
-<section id="faith-scroll" class="faith-hero">
+                <section id="faith-scroll" class="faith-hero">  
 
   <!-- Background Faith Image -->
   <div class="faith-bg"></div>
