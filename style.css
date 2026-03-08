@@ -1,0 +1,42 @@
+/** Main Container Styles */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/** Header Styles */
+.header {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/** Navigation Styles */
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+/** Section Styles */
+.isolated-section {
+    padding: 15px;
+}
+
+/** Footer Styles */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+}
+
+/** Component Specific Styles */
+/** Component A */
+.component-a {
+    color: #333;
+    background-color: #fff;
+}
+
+/** Component B */
+.component-b {
+    color: #666;
+    background-color: #f4f4f4;
+}
