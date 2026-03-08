@@ -3365,16 +3365,18 @@ footer a:hover { text-decoration: underline; }
             revealOnScroll();
             window.addEventListener('scroll', revealOnScroll);
         };
-        const scrollEl = document.querySelector('.scroll.parchment');
+        const scrollElements = document.querySelectorAll('.scroll.parchment');
   const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
     },
     { threshold: 0.1 }
   );
-  observer.observe(scrollEl);
+  scrollElements.forEach(el => observer.observe(el));
     </script>
     <style>
 /* ===== FAITH HERO SECTION ===== */
