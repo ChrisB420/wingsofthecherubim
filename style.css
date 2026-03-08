@@ -63,7 +63,7 @@ body {
 }
 
 /* ==== HERO SECTION ==== */
-header.hero, .hero-simple, .faith-hero {
+header.hero, .hero-simple {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -106,17 +106,11 @@ header.hero {
   width: 120%;
   height: 120%;
   background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 60%);
-  animation: pulse 6s infinite ease-in-out;
+  animation: pulse-light 6s infinite ease-in-out;
   z-index: 0;
 }
-.faith-bg {
-  background: url('/1000137115.jpg') center/cover no-repeat;
-  filter: brightness(0.95) contrast(1.1);
-  z-index: 0;
-}
-
 /* HERO ANIMATIONS */
-@keyframes pulse {
+@keyframes pulse-light {
   0%,100% { opacity: 0.5; }
   50% { opacity: 0.9; }
 }
@@ -221,42 +215,6 @@ nav {
 nav ul { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.8rem; list-style: none; }
 nav a { color: #ecf0f1; font-weight: bold; padding: 0.6rem 1.2rem; border-radius: 6px; transition: all 0.3s ease; }
 nav a:hover { background: rgba(255,215,0,0.25); color: gold; }
-
-/* ==== FAITH HERO SCROLL ==== */
-.faith-hero {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: #05070c;
-}
-.faith-overlay {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  padding: 2rem;
-  text-align: center;
-  color: #fff;
-}
-.faith-title { font-size: 3.5rem; letter-spacing: 0.08em; font-family: Georgia, serif; margin-bottom: 1rem; }
-.menorah-glow {
-  width: 260px; height: 260px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,215,150,0.6), transparent 70%);
-  margin: 1.5rem 0;
-  animation: pulse 6s infinite ease-in-out;
-}
-.scroll-text {
-  max-width: 720px;
-  margin-top: 2rem;
-  font-size: 1.1rem;
-  line-height: 1.9;
-  background: rgba(0,0,0,0.45);
-  padding: 1.6rem 2.2rem;
-  border-radius: 14px;
-}
 
 /* ==== PARCHMENT SCROLL ==== */
 .scroll.parchment {
@@ -734,19 +692,6 @@ footer a:hover { text-decoration: underline; }
   padding: 1.6rem 2.2rem;
   border-radius: 14px;
 }
- /* ===== PARCHMENT SCROLL STYLE ===== */
-.scroll.parchment {
-  background: #f5ecd9;
-  color: #2e2a24;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 4rem 2.5rem;
-  font-family: Georgia, serif;
-  line-height: 1.9;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-  border-radius: 6px;
-}
-
 /* Subtle parchment grain */
 .scroll.parchment::before {
   content: "";
@@ -815,18 +760,6 @@ footer a:hover { text-decoration: underline; }
   border: none;
   border-top: 1px solid rgba(0,0,0,0.2);
   margin: 3rem 0;
-}
-
-/* ===== SCROLL FADE-IN ANIMATION ===== */
-.scroll.parchment {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1.2s ease;
-}
-
-.scroll.parchment.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Mobile tuning */
