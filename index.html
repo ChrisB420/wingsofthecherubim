@@ -600,10 +600,107 @@ footer a:hover { text-decoration: underline; }
 
                 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
 <!-- FAITH SCROLL TEACHING : Wings of the Cherubim -->
-<section id="faith-teaching" class="scroll parchment">
+<!-- FAITH TEACHING SCROLL: WINGS OF THE CHERUBIM - COMPLETE SECTION -->
+<section id="faith-teaching-complete" class="scroll parchment">
+  <style>
+    /* PARCHMENT SCROLL STYLING - COMPLETE */
+    .scroll.parchment {
+      background: #f5ecd9;
+      color: #2e2a24;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 4rem 2.5rem;
+      font-family: Georgia, serif;
+      line-height: 1.9;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+      border-radius: 6px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1.2s ease;
+      position: relative;
+    }
+    
+    .scroll.parchment.visible { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+    
+    .scroll.parchment::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4"/></filter><rect width="200" height="200" filter="url(%23n)" opacity="0.04"/></svg>');
+      pointer-events: none;
+      border-radius: 6px;
+    }
+    
+    .scroll.parchment h1, 
+    .scroll.parchment h2, 
+    .scroll.parchment h3 {
+      font-family: "Cinzel", Georgia, serif;
+      color: #c9a24d;
+      letter-spacing: 0.08em;
+      margin-top: 3rem;
+    }
+    
+    .scroll.parchment h1 { 
+      text-align: center; 
+      font-size: 2.4rem; 
+      margin-top: 0;
+    }
+    
+    .scroll.parchment h2 { 
+      text-align: center; 
+      font-size: 1.4rem; 
+    }
+    
+    .scroll.parchment h3 { 
+      font-size: 1.25rem; 
+    }
+    
+    .scroll.parchment .theme { 
+      text-align: center; 
+      font-style: italic; 
+      margin-bottom: 2rem; 
+    }
+    
+    .scroll.parchment blockquote {
+      border-left: 4px solid #c9a24d;
+      padding-left: 1rem;
+      margin: 2rem 0;
+      font-style: italic;
+    }
+    
+    .scroll.parchment .call { 
+      text-align: center; 
+      font-size: 1.15rem; 
+      font-weight: bold; 
+    }
+    
+    .scroll.parchment .prayer {
+      font-style: italic;
+      background: rgba(255,255,255,0.6);
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+    
+    .scroll.parchment hr {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.2);
+      margin: 3rem 0;
+    }
+    
+    .scroll.parchment ul {
+      margin: 1rem 0 1rem 2rem;
+    }
+    
+    .scroll.parchment li {
+      margin-bottom: 0.8rem;
+    }
+  </style>
 
   <h1>FAITH — Wings of the Cherubim</h1>
-  <h2>God’s Shekinah Glory</h2>
+  <h2>God's Shekinah Glory</h2>
 
   <p class="theme">
     <strong>Theme:</strong> The Seven Lamps, the Living Word, and the Curse of Death
@@ -622,12 +719,12 @@ footer a:hover { text-decoration: underline; }
   <p>
     The rainbow is refracted light. In unity it forms pure light, ascending from God,
     unified as one. As the six wings of the seraphim surround Him, the central shaft
-    remains the fullness of God’s righteousness.
+    remains the fullness of God's righteousness.
   </p>
 
   <p>
     This light is made manifest in the gift of light, descending from the throne of God.
-    The ascending and descending light is a declaration of man’s right of salvation.
+    The ascending and descending light is a declaration of man's right of salvation.
   </p>
 
   <blockquote>
@@ -635,7 +732,7 @@ footer a:hover { text-decoration: underline; }
   </blockquote>
 
   <ul>
-    <li><strong>1 Kings 6:24–25</strong> — The cherubim of Solomon’s Temple, each touching the other.</li>
+    <li><strong>1 Kings 6:24–25</strong> — The cherubim of Solomon's Temple, each touching the other.</li>
     <li><strong>Ezekiel 1:6</strong> — Each living creature with four faces and four wings.</li>
   </ul>
 
@@ -657,7 +754,7 @@ footer a:hover { text-decoration: underline; }
 
   <p>
     This narrow way is the result of the curse placed on the earth in Genesis 3:15.
-    The curse is a result of man’s free will to know and choose evil.
+    The curse is a result of man's free will to know and choose evil.
   </p>
 
   <hr>
@@ -674,7 +771,7 @@ footer a:hover { text-decoration: underline; }
   <p>
     No one could open it until the Lamb was found worthy.
     The seals represent judgment restrained by mercy,
-    time bound within God’s eternal sabbath,
+    time bound within God's eternal sabbath,
     and the coming final judgment.
   </p>
 
@@ -685,7 +782,7 @@ footer a:hover { text-decoration: underline; }
   <p>
     As a result of this curse, all men are born spiritually dead.
     The eyes of the spiritual heart are blind.
-    The question “What will happen to me when I die?”
+    The question "What will happen to me when I die?"
     lingers deep within every soul.
   </p>
 
@@ -740,7 +837,6 @@ footer a:hover { text-decoration: underline; }
 
     <strong>Amen.</strong>
   </p>
-
 
 </section>
                 <div class="key-verse">
