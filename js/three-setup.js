@@ -4,6 +4,10 @@
  * Initialises a minimal Three.js scene in #threejs-container.
  * Attempts to load the cherub GLTF model; gracefully falls back
  * to a plain background image if the model or WebGL is unavailable.
+ *
+ * Asset requirement:
+ *   Place the cherub model at: assets/models/cherub.glb
+ *   If the file is absent the scene still renders (without the 3D model).
  */
 (function initThreeScene() {
     const container = document.getElementById('threejs-container');

@@ -159,11 +159,8 @@
 
         <div class="contact-form-section" role="region" aria-labelledby="message-form-heading">
           <h3 id="message-form-heading">Send Us a Message</h3>
-          <p class="form-note">
-            Please note: This form requires server-side processing. For immediate contact, please use the
-            email addresses above.
-          </p>
-          <form action="#" method="POST" class="contact-form" aria-label="Contact form">
+          <div id="form-status" role="alert" aria-live="polite" style="display:none; padding:1rem; border-radius:8px; margin-bottom:1rem; text-align:center; font-weight:bold;"></div>
+          <form action="../contact_form.php" method="POST" class="contact-form" aria-label="Contact form" id="contact-form" novalidate>
             <label for="contact-name">Your Name</label>
             <input type="text" id="contact-name" name="name" required autocomplete="name">
 
@@ -224,6 +221,28 @@
   <script src="../js/particles.js"></script>
   <script src="../js/navigation.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    // Show success/error message based on URL query param
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const status = params.get('status');
+      const el = document.getElementById('form-status');
+      if (!el) return;
+      if (status === 'success') {
+        el.style.display = 'block';
+        el.style.background = '#e6ffe6';
+        el.style.color = '#1e7e34';
+        el.style.border = '1px solid #28a745';
+        el.textContent = '✅ Thank you! Your message has been sent. We will reply within 24–48 hours.';
+      } else if (status === 'error') {
+        el.style.display = 'block';
+        el.style.background = '#ffe6e6';
+        el.style.color = '#a00';
+        el.style.border = '1px solid #c00';
+        el.textContent = '❌ Sorry, there was a problem sending your message. Please email us directly at info@wingsofthecherubim.quest.';
+      }
+    }());
+  </script>
 
 </body>
 </html>
