@@ -109,7 +109,60 @@ header.hero, .hero-simple, .faith-hero {
   overflow: hidden;
   color: #fff;
 }
+/* ===== Collapsible Haitian + Zechariah block ===== */
+details.collapse-block{
+  margin: 2.5rem 0;
+  border: 2px solid #c9a24d;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  overflow: hidden;
+}
 
+/* The clickable header row */
+details.collapse-block > summary{
+  list-style: none;              /* removes default marker in many browsers */
+  cursor: pointer;
+  user-select: none;
+
+  padding: 1.1rem 1.25rem;
+  background: linear-gradient(90deg, #1e3a8a, #2d5a8c);
+  color: #fff;
+
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* remove default triangle marker (Chrome/Safari) */
+details.collapse-block > summary::-webkit-details-marker{
+  display: none;
+}
+
+/* custom arrow */
+details.collapse-block > summary::after{
+  content: "▾";
+  float: right;
+  font-size: 1.2rem;
+  line-height: 1;
+  opacity: 0.95;
+}
+
+details.collapse-block[open] > summary::after{
+  content: "▴";
+}
+
+/* spacing for content inside the open dropdown */
+details.collapse-block > :not(summary){
+  padding: 1.25rem;
+}
+
+/* Optional: nicer focus for keyboard users */
+details.collapse-block > summary:focus-visible{
+  outline: 3px solid rgba(255,215,0,0.85);
+  outline-offset: 3px;
+}
 header.hero {
   background: radial-gradient(circle at top, #4a2d82, #0a0a14);
   padding: 4rem 2rem 3rem;
