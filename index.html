@@ -163,6 +163,9 @@ details.collapse-block > summary:focus-visible{
   outline: 3px solid rgba(255,215,0,0.85);
   outline-offset: 3px;
 }
+header.hero {
+  background: radial-gradient(circle at top, #4a2d82, #0a0a14);
+  padding: 4rem 2rem 3rem;
 
   header.hero{
   position: relative;
@@ -184,6 +187,7 @@ details.collapse-block > summary:focus-visible{
   border-bottom: 6px solid #FFD700;
   border-radius: 12px 12px 0 0;
 }
+
    @media (max-width: 480px){
   header.hero{
     min-height: 50vh;
@@ -530,12 +534,12 @@ th { background:#7cb342; color:#fff; }
         flex-direction: column;
         gap: 1rem;
     }
-    
+
     .nav-menu {
         gap: 1rem;
         flex-direction: column;
     }
-    
+
     .nav-link {
         padding: 0.6rem 1.2rem;
     }
@@ -702,6 +706,24 @@ footer a:hover { text-decoration: underline; }
   <!-- Background Faith Image -->
   <div class="faith-bg"></div>
 
+  <!-- Overlay Content -->
+  <div class="faith-overlay">
+    <h1 class="faith-title">faith</h1>
+
+    <div class="menorah-glow"></div>
+
+    <h2 class="faith-sub">WINGS OF THE CHERUBIM</h2>
+    <h3 class="faith-sub">GOD’S SHEKINAH GLORY</h3>
+
+    <div class="scroll-text">
+      <p>
+        The descending light from God is mercy.<br>
+        The ascending light from man is faith.<br>
+        Where they meet, salvation is revealed.
+      </p>
+    </div>
+  </div>
+</section>
  
                 <img src="1000137115.jpg" alt="Wings of the Cherubim Vision" class="main-spiritual-image">
 
@@ -728,12 +750,12 @@ footer a:hover { text-decoration: underline; }
       transition: all 1.2s ease;
       position: relative;
     }
-    
+
     .scroll.parchment.visible { 
       opacity: 1; 
       transform: translateY(0); 
     }
-    
+
     .scroll.parchment::before {
       content: "";
       position: absolute;
@@ -742,7 +764,7 @@ footer a:hover { text-decoration: underline; }
       pointer-events: none;
       border-radius: 6px;
     }
-    
+
     .scroll.parchment h1, 
     .scroll.parchment h2, 
     .scroll.parchment h3 {
@@ -751,58 +773,58 @@ footer a:hover { text-decoration: underline; }
       letter-spacing: 0.08em;
       margin-top: 3rem;
     }
-    
+
     .scroll.parchment h1 { 
       text-align: center; 
       font-size: 2.4rem; 
       margin-top: 0;
     }
-    
+
     .scroll.parchment h2 { 
       text-align: center; 
       font-size: 1.4rem; 
     }
-    
+
     .scroll.parchment h3 { 
       font-size: 1.25rem; 
     }
-    
+
     .scroll.parchment .theme { 
       text-align: center; 
       font-style: italic; 
       margin-bottom: 2rem; 
     }
-    
+
     .scroll.parchment blockquote {
       border-left: 4px solid #c9a24d;
       padding-left: 1rem;
       margin: 2rem 0;
       font-style: italic;
     }
-    
+
     .scroll.parchment .call { 
       text-align: center; 
       font-size: 1.15rem; 
       font-weight: bold; 
     }
-    
+
     .scroll.parchment .prayer {
       font-style: italic;
       background: rgba(255,255,255,0.6);
       padding: 1.5rem;
       border-radius: 6px;
     }
-    
+
     .scroll.parchment hr {
       border: none;
       border-top: 1px solid rgba(0,0,0,0.2);
       margin: 3rem 0;
     }
-    
+
     .scroll.parchment ul {
       margin: 1rem 0 1rem 2rem;
     }
-    
+
     .scroll.parchment li {
       margin-bottom: 0.8rem;
     }
@@ -1023,7 +1045,7 @@ details.collapse-block > summary{
   </p>
 
 </section>
-   
+
 <section class="isolated-section">
   <style>
     .isolated-section {
@@ -2158,7 +2180,7 @@ details.collapse-block > summary{
       margin: 20px 0 40px;
       font-size: 16px;
     }
- 
+
         /* Base & Global Reset */
          {
             margin: 0;
@@ -2166,7 +2188,7 @@ details.collapse-block > summary{
             box-sizing: border-box;
             font-family: 'Georgia', serif; /* More classic/evocative font */
         }
-    
+
 
      body {
             background-color: #f0f0f5; /* Lighter, ethereal background */
@@ -2175,7 +2197,7 @@ details.collapse-block > summary{
             overflow-x: hidden; /* Prevents horizontal scroll issues */
             font-size: 1.1em; /* Slightly larger base font */
         }
-    
+
       </style>
 
   <div class="key-text">
@@ -2425,21 +2447,3 @@ details.collapse-block > summary{
     font-size: 16px;
   }
 </style>
- <!-- Overlay Content -->
-  <div class="faith-overlay">
-    <h1 class="faith-title">faith</h1>
-
-    <div class="menorah-glow"></div>
-
-    <h2 class="faith-sub">WINGS OF THE CHERUBIM</h2>
-    <h3 class="faith-sub">GOD’S SHEKINAH GLORY</h3>
-
-    <div class="scroll-text">
-      <p>
-        The descending light from God is mercy.<br>
-        The ascending light from man is faith.<br>
-        Where they meet, salvation is revealed.
-      </p>
-    </div>
-  </div>
-</section> 
