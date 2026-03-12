@@ -714,7 +714,38 @@ footer a:hover { text-decoration: underline; }
  
                 <img src="1000137115.jpg" alt="Wings of the Cherubim Vision" class="main-spiritual-image">
 
-                <div class="portal-trigger" onclick="triggerPortalBurst()">Enter the Vision</div>
+              <!-- Signup form (hidden until Enter the Vision is clicked) -->
+<div id="signup-reveal" style="display:none; margin-top: 1.5rem;">
+  <h3 style="margin-bottom:0.5rem;">Sign up</h3>
+
+  <form action="signup.php" method="post">
+    <label for="vision-name">Name</label><br>
+    <input id="vision-name" name="name" type="text" autocomplete="name" style="width: min(420px, 100%); padding: 10px; margin: 0.25rem 0 0.75rem;" /><br>
+
+    <label for="vision-email">Email</label><br>
+    <input id="vision-email" name="email" type="email" required autocomplete="email"
+           style="width: min(420px, 100%); padding: 10px; margin: 0.25rem 0 0.75rem;" /><br>
+
+    <button type="submit" style="padding: 10px 18px; font-weight: bold;">Submit</button>
+  </form>
+</div>  
+      <script>
+  // When "Enter the Vision" is clicked, reveal the signup form
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("enter-vision");
+    const box = document.getElementById("signup-reveal");
+
+    if (!btn || !box) return;
+
+    btn.addEventListener("click", function () {
+      box.style.display = "block";
+      box.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      const email = document.getElementById("vision-email");
+      if (email) email.focus();
+    });
+  });
+</script>          
 
                 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
 <!-- FAITH SCROLL TEACHING : Wings of the Cherubim -->
