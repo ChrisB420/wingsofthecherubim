@@ -519,6 +519,52 @@ th { background:#7cb342; color:#fff; }
     .nav-link {
         padding: 0.6rem 1.2rem;
     }
+}
+.main-nav{
+position:sticky;
+top:0;
+width:100%;
+background:rgba(10,10,20,0.9);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+.nav-logo a{
+color:white;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.nav-menu{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-link{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+.nav-link:hover{
+color:gold;
+}
+
+.nav-contact{
+background:gold;
+color:black;
+padding:8px 14px;
+border-radius:6px;
 }      
 /* ==== PARTICLES ==== */
 .particle {
@@ -598,19 +644,26 @@ footer a:hover { text-decoration: underline; }
     <p class="tagline">Unveiling Sacred Prophetic Revelations</p>
   </div>
 
-<!-- STICKY NAVIGATION BAR (replace the glass-nav section) -->
+<!-- STICKY NAVIGATION BAR -->
 <nav class="main-nav">
-    <div class="nav-container">
-        <div class="nav-logo">Wings of the Cherubim</div>
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">🏠 Home</a></li>
-            <li><a href="about.html" class="nav-link">ℹ️ About</a></li>
-            <li><a href="contact.html" class="nav-link">✉️ Contact</a></li>
-            <li><a href="seminars.html" class="nav-link">📚 Seminars</a></li>
-            <li><a href="teachings.html" class="nav-link">📖 Teachings</a></li>
-            <li><a href="outreach.html" class="nav-link">🤝 Outreach</a></li>
-        </ul>
+  <div class="nav-container">
+
+    <!-- Logo -->
+    <div class="nav-logo">
+      <a href="index.html">Wings of the Cherubim</a>
     </div>
+
+    <!-- Navigation Menu -->
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="teachings.html" class="nav-link">Teachings</a></li>
+      <li><a href="seminars.html" class="nav-link">Seminars</a></li>
+      <li><a href="outreach.html" class="nav-link">Outreach</a></li>
+      <li><a href="contact.html" class="nav-link nav-contact">Contact</a></li>
+    </ul>
+
+  </div>
 </nav>
 
 
