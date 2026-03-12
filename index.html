@@ -163,13 +163,33 @@ details.collapse-block > summary:focus-visible{
   outline: 3px solid rgba(255,215,0,0.85);
   outline-offset: 3px;
 }
-header.hero {
-  background: radial-gradient(circle at top, #4a2d82, #0a0a14);
-  padding: 4rem 2rem 3rem;
+
+  header.hero{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+
+  /* Purple gradient background */
+  background: radial-gradient(circle at top, #4a2d82 0%, #0a0a14 70%);
+
+  /* Size + spacing (reasonable) */
+  min-height: 60vh;
+  padding: 2.25rem 1.5rem 1.75rem;
+
+  /* Existing visual accents */
   border-bottom: 6px solid #FFD700;
   border-radius: 12px 12px 0 0;
 }
-
+   @media (max-width: 480px){
+  header.hero{
+    min-height: 50vh;
+    padding: 1.5rem 1rem 1.25rem;
+  }
+} 
 .hero-simple {
   height: 70vh;
   min-height: 420px;
@@ -682,24 +702,7 @@ footer a:hover { text-decoration: underline; }
   <!-- Background Faith Image -->
   <div class="faith-bg"></div>
 
-  <!-- Overlay Content -->
-  <div class="faith-overlay">
-    <h1 class="faith-title">faith</h1>
-
-    <div class="menorah-glow"></div>
-
-    <h2 class="faith-sub">WINGS OF THE CHERUBIM</h2>
-    <h3 class="faith-sub">GOD’S SHEKINAH GLORY</h3>
-
-    <div class="scroll-text">
-      <p>
-        The descending light from God is mercy.<br>
-        The ascending light from man is faith.<br>
-        Where they meet, salvation is revealed.
-      </p>
-    </div>
-  </div>
-</section>
+ 
                 <img src="1000137115.jpg" alt="Wings of the Cherubim Vision" class="main-spiritual-image">
 
                 <div class="portal-trigger" onclick="triggerPortalBurst()">Enter the Vision</div>
@@ -2422,3 +2425,21 @@ details.collapse-block > summary{
     font-size: 16px;
   }
 </style>
+ <!-- Overlay Content -->
+  <div class="faith-overlay">
+    <h1 class="faith-title">faith</h1>
+
+    <div class="menorah-glow"></div>
+
+    <h2 class="faith-sub">WINGS OF THE CHERUBIM</h2>
+    <h3 class="faith-sub">GOD’S SHEKINAH GLORY</h3>
+
+    <div class="scroll-text">
+      <p>
+        The descending light from God is mercy.<br>
+        The ascending light from man is faith.<br>
+        Where they meet, salvation is revealed.
+      </p>
+    </div>
+  </div>
+</section> 
