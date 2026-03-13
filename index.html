@@ -115,6 +115,9 @@ header.hero, .hero-simple, .faith-hero {
   overflow: hidden;
   color: #fff;
 }
+     .hero-content{
+  transform: translateY(-35px);
+}  
 /* ===== Collapsible Haitian + Zechariah block ===== */
 details.collapse-block{
   margin: 2.5rem 0;
@@ -179,7 +182,11 @@ header.hero{
   overflow: hidden;
   color: #fff;
 
-  background: radial-gradient(circle at top, #4a2d82 0%, #0a0a14 70%);
+  background:
+  url('star.png') center/contain no-repeat,
+  radial-gradient(circle at top, #4a2d82 0%, #0a0a14 70%);
+   background-size: 700px auto, cover;
+opacity: 1; 
 
   min-height: 60vh;              /* controls overall hero height */
   padding: 2.25rem 1.5rem 1.75rem; /* smaller padding */
@@ -501,7 +508,9 @@ th { background:#7cb342; color:#fff; }
     z-index: 100;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
-
+header.hero .main-nav{
+  margin-top: -20px;
+}
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
