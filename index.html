@@ -733,41 +733,62 @@ border:none;
               
  
                 <img src="1000137115.jpg" alt="Wings of the Cherubim Vision" class="main-spiritual-image">
-<button id="enter-vision" class="portal-trigger" type="button">
-  Enter the Vision
-</button>
-              <!-- Signup form (hidden until Enter the Vision is clicked) -->
-<div id="signup-reveal" style="display:none; margin-top: 1.5rem;">
+<!-- Enter the Vision trigger -->
+<div id="enter-vision-wrap" style="text-align:center; margin: 1.25rem 0;">
+  <button id="enter-vision" type="button"
+    style="
+      display:inline-block;
+      width:min(260px, 100%);
+      padding: 1.05rem 1.3rem;
+      background: linear-gradient(45deg, #6b48ff, #ffd700);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-align: center;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 22px gold;
+    ">
+    Enter the Vision
+  </button>
+</div>
+
+<!-- Signup form (hidden until Enter the Vision is clicked) -->
+<div id="signup-reveal" hidden style="margin-top: 1.5rem;">
   <h3 style="margin-bottom:0.5rem;">Sign up</h3>
 
   <form action="signup.php" method="post">
     <label for="vision-name">Name</label><br>
-    <input id="vision-name" name="name" type="text" autocomplete="name" style="width: min(420px, 100%); padding: 10px; margin: 0.25rem 0 0.75rem;" /><br>
+    <input id="vision-name" name="name" type="text" autocomplete="name"
+      style="width:min(420px,100%); padding:10px; margin:0.25rem 0 0.75rem;" /><br>
 
     <label for="vision-email">Email</label><br>
     <input id="vision-email" name="email" type="email" required autocomplete="email"
-           style="width: min(420px, 100%); padding: 10px; margin: 0.25rem 0 0.75rem;" /><br>
+      style="width:min(420px,100%); padding:10px; margin:0.25rem 0 0.75rem;" /><br>
 
     <button type="submit" style="padding: 10px 18px; font-weight: bold;">Submit</button>
   </form>
-</div>  
-      <script>
-  // When "Enter the Vision" is clicked, reveal the signup form
-  document.addEventListener("DOMContentLoaded", function () {
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("enter-vision");
     const box = document.getElementById("signup-reveal");
-
     if (!btn || !box) return;
 
-    btn.addEventListener("click", function () {
-      box.style.display = "block";
-      box.scrollIntoView({ behavior: "smooth", block: "start" });
+    btn.addEventListener("click", () => {
+      box.hidden = false;
+
+      // Scroll a little nicer (and safe even if the page is weirdly structured)
+      const y = box.getBoundingClientRect().top + window.scrollY - 20;
+      window.scrollTo({ top: y, behavior: "smooth" });
 
       const email = document.getElementById("vision-email");
       if (email) email.focus();
     });
   });
-</script>          
+</script>
 
                 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
 <!-- FAITH SCROLL TEACHING : Wings of the Cherubim -->
