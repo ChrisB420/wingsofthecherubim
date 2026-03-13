@@ -771,24 +771,7 @@ border:none;
   </form>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("enter-vision");
-    const box = document.getElementById("signup-reveal");
-    if (!btn || !box) return;
-
-    btn.addEventListener("click", () => {
-      box.hidden = false;
-
-      // Scroll a little nicer (and safe even if the page is weirdly structured)
-      const y = box.getBoundingClientRect().top + window.scrollY - 20;
-      window.scrollTo({ top: y, behavior: "smooth" });
-
-      const email = document.getElementById("vision-email");
-      if (email) email.focus();
-    });
-  });
-</script>
+<script src="assets/js/enter-vision.js" defer></script>
 
                 <audio id="celestialBurst" src="assets/audio/celestial-burst.mp3" preload="auto"></audio>
 <!-- FAITH SCROLL TEACHING : Wings of the Cherubim -->
